@@ -12,3 +12,7 @@ body {
   color: CanvasText;
   color-scheme: light dark;
 }
+
+img {
+  width: 50px;
+}
