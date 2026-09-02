@@ -8,11 +8,7 @@
 
 body {
   font-family: "Comic Relief", system-ui;
-  background-color: Canvas;
+  background-color: #c2a487;
   color: CanvasText;
   color-scheme: light dark;
-}
-
-img {
-  width: 10px;
 }
