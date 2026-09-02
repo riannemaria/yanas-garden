@@ -13,6 +13,9 @@ body {
   background-color: rgb(204, 173, 160);
   color: CanvasText;
   color-scheme: light dark;
+}
+
+header {
   margin: 0;
 }
 
