@@ -19,5 +19,5 @@ img {
 }
 
 img:hover {
-  transform: perspective(360deg);
+  transform: rotate(360deg);
 }
