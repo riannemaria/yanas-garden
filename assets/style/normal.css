@@ -1,13 +1,15 @@
 /* HIER KOMT JOUW CSS */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
 @font-face {
-  font-family: "Comic Relief";
+  font-family: "Roboto";
   src: url(../type/ComicRelief-Regular.woff2);
   font-weight: 400;
   font-style: normal;
 }
 
 body {
-  font-family: "Comic Relief", system-ui;
+  font-family: "Roboto", system-ui;
   background-color: rgb(204, 173, 160);
   color: CanvasText;
   color-scheme: light dark;
