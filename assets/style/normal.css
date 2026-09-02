@@ -15,4 +15,9 @@ body {
 
 img {
   width: 80px;
+  transition: transform 0.8s ease;
+}
+
+img:hover {
+  transform: perspective(360deg);
 }
