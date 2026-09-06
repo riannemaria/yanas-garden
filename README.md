@@ -21,7 +21,9 @@ Voorbereidingen:
 
 Huiswerk:
 
-### 2 sept - [Workshop]
+<details>
+
+<summary> ### 2 sept - [Workshop] </summary>
 
 HTML & CSS Basics
 
@@ -40,6 +42,8 @@ Voorbereidende vragen:
    Je kunt bijvoorbeeld een styles.css gebruiken voor de algemene vormgeving van de hele website en daarnaast een product.css voor alleen productpagina's en een blog.css voor blogpagina's.
 
 MMD, Micro-interacties, Forms
+
+</details>
 
 ### 31 aug - Kickoff
 
