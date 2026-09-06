@@ -4,13 +4,40 @@ Het staat model voor digitale tuintjes welke bij 'Het web is voor iedereen' door
 
 ## Learning Log
 
-### [...]
+### 4 sept - [Workshop]
 
-[...]
+Praktische CSS
 
-### 3 sept - [Workshop]
+Voorbereidingen:
 
-[...]
+Huiswerk:
+https://codepen.io/editor/Rianne-Maria/pen/01a067cf-330c-79e7-a191-3e2bded8e517
+
+Fonts met kleur en effecten
+
+Voorbereidingen:
+
+Huiswerk:
+
+### 2 sept - [Workshop]
+
+HTML & CSS Basics
+
+Voorbereidende vragen:
+
+1. Hoe weet ik wanneer iets in HTML hoort en wanneer ik CSS moet gebruiken?
+   -> HTML gebruik je voor de inhoud, structuur en betekenis van een website. Hiermee geef je bijvoorbeeld aan wat een titel, paragraaf, afbeelding, link of lijst is. CSS gebruik je daarna om te bepalen hoe deze onderdelen eruitzien, bijvoorbeeld de kleur, grootte, het lettertype, de achtergrond en de positie.
+
+2. Wanneer gebruik je px en wanneer is het beter om em te gebruiken?
+   -> px is handig wanneer je een vaste en specifieke grootte wilt instellen. em is vooral handig wanneer je wilt dat de grootte van een element meeschaalt met de tekstgrootte.
+   Dit is bijvoorbeeld handig bij titels. Als je wilt dat een titel altijd twee keer zo groot is als de normale tekst, kun je 2em gebruiken. Wanneer je later de normale tekst groter of kleiner maakt, verandert de titel automatisch mee.
+
+3. Wanneer is het handig om meerdere stylesheets te gebruiken in plaats van alles in één CSS-bestand te zetten?
+   -> Bij een kleine website is het vaak overzichtelijk om alle CSS in één stylesheet te bewaren. Wanneer een website groter wordt en verschillende soorten pagina's heeft, kunnen meerdere stylesheets handig zijn om de code overzichtelijk te houden.
+
+   Je kunt bijvoorbeeld een styles.css gebruiken voor de algemene vormgeving van de hele website en daarnaast een product.css voor alleen productpagina's en een blog.css voor blogpagina's.
+
+MMD, Micro-interacties, Forms
 
 ### 31 aug - Kickoff
 
