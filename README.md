@@ -13,6 +13,8 @@ Voorbereidingen:
 Huiswerk:
 https://codepen.io/editor/Rianne-Maria/pen/01a067cf-330c-79e7-a191-3e2bded8e517
 
+![Opdracht 1 Workshop 3](images/readme/opdracht1_workshop3.png)
+
 Fonts met kleur en effecten
 
 Voorbereidingen:
