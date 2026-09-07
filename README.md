@@ -11,7 +11,7 @@ Praktische CSS
 Voorbereidingen:
 Ik heb als eerst een code pen account aan gemaakt en ben daarna met opdracht 1 begonnen. In deze opdracht ben ik begonnen met een lelijke pagina maken door middel van alleen html te gebruiken en de structuur aan te houden die was gegeven. Zo kwam dat eruit te zien
 
-![Voorbereidende opdracht op de deepdive Praktische CSS](../images/readme/PraktischeCSS_Voorbereiding.png)
+![Voorbereidende opdracht op de deepdive Praktische CSS](images/readme/PraktischeCSS_Voorbereiding.png)
 
 Huiswerk:
 https://codepen.io/editor/Rianne-Maria/pen/01a067cf-330c-79e7-a191-3e2bded8e517
@@ -25,7 +25,7 @@ Huiswerk:
 ### 2 sept - Deepdives
 
 <details>
-<summary><strong><h3>HTML & CSS Basics<h3></strong></summary>
+<summary><strong>HTML & CSS Basics</strong></summary>
 
 Voorbereidende vragen:
 
