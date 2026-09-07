@@ -4,11 +4,14 @@ Het staat model voor digitale tuintjes welke bij 'Het web is voor iedereen' door
 
 ## Learning Log
 
-### 4 sept - [Workshop]
+### 4 sept - Deepdives
 
 Praktische CSS
 
 Voorbereidingen:
+Ik heb als eerst een code pen account aan gemaakt en ben daarna met opdracht 1 begonnen. In deze opdracht ben ik begonnen met een lelijke pagina maken door middel van alleen html te gebruiken en de structuur aan te houden die was gegeven. Zo kwam dat eruit te zien
+
+![Voorbereidende opdracht op de deepdive Praktische CSS](../images/readme/PraktischeCSS_Voorbereiding.png)
 
 Huiswerk:
 https://codepen.io/editor/Rianne-Maria/pen/01a067cf-330c-79e7-a191-3e2bded8e517
@@ -19,10 +22,10 @@ Voorbereidingen:
 
 Huiswerk:
 
-### 2 sept - [Workshop]
+### 2 sept - Deepdives
 
 <details>
-<summary>**HTML & CSS Basics**</summary>
+<summary><strong><h3>HTML & CSS Basics<h3></strong></summary>
 
 Voorbereidende vragen:
 
@@ -39,7 +42,9 @@ Voorbereidende vragen:
    Je kunt bijvoorbeeld een styles.css gebruiken voor de algemene vormgeving van de hele website en daarnaast een product.css voor alleen productpagina's en een blog.css voor blogpagina's.
    </details>
 
-MMD, Micro-interacties, Forms
+<details>
+<summary><strong>MMD, Micro-interacties, Forms</strong></summary>
+</details>
 
 ### 31 aug - Kickoff
 
