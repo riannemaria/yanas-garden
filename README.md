@@ -21,7 +21,8 @@ Huiswerk:
 
 ### 2 sept - [Workshop]
 
-HTML & CSS Basics
+<details>
+<summary>**HTML & CSS Basics**</summary>
 
 Voorbereidende vragen:
 
@@ -36,6 +37,7 @@ Voorbereidende vragen:
    -> Bij een kleine website is het vaak overzichtelijk om alle CSS in één stylesheet te bewaren. Wanneer een website groter wordt en verschillende soorten pagina's heeft, kunnen meerdere stylesheets handig zijn om de code overzichtelijk te houden.
 
    Je kunt bijvoorbeeld een styles.css gebruiken voor de algemene vormgeving van de hele website en daarnaast een product.css voor alleen productpagina's en een blog.css voor blogpagina's.
+   </details>
 
 MMD, Micro-interacties, Forms
 
