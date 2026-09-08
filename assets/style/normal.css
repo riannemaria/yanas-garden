@@ -10,7 +10,7 @@
 
 body {
   font-family: "Roboto", system-ui;
-  background-color: rgb(204, 173, 160);
+  background-color: #f3e9d7;
   color: CanvasText;
   color-scheme: light dark;
 }
@@ -29,8 +29,8 @@ img:hover {
 }
 
 h1 {
-  background-color: rgb(89, 62, 50);
-  color: white;
+  background-color: #3b2d26;
+  color: #f3e9d7;
   text-align: center;
 }
 
