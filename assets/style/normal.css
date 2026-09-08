@@ -34,6 +34,25 @@ h1 {
   text-align: center;
 }
 
-p {
-  font-family: "Roboto";
+section nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+
+  padding: 0;
+  list-style: none;
+}
+
+section nav a {
+  display: block;
+
+  font-size: 1.5em;
+  color: CanvasText;
+  text-decoration: none;
+
+  transition: transform 0.3s ease;
+}
+
+section nav a:hover {
+  transform: scale(1.1);
 }
