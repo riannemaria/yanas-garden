@@ -25,6 +25,63 @@ Tot slot heb ik bewuster gekeken naar visuele hiërarchie: wat is de titel, wat 
 
 </details>
 
+<details>
+<summary><strong>Deepdive - Mooie kleuren en gradients </strong></summary>
+
+### Voorbereidingen
+
+Voor de Deep Dive over kleur en gradients moest ik als voorbereiding drie verschillende kleurspelletjes doen. Hiermee kon ik testen hoe goed ik kleuren herken, onthoud en verschillen tussen kleuren kan zien.
+
+<strong> Voorbereiding 1 – CSS-kleuren herkennen </strong></br>
+Bij het eerste spel kreeg ik een CSS-kleur en moest ik deze terugvinden in een groot palet met verschillende kleuren. Dit vond ik best lastig, vooral wanneer meerdere kleuren heel erg op elkaar leken. Soms kon ik de juiste kleur snel herkennen, maar bij kleine kleurverschillen had ik er meer moeite mee. Hier merkte ik dus dat ik CSS-kleuren nog niet altijd goed van elkaar kan onderscheiden.
+
+![Voorbereiding 1](images/readme/voorbereiding1_kleur.png)
+
+<strong> Voorbereiding 2 – Kleur onthouden en namaken </strong></br>
+Bij het tweede spel kreeg ik kort een kleur te zien die ik daarna uit mijn geheugen zo goed mogelijk moest namaken met HSL-sliders. Dit spel kende ik toevallig al, omdat ik de daily versie hiervan bijna elke dag doe. Toch vond ik deze kleuren lastiger dan normaal. Soms dacht ik dat mijn kleur bijna precies hetzelfde was, terwijl er toch meer verschil in zat dan ik verwachtte. Mijn uiteindelijke score was 84,33, dus best goed, maar ik merkte dat het onthouden van kleine verschillen in hue, saturation en lightness nog lastig kan zijn.
+
+![Voorbereiding 2](images/readme/voorbereiding2_kleur.png)
+
+<strong> Voorbereiding 3 – Kleurverschillen zien </strong></br>
+Het derde spel vond ik het leukst. Hierbij kreeg ik twee kleuren te zien die steeds meer op elkaar gingen lijken en moest ik aangeven waar de overgang tussen de twee kleuren zat. De eerste levels gingen vrij makkelijk, maar vooral rond level 20 tot 30 moest ik echt goed focussen om het verschil nog te kunnen zien. Als ik er lang genoeg naar keek, kon ik het verschil meestal uiteindelijk wel herkennen. Hierdoor merkte ik dat ik kleine kleurverschillen best goed kan zien, zolang ik de tijd neem om goed te kijken.
+
+![Voorbereiding 3](images/readme/voorbereiding3_kleur.png)
+
+### Oefening 1
+
+Voordat ik aan de oefeningen begon, heb ik eerst de theorie uit de PowerPoints doorgenomen. Hierin heb ik geleerd hoe verschillende gradients, kleuren en animaties in CSS werken. Met deze kennis ben ik daarna de oefeningen gaan maken.
+
+Bij oefening 1 moest ik 12 verschillende blokjes met gradients namaken en custom properties gebruiken voor de kleuren. De eerste blokjes gingen redelijk goed met behulp van de tips in dlo, maar vanaf ongeveer blokje 5 werd het lastiger. Ik ben toen steeds teruggegaan naar de theorie in de powerpoint om te kijken welke code en technieken ik kon gebruiken en heb dit daarna zelf toegepast.
+
+Door deze oefening begrijp ik nu veel beter hoe de verschillende gradients werken, zoals een linear-gradient, radial-gradient en conic-gradient. Ook heb ik geleerd hoe ik de richting van een gradient kan bepalen, color stops kan gebruiken om aan te geven waar een kleur begint of eindigt en hoe ik meerdere gradients over elkaar kan stapelen om complexere vormen en patronen te maken. Ik merk hierdoor dat ik niet alleen de code overneem, maar ook steeds beter begrijp wat de verschillende waarden in de code daadwerkelijk met het beeld doen.
+
+Het laatste blokje heb ik uiteindelijk niet af kunnen maken, omdat ik nog niet goed begreep hoe ik alle verschillende onderdelen daarvoor moest combineren. Dat is dus nog iets waar ik verder mee wil oefenen.
+
+![Oefening 1](images/readme/oefening1_kleur.png)
+
+### Oefening 2
+
+Daarna ben ik verdergegaan met het namaken van vlaggen met CSS-gradients. Deze oefening vond ik een stuk lastiger. Ook hierbij heb ik vaak teruggekeken naar de theorie om te bepalen welke gradient ik nodig had en hoe ik meerdere vormen kon combineren.
+
+Bij de eerste drie vlaggen merkte ik wel dat ik steeds beter begon te begrijpen welke techniek ik moest gebruiken. Bij de vlag van Macedonië wist ik bijvoorbeeld dat ik eerst de stralen met een gradient moest maken en daar vervolgens een cirkel bovenop moest zetten. Dat vond ik fijn, omdat ik merkte dat de theorie uit de PowerPoint en de vorige oefening al beter begon te blijven hangen.
+
+Toen ik bij de moeilijkere vlaggen kwam, liep ik wel vast. Ik wist bijvoorbeeld nog niet goed hoe ik een gewoon kruis op de juiste manier moest opbouwen met gradients. Daarom ben ik weer teruggegaan naar een paar makkelijkere vlaggen om daar verder mee te oefenen. Ik merk dus dat ik vaak al wel in mijn hoofd begrijp wat ik ongeveer moet doen, maar dat het omzetten daarvan naar de juiste CSS-code nog lastig is. Dat is vooral iets waar ik nog meer mee moet oefenen.
+
+![Oefening 2](images/readme/oefening2_kleur.png)
+
+### Oefening 3
+
+Als laatste ben ik aan de slag gegaan met animaties. In het begin vond ik deze oefening best lastig, omdat hier in de PowerPoint maar weinig uitleg over stond. Toen ik de code rustig ging lezen en logisch probeerde te kijken naar wat iedere regel deed, merkte ik dat ik het eigenlijk steeds beter begon te begrijpen. De eerste twee oefeningen kon ik daardoor vrij makkelijk maken. Bij de volgende oefeningen moest ik wat langer kijken en vergelijken met wat ik daarvoor had gedaan.
+
+Uiteindelijk begon ik te begrijpen hoe ik een @property moet opbouwen, welke syntax ik nodig heb en hoe ik een initial-value instel. Ook kon ik steeds beter bepalen of ik bijvoorbeeld met een angle of percentage moest werken. Dat vond ik fijn, omdat ik merkte dat ik niet alleen code aan het overnemen was, maar ook begon te begrijpen waarom ik bepaalde keuzes maakte.
+
+Wat ik nog lastig vind, is om een ingewikkeldere background-image helemaal zelf op te bouwen en daarin bijvoorbeeld calc() te combineren met een variabele. Daardoor lukte het laatste blokje mij niet. Ik merk dus dat ik de losse onderdelen en de logica van de animaties nu een stuk beter begrijp, maar dat ik nog moet oefenen met het zelfcombineren van die technieken tot complexere CSS.
+
+Link naar de CodePen opdracht:
+https://codepen.io/editor/Rianne-Maria/pen/01a08bc6-edf3-76a3-8e1d-2b941576d4a4
+
+</details>
+
 ### 9 sept - Workshop 2
 
 <details>
