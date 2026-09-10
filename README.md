@@ -16,6 +16,45 @@ Het staat model voor digitale tuintjes welke bij 'Het web is voor iedereen' door
 #### Presentatie
 
 <details>
+<summary><strong>Presentatie</strong></summary>
+Mijn presentatie staat hier
+
+[Bekijk mijn presentatie](oefeningen/presentatie/index.html)
+
+#### Vragen na de presentatie
+
+Na mijn presentatie heeft Dewi wat vragen gesteld die ik heb beantwoord:
+
+<strong> 1. Wat ben je door het verzamelen van je inspiratie over je onderwerp te weten gekomen? </strong></br>
+Ik kwam er vooral achter dat mijn beleving van muziek veel breder is dan alleen welke artiesten of nummers ik leuk vind. Ik had er eerst nooit zo over nagedacht en had ook niet door dat muziek zo grote impact heeft op mijn leven. Muziek zit eigenlijk in heel veel dagelijkse momenten en is voor mij zowel digitaal als fysiek.
+
+<strong> 2. Hoe wil je voorkomen dat je Digital Garden gewoon een website over je favoriete muziek wordt? </strong></br>
+Door niet alleen artiesten en nummers te laten zien, maar vooral mijn eigen ervaringen centraal te zetten. Dus bijvoorbeeld wanneer ik muziek luister, welke herinneringen erbij horen, concerten waar ik ben geweest, karaoke vanuit mijn cultuur en het zelf maken van muziek.
+
+<strong> 3. Welke inspiratie kun je uit je afbeeldingen halen? Stijl, gevoel, vorm enz. </strong></br>
+Uit mijn afbeeldingen haal ik vooral inspiratie uit de verschillende sferen die muziek voor mij kan hebben. In mijn concertfoto's zie je bijvoorbeeld veel donkere achtergronden met felle en gekleurde verlichting. Andere foto's zijn juist rustiger en persoonlijker. Het is niet 1 vibe zegmaar, maar meerdere vibes.
+
+Ook zie ik veel dingen terug die ik later misschien als vorm of interactie kan gebruiken, zoals albumcovers, Spotify, vinylplaten, muziekspelers, soundwaves en knoppen zoals play en pause.
+
+<strong> 4. Vul deze zin aan: </strong></br>
+<strong>Ik wil mijn Digital Garden laten gaan over...</strong></br>
+mijn persoonlijke beleving van muziek en de verschillende manieren waarop muziek onderdeel is van mijn leven.
+
+<strong>...en wil dat laten zien door ... aan content te tonen.</strong></br>
+eigen foto's, muziek, herinneringen, concerten, albumcovers, artiesten, korte teksten en interactieve elementen.
+
+<strong>Ik begin met een stukje eigen content over...</strong></br>
+muziek in mijn dagelijks leven en de verschillende momenten waarop muziek bij mij aanwezig is.
+
+<strong>Als het begin is gemaakt kan ik mijn Garden verder uitbreiden door...</strong></br>
+steeds meer persoonlijke herinneringen, muziekfases, concerten, moods, karaoke, instrumenten en andere ervaringen met muziek toe te voegen.
+
+<strong> 5. Wat is het karakter/de uitstraling/het gevoel dat bij het onderwerp past? </strong></br>
+Ik denk dat mijn onderwerp vooral persoonlijk, nostalgisch en levendig moet voelen en gewoon een warm cozy gevoel krijg wanneer je op de website kijkt. Aan de ene kant heb ik rustige en emotionele kanten van muziek, bijvoorbeeld muziek die bij herinneringen hoort. Aan de andere kant heb ik juist hele energieke dingen zoals concerten, dansen en karaoke. Ik wil die verschillende gevoelens uiteindelijk ook terug laten komen in mijn Digital Garden.
+
+</details>
+
+<details>
 <summary><strong>Visual Research</strong></summary>
 
 #### Opdracht 5 - Een sfeerwoord als uitgangspunt
@@ -65,7 +104,7 @@ Door deze tweede Crazy 8 merkte ik dus dat mijn Visual Research vooral als start
 
 #### Opdracht 10 – Crazy 8 beoordelen
 
-![Beoordeling](images/readme/crazy8_beoordeling.png)
+![Beoordeling](images/readme/Crazy8_beoordeling.png)
 
 </details>
 
