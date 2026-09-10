@@ -9,11 +9,23 @@ Het staat model voor digitale tuintjes welke bij 'Het web is voor iedereen' door
 <details>
 <summary><strong>Opdracht 11 - Uitgangspunten voor schetsen</strong></summary>
 
+Voor deze opdracht moest ik ideeën uit mijn Crazy 8 kiezen en deze verder uitwerken naar vijf mobile-first schetsen. Hierbij moest ik niet meer alleen snel ideeën tekenen, maar beter nadenken over hoe de schermen echt zouden werken. Ik moest uitgaan van een single column, realistische verhoudingen en de echte hoeveelheid content. Ook moest ik rekening houden met leesbaarheid, ongeveer 35 tekens per regel, een font-size van minimaal 16px/1em en voldoende ruimte tussen elementen. De inzichten uit mijn Visual Research, Crazy 8 en de beoordeling daarvan moest ik hierin meenemen.
+
+Ik heb schetsen gemaakt van zowel mijn homescherm als verschillende pagina's waar je terechtkomt wanneer je op onderdelen van het homescherm klikt. Hiervoor heb ik de afmetingen van mijn eigen telefoon aangehouden, zodat ik beter kon inschatten hoeveel ruimte ik daadwerkelijk op een mobiel scherm heb en de verhoudingen realistischer kon tekenen.
+
+Bij het uitwerken heb ik ook opnieuw gekeken naar mijn Crazy 8-beoordeling en geprobeerd mijn ontwerpen zo webby mogelijk te maken. Mijn homescherm heb ik bijvoorbeeld veranderd naar een close-up van een bureau met verschillende muziekgerelateerde objecten. Deze objecten zijn grote klikbare elementen, waardoor ze niet alleen onderdeel zijn van de omgeving, maar ook als navigatie werken en makkelijker te bedienen zijn op mobiel. Bovenaan heb ik daarnaast een horizontaal scrollbaar menu toegevoegd. Zo hoeft een gebruiker niet per se via de objecten te zoeken, maar kan die ook direct naar een onderdeel navigeren.
+
+Ook heb ik mijn Visual Research verder verwerkt. De nostalgische sfeer komt bijvoorbeeld terug in de Polaroids en oude muziekobjecten. Bij de Polaroids heb ik nu ook daadwerkelijk nagedacht over de content die erin komt, zoals een herinnering, jaartal en bijbehorend nummer. De warme, persoonlijke en cozy uitstraling uit mijn Visual Research wil ik later verder versterken met warme kleuren, licht en de visuele effecten die ik eerder heb onderzocht.
+
+Daarnaast heb ik kennis uit mijn deep dives meegenomen. Zo heb ik bij mijn Aura-pagina een idee uit de deep dive over kleur verder toegepast: ik wil een gekleurde gloed maken die pulseert en zo mijn muziekaura voorstelt. Bij andere schermen heb ik nagedacht over beweging, bijvoorbeeld een draaiende plaat en kaarten die je kunt doorbladeren. Hierdoor wordt de Garden niet alleen visueel, maar ook interactief en dynamisch.
+
+Tot slot heb ik bewuster gekeken naar visuele hiërarchie: wat is de titel, wat is ondersteunende tekst, wat moet als eerste opvallen en waar zitten de interactieve onderdelen? Door mijn Crazy 8 niet letterlijk over te nemen, maar deze te combineren met de feedback uit de beoordeling, mijn Visual Research en technieken uit de deep dives, zijn de schetsen een concretere en beter onderbouwde versie van mijn eerste ideeën geworden.
+
+![Schetsen](images/readme/opdracht11.png)
+
 </details>
 
 ### 9 sept - Workshop 2
-
-#### Presentatie
 
 <details>
 <summary><strong>Presentatie</strong></summary>
