@@ -77,7 +77,7 @@ Uiteindelijk begon ik te begrijpen hoe ik een @property moet opbouwen, welke syn
 
 Wat ik nog lastig vind, is om een ingewikkeldere background-image helemaal zelf op te bouwen en daarin bijvoorbeeld calc() te combineren met een variabele. Daardoor lukte het laatste blokje mij niet. Ik merk dus dat ik de losse onderdelen en de logica van de animaties nu een stuk beter begrijp, maar dat ik nog moet oefenen met het zelfcombineren van die technieken tot complexere CSS.
 
-Link naar de CodePen opdracht:
+Link naar de CodePen opdracht: </br>
 https://codepen.io/editor/Rianne-Maria/pen/01a08bc6-edf3-76a3-8e1d-2b941576d4a4
 
 </details>
