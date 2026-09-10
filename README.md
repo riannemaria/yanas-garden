@@ -4,7 +4,77 @@ Het staat model voor digitale tuintjes welke bij 'Het web is voor iedereen' door
 
 ## Learning Log
 
+### 10 sept - Huiswerk voor Workshop 3
+
 ### 9 sept - Workshop 2
+
+#### Presentatie
+
+<details>
+<summary><strong>Visual Research</strong></summary>
+
+#### Opdracht 5 - Een sfeerwoord als uitgangspunt
+
+Voor het visuele onderzoek moest ik eerst sfeerwoorden kiezen die passen bij mijn onderwerp My Life Through Music. Ik heb gekozen voor nostalgisch, levendig en comfortabel/cozy. Nostalgisch omdat muziek mij terugbrengt naar herinneringen en bepaalde periodes in mijn leven, levendig omdat muziek mij veel energie kan geven maar mij ook gewoord alive laat voelen en comfortabel/cozy omdat muziek voor mij ook vertrouwd en ontspannend voelt. Ik hou ervan om altijd muziek aan te hebben, ook instrumenteel, en dat geeft mij gewoon een warm en cozy gevoel. Vanuit deze drie woorden ben ik verdergegaan met mijn visuele onderzoek.
+
+![Sfeerwoord](images/readme/opdracht5.png)
+
+#### Opdracht 6 – Directe visuele vertaling
+
+Bij deze opdracht moest ik vanuit mijn sfeerwoorden op zoek gaan naar beelden die daar voor mij direct bij passen. Voor levendig heb ik vooral beelden gekozen met veel beweging, zoals dansende en bewegende mensen, concerten, vuurwerk en andere beelden waar veel energie in zit. Voor comfortabel/cozy kwam ik juist veel uit op warme oranje en bruine kleuren, lichtjes, kaarsen en gezellige kamers. Daar krijg ik gewoon een warm en cozy gevoel mij. Bij nostalgisch heb ik meer gekeken naar een retro en oude uitstraling, zoals een platenspeler, een oude muziekspeler, grainy foto's en foto's die een beetje vervaagd of onscherp zijn. Zo begon ik ook steeds meer overeenkomsten tussen de beelden te zien.
+
+#### Opdracht 7 – Directe visuele vertaling
+
+Daarna moest ik de kenmerken uit opdracht 6 abstracter gaan vertalen naar vorm, kleur en typografie. Ik heb daarom typografische en grafische posters verzameld die aansloten bij mijn sfeerwoorden. Ik koos veel posters met blur en vervormde of golvende typografie, omdat dit voor mij het levendige en de beweging uit mijn eerdere beelden terugbrengt. Grain en vervaagde effecten heb ik gekozen omdat dit een wat oudere en nostalgische uitstraling geeft. Daarnaast kwamen warme oranje, rode en bruine kleuren veel terug, omdat deze voor mij juist het comfortabele en cozy gevoel geven. Zo heb ik mijn sfeerwoorden omgezet naar kenmerken die ik later kan gebruiken in mijn ontwerp.
+
+![afbeeldingen](images/readme/opdracht67.png)
+
+#### Opdracht 8 – Uitgangspunten voor schetsen
+
+Bij deze opdracht moest ik uit mijn abstracte vertaling vier posters kiezen die mij het meest inspireerden. Per poster heb ik gekeken welke kenmerken passen bij mijn sfeerwoorden, hoe ik deze kenmerken kan gebruiken in mijn ontwerp en wat ik hiermee concreet zou kunnen gaan schetsen. Zo heb ik mijn visuele onderzoek vertaald naar echte uitgangspunten voor mijn ontwerp. De bijbehorende uitleg per poster is te zien in de afbeeldingen hieronder.
+
+![Selectie](images/readme/opdracht8.png)
+
+</details>
+
+<details>
+<summary><strong>Crazy 8</strong></summary>
+
+#### Opdracht 9 – Schetsoefening Crazy 8
+
+<strong>Mijn eerste crazy 8</strong></br>
+Hierna heb ik de Crazy 8 gedaan. Hierbij moest ik in korte tijd verschillende ideeën schetsen, ongeveer 40 seconden per schets. Ik heb hierbij mijn sfeerwoorden als uitgangspunt gebruikt. Voor nostalgisch heb ik bijvoorbeeld Polaroids aan een lijn getekend waar ik herinneringen en muziek aan kan koppelen, een tijdlijn waar je doorheen kan scrollen en oude LP’s die over elkaar liggen die je kan aanklikken. Voor levendig heb ik juist gekeken naar beweging, zoals een draaiende platenspeler en golvende vormen voor knoppen. Zo heb ik snel verschillende manieren bedacht waarop mijn sfeerwoorden terug kunnen komen in mijn Garden.
+
+<strong>Mijn tweede crazy 8</strong></br>
+De dag daarna ben ik opnieuw naar mijn Crazy 8 gaan kijken en merkte ik dat deze nog niet helemaal compleet voelde. Ik had namelijk vooral schermen geschetst die je te zien krijgt nadat je ergens op hebt geklikt, maar nog niet echt onderzocht hoe mijn homescherm/beginscherm eruit zou kunnen zien. Daarom heb ik nog een Crazy 8 gedaan, maar dit keer alleen gericht op verschillende mogelijkheden voor mijn homepage. Ook hierbij heb ik weer ongeveer 40 seconden per schets gebruikt, zodat ik snel ideeën op papier kon zetten zonder er te lang over na te denken.
+
+Ik ben hierbij eerst teruggegaan naar de uitkomsten van mijn Visual Research. Bij mijn eerste schetsen heb ik vooral gekeken naar het sfeerwoord comfortabel/cozy. Daarom heb ik bijvoorbeeld kamers en een bureauomgeving getekend waarin alle verschillende objecten klikbare onderdelen kunnen zijn. In de uiteindelijke vormgeving zou ik dit willen versterken met warme verlichting en vooral oranje en bruine kleuren, die ook veel terugkwamen in mijn Visual Research.
+
+Daarna ben ik meer gaan kijken naar nostalgie. Zo heb ik een idee gemaakt waarbij LP's naast elkaar de verschillende menu-items vormen. Ook heb ik een wat rommeligere verzameling van objecten geschetst, zoals een iPod, LP, camera en piano. Deze objecten verwijzen naar verschillende onderdelen van mijn muziekbeleving en geven tegelijkertijd die oudere en persoonlijke uitstraling die ik bij mijn visuele onderzoek had gevonden.
+
+Tijdens het snel schetsen ontstonden vervolgens ook ideeën die ik vooraf nog niet had bedacht. Zo heb ik bijvoorbeeld een homepage gemaakt die lijkt op een playlist, een indeling met verschillende albumcovers en een ontwerp met een grote koptelefoon waarbij je tijdens het scrollen het snoer volgt en onderweg verschillende menu-items tegenkomt.
+
+Door deze tweede Crazy 8 merkte ik dus dat mijn Visual Research vooral als startpunt werkte, maar mij niet beperkte tot alleen die eerste ideeën. De warme kleuren, nostalgische objecten, beweging en vloeiende vormen gaven mij een richting om vanuit te beginnen. Door daarna snel verschillende composities te schetsen, ontstonden vanzelf weer nieuwe ideeën en manieren van navigeren. Hierdoor heb ik uiteindelijk veel verschillende mogelijkheden voor mijn homepage kunnen onderzoeken in plaats van meteen vast te blijven zitten aan mijn eerste idee.
+
+![Crazy 8](images/readme/crazy8.png)
+
+<details>
+<summary><strong>Checkout</strong></summary>
+
+<strong> 1. Leg uit waar het Visual Research in 3 stappen naartoe werkt </strong></br>
+Het Visual Research helpt mij om vanuit mijn sfeerwoorden uiteindelijk tot concrete ontwerpkeuzes te komen. Ik ben begonnen met directe beelden, heb deze daarna vertaald naar abstracte kenmerken zoals kleur, vorm en typografie en heb daar uiteindelijk uitgangspunten van gemaakt waarmee ik kon gaan schetsen.
+
+<strong> 2. Vertel in 2 zinnen waar jouw Garden over gaat, en met welke content je dat gaat doen (beeld, tekst, sound, animatie enz).</strong></br>
+Mijn Garden My Life Through Music gaat over hoe muziek onderdeel is van mijn leven en verbonden is aan herinneringen, momenten, ervaringen en mensen. Daarnaast wil ik mijn eigen muzieksmaak delen, zoals mijn favoriete nummers en artiesten, muziek die ik zou aanraden, maar ook dingen die ik juist helemaal niet leuk vind. Hiervoor wil ik onder andere foto's, tekst, muziek/sound, animaties en interactieve elementen gebruiken.
+
+<strong> 3. Vertel kort welk idee van de Crazy 8 je het liefst zou willen uitvoeren/ verder zou willen onderzoeken.</strong></br>
+Ik wil vooral het idee van de interactieve kamer verder onderzoeken. Hierbij kunnen verschillende objecten in de kamer als navigatie werken en wil ik met warme kleuren en licht een cozy sfeer creëren. Ik vind dit interessant omdat bezoekers hierdoor zelf kunnen rondkijken en mijn Garden kunnen ontdekken in plaats van alleen een standaard menu te volgen.
+
+#### Opdracht 10 – Crazy 8 beoordelen
+
+![Beoordeling](images/readme/crazy8_beoordeling.png)
+
+</details>
 
 ### 8 sept - Deepdive
 
