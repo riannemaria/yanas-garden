@@ -6,6 +6,11 @@ Het staat model voor digitale tuintjes welke bij 'Het web is voor iedereen' door
 
 ### 10 sept - Huiswerk voor Workshop 3
 
+<details>
+<summary><strong>Opdracht 11 - Uitgangspunten voor schetsen</strong></summary>
+
+</details>
+
 ### 9 sept - Workshop 2
 
 #### Presentatie
@@ -58,6 +63,12 @@ Door deze tweede Crazy 8 merkte ik dus dat mijn Visual Research vooral als start
 
 ![Crazy 8](images/readme/crazy8.png)
 
+#### Opdracht 10 – Crazy 8 beoordelen
+
+![Beoordeling](images/readme/crazy8_beoordeling.png)
+
+</details>
+
 <details>
 <summary><strong>Checkout</strong></summary>
 
@@ -69,10 +80,6 @@ Mijn Garden My Life Through Music gaat over hoe muziek onderdeel is van mijn lev
 
 <strong> 3. Vertel kort welk idee van de Crazy 8 je het liefst zou willen uitvoeren/ verder zou willen onderzoeken.</strong></br>
 Ik wil vooral het idee van de interactieve kamer verder onderzoeken. Hierbij kunnen verschillende objecten in de kamer als navigatie werken en wil ik met warme kleuren en licht een cozy sfeer creëren. Ik vind dit interessant omdat bezoekers hierdoor zelf kunnen rondkijken en mijn Garden kunnen ontdekken in plaats van alleen een standaard menu te volgen.
-
-#### Opdracht 10 – Crazy 8 beoordelen
-
-![Beoordeling](images/readme/crazy8_beoordeling.png)
 
 </details>
 
