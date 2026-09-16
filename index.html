@@ -1,4 +1,5 @@
 <!doctype html>
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,68 +7,91 @@
     <meta name="author" content="[jouw naam]" />
     <meta name="color-scheme" content="dark light" />
 
-    <title>Yana's Archives</title>
+    <title>My Life Through Music</title>
+
     <link rel="stylesheet" href="./assets/style/normal.css" />
 
     <!-- Importeer het webring component, voeg jouw eigen domein toe in data-page -->
     <script
-      data-page="[https://voorbeeld.nl]"
+      data-page="https://voorbeeld.nl"
       src="https://digitaaltuintje.nl/webring.js"
       defer
     ></script>
   </head>
+
   <body>
     <header>
-      <h1>welcome to my page</h1>
+      <h1>My Life Through Music</h1>
 
-      <p>
-        [Dit is de model repository,
-        <a href="https://github.com/CMDA/model"
-          >fork deze repository op GitHub.</a
-        >
-      </p>
-
-      <nav>
+      <nav aria-label="Hoofdmenu">
         <ul>
-          <li><a href="/">[Home]</a></li>
-          <li><a href="/log.html">[Log]</a></li>
-          <li><a href="/story.html">[Story]</a></li>
-          <li><a href="/contact.html">[Contact]</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="moods.html">Moods</a></li>
+          <li><a href="memories.html">Memories</a></li>
+          <li><a href="moments.html">Moments</a></li>
+          <li><a href="albums.html">Albums</a></li>
+          <li><a href="about.html">About me</a></li>
         </ul>
       </nav>
     </header>
 
-    <section>
-      <h2>How are you feeling?</h2>
-
-      <nav>
+    <main>
+      <nav aria-label="Ontdek mijn muziekwereld">
         <ul>
-          <li><a href="happy.html">😄</a></li>
-          <li><a href="sad.html">😢</a></li>
-          <li><a href="angry.html">😡</a></li>
-          <li><a href="confident.html">😎</a></li>
-          <li><a href="nostalgic.html">😌</a></li>
+          <li>
+            <a href="albums.html">
+              <img
+                src="images/website/Albums2.png"
+                alt="Albumhoezen op een plank"
+              />
+            </a>
+          </li>
+
+          <li>
+            <a href="photos.html">
+              <img src="images/website/Polaroids.png" alt="Polaroidfoto's" />
+            </a>
+          </li>
+
+          <li>
+            <a href="vinyl.html">
+              <img src="images/website/Recordplayer.png" alt="Platenspeler" />
+            </a>
+          </li>
+
+          <li>
+            <a href="camera.html">
+              <img src="images/website/Camera1.png" alt="Camera" />
+            </a>
+          </li>
+
+          <li>
+            <input
+              type="checkbox"
+              id="theme-mode"
+              aria-label="Wissel tussen licht en donker thema"
+            />
+          </li>
+
+          <li>
+            <a href="ipod.html">
+              <img src="images/website/Ipod1.png" alt="iPod" />
+            </a>
+          </li>
+
+          <li>
+            <a href="laptop.html">
+              <img src="images/website/Laptop.png" alt="Laptop" />
+            </a>
+          </li>
+
+          <li>
+            <a href="kaars.html">
+              <img src="images/website/Kaarsuit.png" alt="Laptop" />
+            </a>
+          </li>
         </ul>
       </nav>
-    </section>
-
-    <main>
-      <article>
-        <h2>My favorite season</h2>
-        <p>coziest season of them all - fall</p>
-        <a href="https://giphy.com/gifs/TreyKennedy1-Kff6WS3S5zr2Y8LFr2">
-          <img src="images/window.jpg" alt="window-in-fall" />
-        </a>
-      </article>
-
-      <article>
-        <h2>31 augustus</h2>
-        <p>Vandaag behandelden we ....</p>
-      </article>
     </main>
-
-    <footer>
-      <p>[Copyleft 2026, all wrongs reversed]</p>
-    </footer>
   </body>
 </html>
