@@ -4,6 +4,128 @@ Het staat model voor digitale tuintjes welke bij 'Het web is voor iedereen' door
 
 ## Learning Log
 
+### 16 sept - Workshop 5
+
+<details>
+<summary><strong>Process mobile first screen</strong></summary>
+
+<strong>Mijn proces tot nu toe</strong></br>
+
+Ik ben begonnen met het uitwerken van mijn eerste idee voor mijn Digital Garden. Mijn idee was om een soort kamer/bureau te maken met allemaal verschillende elementen die iets te maken hebben met mijn muziekbeleving. Denk bijvoorbeeld aan een laptop, platenspeler, albums, camera, iPod en andere spullen. Uiteindelijk moeten deze elementen klikbaar worden en naar verschillende pagina’s binnen mijn garden leiden.
+
+In het begin heb ik vooral geëxperimenteerd met hoe ik al deze elementen op de pagina kon krijgen. Dit vond ik best een uitdaging, omdat ik nog niet heel veel ervaring heb met CSS Grid en omdat ik mezelf probeer aan te leren om zo min mogelijk onnodige classes, id’s, divs en spans te gebruiken. Vanuit de lessen heb ik namelijk geleerd dat ik eerst moet kijken naar wat ik met gewone HTML-elementen en CSS-selectors kan oplossen.
+
+<strong>Eerste versie van mijn bureau</strong></br>
+
+Voor mijn eerste versie ben ik begonnen met het indelen van de pagina in verschillende kolommen. Daarmee kon ik de verschillende onderdelen van mijn bureau ongeveer op de goede plek zetten. Dit was veel priegelwerk en ik weet eigenlijk niet zo goed of dit wel mocht op deze manier. Ik heb veel gespeeld met de positionering van bepaalde elementen.
+
+Op mijn eigen scherm zag de pagina eruit zoals ik wilde en ook wanneer ik mijn browser kleiner maakte naar telefoon formaat, bleef de indeling redelijk goed staan. Maar toen ik het op mijn laptop opende was het niet meer in verhouding. Hier kwam ik erachter dat het niet responsive was.
+
+Ik heb dit idee uiteindelijk even aan de kant gelegd. Niet omdat ik het niet meer wil gebruiken, maar omdat ik merkte dat ik er op dat moment een beetje in vastliep en ik het iets anders wil maken dan wat ik nu aan het maken was. Ik wilde ondertussen ook een ander onderdeel van mijn website proberen, die ik ook wilde gebruiken voor de homepage en eventueel vervangen voor het eerste idee.
+
+(Hier komen later nog afbeeldingen/screenshots van de verschillende versies.)
+
+<strong>Tweede idee: mijn albumplank</strong></br>
+
+Daarna ben ik verdergegaan met een ander onderdeel van mijn Digital Garden: een pagina met mijn favoriete albums.
+
+Mijn idee hierbij is dat je naar een muur kijkt waarop twee planken hangen met albumhoezen. De albums die er nu op staan zijn vooral tijdelijk gebruikt om de layout te kunnen maken. Later wil ik mijn eigen albums/content gebruiken die echt iets over mijn muzieksmaak vertellen.
+
+Ik ben hierbij opnieuw begonnen met CSS Grid. Ik heb de albums in meerdere kolommen gezet en geprobeerd om ze netjes over de breedte van de pagina te verdelen.
+
+Het plaatsen van de albumhoezen zelf ging redelijk snel, maar daarna wilde ik natuurlijk ook dat het echt leek alsof de albums op een plank stonden.
+
+Daarvoor moest ik wat meer experimenteren met CSS. Ik heb bijvoorbeeld gekeken naar position: relative, position: absolute en pseudo-elementen zoals ::before. Dit waren dingen die ik nog niet helemaal goed kende.
+
+Met ::before kon ik uiteindelijk een extra visueel element toevoegen zonder dat ik daarvoor extra HTML hoefde te schrijven. Daarmee heb ik onder de albums een plank gemaakt.
+
+Dat vond ik zelf interessant, omdat ik hiermee ook weer één van de regels uit de lessen kon toepassen: niet voor ieder visueel onderdeel meteen een extra HTML-element toevoegen als CSS het ook kan oplossen.
+
+Ik heb hiervoor ook documentatie en voorbeelden opgezocht, omdat ik niet zomaar code wilde gebruiken zonder te begrijpen wat het deed.
+
+<strong>Kennis uit de deep dives</strong></br>
+
+Tijdens het bouwen heb ik veel geprobeerd om dingen die ik tijdens de deep dives en oefeningen heb geleerd ook echt toe te passen in mijn eigen website.
+
+Uit de Practical CSS Deep Dive heb ik bijvoorbeeld veel meegenomen over:
+
+CSS Grid;
+custom properties;
+calc();
+verschillende CSS-selectors.
+
+Vooral het werken met selectors vond ik eerst best lastig. Door de oefeningen en door mijn eigen website merk ik dat ik steeds beter begin te begrijpen hoe je een specifiek element kunt selecteren zonder overal een class aan te geven.
+
+Ook heb ik kennis uit de Light & Dark Theme Deep Dive gebruikt. Daar heb ik geleerd hoe je met custom properties kleuren centraal kunt instellen en hoe light-dark() gebruikt kan worden.
+
+In mijn eigen website heb ik daardoor ook geëxperimenteerd met een light en dark theme.
+
+Ik heb met name en value gewerkt en zo een light en dark theme kunnen maken. Hij werkt nog niet helemaal goed, maar dat moet ik nog even onderzoeken.
+
+Ook het werken met responsive images kwam uit deze deep dive. Tijdens de oefening moesten we bijvoorbeeld verschillende afbeeldingen gebruiken voor licht/donker en groot/klein scherm. Dit kon ik goed gebruiken voor het verandern van mijn achtergrond tijdens het dark light theme.
+
+</details>
+
+### 15 sept - Voorbereiding workshop 5
+
+<details>
+<summary><strong>Deep Dive responsive grid + grid-areas</strong></summary>
+
+</details>
+
+### 14 sept - Biweekly geek 1
+
+<details>
+<summary><strong>Bi-weekly geek 1</strong></summary>
+
+![Biweekly Geek 1](images/readme/biweekly1.png)
+
+</details>
+
+<details>
+<summary><strong>Opdracht 16 - van one column layout naar een responsive design</strong></summary>
+
+Duo: Hiba
+
+</details>
+
+<details>
+<summary><strong>Opdracht 17 – Responsive voorbeelden zoeken</strong></summary>
+
+Duo: Teresa
+
+<strong>1. De knoppen “Log in” en “Sign up” worden op een kleiner scherm vervangen door één icoon.</strong></br>
+Dit bespaart ruimte in de navigatie.
+<strong>2. De websitekaarten veranderen van meerdere kolommen naar minder kolommen.</strong></br>
+Op een groot scherm kunnen meerdere kaarten naast elkaar staan, terwijl ze op een kleiner scherm bijvoorbeeld naar twee of één kolom gaan. Hierdoor blijven de afbeeldingen en teksten groot genoeg om goed te bekijken.
+<strong>3. Teksten passen zich aan de beschikbare breedte aan.</strong></br>
+Wanneer het scherm smaller wordt, worden langere titels of zinnen over meerdere regels verdeeld in plaats van dat ze buiten het scherm lopen.
+
+Wij vinden het vooral interessant hoe sommige knoppen veranderen in een icoon. Zo bespaart de website ruimte en blijft de navigatie overzichtelijk.
+
+</details>
+
+<details>
+<summary><strong>Check-out</strong></summary>
+
+<strong> 1. Wanneer wordt een website ‘lelijk’ en hoe kun je dit fixen?</strong></br>
+
+Een website kan ‘lelijk’ worden wanneer content niet goed meebeweegt met verschillende schermformaten. Bijvoorbeeld als tekst buiten het scherm valt, afbeeldingen te groot worden, elementen over elkaar heen komen of knoppen te klein zijn. Dit kan ik oplossen door responsive te ontwerpen, bijvoorbeeld met flexbox/grid, relatieve eenheden en afbeeldingen die zich aanpassen aan de beschikbare ruimte.
+
+<strong> 2. Welke volgende stap neem ik om mijn website responsive te maken?</strong></br>
+Ik wil mobile-first beginnen en daarna kijken hoe mijn ontwerp op steeds grotere schermen werkt. Vooral bij mijn kamer moet ik goed kijken hoe alle elementen op hun plek blijven en nog steeds goed klikbaar zijn.
+
+<strong> 3. Kan ik mijn Garden onderbouwen met Webby vocabulary?</strong></br>
+Op dit moment nog niet optimaal maar er is een begin, mijn Garden is interactief, omdat je op verschillende spullen in mijn kamer kan klikken en zo nieuwe pagina’s ontdekt. Ook is hij expressief door mijn warme kleuren, beweging en animaties. Ik wil hem daarnaast toegankelijk en adaptief maken, zodat alles goed klikbaar is en op verschillende schermformaten werkt.
+
+</details>
+
+### 11 sept - Workshop 3
+
+<details>
+<summary><strong>Deepdive - Grid 101 + Media queries</strong></summary>
+</details>
+
 ### 10 sept - Huiswerk voor Workshop 3
 
 <details>
@@ -27,6 +149,7 @@ Tot slot heb ik bewuster gekeken naar visuele hiërarchie: wat is de titel, wat 
 
 <details>
 <summary><strong>Deepdive - Mooie kleuren en gradients </strong></summary>
+</details>
 
 ### Voorbereidingen
 
@@ -255,6 +378,8 @@ Ik wist deze code nog niet helemaal uit mijn hoofd, dus ik heb het voorbeeld uit
 <summary><strong>Verkenning onderwerp</strong></summary>
 
 #### Opdracht 1 – Rangschikken
+
+![rangschikken](images/readme/best_worst.png)
 
 #### Opdracht 2 – Eigen verkenning
 
