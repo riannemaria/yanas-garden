@@ -5,6 +5,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "dongle";
+  src: url(../type/dongle-normal-400.woff2);
+  font-weight: 400;
+  font-style: normal;
+}
+
 html {
   color-scheme: light dark;
 
@@ -89,6 +96,46 @@ main nav img {
   margin: auto;
 }
 
+main li a {
+  display: block;
+  position: relative;
+
+  transition:
+    transform 0.2s ease,
+    filter 0.2s ease;
+}
+
+main li a:hover,
+main li a:focus-visible {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 0.4em #f3e9d7);
+}
+
+main li a::after {
+  position: absolute;
+
+  left: 50%;
+  bottom: -2em;
+
+  transform: translateX(-50%);
+
+  opacity: 0;
+  transition: opacity 0.2s ease;
+
+  color: #f3e9d7;
+  background-color: #3b2d26;
+
+  padding: 0.3em 0.6em;
+  border-radius: 0.4em;
+
+  white-space: nowrap;
+}
+
+main li a:hover::after,
+main li a:focus-visible::after {
+  opacity: 1;
+}
+
 /* ALBUMS */
 main li:nth-child(1) {
   grid-column: 2 / 5;
@@ -106,6 +153,10 @@ main li:nth-child(1) img {
   transform: scale(2.5);
 }
 
+main li:nth-child(1) a::after {
+  content: "Albums";
+}
+
 /* POLAROIDS*/
 
 main li:nth-child(2) {
@@ -121,6 +172,10 @@ main li:nth-child(2) {
 
 main li:nth-child(2) img {
   transform: scale(2);
+}
+
+main li:nth-child(2) a::after {
+  content: "Memories";
 }
 
 /*PLATENSPELER*/
@@ -142,6 +197,10 @@ main li:nth-child(3) img {
   transform: scale(2);
 }
 
+main li:nth-child(3) a::after {
+  content: "On repeat";
+}
+
 /*CAMERA*/
 
 main li:nth-child(4) {
@@ -157,6 +216,10 @@ main li:nth-child(4) {
 
 main li:nth-child(4) img {
   width: 9em;
+}
+
+main li:nth-child(4) a::after {
+  content: "Concerts & Experiences";
 }
 
 /*LAMP*/
@@ -180,10 +243,28 @@ main li:nth-child(5) input {
   width: 9em;
   aspect-ratio: 1;
 
+  border: 0;
+  padding: 0;
+
+  background-color: transparent;
   background-image: url("../../images/website/Lamp.png");
   background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  cursor: pointer;
 
   transform: scale(2.5);
+
+  transition:
+    transform 0.2s ease,
+    filter 0.2s ease;
+}
+
+main li:nth-child(5) input:hover,
+main li:nth-child(5) input:focus-visible {
+  transform: scale(2.6);
+  filter: drop-shadow(0 0 0.4em #f3e9d7);
 }
 
 /*IPOD*/
@@ -206,6 +287,11 @@ main li:nth-child(6) img {
   transform: scale(1.2);
 }
 
+main li:nth-child(6) a::after {
+  content: "Music Through The Years";
+  bottom: 0.5em;
+}
+
 /*LAPTOP*/
 
 main li:nth-child(7) {
@@ -222,6 +308,10 @@ main li:nth-child(7) {
 main li:nth-child(7) img {
   width: 9em;
   transform: scale(1.3);
+}
+
+main li:nth-child(7) a::after {
+  content: "Digital Music";
 }
 
 /*KAARS*/
@@ -241,6 +331,27 @@ main li:nth-child(8) {
 
 main li:nth-child(8) img {
   width: 9em;
+}
+
+main li:nth-child(8) a::after {
+  content: "Music I Want To Burn";
+  z-index: 20;
+}
+
+main li:nth-child(8):hover,
+main li:nth-child(8):focus-within {
+  z-index: 8;
+}
+
+main li a {
+  display: block;
+  transition: transform 0.2s ease;
+}
+
+main li a:hover,
+main li a:focus-visible {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 0.4em #f3e9d7);
 }
 
 figure {
@@ -265,11 +376,11 @@ figure::before {
     transparent 100%
   );
 
-  filter: blur(1em); /*bron: https://www.w3schools.com/cssref/func_blur.php */
+  filter: blur(1em);
   animation: pulseren 5s ease-in-out infinite;
 }
 
-@keyframes pulse {
+@keyframes pulseren {
   0% {
     transform: scale(1);
   }
@@ -283,8 +394,6 @@ figure::before {
   }
 }
 
-/* bron : https://www.geeksforgeeks.org/css/css-pulse-animation/ */
-
 @media (prefers-color-scheme: dark) {
   main {
     background-image: url("../../images/website/Darkbackground.png");
@@ -294,7 +403,8 @@ figure::before {
 @media (min-width: 60em) {
   main nav {
     width: auto;
-    height: calc(100svh - 8em);
+    height: calc(100svh - 9em);
+    aspect-ratio: 9 / 16;
   }
 
   main nav ul {
@@ -306,19 +416,19 @@ figure::before {
     background-position: center 70%;
   }
 
-  html:has([value="dark-theme"]:checked) main {
+  html:has(#theme-mode:checked) main {
     background-position: center 78%;
   }
 }
 
-html:has([value="dark-theme"]:checked) {
+html:has(#theme-mode:checked) {
   color-scheme: dark;
 }
 
-html:has([value="dark-theme"]:checked) main li:nth-child(8) img {
+html:has(#theme-mode:checked) main li:nth-child(8) img {
   content: url("../../images/website/Kaarsaan.png");
 }
 
-html:has([value="dark-theme"]:checked) main {
+html:has(#theme-mode:checked) main {
   background-image: url("../../images/website/Darkbackground.png");
 }

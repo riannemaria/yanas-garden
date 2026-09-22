@@ -158,6 +158,14 @@ Ik wil mijn pagina mobile-first opbouwen. In mijn HTML wil ik semantische elemen
 </details>
 
 <details>
+<summary><strong>Opdracht 13 -Van schets naar HTML</strong></summary>
+</details>
+
+<details>
+<summary><strong>Opdracht 14 - eerste html opzet</strong></summary>
+</details>
+
+<details>
 <summary><strong>Deepdive - Grid 101 + Media queries</strong></summary>
 </details>
 
