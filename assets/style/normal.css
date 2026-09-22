@@ -24,6 +24,8 @@ body {
   background: #4a2f22;
   color: white;
   font-family: "sniglet", system-ui, sans-serif;
+
+  cursor: url("../../images/website/cursor.cur"), auto;
 }
 
 /* TITEL */
