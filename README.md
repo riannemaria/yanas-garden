@@ -123,6 +123,41 @@ Op dit moment nog niet optimaal maar er is een begin, mijn Garden is interactief
 ### 11 sept - Workshop 3
 
 <details>
+<summary><strong>Opdracht 12 – Bespreken huiswerk</strong></summary>
+
+<strong>1. Zijn je schetsen Webby genoeg?</strong></br>
+<u>Toegankelijk</u>
+
+De pagina is redelijk toegankelijk, maar ik moet nog duidelijker maken welke elementen interactief zijn. In mijn schets zie je bijvoorbeeld niet meteen dat de laptop, camera en iPod klikbaar zijn. Dit wil ik duidelijker maken met hover- en focus-effecten. Daarnaast moet ik het menu nog even veranderen, want een slider met 10+ opties is niet heel overzichtelijk.
+
+<u>Volwassen</u>
+
+Mijn ontwerp is grotendeels haalbaar met HTML en CSS. De grootste uitdaging is dat alle objecten op verschillende plekken staan en samen één compositie vormen. Ik moet daarom goed nadenken over hoe ik dit responsive opbouw.
+
+<u>Expressief</u>
+
+Mijn ontwerp is al vrij expressief omdat ik geen standaard website-indeling gebruik. De pagina voelt meer als een persoonlijke kamer die je kunt ontdekken. Mijn sfeerwoorden nostalgisch, levendig en cozy komen terug in de voorwerpen en vormgeving. Ik kan dit nog sterker maken door meer CSS-effecten toe te voegen, bijvoorbeeld een lamp die gaat gloeien, een album dat iets naar voren komt of objecten die subtiel bewegen bij hover.
+
+<u>Leuk/verrassend</u>
+
+Het verrassende zit vooral in het ontdekken van de navigatie. De bezoeker navigeert niet via een standaard menu, maar door voorwerpen in mijn kamer aan te klikken. Ik wil nog beter zichtbaar maken dat de voorwerpen reageren op de gebruiker. Daardoor wordt het leuker om te ontdekken waar alles naartoe leidt.
+
+<strong>2. Hoe kun je je schermontwerp realiseren in HTML en CSS?</strong></br>
+Ik wil mijn pagina mobile-first opbouwen. In mijn HTML wil ik semantische elementen gebruiken en zo min mogelijk onnodige divs, classes en ID's gebruiken. Omdat de voorwerpen naar andere pagina's leiden, gebruik ik hiervoor <a> elementen en geen buttons. In CSS wil ik voornamelijk Grid proberen te gebruiken om de verschillende onderdelen op hun plek te zetten. Mocht dit niet helemaal lukken met het responsive maken, dan ga ik over naar mijn tweede idee die hetzelfde idee heeft, maar makkelijker op te bouwen is. Met media queries kan ik de compositie aanpassen voor grotere schermen. Voor de interactie kan ik :hover en :focus-visible gebruiken.
+
+<strong>3. Vragen/moeilijke onderdelen</strong></br>
+
+1. Hoe zorg ik ervoor dat alle losse voorwerpen op hun plek blijven staan als het scherm groter of kleiner wordt?
+
+2. Hoe kan ik animaties en hover-effecten toevoegen zonder JavaScript te gebruiken?
+
+3. Hoe voorkom ik dat mijn mobiele versie te druk wordt met zoveel verschillende voorwerpen?
+
+<strong>4. Maak waar nodig een laatste iteratie, zodat het helder is wat je definitieve bouwplan is in html/css.</strong></br>
+
+</details>
+
+<details>
 <summary><strong>Deepdive - Grid 101 + Media queries</strong></summary>
 </details>
 
@@ -149,7 +184,6 @@ Tot slot heb ik bewuster gekeken naar visuele hiërarchie: wat is de titel, wat 
 
 <details>
 <summary><strong>Deepdive - Mooie kleuren en gradients </strong></summary>
-</details>
 
 ### Voorbereidingen
 
