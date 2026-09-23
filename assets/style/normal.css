@@ -1,11 +1,4 @@
 @font-face {
-  font-family: "comicrelief";
-  src: url(../type/ComicRelief-Regular.woff2);
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
   font-family: "sniglet";
   src: url(../type/sniglet-normal-400.woff2);
   font-weight: 400;
@@ -19,6 +12,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "luxe";
+  src: url(../type/luxurious-script-normal-400.woff2);
+  font-weight: 400;
+  font-style: normal;
+}
+
 body {
   margin: 0;
   background: #4a2f22;
@@ -26,6 +26,10 @@ body {
   font-family: "sniglet", system-ui, sans-serif;
 
   cursor: url("../../images/website/cursor.cur"), auto;
+}
+
+a {
+  cursor: url("../../images/website/cursor2.cur"), pointer;
 }
 
 /* TITEL */
@@ -45,6 +49,12 @@ h1 {
   font-weight: 10;
 }
 
+.life {
+  font-family: "Luxe", system-ui, sans-serif;
+  font-size: 2em;
+  font-weight: 10;
+}
+
 /* GROTE PAGINA-LAYOUT */
 
 main {
@@ -52,9 +62,9 @@ main {
 
   grid-template-columns:
     1fr
-    minmax(8em, 11em)
+    minmax(8em, 13em)
     minmax(25em, 50em)
-    minmax(8em, 11em)
+    minmax(8em, 13em)
     1fr;
 
   grid-template-areas: ". menu-links albums menu-rechts .";
@@ -68,6 +78,20 @@ main {
 
 .menu-links {
   grid-area: menu-links;
+}
+
+.menu-links img {
+  animation: draaien 5s linear infinite;
+}
+
+@keyframes draaien {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 main section {
@@ -159,7 +183,7 @@ main section ul {
   padding: 2em;
 
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
 
   column-gap: var(--ruimte-tussen-albums);
   row-gap: calc(var(--ruimte-tussen-albums) * 2);
@@ -198,6 +222,44 @@ main section a::after {
   background: #26150e;
 }
 
+main section li:nth-child(1) img {
+  position: relative;
+  top: 69%;
+  scale: 2;
+  z-index: 3;
+}
+
+/* Hele link is niet met de muis klikbaar */
+main section li:nth-child(1) a {
+  pointer-events: none;
+}
+
+/* Klein onzichtbaar klikvlak op de plek van de plant */
+main section li:nth-child(1) a::before {
+  content: "";
+
+  position: absolute;
+
+  width: 65%;
+  height: 65%;
+
+  left: 45%;
+  top: 65%;
+
+  translate: -50% -50%;
+
+  pointer-events: auto;
+
+  z-index: 4;
+}
+
+section li:nth-child(4) img {
+  position: relative;
+  top: 10%;
+
+  z-index: 3;
+}
+
 /* AFBEELDINGEN */
 
 main section img {
@@ -214,6 +276,24 @@ main section img {
 
 main section a:hover img {
   transform: scale(1.05);
+}
+
+@media (max-width: 80em) {
+  main {
+    grid-template-columns:
+      8em
+      1fr
+      8em;
+
+    grid-template-areas: "menu-links albums menu-rechts";
+
+    gap: 1em;
+    padding: 0 1em;
+  }
+
+  main section ul {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 /* TABLET */
@@ -251,9 +331,9 @@ main section a:hover img {
     grid-template-columns: 1fr;
 
     grid-template-areas:
-      "menu-links"
+      "menu-rechts"
       "albums"
-      "menu-rechts";
+      "menu-links";
 
     gap: 2em;
 
@@ -272,12 +352,44 @@ main section a:hover img {
     justify-content: center;
 
     gap: 1em;
+    row-gap: 0.1em;
+  }
+
+  .menu-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    grid-template-areas: "song mood random";
+  }
+
+  .menu-links section:nth-child(1) {
+    grid-area: song;
+  }
+
+  .menu-links section:nth-child(2) {
+    grid-area: mood;
+  }
+
+  .menu-links section:nth-child(3) {
+    grid-area: random;
+  }
+
+  .menu-links h2 {
+    font-size: 0.8em;
+  }
+
+  .menu-links p {
+    text-align: center;
+  }
+
+  .menu-links img {
+    scale: calc(0.8);
   }
 
   main section ul {
     --ruimte-tussen-albums: 1em;
 
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
 
     row-gap: calc(var(--ruimte-tussen-albums) * 3);
 
