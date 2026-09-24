@@ -178,7 +178,8 @@ main {
 }
 
 .homepage,
-.songs {
+.songs,
+.about {
   grid-area: midden;
 }
 
@@ -519,6 +520,7 @@ main {
 
 .songs li > button:hover img {
   transform: scale(1.05);
+  filter: drop-shadow(0 0 0.4em #f3e9d7);
 }
 
 /* Popover */
@@ -601,6 +603,192 @@ main {
 
 .songs aside dd {
   margin: 0;
+}
+
+/* =========================
+   ABOUT ME
+   ========================= */
+
+.about {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(6, auto);
+
+  grid-template-areas:
+    "naam naam"
+    "quote quote"
+    "profile details"
+    "socials socials"
+    "about-me work-school"
+    "blurbs blurbs";
+
+  column-gap: 2em;
+  row-gap: 1em;
+
+  padding: 2em;
+}
+
+.about h2 {
+  grid-area: naam;
+
+  margin: 0;
+}
+
+.about p:first-of-type {
+  grid-area: quote;
+  margin: -0.7em 0 0;
+}
+
+.profile {
+  grid-area: profile;
+  position: relative;
+
+  margin: 0;
+  padding: 0.6em;
+
+  border: 0.15em solid var(--kleur-rand);
+  box-shadow: inset 0 0 0 0.2em var(--kleur-menu-binnenrand);
+}
+
+.profile img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+
+  animation: zweven 2s infinite;
+}
+
+.profile img:first-child {
+  display: block;
+}
+
+.profile img:last-child {
+  display: none;
+}
+
+.profile:hover img:first-child {
+  display: none;
+}
+
+.profile:hover img:last-child {
+  display: block;
+}
+
+@keyframes zweven {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-0.4em);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.details {
+  grid-area: details;
+  display: grid;
+
+  grid-template-rows: repeat(2, auto);
+  gap: 1em;
+}
+
+.details ul {
+  margin: 0;
+  padding: 1em 0;
+
+  list-style: none;
+
+  border-bottom: 0.1em solid var(--kleur-rand);
+}
+.details ul li {
+  margin-bottom: 0.5em;
+}
+
+.details figure {
+  margin: 0;
+  padding-top: 1em;
+}
+
+.details figure img {
+  display: block;
+
+  width: 13em;
+
+  object-fit: contain;
+}
+
+.socials {
+  grid-area: socials;
+
+  margin: 0;
+  padding: 0.5em 0;
+
+  text-align: center;
+
+  border-top: 0.1em solid var(--kleur-rand);
+  border-bottom: 0.1em solid var(--kleur-rand);
+}
+
+.about-me {
+  grid-area: about-me;
+
+  list-style: none;
+  padding: 1em;
+
+  border: 0.1em solid var(--kleur-rand);
+}
+
+.about-me h3 {
+  margin: 0 0 0.5em;
+
+  color: var(--kleur-menu-kop);
+}
+
+.about-me ul {
+  margin: 0;
+  padding-left: 1.5em;
+}
+
+.work-school {
+  grid-area: work-school;
+
+  padding: 1em;
+
+  border: 0.1em solid var(--kleur-rand);
+}
+
+.work-school h3 {
+  margin: 0 0 0.5em;
+
+  color: var(--kleur-menu-kop);
+}
+
+.work-school p {
+  margin: 0.3em 0;
+}
+
+.blurbs {
+  grid-area: blurbs;
+
+  padding: 1em;
+
+  border: 0.1em solid var(--kleur-rand);
+}
+
+.blurbs h3 {
+  margin: 0 0 0.5em;
+
+  color: var(--kleur-menu-kop);
+}
+
+.blurbs ul {
+  margin: 0;
+  padding-left: 1.5em;
 }
 
 /* =========================
@@ -798,5 +986,13 @@ main {
     row-gap: calc(var(--ruimte-tussen-albums) * 3);
 
     padding: 1em;
+  }
+
+  .about {
+    width: calc(100% - 2em);
+    margin: 0 auto;
+    padding: 0;
+
+    grid-template-columns: repeat(2, 1fr);
   }
 }
