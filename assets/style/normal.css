@@ -500,6 +500,109 @@ main {
   background: var(--kleur-hover-achtergrond);
 }
 
+/* Album knop */
+
+.songs li > button {
+  padding: 0;
+
+  background: none;
+  border: none;
+
+  cursor: inherit;
+}
+
+/* Album wordt groter bij hover */
+
+.songs li > button img {
+  transition: transform 0.2s ease;
+}
+
+.songs li > button:hover img {
+  transform: scale(1.05);
+}
+
+/* Popover */
+
+.songs aside {
+  position: relative;
+
+  width: min(30em, 85vw);
+
+  padding: 2em;
+
+  text-align: center;
+
+  color: var(--kleur-wit);
+  background: var(--kleur-menu);
+
+  border: 0.15em solid var(--kleur-rand);
+}
+
+/* Achtergrond achter popover */
+
+.songs aside::backdrop {
+  background: rgb(0 0 0 / 60%);
+}
+
+/* Grote albumcover */
+
+.songs aside > img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  object-fit: contain;
+}
+
+/* Kruisje */
+
+.songs aside > button {
+  position: absolute;
+
+  top: 0.5em;
+  right: 0.5em;
+
+  width: 2em;
+  height: 2em;
+
+  font-size: 1.2em;
+
+  color: var(--kleur-wit);
+  background: var(--kleur-achtergrond);
+
+  border: 0.1em solid var(--kleur-rand);
+  border-radius: 50%;
+
+  cursor: pointer;
+}
+
+.songs aside > button:hover {
+  color: var(--kleur-hover-tekst);
+  background: var(--kleur-hover-achtergrond);
+}
+
+.songs aside dl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+
+  gap: 0.4em 1em;
+
+  width: fit-content;
+  margin: 1em auto;
+
+  text-align: left;
+}
+
+.songs aside dt {
+  font-weight: bold;
+  color: var(--kleur-rand);
+}
+
+.songs aside dd {
+  margin: 0;
+}
+
 /* =========================
    KLEINERE DESKTOP
    ========================= */
