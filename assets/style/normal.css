@@ -802,6 +802,10 @@ footer {
     gap: 1em;
 
     padding: 0 1em;
+
+    .homepage ul {
+      grid-template-columns: repeat(4, 1fr);
+    }
   }
 }
 
@@ -810,8 +814,6 @@ footer {
    ========================= */
 
 @media (max-width: 60em) {
-  /* Header */
-
   header {
     grid-template-columns:
       minmax(0, 1fr)
@@ -834,6 +836,19 @@ footer {
     white-space: nowrap;
   }
 
+  main {
+    grid-template-columns:
+      10em
+      minmax(0, 1fr)
+      10em;
+
+    grid-template-areas: "menu-links midden menu-rechts";
+
+    gap: 1em;
+
+    padding: 0 1em;
+  }
+
   .life {
     font-size: 2em;
   }
@@ -854,6 +869,14 @@ footer {
    ========================= */
 
 @media (max-width: 45em) {
+  header {
+    grid-template-columns:
+      minmax(0, 1fr)
+      auto
+      minmax(0, 1fr);
+
+    padding: 1em 0.5em;
+  }
   header > img {
     max-width: 5em;
     min-width: 0;
@@ -941,6 +964,7 @@ footer {
     row-gap: calc(var(--ruimte-tussen-albums) * 3);
 
     padding: 1em;
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .about {
