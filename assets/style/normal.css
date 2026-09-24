@@ -768,8 +768,8 @@ main {
   color: var(--kleur-menu-kop);
 }
 
-.work-school p {
-  margin: 0.3em 0;
+.work-school li {
+  margin: 0;
 }
 
 .blurbs {
