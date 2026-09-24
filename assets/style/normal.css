@@ -301,6 +301,11 @@ main {
    HOMEPAGE
    ========================= */
 
+.homepage h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .homepage ul {
   --ruimte-tussen-albums: 2em;
 
@@ -773,6 +778,12 @@ main {
 .blurbs ul {
   margin: 0;
   padding-left: 1.5em;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* =========================
