@@ -379,9 +379,9 @@ main > section a:hover img {
 @media (max-width: 80em) {
   main {
     grid-template-columns:
-      8em
+      10em
       minmax(0, 1fr)
-      8em;
+      10em;
 
     grid-template-areas: "menu-links albums menu-rechts";
 
@@ -432,9 +432,9 @@ main > section a:hover img {
 
   main {
     grid-template-columns:
-      8em
+      10em
       minmax(0, 1fr)
-      8em;
+      10em;
 
     grid-template-areas: "menu-links albums menu-rechts";
 
