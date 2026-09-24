@@ -26,6 +26,8 @@ body {
   font-family: "sniglet", system-ui, sans-serif;
 
   cursor: url("../../images/website/cursor.cur"), auto;
+
+  overflow-x: hidden;
 }
 
 a {
@@ -35,8 +37,67 @@ a {
 /* TITEL */
 
 header {
-  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+
   padding: 2em;
+}
+
+header img {
+  max-width: 15em;
+  height: auto;
+}
+
+header img:first-of-type {
+  justify-self: end;
+}
+
+header img:last-of-type {
+  justify-self: start;
+}
+
+header h1 {
+  text-align: center;
+  margin: 0 1em;
+}
+
+header section {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+
+  grid-column: 1 / -1;
+
+  border-top: 0.08em solid #d79a7f;
+  border-bottom: 0.08em solid #d79a7f;
+}
+
+header section {
+  overflow: hidden;
+  white-space: nowrap;
+
+  padding: 0.7em 0;
+
+  border-top: 0.08em solid #d79a7f;
+  border-bottom: 0.08em solid #d79a7f;
+}
+
+header section p {
+  display: inline-block;
+  margin: 0;
+
+  animation: schuiven 30s linear infinite;
+}
+
+@keyframes schuiven {
+  from {
+    transform: translateX(100vw);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
 }
 
 h1 {
@@ -51,7 +112,7 @@ h1 {
 
 .life {
   font-family: "Luxe", system-ui, sans-serif;
-  font-size: 2em;
+  font-size: 2.5em;
   font-weight: 10;
 }
 
@@ -100,6 +161,22 @@ main section {
 
 .menu-rechts {
   grid-area: menu-rechts;
+  position: relative;
+}
+
+.menu-rechts > img {
+  position: absolute;
+  width: 25em;
+  height: auto;
+
+  top: -3em;
+  right: -11em;
+
+  z-index: 2;
+}
+
+.menu-rechts li {
+  z-index: 5;
 }
 
 /* ZIJMENU'S */
@@ -204,21 +281,13 @@ main section a {
 
 main section a::after {
   content: "";
-
   position: absolute;
 
-  left: calc(var(--ruimte-tussen-albums) / -2);
-  right: calc(var(--ruimte-tussen-albums) / -2);
-
-  /*
-    Bron:
-    https://css-tricks.com/how-to-get-sticky-and-full-bleed-elements-to-play-well-together/
-    */
+  left: calc(var(--ruimte-tussen-albums) / -2 - 0.1em);
+  right: calc(var(--ruimte-tussen-albums) / -2 - 0.1em);
 
   bottom: -1em;
-
   height: 0.7em;
-
   background: #26150e;
 }
 
@@ -253,7 +322,7 @@ main section li:nth-child(1) a::before {
   z-index: 4;
 }
 
-section li:nth-child(4) img {
+section li:nth-child(5) img {
   position: relative;
   top: 10%;
 
@@ -314,19 +383,65 @@ main section a:hover img {
   main section ul {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  header {
+    grid-template-columns: 1fr auto 1fr;
+    padding: 1em 0.5em;
+  }
+
+  header h1 {
+    font-size: 0.9em;
+    margin: 0 0.3em;
+    white-space: nowrap;
+  }
+
+  header img {
+    width: 100%;
+    max-width: 10em;
+    min-width: 0;
+  }
+
+  .life {
+    font-size: 2em;
+  }
+
+  .music {
+    font-size: 1.7em;
+  }
 }
 
 /* TELEFOON */
 
 @media (max-width: 45em) {
-  header {
-    padding: 1.5em 1em;
+  html,
+  body {
+    overflow-x: hidden;
   }
 
-  h1 {
+  header {
+    grid-template-columns: 1fr auto 1fr;
+    padding: 1em 0.5em;
+  }
+
+  header h1 {
+    font-size: 0.8em;
+    margin: 0 0.3em;
+    white-space: nowrap;
+  }
+
+  header img {
+    width: 100%;
+    max-width: 5em;
+    min-width: 0;
+  }
+
+  .life {
+    font-size: 2em;
+  }
+
+  .music {
     font-size: 1.7em;
   }
-
   main {
     grid-template-columns: 1fr;
 
