@@ -802,10 +802,16 @@ footer {
     gap: 1em;
 
     padding: 0 1em;
+  }
 
-    .homepage ul {
-      grid-template-columns: repeat(4, 1fr);
-    }
+  .homepage ul {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .songs article {
+    width: min(25em, 85vw);
+    max-height: 90vh;
+    overflow-y: auto;
   }
 }
 
