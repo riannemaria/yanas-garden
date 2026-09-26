@@ -253,18 +253,26 @@ main {
    LINKER MENU
    ========================= */
 
-.menu-links section:nth-child(1) img {
+.menu-links section img {
   display: block;
 
   width: 100%;
   height: auto;
 
   object-fit: contain;
+}
 
+.menu-links section p {
+  display: flex;
+  justify-self: center;
+  align-items: center;
+}
+
+.menu-links section:nth-child(1) img {
   animation: draaien 5s linear infinite;
 }
 
-.menu-links section:nth-child(1) a:hover {
+.menu-links section a:hover {
   background: none;
 
   transform: scale(1.1);
@@ -284,7 +292,7 @@ main {
    RECHTER MENU
    ========================= */
 
-.menu-rechts > img {
+.menu-rechts img {
   position: absolute;
 
   top: -3em;
@@ -630,10 +638,10 @@ main {
     "about-me work-school"
     "blurbs blurbs";
 
-  column-gap: 2em;
+  column-gap: 1em;
   row-gap: 1em;
 
-  padding: 2em;
+  margin: 1em;
 }
 
 .about h2 {
@@ -815,7 +823,7 @@ main {
   grid-template-columns: repeat(6, 1fr);
 
   margin: 0;
-  padding: 0;
+  padding: 1em;
 
   column-gap: 0.2em;
 
@@ -825,8 +833,13 @@ main {
   box-shadow: inset 0 0 0 0.2em var(--kleur-menu-binnenrand);
 }
 
+.moods nav li {
+  display: grid;
+  place-items: center;
+}
+
 .moods nav img {
-  width: 7em;
+  width: 4em;
 
   transition: transform 0.2s ease;
 }
@@ -838,7 +851,7 @@ main {
 }
 
 /* =========================
-   HAPPY DETAIL
+  DETAIL
    ========================= */
 
 .mood-detail {
@@ -856,7 +869,6 @@ main {
     "photo playlist"
     "photo listen";
 
-  column-gap: 1em;
   row-gap: 1em;
 
   margin-top: 2em;
@@ -894,7 +906,7 @@ main {
 
 .favorite-ritual ul {
   margin: 0;
-  padding-left: 1.5em;
+  padding-left: 1em;
 }
 
 /* Confidence boost */
@@ -910,7 +922,7 @@ main {
 }
 
 .mood-boost img {
-  width: 15em;
+  width: 12em;
   height: auto;
 }
 /* Quote */
@@ -990,6 +1002,10 @@ main {
    AURA
    ========================= */
 
+.aura {
+  margin-bottom: 2em;
+}
+
 .aura h2,
 .aura p {
   display: flex;
@@ -999,14 +1015,16 @@ main {
   text-align: center;
 }
 
+.aura p {
+  margin: 0 1.5em;
+}
+
 .aura figure {
-  width: 18em;
+  width: 50%;
   aspect-ratio: 1;
   position: relative;
-  margin: 0;
 
-  margin: 0 auto;
-  top: 15%;
+  margin: 4em auto 2em;
 }
 
 .aura figure::before {
@@ -1030,18 +1048,98 @@ main {
 
 @keyframes pulseren {
   0% {
-    transform: scale(1);
+    transform: scale(0.8);
   }
 
   50% {
-    transform: scale(1.3);
+    transform: scale(1);
   }
 
   100% {
-    transform: scale(1);
+    transform: scale(0.8);
   }
 }
+.aura nav {
+  margin-top: 7em;
+}
 
+.aura nav h3 {
+  text-align: center;
+}
+
+.aura nav ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  column-gap: 1em;
+
+  padding: 0;
+}
+
+.aura li {
+  list-style: none;
+  aspect-ratio: 1;
+
+  border: 0.15em solid var(--kleur-rand);
+  box-shadow: inset 0 0 0 0.2em var(--kleur-menu-binnenrand);
+}
+
+.aura nav figure {
+  width: 30%;
+  aspect-ratio: 1;
+  position: relative;
+
+  margin: 4em auto;
+}
+
+.aura nav figure::before {
+  content: "";
+  position: absolute;
+  inset: -1em;
+
+  border-radius: 50%;
+
+  filter: blur(1em);
+  animation: pulseren 5s ease-in-out infinite;
+}
+
+.aura nav li:nth-child(1) figure::before {
+  background: radial-gradient(
+    circle,
+    #51d6ff 0%,
+    #9cfff2 35%,
+    #d4f8ff 65%,
+    rgba(71, 218, 255, 0.45) 82%,
+    transparent 100%
+  );
+}
+
+.aura nav li:nth-child(2) figure::before {
+  background: radial-gradient(
+    circle,
+    #9e1f78 0%,
+    #e266c7 35%,
+    #f1a5c5 65%,
+    rgba(206, 61, 169, 0.45) 82%,
+    transparent 100%
+  );
+}
+
+.aura nav li:nth-child(3) figure::before {
+  background: radial-gradient(
+    circle,
+    #6b3e2e 0%,
+    #9a6347 35%,
+    #c48a63 65%,
+    rgba(196, 138, 99, 0.45) 82%,
+    transparent 100%
+  );
+}
+
+.aura nav a {
+  color: var(--kleur-wit);
+  text-decoration: none;
+}
 footer {
   display: flex;
   justify-content: center;
@@ -1146,7 +1244,7 @@ footer {
     padding: 1em 0.5em;
   }
 
-  header > img {
+  header img {
     max-width: 5em;
     min-width: 0;
   }
@@ -1234,100 +1332,16 @@ footer {
     scale: 0.8;
   }
 
-  /* Homepage */
-
   .homepage ul {
-    --ruimte-tussen-albums: 1em;
-
     grid-template-columns: repeat(3, 1fr);
-
-    row-gap: calc(var(--ruimte-tussen-albums) * 3);
-
-    padding: 1em;
   }
 
   .about {
-    width: calc(100% - 2em);
-    margin: 0 auto;
-    padding: 0;
-
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  .moods {
-    padding: 0 1em;
   }
 
   .moods nav ul {
     grid-template-columns: repeat(3, 1fr);
-    row-gap: 1em;
-  }
-
-  .moods nav img {
-    width: 5em;
-  }
-
-  .mood-detail-happy {
-    grid-template-columns: 1fr;
-
-    grid-template-areas:
-      "title"
-      "intro"
-      "ritual"
-      "boost"
-      "quote"
-      "photo"
-      "playlist"
-      "listen";
-
-    row-gap: 1.2em;
-    column-gap: 0;
-
-    margin-top: 1.5em;
-  }
-
-  .mood-detail-happy > h3,
-  .mood-detail-happy > p {
-    text-align: center;
-  }
-
-  .favorite-ritual,
-  .mood-boost,
-  .listen {
-    width: 100%;
-  }
-
-  .favorite-ritual {
-    padding: 1em;
-  }
-
-  .mood-boost {
-    padding: 0.5em 1em;
-  }
-
-  .mood-boost p {
-    font-size: 1.5em;
-  }
-
-  .mood-detail-happy blockquote {
-    margin: 0;
-    padding: 1em 0;
-
-    text-align: center;
-  }
-
-  .mood-photo {
-    width: 15em;
-
-    justify-self: center;
-    align-self: start;
-
-    margin-top: 0;
-    margin-left: 0;
-  }
-
-  .playlist {
-    width: 100%;
   }
 
   .playlist iframe {
@@ -1335,7 +1349,9 @@ footer {
     height: 12em;
   }
 
-  .listen {
-    padding: 1em;
+  .aura nav ul {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin: 0 1em;
   }
 }
