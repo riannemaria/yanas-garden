@@ -5,13 +5,15 @@
 :root {
   --kleur-achtergrond: #4a2f22;
   --kleur-wit: white;
-  --kleur-rand: #d79a7f;
+  --kleur-rand: light-dark(#b2967d, #d79a7f);
   --kleur-menu: #684735;
   --kleur-menu-binnenrand: #fcebd8;
   --kleur-menu-kop: #ecc5b8;
   --kleur-hover-achtergrond: #f2cdb5;
   --kleur-hover-tekst: #7d4638;
   --kleur-plank: #26150e;
+
+  --ruimte-tussen-albums: 2em;
 }
 
 /* =========================
@@ -56,6 +58,16 @@ body {
   margin: 0;
 
   background: var(--kleur-achtergrond);
+
+  background: linear-gradient(
+    to right,
+    #2b1608 0%,
+    #4a2f22 20%,
+    #2b1608 50%,
+    #4a2f22 80%,
+    #2b1608 100%
+  );
+
   color: var(--kleur-wit);
 
   font-family: "sniglet", system-ui, sans-serif;
@@ -156,6 +168,7 @@ header p span {
    HOOFDLAYOUT
    ========================= */
 
+/* in dit gedeelte maak ik gebruik van de kennis opgedaan uit de deepdive grid-template-areas*/
 main {
   display: grid;
 
@@ -181,7 +194,8 @@ main {
 .songs,
 .about,
 .moods,
-.aura {
+.aura,
+.memories {
   grid-area: midden;
 }
 
@@ -315,8 +329,6 @@ main {
    ========================= */
 
 .homepage ul {
-  --ruimte-tussen-albums: 2em;
-
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 
@@ -349,6 +361,7 @@ main {
 }
 
 /* Planken */
+/* Voor dit gedeelte heb ik gebruik gemaakt van de bron: https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements*/
 
 .homepage a::after {
   content: "";
@@ -425,7 +438,7 @@ main {
 
 /* Jaar */
 
-.songs > h2 {
+.songs h2 {
   margin: 0 0 0.5em;
 
   text-align: center;
@@ -436,7 +449,7 @@ main {
 
 /* Maanden */
 
-.songs > nav {
+.songs nav {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 
@@ -449,7 +462,7 @@ main {
   border-bottom: 0.1em solid var(--kleur-rand);
 }
 
-.songs > nav a {
+.songs nav a {
   padding: 0.4em;
 
   text-align: center;
@@ -462,14 +475,14 @@ main {
   border-radius: 0.5em;
 }
 
-.songs > nav a:hover {
+.songs nav a:hover {
   color: var(--kleur-hover-tekst);
   background: var(--kleur-hover-achtergrond);
 }
 
 /* Songs */
 
-.songs > ul {
+.songs ul {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 
@@ -506,15 +519,15 @@ main {
   text-align: center;
 }
 
-.songs > nav a:hover,
-.songs > nav a.active {
+.songs nav a:hover,
+.songs nav a.active {
   color: var(--kleur-hover-tekst);
   background: var(--kleur-hover-achtergrond);
 }
 
 /* Album knop */
 
-.songs li > button {
+.songs li button {
   padding: 0;
 
   background: none;
@@ -525,16 +538,19 @@ main {
 
 /* Album wordt groter bij hover */
 
-.songs li > button img {
+.songs li button img {
   transition: transform 0.2s ease;
 }
 
-.songs li > button:hover img {
+.songs li button:hover img {
   transform: scale(1.05);
   filter: drop-shadow(0 0 0.4em #f3e9d7);
 }
 
 /* Popover */
+/*hier maak ik gebruik van de bron:
+https://developer.mozilla.org/en-US/docs/Web/API/Popover_API
+*/
 
 .songs article {
   position: fixed;
@@ -564,7 +580,7 @@ main {
 
 /* Grote albumcover */
 
-.songs article > img {
+.songs article img {
   display: block;
 
   width: 100%;
@@ -575,7 +591,7 @@ main {
 
 /* Kruisje */
 
-.songs article > button {
+.songs article button {
   position: absolute;
 
   top: 0.5em;
@@ -595,7 +611,7 @@ main {
   cursor: pointer;
 }
 
-.songs article > button:hover {
+.songs article button:hover {
   color: var(--kleur-hover-tekst);
   background: var(--kleur-hover-achtergrond);
 }
@@ -624,6 +640,9 @@ main {
 /* =========================
    ABOUT ME
    ========================= */
+
+/*in dit gedeelte maak ik gebruik van de kennis opgedaan uit de deepdive grid-template-areas*/
+/*daarnaast maak ik gebruik van de bron: https://codepen.io/MarioDesigns/pen/woJgeo voor de animatie*/
 
 .about {
   display: grid;
@@ -853,6 +872,7 @@ main {
 /* =========================
   DETAIL
    ========================= */
+/*in dit gedeelte maak ik gebruik van de kennis opgedaan uit de deepdive grid-template-areas*/
 
 .mood-detail {
   display: grid;
@@ -1001,6 +1021,8 @@ main {
 /* =========================
    AURA
    ========================= */
+/*in dit gedeelte maak ik gebruik van de kennis opgedaan uit de deepdive gradients*/
+/*daarnaast maak ik gebruik van de bron: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/gradient/radial-gradient*/
 
 .aura {
   margin-bottom: 2em;
@@ -1140,6 +1162,192 @@ main {
   color: var(--kleur-wit);
   text-decoration: none;
 }
+
+/* =========================
+   MEMORIES
+   ========================= */
+
+/* voor dit gedeelte maak ik gebruik van de bronnen:
+https://markodenic.tech/seamless-css-marquees/
+https://www.youtube.com/watch?v=uw5jVO1eNF8 */
+
+.memories {
+  overflow: hidden;
+
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.memories h2 {
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+.memory-row {
+  overflow: hidden;
+  margin: 2em 0;
+}
+
+.memory-row ul {
+  display: inline-flex;
+  gap: 5em;
+
+  margin: 0;
+  padding: 2.5em 0 1em;
+  list-style: none;
+  position: relative;
+  animation: marquee-links 65s linear infinite;
+}
+
+.memory-row.reverse ul {
+  animation: marquee-rechts 65s linear infinite;
+}
+
+.memory-row ul::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 2.2em;
+  height: 0.12em;
+  background: #8f6d58;
+}
+
+.memory-row li {
+  position: relative;
+  flex: 0 0 10em;
+}
+
+.memory-row li:nth-child(odd) button {
+  rotate: -2deg;
+}
+
+.memory-row li:nth-child(even) button {
+  rotate: 2deg;
+}
+
+.knijper {
+  width: 8em;
+  position: absolute;
+  top: -28%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.memory-row button {
+  display: block;
+  width: 100%;
+  margin-top: 1.2em;
+  padding: 0.6em 0.6em 0.9em;
+  border: none;
+  background: #f3eee8;
+  box-shadow: 0 0.15em 0.45em rgb(0 0 0 / 0.18);
+  cursor: pointer;
+}
+
+.memory-row button img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1.05;
+  object-fit: cover;
+  background: #d9d2c9;
+}
+
+.memory-row button p {
+  margin: 0.7em 0 0;
+  color: #4c4038;
+  text-align: center;
+  font-size: 0.9em;
+  line-height: 1.3;
+}
+
+.memory-row button:hover {
+  transform: translateY(-0.2em);
+}
+
+.memory-row ul:hover {
+  animation-play-state: paused;
+}
+
+/* =========================
+   POPOVER
+   ========================= */
+
+/*voor dit gedeelte heb ik gebruik gemaakt van de bron:
+https://developer.mozilla.org/en-US/docs/Web/API/Popover_API/Using
+*/
+
+.memories article[popover] {
+  width: min(28em, 90vw);
+  padding: 1em;
+  border: 0.15em solid var(--kleur-rand);
+  box-shadow: inset 0 0 0 0.2em var(--kleur-menu-binnenrand);
+  background: var(--kleur-menu);
+  color: var(--kleur-wit);
+}
+
+.memories article[popover]::backdrop {
+  background: rgb(0 0 0 / 0.45);
+}
+
+.memories article[popover] > button {
+  display: block;
+  margin-left: auto;
+  margin-bottom: 0.5em;
+  border: none;
+  background: transparent;
+  color: var(--kleur-wit);
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.memories article[popover] img {
+  display: block;
+  width: 100%;
+  margin-bottom: 1em;
+  border: 0.1em solid var(--kleur-rand);
+}
+
+.memories article[popover] h3 {
+  margin: 0 0 0.3em;
+  color: var(--kleur-menu-kop);
+}
+
+.memories article[popover] p {
+  margin: 0 0 0.7em;
+  line-height: 1.5;
+}
+
+/* =========================
+   ANIMATIES
+   ========================= */
+
+/*voor dit gedeelte heb ik gebruik gemaakt van de bronnen:
+https://markodenic.tech/seamless-css-marquees/
+https://www.youtube.com/watch?v=uw5jVO1eNF8
+*/
+
+@keyframes marquee-links {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-rechts {
+  from {
+    transform: translateX(-50%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
 footer {
   display: flex;
   justify-content: center;

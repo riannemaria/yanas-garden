@@ -4,76 +4,496 @@ Het staat model voor digitale tuintjes welke bij 'Het web is voor iedereen' door
 
 ## Learning Log
 
+### 22 sept - Huiswerk voor Workshop 2
+
+<details>
+<summary><strong>Deepdive -  Buttons, states en selectors</strong></summary>
+
+### Voorbereidingen
+
+Als eerste heb ik het artikel over CSS pseudo-classes van Kevin Powell doorgenomen. Hier leerde ik hoe je met bijvoorbeeld :hover en :focus-visible styling kunt laten reageren op wat een gebruiker doet. Vooral vond ik het belangrijk om te leren dat deze states niet alleen voor visuele effecten zijn, maar ook zorgen voor duidelijke feedback en betere toegankelijkheid.
+
+![Voorbereiding Deep Dive over Pseudo-classes](images/readme/voorbereiding_deepdive_pseudo.png)
+
+Daarna heb ik het artikel over User Interaction van Kevin Powell gelezen en de oefening uitgevoerd. Hier leerde ik hoe je met pseudo-classes zoals :user-valid, :user-invalid en :focus-within direct feedback kunt geven op acties van een gebruiker, bijvoorbeeld bij een formulier. Dit is niet alleen fijn voor de UX, maar ook belangrijk voor toegankelijkheid, omdat gebruikers zo beter begrijpen wat er gebeurt.
+
+![Voorbereiding Deep Dive over User interaction](images/readme/voorbereiding_deepdive_userinteraction.png)
+
+### Oefening 1 - Basic button states
+
+Bij de eerste oefening heb ik geleerd hoe ik de verschillende states van een button kan vormgeven. Ik heb geoefend met de default, :focus, :hover en :active state en iedere state een andere styling gegeven. Hierdoor zag ik hoe je met CSS duidelijke feedback op verschillende interacties kunt geven.
+
+Dit is voor mijn eigen website belangrijk omdat ik veel interactieve elementen gebruik. Door deze states bewust toe te passen kan ik beter duidelijk maken wat klikbaar is, wat op dat moment focus heeft en wanneer een actie wordt uitgevoerd. Dit maakt mijn Digital Garden duidelijker in gebruik én toegankelijker.
+
+![Oefening 1 - Deepdive Basic Button States](images/readme/oefening1_deepdive_buttonstates.png)
+https://codepen.io/editor/Rianne-Maria/pen/01a0eee0-cf51-75ce-9877-a05f68d6bb14
+
+### Oefening 2 - Basic button states
+
+Bij deze oefening heb ik gewerkt met <details> en <summary>. Deze elementen kende ik al, omdat ik ze zelf al gebruik in mijn README om onderdelen in- en uit te klappen. Wat nieuw voor mij was, is dat een <summary> eigenlijk ook interactief is en je deze daarom net als een button verschillende states kunt geven. Ik heb de :focus-visible, :hover en :active states uit de vorige oefening toegepast op mijn summary. Dit is belangrijk voor mijn eigen website omdat ik nu weet dat ik dezelfde principes voor feedback en toegankelijkheid ook kan toepassen op andere interactieve elementen dan alleen buttons.
+
+![Oefening 2 - Deepdive Basic Button States](images/readme/oefening2_deepdive_buttonstates.png)
+https://codepen.io/editor/Rianne-Maria/pen/01a0eee7-6cab-73bf-bd9c-39d7ca76b5ce
+
+### Oefening 2 - Details en summary
+
+</details>
+
+<details>
+<summary><strong>Talk 1 - Microinteractions: Design with Details</strong></summary>
+
+Als voorbereiding op deze Deep Dive heb ik de talk ‘Microinteractions: Design with Details’ van Dan Saffer bekeken. In deze talk wordt uitgelegd hoe juist kleine interacties en details een grote invloed kunnen hebben op de gebruikerservaring. Ik heb tijdens het kijken aantekeningen gemaakt over wat microinteractions zijn, waarom ze belangrijk zijn en uit welke onderdelen ze bestaan: Triggers, Rules, Feedback en Loops & Modes.
+
+Mijn notities:
+![Microinteractions: Design with Detail notes](images/readme/talk1.png)
+
+</details>
+
+<details>
+<summary><strong>Artikel 1 – Dark Patterns in UX</strong></summary>
+Daarna heb ik het artikel ‘What are Dark Patterns in UX?’ van UX Design Institute gelezen. Hierin wordt uitgelegd hoe ontwerpkeuzes gebruikers bewust kunnen sturen of misleiden, bijvoorbeeld door bepaalde keuzes moeilijker te maken, informatie te verbergen of gebruik te maken van FOMO en confirm-shaming. Tijdens het lezen heb ik vooral gekeken naar de verschillende soorten dark patterns en waarom deze problematisch zijn voor de gebruikerservaring. Het artikel maakte mij bewuster van hoeveel invloed vormgeving, tekst en de hiërarchie van keuzes kunnen hebben op het gedrag van een gebruiker.
+
+Mijn notities:
+![Dark Patterns in UX notes](images/readme/darkpatterns_artikel.png)
+
+</details>
+
+<details>
+<summary><strong>Talk 2 – Deceptive Patterns</strong></summary>
+Vervolgens heb ik een talk over deceptive patterns bekeken. Hierin werd uitgelegd dat een ontwerp niet alleen misleidend kan zijn wanneer dit bewust wordt gedaan, maar dat gebruikers zich ook onbedoeld misleid kunnen voelen. Een belangrijk inzicht vond ik daarom dat je als designer moet kijken naar wie het meeste voordeel heeft van een ontwerp en of de werking overeenkomt met het mental model en de verwachtingen van de gebruiker. De talk liet mij vooral nadenken over het verschil tussen wat ik als designer bedoel en hoe een gebruiker mijn ontwerp uiteindelijk daadwerkelijk ervaart.
+
+Mijn notities:
+![Deceptive Patterns notes](images/readme/talk2.png)
+
+</details>
+
+<details>
+<summary><strong>Talk 2 – Deceptive Patterns</strong></summary>
+Als laatste heb ik het artikel ‘Deceptive Patterns in UX’ van Nielsen Norman Group gelezen. Dit artikel ging verder in op hoe misleidende ontwerpkeuzes kunnen ontstaan en hoe je deze als designer kunt herkennen en voorkomen. Hierbij heb ik onder andere geleerd over sludge, waarbij een gebruiker onnodig veel moeite moet doen om een bepaalde keuze uit te voeren. Wat ik vooral uit dit artikel meeneem, is dat ik niet alleen moet kijken of een gebruiker een keuze kan maken, maar ook hoe makkelijk die keuze te vinden, begrijpen en uitvoeren is.
+
+Mijn notities:
+![Deceptive Patterns in UX notes](images/readme/artikel2_deceptivepatterns.png)
+
+</details>
+
+### 21 sept - Sprintplanning + Workshop 1
+
+<details>
+<summary><strong>Checkout</strong></summary>
+
+<strong>Wat zijn HTML landmark role elements?</strong></br>
+HTML landmark elements zijn semantische elementen die de grote onderdelen van een pagina structuur en betekenis geven, zoals <header>, <nav>, <main> en <footer>. Ze helpen niet alleen om mijn HTML overzichtelijk te houden, maar zorgen er ook voor dat bijvoorbeeld screenreaders begrijpen hoe de pagina is opgebouwd en gebruikers makkelijker door de website kunnen navigeren.
+
+<strong>Wat zijn heading elementen en hoe horen deze ‘genest’ te worden?</strong></br>
+Heading elementen zijn de koppen <h1> t/m <h6>. Deze geven de hiërarchie van de content aan en moeten daarom in een logische volgorde worden gebruikt. Een <h1> is de belangrijkste kop, daaronder gebruik je bijvoorbeeld <h2> voor onderdelen en <h3> voor onderdelen binnen een <h2>. Ik gebruik headings dus niet omdat ik een tekst alleen groter wil maken, maar om de structuur en betekenis van mijn pagina aan te geven.
+
+<strong>Hoe ga jij met cookies om? Beschrijf je beweegredenen en of die zijn veranderd na het volgen van dit college.</strong></br>
+Voor deze les dacht ik eigenlijk niet zo veel na over cookies en klikte ik vaak snel op accepteren om verder te kunnen. Door het onderzoek naar de verschillende cookiemeldingen ben ik me er veel bewuster van geworden waar ik precies toestemming voor geef en hoe het UX-design van een melding mijn keuze kan beïnvloeden. Ik zou nu eerder kijken welke cookies noodzakelijk zijn en onnodige cookies weigeren.
+
+Voor mijn eigen Digital Garden ga ik hier ook bewuster mee om. Ik wil onderzoeken welke externe diensten ik gebruik, bijvoorbeeld Spotify- en YouTube-embeds, en wat deze betekenen voor de privacy van mijn bezoekers. Als ik een toestemmingsmelding nodig heb, wil ik deze duidelijk en eerlijk ontwerpen, waarbij accepteren en weigeren even makkelijk zijn en de gebruiker begrijpt waar die toestemming voor geeft.
+
+</details>
+
+<details>
+<summary><strong>Geïnformeerd cookies accepteren</strong></summary>
+Voor deze opdracht heb ik onderzocht hoe verschillende websites omgaan met cookie consent en hoe duidelijk een gebruiker wordt geïnformeerd voordat die toestemming geeft. Hiervoor heb ik de cookiemeldingen van De Volkskrant en Paradiso stap voor stap bekeken. Ik heb gekeken naar de uitleg, de verschillende keuzes, welke knoppen het meeste opvallen en hoe makkelijk het is om cookies te accepteren of juist te weigeren. Ook heb ik op de Songhoy Blues-pagina getest wat er gebeurt wanneer ik bepaalde cookies niet accepteer.
+
+Een belangrijk inzicht vond ik dat alleen het aanbieden van een keuze niet automatisch betekent dat die keuze ook duidelijk en gelijkwaardig wordt aangeboden. Bij De Volkskrant moest ik bijvoorbeeld eerst naar de instellingen om alles te kunnen weigeren, terwijl Paradiso direct de optie ‘Liever niet’ liet zien. Ook ontdekte ik dat een cookiekeuze invloed kan hebben op de content: de video op de Songhoy Blues-pagina werd pas zichtbaar nadat ik de benodigde voorkeurscookies had toegestaan.
+
+![Geïnformeerd cookies accepteren](images/readme/opdracht_cookies.png)
+
+Voor mijn eigen Digital Garden neem ik vooral mee dat ik bewust moet kijken naar welke externe diensten ik gebruik en wat deze met gegevens van mijn bezoekers doen. Ik gebruik bijvoorbeeld externe content en embeds van diensten zoals Spotify en YouTube. Door deze opdracht realiseerde ik mij dat zulke onderdelen invloed kunnen hebben op de privacy van een bezoeker. Ook wil ik onderzoeken wat het gebruik van GitHub en digitaaltuintje.nl betekent voor mijn website.
+
+Daarnaast neem ik veel mee op het gebied van UX-design. Als ik zelf een cookie- of privacymelding nodig heb, wil ik voorkomen dat ik de gebruiker met kleur, grootte of positie van knoppen naar één keuze stuur. Accepteren en weigeren moeten allebei duidelijk en makkelijk te vinden zijn en de tekst moet begrijpelijk uitleggen waarvoor iemand toestemming geeft en wat er gebeurt als diegene weigert. Zo houd ik bij mijn eigen ontwerp niet alleen rekening met hoe mijn website eruitziet, maar ook met privacy, transparantie en de ervaring van de gebruiker.
+
+</details>
+
+### 18 sept - Voortgang & Retrospect
+
+<details>
+<summary><strong>Checkout</strong></summary>
+
+<details>
+<summary><strong>Oriënteren en begrijpen</strong></summary>
+<strong>Waarom geven de docenten deze opdracht?</strong></br>
+Volgens mij krijgen we deze opdracht om te leren hoe je van een eigen idee naar een werkend en onderbouwd digitaal ontwerp gaat. Het gaat dus niet alleen om uiteindelijk een mooie Digital Garden maken, maar vooral om het proces erachter. Tijdens deze sprint heb ik gemerkt dat we steeds eerst onderzoeken, schetsen en verschillende mogelijkheden uitproberen voordat we iets definitief maken.
+
+Bij mijn eigen Garden heb ik bijvoorbeeld eerst mijn onderwerp My Life Through Music onderzocht, daarna Visual Research gedaan, een moodboard en Crazy 8 gemaakt en verschillende schetsen uitgewerkt. Vervolgens ben ik die ideeën gaan vertalen naar HTML en CSS. De Deep Dives hielpen mij daarbij om nieuwe technieken eerst los te oefenen en ze daarna in mijn eigen ontwerp te kunnen gebruiken.
+
+Ik denk daarom dat het doel vooral is dat ik leer waarom ik bepaalde ontwerp- en codekeuzes maak, in plaats van alleen iets te maken omdat het er leuk uitziet.
+
+<strong>Welke technieken gebruik ik?</strong></br>
+In deze sprint heb ik vooral gewerkt met HTML en CSS. Bij HTML heb ik geleerd om meer te kijken naar de betekenis en structuur van mijn content. Ik heb bijvoorbeeld nagedacht over welke content een heading, navigatie, afbeelding, link, lijst of section is, in plaats van alles alleen te gebruiken om de juiste vormgeving te krijgen.
+
+In CSS heb ik onder andere gewerkt met CSS Grid, Flexbox, media queries, Grid Areas, custom properties, @font-face, pseudo-elementen en light/dark mode. Vooral Grid en responsive design zijn een groot onderdeel van mijn proces geweest. Door de Deep Dives over Grid heb ik steeds beter leren begrijpen hoe ik elementen in rows en columns kan positioneren en hoe ik een layout met media queries kan aanpassen aan verschillende schermgroottes.
+
+Ik heb daarbij ook geleerd dat een techniek niet automatisch geschikt is voor ieder ontwerp. Bij mijn eerste kamerconcept probeerde ik bijvoorbeeld bijna alles met Grid te positioneren. Dat werkte gedeeltelijk, maar maakte het responsive maken uiteindelijk erg ingewikkeld. Die ervaring neem ik mee naar mijn volgende ontwerp.
+
+<strong>Wat zijn de randvoorwaarden?</strong></br>
+Een belangrijke randvoorwaarde is dat mijn website mobile-first wordt opgebouwd en daarna responsive wordt gemaakt voor grotere schermen. Daarnaast moet ik werken met HTML en CSS en rekening houden met semantische HTML, een duidelijke structuur en toegankelijkheid. Mijn website moet uiteindelijk niet alleen visueel werken, maar ook technisch logisch zijn opgebouwd.
+
+Voor mezelf zijn er ook randvoorwaarden ontstaan tijdens het proces. Ik wil bijvoorbeeld dat mijn ontwerp haalbaar blijft binnen de beschikbare tijd. Ik hou namelijk van mezelf uitdagen en ben erg perfectionistisch, maar daardoor word een design zoals de kamer best lastig om binnen een bepaalde tijd te maken. Mijn eerste kamerconcept werd technisch steeds ingewikkelder. Na de feedback uit mijn voortgangsgesprek heb ik daarom besloten om verder te gaan met mijn eenvoudigere albumplank-concept. Daarmee kan ik meer aandacht besteden aan typografie, kleur, hiërarchie, responsiveness en de andere dingen die ik tijdens de sprint leer.
+
+<strong>Waar gebruik je HTML/CSS voor?</strong></br>
+Ik gebruik HTML voor de inhoud en structuur van mijn Digital Garden. HTML bepaalt wat iets daadwerkelijk is. Een titel wordt bijvoorbeeld een heading, navigatie wordt een nav en een afbeelding die ergens naartoe leidt kan onderdeel zijn van een link. Ik probeer daarbij steeds meer vanuit semantiek te denken en niet vanuit hoe iets eruit moet zien.
+
+CSS gebruik ik vervolgens voor de presentatie en layout. Daarmee bepaal ik bijvoorbeeld kleuren, lettertypes, witruimte, afmetingen en de positie van elementen. Ook gebruik ik CSS om mijn ontwerp responsive te maken en interactie en visuele feedback toe te voegen, bijvoorbeeld met hover/focus-states en mijn light/dark-theme. Door HTML en CSS op deze manier van elkaar te scheiden blijft mijn code duidelijker en begrijp ik beter welke taal waarvoor bedoeld is.
+
+<strong>Wat kan er allemaal met CSS?</strong></br>
+Met CSS kun je veel doen. Naast kleuren, lettertypes en afmetingen kun je er complete layouts mee opbouwen en elementen precies vormgeven en positioneren. Wat ik deze sprint vooral heb geleerd, is hoe belangrijk CSS is voor het responsive maken van een website. Met bijvoorbeeld Grid, Flexbox en media queries kan ik ervoor zorgen dat mijn ontwerp zich aanpast aan verschillende schermgroottes.
+
+Dat vind ik heel handig, omdat een website niet alleen goed moet werken op mijn eigen laptopscherm, maar bijvoorbeeld ook op een telefoon of een groter desktopscherm. Ik heb geleerd om mobile-first te beginnen en vanuit daar mijn layout aan te passen voor grotere schermen. Tijdens mijn Grid Deep Dives heb ik bijvoorbeeld geoefend met het veranderen van het aantal columns en met Grid Areas. Hierdoor begrijp ik nu veel beter hoe ik met CSS één ontwerp op verschillende schermformaten goed kan laten werken.
+
+Vooral dat responsive gedeelte wil ik verder meenemen in mijn eigen Digital Garden, omdat ik wil dat mijn website op ieder scherm overzichtelijk en bruikbaar blijft.
+
+</details>
+
+<details>
+<summary><strong>Verbeelden en conceptualiseren</strong></summary>
+<strong>Lukt het om verschillende ideeën te bedenken?</strong></br>
+Ja, ik heb tijdens deze sprint bewust meerdere richtingen onderzocht voordat ik één ontwerp ben gaan uitwerken. Ik ben begonnen met onder andere een Crazy 8, moodboard, Visual Research en verschillende schetsen. Ik heb bijvoorbeeld twee keer een Crazy 8 gedaan om meerdere ideeen te ontwikkelen en heb daarna ideeen met elkaar gecombineerd. Hierdoor ontstonden meerdere mogelijkheden voor hoe mijn Digital Garden eruit kon zien.
+
+Mijn eerste grote concept was de slaapkamer/kamer waarin verschillende objecten naar onderdelen van mijn website zouden leiden. Daarnaast had ik ook andere schetsen gemaakt, waaronder het idee met albumplanken. Dat bleek uiteindelijk heel handig, omdat mijn eerste concept technisch erg ingewikkeld werd. Ik had daardoor al een andere richting waar ik op terug kon vallen. Ik heb hiervan geleerd dat het handig is om niet meteen verliefd te worden op één idee, maar meerdere mogelijkheden open te houden.
+
+<strong>Lukt het om je ideeën te schetsen?</strong></br>
+Ja. Schetsen heeft mij deze sprint juist erg geholpen om mijn ideeën duidelijker te krijgen. Ik heb bijvoorbeeld mijn kamerconcept eerst op papier uitgewerkt en daarbij al nagedacht over rows, columns, de positie van objecten en de mobiele layout. Ook heb ik mijn About Me-pagina in verschillende stappen geschetst om na te denken over contrast, witruimte, hiërarchie en Grid.
+
+Door iets eerst te tekenen zie ik sneller problemen die ik in mijn hoofd nog niet had bedacht. Het helpt mij ook om eerst over de structuur na te denken voordat ik meteen begin met coderen.
+
+<strong>Wat doet deze CSS-property?</strong></br>
+Tijdens mijn Deep Dives heb ik veel nieuwe CSS-properties ontdekt door ermee te experimenteren. Vooral bij Grid heb ik dit veel gedaan. Ik heb bijvoorbeeld gespeeld met grid-template-columns, grid-template-areas, grid-area, gap en media queries.
+
+Ik merkte dat ik een property beter begrijp wanneer ik zelf waarden verander en vervolgens direct kijk wat er op het scherm gebeurt. Bij de oefeningen met Grid Areas begon ik bijvoorbeeld steeds beter uit mijn hoofd te begrijpen hoe ik onderdelen in een bepaalde area kon plaatsen. Dat experimenteren wil ik blijven gebruiken wanneer ik nieuwe CSS tegenkom.
+
+<strong>Welke content en welke HTML heb je nodig?</strong></br>
+Bij het maken van mijn website ben ik steeds bewuster gaan nadenken over wat mijn content daadwerkelijk betekent voordat ik het ga vormgeven. Voor mijn Digital Garden heb ik bijvoorbeeld titels, navigatie, afbeeldingen, links, lijstjes, quotes en verschillende stukken tekst nodig.
+
+Daar probeer ik vervolgens passende semantische HTML bij te gebruiken. Een titel wordt bijvoorbeeld een heading, navigatie een <nav>, een lijst een <ul> en een klikbare afbeelding kan in een <a> staan. Ik heb geleerd dat HTML vooral de inhoud en structuur moet beschrijven en dat ik CSS daarna gebruik voor de vormgeving.
+
+<strong>Hoe kan ik dit soort content vormgeven?</strong></br>
+Hiervoor heb ik deze sprint veel verschillende mogelijkheden onderzocht. Met mijn Visual Research, moodboard, kleurenonderzoek en typografieonderzoek heb ik gekeken welke uitstraling bij My Life Through Music past. Ik wilde vooral een persoonlijke, warme en cozy sfeer creëren.
+
+Ik heb daarnaast geleerd dat vormgeving niet alleen gaat over mooie kleuren en afbeeldingen. Ook witruimte, contrast, hiërarchie, typografie, Grid en consistentie bepalen hoe een pagina aanvoelt en hoe makkelijk de gebruiker de content begrijpt. Uit mijn voortgangsgesprek bleek dat ik dit onderzoek nog duidelijker in mijn uiteindelijke website moet verwerken. Dat wordt daarom een belangrijk aandachtspunt voor Sprint 2.
+
+<strong>Wat als ik hier nu eens 1000 invul?</strong></br>
+Deze sprint heb ik juist geleerd dat het in de conceptfase ook goed is om extremere dingen uit te proberen, omdat je daardoor op ideeën kunt komen waar je anders niet aan denkt.
+
+</details>
+
+<details>
+<summary><strong>Prototypen en uitwerken</strong></summary>
+<strong>Begrijpen bezoekers de site?</strong></br>
+Dit heb ik tijdens Sprint 1 nog niet uitgebreid met gebruikers getest, maar ik heb tijdens het maken wel steeds gekeken of duidelijk is waar je op kunt klikken en waar onderdelen naartoe leiden. Bij mijn eerste kamerconcept wilde ik bijvoorbeeld dat de verschillende objecten in de kamer als navigatie zouden werken. Tijdens het uitwerken merkte ik dat iets voor mijzelf logisch kan zijn, maar dat dit niet automatisch betekent dat een bezoeker het ook begrijpt. Hier moet ik dus in sprint 2 aan gaan werken.
+
+<strong>Wat vindt de opdrachtgever ervan?</strong></br>
+Bij deze opdracht heb ik geen echte opdrachtgever. Ik zie mijn docenten en begeleiders daarom als de personen bij wie ik kan controleren of mijn ontwerp aansluit bij de eisen van de opdracht. Tijdens mijn voortgangsgesprek heb ik mijn prototype laten zien en feedback gekregen op zowel mijn ontwerp als mijn code.
+
+Uit die feedback kwam bijvoorbeeld dat ik mijn eerste kamerconcept technisch erg ingewikkeld had gemaakt en dat mijn Visual Research nog duidelijker terug mocht komen in mijn website. Deze feedback heb ik meegenomen in mijn volgende iteratie. Daardoor heb ik uiteindelijk besloten om verder te gaan met mijn albumplank-concept, omdat ik daarin de eisen en de dingen die ik tijdens de lessen leer beter kan toepassen.
+
+<strong>Werkt dit wel?</strong></br>
+Dit is iets wat ik tijdens Sprint 1 heel duidelijk heb ervaren. Mijn kamerconcept zag er in mijn hoofd goed uit, maar tijdens het daadwerkelijk bouwen kwam ik erachter dat het positioneren van alle losse elementen op verschillende schermformaten erg ingewikkeld werd. Iedere keer als ik iets voor één scherm verbeterde, kon het op een ander scherm weer verkeerd staan.
+
+Door een werkend prototype te maken kwam ik dus achter problemen die ik in mijn schets nog niet kon zien. Ik heb geprobeerd deze problemen op te lossen met Grid en media queries, maar op een gegeven moment merkte ik dat ik vooral bezig was met repareren. Daardoor heb ik geleerd dat ik eerder moet testen of mijn idee technisch haalbaar is en dat ik een ontwerp ook mag vereenvoudigen als dat uiteindelijk een beter resultaat oplevert.
+
+<strong>Ooooh, kan dit ook?!</strong></br>
+Dit gevoel heb ik vooral gehad tijdens de Deep Dives en het experimenteren met CSS. Ik ontdekte bijvoorbeeld dat ik met Grid Areas een layout bijna visueel in mijn CSS kan indelen en dat ik met media queries dezelfde content op verschillende schermgroottes anders kan positioneren.
+
+Ook vond ik het interessant dat ik met CSS veel meer interactie kon maken dan ik vooraf dacht. Zo heb ik geëxperimenteerd met een light/dark-theme waarbij de lamp in mijn kamer als schakelaar werkte. Door dingen daadwerkelijk te bouwen en ermee te spelen, ontdek ik steeds nieuwe mogelijkheden. Ik merk daardoor dat mijn kennis niet alleen uit de uitleg van de opdrachten komt, maar vooral groeit doordat ik zelf probeer, fouten maak, aanpas en opnieuw test.
+
+</details>
+
+<details>
+<summary><strong>Evalueren</strong></summary>
+<strong>Reflecteren met the riddle</strong></br>
+
+1. Wat wilde ik weten?
+   Ik wilde tijdens deze sprint vooral ontdekken hoe ik mijn idee voor My Life Through Music kon vertalen naar een werkende Digital Garden. Daarbij wilde ik leren hoe ik mijn ontwerp responsive kon maken en hoe ik technieken uit de lessen en Deep Dives, zoals Grid, media queries en light/dark mode, kon toepassen.
+
+2. Wat deed ik om erachter te komen?
+   Ik heb veel geschetst, Visual Research gedaan en verschillende concepten bedacht. Daarnaast heb ik Deep Dives gevolgd en de technieken daaruit steeds geprobeerd toe te passen in mijn eigen website. Ik heb mijn website continu op verschillende schermgroottes bekeken en mijn code aangepast wanneer iets niet goed werkte. Uiteindelijk heb ik mijn prototype ook tijdens het voortgangsgesprek laten zien en feedback gevraagd.
+
+3. Wat was het resultaat?
+   Ik kreeg mijn eerste kamerconcept semi-werkend en gedeeltelijk responsive, inclusief een light/dark-theme. Tegelijkertijd ontdekte ik dat ik het mezelf technisch erg moeilijk had gemaakt. Vooral het positioneren van alle losse objecten werd steeds ingewikkelder. Uit mijn voortgangsgesprek kwam ook naar voren dat mijn Visual Research, typografie en visuele hiërarchie nog duidelijker terug mochten komen in mijn website. Hierdoor heb ik uiteindelijk besloten om verder te gaan met mijn eenvoudigere albumplank-concept.
+
+4. Wat weet ik nu (niet)?
+   Ik begrijp nu veel beter hoe Grid, media queries en responsive design werken en ik kan deze technieken steeds zelfstandiger toepassen. Ik weet nu ook dat ik niet automatisch een techniek moet gebruiken alleen omdat ik hem ken: ik moet kijken welke techniek het beste bij mijn ontwerp past. Wat ik nog verder wil leren, is hoe ik mijn responsive layout zo vloeiend mogelijk kan maken en hoe ik mijn Visual Research en ontwerpprincipes duidelijker kan vertalen naar mijn uiteindelijke website.
+
+<strong>Wat wil(de) ik weten/bereiken?</strong></br>
+Mijn belangrijkste doel was om mijn eigen concept om te zetten naar een werkende, responsive website. Ik wilde niet alleen HTML en CSS leren schrijven, maar ook begrijpen waarom ik bepaalde code gebruik. Daarnaast wilde ik mijn persoonlijke stijl en mijn onderwerp My Life Through Music duidelijk terug laten komen.
+
+Tijdens de sprint is mijn doel iets veranderd. Ik merkte dat het niet alleen belangrijk is dat iets technisch werkt, maar ook dat mijn keuzes haalbaar en onderbouwd zijn. Voor Sprint 2 wil ik daarom meer balans vinden tussen techniek, vormgeving en mijn onderzoek.
+
+<strong>Wat heb ik gedaan?</strong></br>
+Ik heb in deze sprint heel veel verschillende dingen gedaan: van Crazy 8, moodboard, Visual Research en schetsen tot het daadwerkelijk schrijven van HTML en CSS. Ik heb meerdere Deep Dives gedaan over onder andere Grid, media queries, responsive design en Grid Areas en heb geprobeerd deze kennis toe te passen in mijn Digital Garden.
+
+Daarnaast heb ik meerdere iteraties van mijn ontwerp gemaakt. Ik ben begonnen met mijn kamerconcept en heb hier veel mee geëxperimenteerd. Toen dit steeds complexer werd, heb ik een back-upconcept met albumplanken gemaakt. Ook heb ik tijdens mijn voortgangsgesprek feedback verzameld en mijn keuzes opnieuw geëvalueerd.
+
+<strong>Wat was het resultaat?</strong></br>
+Het belangrijkste resultaat is voor mij niet alleen de website die er nu staat, maar vooral hoeveel meer ik inmiddels begrijp van het proces erachter. Ik kan nu veel zelfstandiger met CSS Grid en media queries werken en begrijp beter hoe mobile-first en responsive design in elkaar zitten.
+
+Daarnaast heeft het experimenteren met mijn eerste concept mij laten zien waar de grenzen van mijn gekozen oplossing liggen. Mijn kamerconcept heeft dus misschien niet mijn definitieve ontwerp opgeleverd, maar heeft mij wel veel geleerd over responsive design, positionering en het kiezen van de juiste CSS-techniek. Mijn nieuwe albumconcept is daardoor ook een veel bewustere keuze geworden.
+
+<strong>Wat weet ik nu (niet)?</strong></br>
+Ik weet nu beter hoe ik een website mobile-first kan opbouwen en vervolgens met media queries responsive kan maken. Ook voel ik mij veel zekerder met Grid dan aan het begin van de sprint. Grid Areas vond ik bijvoorbeeld eerst nieuw, maar na de oefeningen kon ik steeds beter uit mijn hoofd bepalen waar elementen moesten komen. Soms moet ik nog wel even spieken, maar ik kan het al beter uit mijn hoofd dan in het begin.
+
+Wat ik nog verder wil ontwikkelen is mijn kennis van visuele hiërarchie, typografie en het daadwerkelijk toepassen van mijn Visual Research. Ook wil ik blijven oefenen met responsive design, zodat mijn layout niet alleen op een paar vaste schermformaten goed staat, maar ook mooi meebeweegt tussen verschillende formaten.
+
+<strong>Wat vond je (niet) leuk?</strong></br>
+Ik vond het vooral leuk dat ik veel vrijheid kreeg om een website te maken over een onderwerp dat persoonlijk bij mij past. Daardoor vond ik het leuk om bezig te zijn met mijn concept, afbeeldingen, muziek en de uitstraling van mijn Garden. Ook vond ik het leuk om te merken dat dingen die ik tijdens een Deep Dive eerst moeilijk vond, later steeds makkelijker werden. Vooral bij Grid en Grid Areas merkte ik dat duidelijk.
+
+Wat ik minder leuk vond, was wanneer ik heel lang met één technisch probleem bezig was zonder dat het beter werd. Bij mijn kamerconcept gebeurde dit bijvoorbeeld tijdens het responsive maken: ik paste iets aan voor het ene scherm en daardoor verschoof het weer op een ander scherm. Daar kon ik soms lang in blijven hangen. Ik heb daarvan geleerd dat ik eerder moet beoordelen of mijn gekozen oplossing nog wel efficiënt is, in plaats van eindeloos dezelfde oplossing te blijven repareren.
+
+<strong>Voldoet het nog aan de eisen?</strong></br>
+Gedeeltelijk. Aan het einde van Sprint 1 had ik al veel belangrijke onderdelen uitgevoerd. Mijn website werkte, ik had gewerkt aan responsiveness, gebruikte Grid, CSS custom properties en lokale fonts en had een light/dark-theme gemaakt.
+
+Uit mijn voortgangsgesprek bleek tegelijkertijd dat er nog onderdelen verbeterd moesten worden. Vooral visuele hiërarchie, typografie en het zichtbaar toepassen van mijn Visual Research waren nog onvoldoende verwerkt. Ook was mijn eerste concept technisch complexer geworden dan nodig.
+
+Daarom vind ik het belangrijk dat ik niet alleen kijk naar hoeveel ik al heb gemaakt, maar ook blijf controleren of wat ik maak daadwerkelijk aansluit bij de leerdoelen en randvoorwaarden. Mijn overstap naar het albumplank-concept is daar eigenlijk een direct gevolg van: ik wil mijn website eenvoudiger opbouwen, zodat ik in Sprint 2 meer aandacht kan besteden aan de onderdelen die nog ontbreken.
+
+In sprint 2 zal ik ook vaker tijdens mijn process checken of het nog doet aan de eisen, zodat ik zeker weet dat ik de goede kant op ga.
+
+</details>
+
+</details>
+
+<details>
+<summary><strong>Voortgangs gesprek</strong></summary>
+Tijdens mijn voortgangsgesprek hebben Charley en Kate gekeken naar mijn Digital Garden en naar mijn proces van Sprint 1. Over het algemeen was de feedback positief: ik had duidelijk hard gewerkt en mijn gekozen interesse was goed terug te zien in mijn Garden. Ook gaf mijn learning log een duidelijk beeld van mijn ontwerpproces. Een belangrijk aandachtspunt voor de volgende sprint is om de opdrachten minder als losse onderdelen te behandelen en de kennis die ik tijdens de Deep Dives en mijn Visual Research opdoe daadwerkelijk toe te passen in mijn website. Zo kan ik meer laten zien dat ik de technieken niet alleen heb uitgevoerd, maar ook begrijp en bewust kan inzetten.
+
+### Feedback op mijn eerste kamerconcept
+
+Tijdens het gesprek hebben we specifiek naar mijn eerste concept met de kamer en het bureau gekeken. Technisch had ik al best veel bereikt: het ontwerp was responsive, ik werkte met Grid en ik had een light- en dark-theme gemaakt waarbij de lamp als schakelaar werkte.
+
+Kate gaf mij alleen mee dat Grid niet per se de handigste oplossing was voor de manier waarop ik alle losse objecten in de kamer wilde positioneren. Voor zo'n ontwerp zou ik bijvoorbeeld beter met position: relative kunnen werken. Dit verklaarde ook waarom ik eerder zoveel moeite had om alle losse objecten op verschillende schermgroottes op de juiste plek te houden.
+
+Daarnaast zat er nog een probleem in mijn light/dark-mode. Wanneer een apparaat standaard in light mode stond, kon ik met de lamp naar dark mode en weer terug. Maar wanneer het apparaat vanuit de eigen instellingen al standaard in dark mode stond, werkte mijn schakelaar niet zoals bedoeld en wilde het niet switchen naar de andere mode. Dit moest ik dus nog anders aanpakken zodat mijn eigen theme-toggle onafhankelijk van de standaardinstelling van het apparaat goed blijft werken.
+
+### Niet te moeilijk maken
+
+Een belangrijk advies van Charlie was om het project niet onnodig moeilijk voor mezelf te maken. Mijn kamerconcept bestond inmiddels uit veel losse afbeeldingen die allemaal afzonderlijk responsive moesten worden gepositioneerd. Daardoor ging veel tijd zitten in het corrigeren van de layout, terwijl ik die tijd ook kon gebruiken om de andere leerdoelen van de opdracht zichtbaar te maken.
+
+Doordat ik ziek was had ik daarnaast nog niet genoeg tijd gehad om onderwerpen zoals visuele hiërarchie, typografie en mijn Visual Research echt terug te laten komen in mijn website. Mijn concept bestond op dat moment voornamelijk uit afbeeldingen. Het onderzoek dat ik had gedaan naar bijvoorbeeld kleuren, fonts, Grid en andere visuele keuzes was daardoor nog onvoldoende zichtbaar in het uiteindelijke ontwerp.
+
+### Besluit na mijn voortgangsgesprek
+
+Alle feedback samen bevestigde eigenlijk iets waar ik zelf al over nadacht: ik ga mijn eerste kamerconcept niet verder uitwerken en stap over op mijn back-upconcept met de albumplanken.
+
+Met dit concept kan ik de website technisch eenvoudiger houden en kan ik de kennis uit mijn Deep Dives veel makkelijker bewust toepassen. Ik weet inmiddels beter hoe ik deze layout met Grid responsive kan opbouwen en hoef daardoor minder tijd te besteden aan het positioneren van heel veel losse objecten. Die tijd kan ik gebruiken om juist mijn kleurenonderzoek, typografie, hiërarchie, Gestalt-principes en andere Visual Research zichtbaar in mijn ontwerp te verwerken.
+
+Voor Sprint 2 wil ik daarom vooral laten zien dat de onderzoeken en oefeningen die ik uitvoer niet losstaan van mijn eindproduct. Mijn belangrijkste doel wordt om de kennis die ik opdoe bewust toe te passen, mijn keuzes te kunnen onderbouwen en mijn code en ontwerp overzichtelijk te houden. Daarmee hoop ik van een technisch ingewikkeld concept naar een eenvoudiger, maar beter onderbouwd en verder uitgewerkt ontwerp te gaan.
+
+</details>
+
+<details>
+<summary><strong>Retrospect</strong></summary>
+
+### Opwarmen & Basisvormen
+
+Als eerste onderdeel van de retrospect begon ik met een teken-warming-up. Het doel hiervan was om niet te veel na te denken over hoe mooi een tekening moest worden, maar vooral gewoon te beginnen. Ik heb verschillende willekeurige kronkels getekend en geprobeerd om van iedere kronkel een vogel te maken. Hierdoor merkte ik dat je met een paar kleine toevoegingen, zoals een snavel, oog, vleugels of poten, al snel iets herkenbaars kunt maken. Het hielp mij om minder perfectionistisch naar het tekenen te kijken en meer vanuit vormen en mogelijkheden te denken.
+
+Daarna heb ik geoefend met de vijf basisvormen: cirkel, vierkant, driehoek, lijn en stip. Vervolgens moest ik met simpele vormen een telefoon, donut, boek en iets ‘webby’s’ tekenen. Bij deze oefening merkte ik dat een visual helemaal niet gedetailleerd hoeft te zijn om een idee duidelijk over te brengen. Met een paar simpele vormen kun je al snel communiceren wat iets voorstelt.
+
+![Opwarmen & Basisvormen](images/readme/opwarmen.jpeg)
+
+Dit vond ik een goede voorbereiding op de rest van de retrospect, omdat het mij liet zien dat de tekeningen vooral bedoeld zijn om mijn proces en gedachten visueel duidelijk te maken, en niet om een perfecte illustratie te maken.
+
+### Piek & Dal Tekening
+
+Voor mijn retrospect heb ik eerst een piek- en daltekening gemaakt van mijn eerste sprint. Aan het begin van de sprint zat ik duidelijk in een piek. Ik was erg gemotiveerd, hield mijn planning goed bij en maakte mijn huiswerk, Deep Dives en Visual Research op tijd. Dit was eigenlijk de eerste keer dat het mij echt goed lukte om een planning consequent bij te houden. Doordat ik merkte dat dit werkte en ik overzicht hield, raakte ik juist nog gemotiveerder om ermee door te gaan.
+
+Daarna kwam mijn dal. Ik werd een week ziek en miste hierdoor lessen en opdrachten. Daardoor liep ik wat achter en lukte het tijdelijk minder goed om mijn planning bij te houden. Ik merkte dat het lastiger werd om weer overzicht te krijgen over wat ik nog moest doen. Toch bleef mijn motivatie voor het project aanwezig, omdat ik het onderwerp leuk vind en vooral uitkeek naar het verder bouwen van mijn eigen website. Toen ik mij weer beter voelde heb ik daarom mijn planning opnieuw opgepakt, gekeken wat ik had gemist en ben ik stap voor stap begonnen met inhalen.
+
+![Piek & Dal Tekening](images/readme/piekendal.jpeg)
+
+### Competenties
+
+Bij het eerste deel van mijn piek heb ik Persoonlijk & geëngageerd ontwerpen geplaatst. In deze periode was ik veel bezig met het ontwikkelen van mijn eigen concept en het zoeken naar een stijl die echt bij mij en mijn onderwerp My Life Through Music past. Ik heb onder andere mijn Crazy 8 gemaakt, een moodboard samengesteld, Visual Research gedaan en geëxperimenteerd met kleuren, gradients, vormen en verschillende visuele stijlen. Hierbij maakte ik bewust persoonlijke keuzes in plaats van zomaar een standaard website te ontwerpen. Mijn eigen muzieksmaak, sfeer en persoonlijkheid werden steeds meer onderdeel van het concept. Daarom vond ik deze competentie goed passen bij dit gedeelte van mijn proces.
+
+Bij het laatste gedeelte heb ik Georganiseerd & professioneel ontwerpen geplaatst. Hier begon ik mijn ideeën steeds meer om te zetten naar een gestructureerd ontwerp dat ik daadwerkelijk kon bouwen. Ik werkte met mijn planning, hield bij welke opdrachten ik nog moest inhalen en ging bewuster kijken naar de structuur van mijn HTML en CSS. Ook heb ik kennis uit mijn Deep Dives over Grid, media queries, mobile-first en responsive design toegepast. Ik ging bijvoorbeeld nadenken over rows en columns, hoe ik mijn elementen logisch in een Grid kon plaatsen en hoe mijn code overzichtelijk en gestructureerd kon blijven.
+
+Hierdoor zie ik in mijn retrospect ook een ontwikkeling: in het begin lag mijn focus vooral op persoonlijke conceptontwikkeling en experimenteren, terwijl ik later steeds meer bezig was met het gestructureerd en technisch uitwerken van mijn concept. Beide onderdelen heb ik nodig om uiteindelijk van mijn persoonlijke idee een werkende Digital Garden te maken.
+
+### Metafoor en Titel
+
+Als laatste heb ik mijn piek- en daltekening vertaald naar een metafoor. Ik heb gekozen voor een weg naar een einddoel, omdat dit goed laat zien hoe mijn eerste sprint voor mij is verlopen. Mijn titel hierbij is: ‘Met een kleine omweg toch vooruit en op naar mijn einddoel Mijn proces verliep namelijk niet helemaal in één rechte lijn, maar ondanks een omweg ben ik wel steeds richting hetzelfde einddoel blijven gaan.
+
+Aan het begin van de weg heb ik bloeiende bloemen, volle struiken en mooie bomen getekend. Deze staan voor mijn goede start: ik was gemotiveerd, hield mijn planning bij en was actief bezig met mijn opdrachten en het ontwikkelen van mijn concept. Daarna komt er een omleiding in de weg. Deze staat voor de periode waarin ik ziek werd. Mijn proces kwam hierdoor tijdelijk wat stil te liggen en ik liep achter met een aantal dingen. Rondom deze omleiding heb ik daarom bewust wat hangende bloemen getekend. Hiermee wilde ik laten zien dat er op dat moment minder groei en activiteit in mijn proces zat.
+
+Na de omleiding komt de weg uiteindelijk weer terug op de oorspronkelijke route. Langzaam verschijnen er ook weer bloeiende bloemen, struiken en bomen. Dit staat voor het moment waarop ik mijn planning weer oppakte, mijn achterstand begon in te halen en weer verderging met mijn website. Het landschap wordt dus steeds levendiger naarmate ik weer vooruitga.
+
+Daarnaast heb ik windvlagen in de tekening verwerkt. Deze bewegen allemaal in de richting van mijn einddoel. Voor mij staan deze voor mijn motivatie en de dingen die mij blijven stimuleren om verder te gaan. Ook wanneer ik een omweg tegenkom, blijft de richting uiteindelijk hetzelfde. Mijn einddoel verdwijnt niet en ik blijf daar stap voor stap naartoe werken.
+
+Met deze metafoor wilde ik dus niet alleen mijn dip laten zien, maar vooral dat een tegenslag niet betekent dat mijn hele proces stopt. De route kan veranderen, maar mijn einddoel blijft hetzelfde.
+
+![Metafoor en Titel ](images/readme/metafoor.jpeg)
+
+</details>
+
 ### 16 sept - Workshop 5
 
 <details>
-<summary><strong>Process mobile first screen</strong></summary>
+<summary><strong>Check-out</strong></summary>
+<strong>1. Noem 3 Gestalt- of Design principles en leg uit wat ze betekenen en doen.</strong></br>
 
-<strong>Mijn proces tot nu toe</strong></br>
+Visual Hierarchy: hiermee bepaal je waar iemand als eerste naar kijkt. Door bijvoorbeeld grootte, kleur en positie te veranderen kun je belangrijke elementen meer laten opvallen.
 
-Ik ben begonnen met het uitwerken van mijn eerste idee voor mijn Digital Garden. Mijn idee was om een soort kamer/bureau te maken met allemaal verschillende elementen die iets te maken hebben met mijn muziekbeleving. Denk bijvoorbeeld aan een laptop, platenspeler, albums, camera, iPod en andere spullen. Uiteindelijk moeten deze elementen klikbaar worden en naar verschillende pagina’s binnen mijn garden leiden.
+Contrast: door verschillen in bijvoorbeeld kleur, grootte of vorm kun je onderdelen van elkaar onderscheiden en belangrijke elementen duidelijker maken.
 
-In het begin heb ik vooral geëxperimenteerd met hoe ik al deze elementen op de pagina kon krijgen. Dit vond ik best een uitdaging, omdat ik nog niet heel veel ervaring heb met CSS Grid en omdat ik mezelf probeer aan te leren om zo min mogelijk onnodige classes, id’s, divs en spans te gebruiken. Vanuit de lessen heb ik namelijk geleerd dat ik eerst moet kijken naar wat ik met gewone HTML-elementen en CSS-selectors kan oplossen.
+Proximity: elementen die dicht bij elkaar staan worden automatisch gezien als onderdelen die bij elkaar horen. Door goed gebruik te maken van ruimte kun je dus duidelijk groepen maken in je ontwerp.
 
-<strong>Eerste versie van mijn bureau</strong></br>
+<strong>2. Een grid biedt ruimte om te spelen (vrijheid), maar tegelijkertijd ook eenheid en structuur (vastigheid). Wat wordt hiermee bedoeld?</strong></br>
 
-Voor mijn eerste versie ben ik begonnen met het indelen van de pagina in verschillende kolommen. Daarmee kon ik de verschillende onderdelen van mijn bureau ongeveer op de goede plek zetten. Dit was veel priegelwerk en ik weet eigenlijk niet zo goed of dit wel mocht op deze manier. Ik heb veel gespeeld met de positionering van bepaalde elementen.
+Een grid geeft je vaste rijen en kolommen waarmee je structuur aanbrengt in je ontwerp. Tegelijkertijd hoef je niet ieder element precies hetzelfde te plaatsen. Je kunt elementen bijvoorbeeld meerdere kolommen laten innemen, laten overlappen of op verschillende plekken zetten. Daardoor heb je vrijheid om een speels ontwerp te maken, terwijl er op de achtergrond nog steeds een duidelijke structuur aanwezig is.
 
-Op mijn eigen scherm zag de pagina eruit zoals ik wilde en ook wanneer ik mijn browser kleiner maakte naar telefoon formaat, bleef de indeling redelijk goed staan. Maar toen ik het op mijn laptop opende was het niet meer in verhouding. Hier kwam ik erachter dat het niet responsive was.
+<strong>3. Welk principe neem je mee in een laatste iteratie van je eigen Garden?</strong></br>
+Ik wil vooral proximity en visual hierarchy meenemen in mijn laatste iteratie. Mijn Digital Garden bevat veel verschillende visuele en klikbare elementen. Ik wil daarom beter kijken naar welke onderdelen bij elkaar horen en deze ook dichter bij elkaar plaatsen. Daarnaast wil ik met grootte en positie duidelijker maken welke onderdelen belangrijker zijn. Zo kan mijn website het speelse en cozy gevoel behouden, maar wordt het voor de gebruiker wel duidelijker waar die naar kan kijken en op kan klikken.
 
-Ik heb dit idee uiteindelijk even aan de kant gelegd. Niet omdat ik het niet meer wil gebruiken, maar omdat ik merkte dat ik er op dat moment een beetje in vastliep en ik het iets anders wil maken dan wat ik nu aan het maken was. Ik wilde ondertussen ook een ander onderdeel van mijn website proberen, die ik ook wilde gebruiken voor de homepage en eventueel vervangen voor het eerste idee.
+</details>
 
-(Hier komen later nog afbeeldingen/screenshots van de verschillende versies.)
+<details>
+<summary><strong>Opdracht 18, 19 & 20 – Contrast, witruimte en hiërarchie</strong></summary>
+Op de dag dat deze opdrachten werden uitgevoerd was ik helaas ziek thuis. Hierdoor heb ik de oefeningen niet samen met iemand anders kunnen doen. Ik wilde ze wel alsnog uitvoeren, dus heb ik de opdrachten individueel toegepast op één van de pagina's die ik voor mijn eigen Digital Garden wil maken. Ik heb hiervoor mijn About Me-pagina gekozen. Op deze pagina komt namelijk veel verschillende content samen: grote en kleine kopjes, gewone tekst, lijstjes, foto's en een quote. Hierdoor vond ik dit een goede pagina om te onderzoeken hoe ik al deze informatie het beste kan indelen.
 
-<strong>Tweede idee: mijn albumplank</strong></br>
+### Beginschets
 
-Daarna ben ik verdergegaan met een ander onderdeel van mijn Digital Garden: een pagina met mijn favoriete albums.
+Ik ben begonnen met een hele simpele schets waarin ik vooral heb gekeken naar welke content er op de pagina moet komen. Ik heb de titel, persoonlijke informatie, foto's, fun facts, werk/school en mijn blurbs onder elkaar gezet. Op dit moment hield ik mij nog niet echt bezig met de uiteindelijke vormgeving, maar vooral met wat er allemaal op de pagina moest staan.
 
-Mijn idee hierbij is dat je naar een muur kijkt waarop twee planken hangen met albumhoezen. De albums die er nu op staan zijn vooral tijdelijk gebruikt om de layout te kunnen maken. Later wil ik mijn eigen albums/content gebruiken die echt iets over mijn muzieksmaak vertellen.
+### Opdracht 18 – Contrast
 
-Ik ben hierbij opnieuw begonnen met CSS Grid. Ik heb de albums in meerdere kolommen gezet en geprobeerd om ze netjes over de breedte van de pagina te verdelen.
+Daarna heb ik gekeken naar het contrast tussen de verschillende onderdelen. Ik heb bijvoorbeeld de hoofdtitel en tussenkopjes groter en duidelijker gemaakt dan de normale tekst. Ook heb ik gekeken naar het verschil tussen een h1, h2, kleinere headings en gewone tekst. Hierdoor werd duidelijker welke informatie belangrijker is en waar een nieuw onderdeel van de pagina begint.
 
-Het plaatsen van de albumhoezen zelf ging redelijk snel, maar daarna wilde ik natuurlijk ook dat het echt leek alsof de albums op een plank stonden.
+### Opdracht 19 – Witruimte
 
-Daarvoor moest ik wat meer experimenteren met CSS. Ik heb bijvoorbeeld gekeken naar position: relative, position: absolute en pseudo-elementen zoals ::before. Dit waren dingen die ik nog niet helemaal goed kende.
+Bij de volgende iteratie heb ik vooral gekeken naar de witruimte tussen de onderdelen. Informatie die bij elkaar hoort heb ik dichter bij elkaar gehouden, terwijl ik tussen verschillende onderwerpen juist meer ruimte heb gelaten. Hierdoor ontstonden duidelijkere groepen en werd de pagina minder druk. Dit hielp mij ook om beter te bepalen welke informatie logisch bij elkaar hoort.
 
-Met ::before kon ik uiteindelijk een extra visueel element toevoegen zonder dat ik daarvoor extra HTML hoefde te schrijven. Daarmee heb ik onder de albums een plank gemaakt.
+### Opdracht 20 – Hiërarchie
 
-Dat vond ik zelf interessant, omdat ik hiermee ook weer één van de regels uit de lessen kon toepassen: niet voor ieder visueel onderdeel meteen een extra HTML-element toevoegen als CSS het ook kan oplossen.
+Als laatste heb ik de hiërarchie verder uitgewerkt en ben ik tot mijn uiteindelijke schets gekomen. Hier heb ik bepaald wat als eerste de aandacht moet trekken en hoe de gebruiker vervolgens door de pagina heen kijkt. De titel staat bovenaan, gevolgd door mijn naam en quote. Mijn grote foto en persoonlijke informatie krijgen daarna veel ruimte. De kleinere onderdelen, zoals fun facts en work/school, heb ik gegroepeerd en My Blurbs krijgt daaronder een eigen gedeelte.
 
-Ik heb hiervoor ook documentatie en voorbeelden opgezocht, omdat ik niet zomaar code wilde gebruiken zonder te begrijpen wat het deed.
+![About me pagina layout](images/readme/aboutme_layout.png)
 
-<strong>Kennis uit de deep dives</strong></br>
+Door dezelfde pagina steeds opnieuw te tekenen en iedere keer op één ander ontwerpprincipe te letten, kon ik goed zien hoeveel contrast, witruimte en hiërarchie invloed hebben op hoe overzichtelijk dezelfde content uiteindelijk wordt.
 
-Tijdens het bouwen heb ik veel geprobeerd om dingen die ik tijdens de deep dives en oefeningen heb geleerd ook echt toe te passen in mijn eigen website.
+### Opdracht 21 – Verhouding & Grid
 
-Uit de Practical CSS Deep Dive heb ik bijvoorbeeld veel meegenomen over:
+Ik heb mijn eerdere schets verder uitgewerkt door er duidelijke rows en columns overheen te tekenen. Hiermee kon ik bepalen hoeveel ruimte de verschillende onderdelen krijgen en hoe ze ten opzichte van elkaar worden uitgelijnd. Mijn grote foto krijgt bijvoorbeeld meer ruimte, terwijl de persoonlijke informatie ernaast in een kleiner gedeelte kan staan. Verder naar beneden kunnen onderdelen zoals About Me/Fun Facts en Work/School naast elkaar staan, terwijl My Blurbs weer de volledige breedte kan gebruiken.
 
-CSS Grid;
-custom properties;
-calc();
-verschillende CSS-selectors.
+Door het grid over mijn ontwerp heen te tekenen kreeg ik een veel duidelijker beeld van waar ieder onderdeel straks in mijn CSS Grid geplaatst kan worden. Hierdoor is mijn laatste schets niet alleen een visueel ontwerp, maar heb ik alvast nagedacht over hoe ik deze layout later daadwerkelijk kan bouwen.
 
-Vooral het werken met selectors vond ik eerst best lastig. Door de oefeningen en door mijn eigen website merk ik dat ik steeds beter begin te begrijpen hoe je een specifiek element kunt selecteren zonder overal een class aan te geven.
-
-Ook heb ik kennis uit de Light & Dark Theme Deep Dive gebruikt. Daar heb ik geleerd hoe je met custom properties kleuren centraal kunt instellen en hoe light-dark() gebruikt kan worden.
-
-In mijn eigen website heb ik daardoor ook geëxperimenteerd met een light en dark theme.
-
-Ik heb met name en value gewerkt en zo een light en dark theme kunnen maken. Hij werkt nog niet helemaal goed, maar dat moet ik nog even onderzoeken.
-
-Ook het werken met responsive images kwam uit deze deep dive. Tijdens de oefening moesten we bijvoorbeeld verschillende afbeeldingen gebruiken voor licht/donker en groot/klein scherm. Dit kon ik goed gebruiken voor het verandern van mijn achtergrond tijdens het dark light theme.
+![About me pagina layout](images/readme/opdracht21.jpeg)
 
 </details>
 
 ### 15 sept - Voorbereiding workshop 5
 
 <details>
-<summary><strong>Deep Dive responsive grid + grid-areas</strong></summary>
+<summary><strong>Artikelen lezen voor workshop 5</strong></summary>
+
+### Artikel 1
+
+Notities artikel 1:
+![Artikel 1 Workshop 5](images/readme/ws5_artikel1.png)
+
+Visual design gaat niet alleen over een website mooi maken. Deze principes kunnen ervoor zorgen dat een ontwerp makkelijker te begrijpen en te gebruiken is. Ze kunnen daarnaast bijdragen aan engagement, emotie en hoe een merk wordt ervaren.
+
+Voor mijn eigen website vind ik vooral visual hierarchy, balance en Gestalt/proximity interessant. Ik heb veel verschillende visuele elementen op mijn homepage en moet er dus op letten dat het ondanks al die elementen duidelijk blijft waar je naar kijkt, welke onderdelen bij elkaar horen en welke onderdelen het belangrijkst zijn.
+
+### Artikel 2
+
+Notities artikel 2:
+![Artikel 1 Workshop 5](images/readme/ws5_artikel2.png)
+
+Consistency betekent meer dan overal dezelfde kleuren gebruiken. Vormgeving, interacties, componenten én teksten moeten logisch bij elkaar aansluiten. Daardoor leert een gebruiker hoe de website werkt en kan die kennis daarna steeds opnieuw worden gebruikt.
+
+Voor mijn eigen website vind ik dit vooral belangrijk omdat ik meerdere pagina's en interactieve onderdelen heb. Ik moet er bijvoorbeeld op letten dat mijn navigatie, typografie, kleuren, hover-effecten en klikbare elementen op verschillende pagina's herkenbaar blijven. Zo kan mijn Digital Garden heel speels en verschillend zijn, maar toch voelen als één website.
 
 </details>
 
-### 14 sept - Biweekly geek 1
+<details>
+<summary><strong>Code for responsiveness</strong></summary>
+
+### Verder werken aan mijn eerste concept
+
+Ik ben eerst verdergegaan met de code die ik al had voor mijn slaapkamerconcept. Ik had hier al veel met CSS Grid en media queries gewerkt om de verschillende elementen op mijn pagina responsive te krijgen. Mijn doel was om ervoor te zorgen dat de objecten uit mijn kamer goed mee zouden schalen en op ongeveer dezelfde plek zouden blijven staan wanneer het scherm groter of kleiner werd.
+
+Ik ben hier best lang mee bezig geweest en heb veel verschillende dingen geprobeerd met mijn Grid, de grootte van de afbeeldingen en de positionering. Hoe meer ik eraan veranderde, hoe ingewikkelder het alleen werd. Als ik bijvoorbeeld iets goed zette voor een groter scherm, stonden sommige elementen ineens veel te hoog of verkeerd op mijn mobiele scherm. Vervolgens probeerde ik dit soms op te lossen door ook de achtergrond aan te passen, maar ik realiseerde me dat dit eigenlijk geen goede oplossing was. De elementen zelf moeten zich aanpassen aan het scherm en ik zou niet voor iedere schermgrootte mijn achtergrond moeten veranderen om alles weer passend te krijgen.
+
+Daarom heb ik besloten om deze versie voorlopig te laten zoals hij is. Ik wil hem tijdens het voortgangsgesprek op school laten zien en feedback vragen over hoe ik dit beter kan aanpakken. Tegelijkertijd merkte ik dat ik mijn concept op deze manier misschien onnodig moeilijk voor mezelf aan het maken was. Daarom heb ik ook een eenvoudiger back-upidee uitgewerkt waar ik op kan terugvallen als mijn oorspronkelijke concept na de feedback nog steeds niet goed responsive te krijgen is.
+
+![Eerste concept homepage responsiveness](images/readme/eersteversie_responsiveness.png)
+
+### Back-up idee – Albumplanken
+
+Voor mijn back-upidee ben ik teruggegaan naar één van mijn eerdere beginscherm schetsen. Daarin had ik al het idee om albums onderdeel te maken van mijn beginscherm in de vorm van playlist covers op 1 pagina. In plaats van een playlist heb ik hiervan uiteindelijk albumplanken gemaakt. Zelf heb ik ook zo'n plank met albums in mijn kamer hangen, waardoor het nog steeds goed bij mijn oorspronkelijke kamerconcept past en het meer aansluit op mijn persoonlijke leven. Daarnaast sluit het aan bij het cozy gevoel dat ik vanaf mijn Crazy 8 en inspiratiewoorden al aan mijn Digital Garden wilde geven.
+
+![Back-up idee voor homescherm Albumplanken](images/readme/nieuwconcept_schets.png)
+
+Ik ben bewust heel simpel begonnen. Eerst heb ik in mijn HTML een aantal albumcovers geplaatst en daarna heb ik deze met CSS Grid ingedeeld. Voor mobiel begon ik met één kolom. Met media queries maakte ik hier op grotere schermen vier en uiteindelijk vijf kolommen van. Tijdens het testen vond ik één kolom op mobiel toch wat onhandig en erg groot. Daarom heb ik dit aangepast naar twee kolommen, zodat er meer albums tegelijk zichtbaar zijn en het duidelijk blijft dat je op verschillende albumcovers kunt klikken.
+
+![Eerste versie homepage Albumplanken](images/readme/eersteversie_albumplanken.png)
+
+Voor de donkere plank onder de albums wilde ik geen extra HTML-element toevoegen, omdat de plank alleen decoratief is en geen inhoud of betekenis aan de pagina toevoegt. Daarom heb ik deze met een CSS pseudo-element, zoals ::after, gemaakt. Met content: "" kun je zo een leeg element genereren en dat vervolgens met CSS een hoogte, breedte, achtergrond en positie geven.
+
+Ik heb hiervoor gebruik gemaakt van de bron: https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements
+
+![Pseudoelement voor de plank](images/readme/pseudoelement_plank.png)
+
+Dit is voorlopig mijn back-upconcept. Mijn eerste idee met de volledige slaapkamer gooi ik dus nog niet weg, ik wil die eerst tijdens het voortgangsgesprek laten zien en daar feedback op krijgen. Maar als blijkt dat ik dat concept te ingewikkeld heb gemaakt om binnen deze opdracht goed responsive uit te werken, kan ik verder met de albumplanken. Daarmee houd ik het ontwerp simpeler, terwijl het nog steeds past bij mijn oorspronkelijke concept en sfeer.
+
+</details>
+
+<details>
+<summary><strong>Deep Dive responsive grid + grid-areas</strong></summary>
+
+### Voorbereidingen
+
+Voor deze Deep Dive moest ik eerst Grid 101 + Media Queries hebben afgerond, zodat ik de basis van CSS Grid al begreep. Deze deepdive heb ik al gedaan dus kon ik door. Daarna heb ik het artikel van Kevin Powell over Grid Areas gelezen. Hierin werd uitgelegd hoe je met grid-template-areas verschillende onderdelen van een pagina een naam kunt geven en deze vervolgens overzichtelijk binnen een Grid kunt positioneren. Ook werd uitgelegd hoe je deze indeling met media queries kunt veranderen, zodat dezelfde content op verschillende schermgroottes een andere layout kan krijgen.
+
+In het artikel stonden ook een aantal kleine opdrachten waarmee ik grid-area en grid-template-areas direct kon oefenen. Deze heb ik tijdens het lezen uitgevoerd, zodat ik de nieuwe properties niet alleen las, maar ook meteen zelf toepaste.
+
+![Deepdive Gridareas Voorbereiding](images/readme/voorbereiding_gridareas.png)
+
+### Oefening 1
+
+Bij de eerste oefening moest ik een responsive layout maken met grid-template-areas. De pagina bestond uit verschillende onderdelen, zoals een header, nav, main, aside en footer. Met Grid Areas moest ik bepalen waar deze onderdelen op het scherm kwamen te staan.
+
+Ik begon met een eenvoudige layout voor een klein scherm. Daarna heb ik met media queries de indeling steeds veranderd voor grotere schermen. Zo kwamen onderdelen die eerst onder elkaar stonden later naast elkaar te staan en ging de layout van één naar meerdere kolommen.
+
+Ik vond grid-template-areas vooral heel handig omdat je in de CSS visueel kunt zien hoe je layout is opgebouwd. Door bijvoorbeeld "nav main aside" te schrijven, kon ik veel makkelijker begrijpen welk onderdeel waar terechtkwam. Dit vond ik overzichtelijker dan alleen werken met nummers van grid-column en grid-row. Ook werd het hierdoor makkelijker om binnen een media query de hele indeling van de pagina te veranderen.
+
+https://codepen.io/editor/Rianne-Maria/pen/01a0c605-f7a9-7545-8109-c8e9a84c5133
+
+![Deepdive Gridareas Oefening 1](images/readme/oefening1_gridareas.png)
+
+### Oefening 2
+
+Bij oefening 2 moest ik opnieuw een responsive layout met grid-template-areas maken, maar deze keer met vier afbeeldingen. Voordat ik begon heb ik eerst de bijbehorende PDF gelezen. Hierin werd stap voor stap uitgelegd hoe ik de layout met media queries, grid-template-columns, grid-template-rows en grid-template-areas kon veranderen.
+
+Ik begon met de mobile versie waarin de afbeeldingen onder elkaar stonden. Bij 28em maakte ik er twee gelijke kolommen en drie rijen van en veranderde ik de Grid Areas zodat de afbeeldingen een nieuwe positie kregen. Daarna maakte ik bij 56em een layout met drie kolommen en twee rijen, waarbij de eerste kolom twee keer zo breed werd als de andere kolommen. Ook hiervoor maakte ik met grid-template-areas weer een nieuwe indeling.
+
+Deze oefening vond ik al ietsjes gemakkelijker gaan. Ik begon steeds beter te begrijpen hoe grid-template-areas werkt en kon delen al uit mijn hoofd doen zonder steeds terug te kijken naar de uitleg. Vooral het aanpassen van dezelfde Grid Areas binnen verschillende media queries vond ik handig, omdat ik nu duidelijk zag hoe je één layout op verschillende schermgroottes helemaal anders kunt indelen.
+
+https://codepen.io/editor/Rianne-Maria/pen/01a0c60e-32e1-741f-b9df-f4a37abe042e
+
+![Deepdive Gridareas Oefening 1](images/readme/oefening2_gridareas.png)
+
+### Oefening 3
+
+Bij de laatste oefening moest ik de cards met de visjes opnieuw maken. Deze opdracht had ik tijdens de vorige Grid Deep Dive al gedaan, maar toen positioneerde ik de onderdelen op een andere manier. Nu moest ik dezelfde cards opbouwen met grid-template-areas en grid-area.
+
+Voordat ik begon heb ik eerst de tips in de PowerPoint bekeken. Hierin zag ik bijvoorbeeld hoe je de afbeelding en titel eerst een eigen naam geeft met grid-area en vervolgens met grid-template-areas bepaalt waar deze binnen de card komen te staan. Daarna heb ik dit zelf verder toegepast op de steeds uitgebreidere cards.
+
+Bij de derde en vierde card vond ik vooral de like-button lastig, omdat deze over de afbeelding heen moest staan. Ik moest goed nadenken over hoe ik de verschillende onderdelen binnen de Grid Areas kon plaatsen en laten overlappen. Uiteindelijk is het gelukt door te experimenteren met de Grid Areas en goed te kijken naar hoe de layout was opgebouwd. Ik kwam erachter dat ik de like-button ook in de image grid-area moest plaatsen. Hierdoor kwam de like-button in hetzelfde gebied als de afbeelding te staan en kon ik hem op de juiste plek over de afbeelding positioneren.
+
+![Deepdive Gridareas Oefening 1](images/readme/oefening3_gridareas.png)
+
+### Wat ik uit deze deepdive heb gehaald
+
+Na deze oefeningen vind ik Grid Areas een fijne manier om met Grid te werken. Ik heb hiermee een veel duidelijker overzicht van waar de verschillende onderdelen binnen mijn grid staan en waar ik ze kan positioneren. Vooral doordat je de gebieden zelf een naam geeft, kan ik makkelijker terugzien hoe mijn layout is opgebouwd. Ik wil dit daarom later ook gaan toepassen in mijn eigen website, vooral om mijn layout overzichtelijker en beter responsive te maken.
+
+</details>
+
+### 14 sept - Workshop 4
 
 <details>
 <summary><strong>Bi-weekly geek 1</strong></summary>
@@ -86,6 +506,12 @@ Ook het werken met responsive images kwam uit deze deep dive. Tijdens de oefenin
 <summary><strong>Opdracht 16 - van one column layout naar een responsive design</strong></summary>
 
 Duo: Hiba
+
+Bij deze opdracht heb ik mijn website op verschillende schermgroottes bekeken door de browser steeds groter en kleiner te maken. Mijn mobile-first versie werkte goed en de elementen stonden daar op de plekken waar ik ze wilde hebben.
+
+Toen ik het scherm groter maakte richting laptop- en desktopformaat zag ik wel een probleem. De elementen scha gaven niet geleidelijk mee met de schermgrootte. Op bepaalde formaten werden de afbeeldingen eerst juist heel groot en verschoven ze uit hun oorspronkelijke positie. Wanneer ik het scherm vervolgens nog groter maakte, kwamen ze uiteindelijk weer beter op hun plek te staan. Hierdoor was de overgang tussen de verschillende schermgroottes niet goed responsive.
+
+Ik merkte hierdoor dat alleen het gebruiken van een Grid niet automatisch betekent dat mijn hele ontwerp responsive is. Vooral de groottes en positionering van mijn losse afbeeldingen moest ik nog beter laten meeschalen met de beschikbare ruimte. Voor mijn volgende iteratie wil ik daarom kijken hoe ik de overgang van mijn mobiele layout naar grotere schermen beter kan maken, zodat de elementen op iedere schermgrootte ongeveer dezelfde verhouding en positie behouden.
 
 </details>
 
@@ -120,25 +546,60 @@ Op dit moment nog niet optimaal maar er is een begin, mijn Garden is interactief
 
 </details>
 
+### 12 sept - Verder aan website
+
+<details>
+<summary><strong>Website verfijnen</strong></summary>
+
+### Layout van mijn website verder verfijnen
+
+Nadat ik de eerste opzet van mijn website had gemaakt, ben ik de layout verder gaan verfijnen. Ik ben begonnen met het toevoegen van een achtergrond voor mijn light theme en daarna heb ik alle losse elementen uit mijn ontwerp op de juiste plek gezet.
+
+Voor de positionering heb ik de kennis uit mijn Grid Deep Dive toegepast. Ik heb mijn main opgebouwd als een grid met verschillende rows en columns. Vervolgens heb ik met :nth-child() de verschillende elementen afzonderlijk getarget. Hierdoor kon ik bijvoorbeeld aangeven in welke grid-column en grid-row een albumplank, polaroids, platenspeler, camera, lamp, iPod of laptop moest komen te staan. Ook heb de kennis uit de deepdives gebruikt om sommige elementen op meerdere rows of columns te positioneren, zodat ze uiteindelijk stonden waar ik wilde. Dit vond ik handig, omdat ik zo niet voor ieder element een aparte class hoefde te maken.
+
+Daarna ben ik veel gaan experimenteren met de precieze positionering. Met onder andere transform: translateY() kon ik een element nog iets omhoog of omlaag verplaatsen en door de breedte van afbeeldingen aan te passen kon ik ze groter of kleiner maken. Ook heb ik flex binnen sommige grid-items gebruikt om een afbeelding binnen zijn eigen gedeelte beter uit te lijnen.
+
+Sommige onderdelen moesten bewust voor of achter andere onderdelen staan. Zo wilde ik bijvoorbeeld dat de camera en kaars elkaar gedeeltelijk overlappen. Hiervoor ben ik met z-index gaan werken.
+
+Tijdens dit proces heb ik mijn website steeds op verschillende schermgroottes bekeken en de Grid-layout verder aangepast. Het was wel lastig om dit hele idee responsive te maken, omdat het op een groter scherm niet mee wilde scalen of op dezelfde plek wilde blijven staan. Dus hier moest ik nog een oplossing voor vinden.
+
+![Verfijnen website](images/readme/verfijnen_1.png)
+![Verfijnen website](images/readme/verfijnen_code.png)
+
+### Light & Dark theme toevoegen
+
+Toen de basis van mijn mopbile layout stond, ben ik verdergegaan met een light en dark theme. Vanuit de Deep Dive over light/dark mode wilde ik dit niet alleen automatisch aan de instellingen van een apparaat koppelen, maar er ook een interactie in mijn eigen ontwerp van maken.
+
+Mijn idee was dat de lamp zelf de schakelaar voor de dark mode zou worden. Hiervoor heb ik de lamp gekoppeld aan een checkbox. Wanneer deze wordt aangevinkt, kan ik met CSS controleren of de dark mode actief is en vervolgens andere styling toepassen. Zo kan onder andere de achtergrond veranderen van de lichte kamer naar een donkere versie. De lamp is daardoor niet alleen decoratie, maar heeft ook echt een functie binnen mijn website.
+
+Ik ben daarnaast gaan experimenteren met extra details die het verschil tussen dag en nacht duidelijker maken. Zo heb ik mijn achtergrond aangepast naar nacht en lampjes in de planten toegevoegd. Ook heb ik de kaars laten veranderen door het te laten branden in de dark mode. Daardoor werd de light/dark mode niet alleen een kleurverandering, maar echt een onderdeel van het concept van mijn Digital Garden.
+
+![Verfijnen website](images/readme/verfijnen_lightdark.png)
+![Verfijnen website](images/readme/verfijnen_lightdark2.png)
+
+Tijdens deze fase heb ik dus meerdere dingen uit eerdere opdrachten gecombineerd: Grid voor de responsive layout, :nth-child() voor het targeten van elementen, transforms en z-index voor de positionering en een checkbox met CSS voor de light/dark-interactie. Hierdoor begon mijn website zowel technisch als visueel steeds dichter bij mijn oorspronkelijke idee te komen.
+
+</details>
+
 ### 11 sept - Workshop 3
 
 <details>
 <summary><strong>Opdracht 12 – Bespreken huiswerk</strong></summary>
 
 <strong>1. Zijn je schetsen Webby genoeg?</strong></br>
-<u>Toegankelijk</u>
+Toegankelijk
 
 De pagina is redelijk toegankelijk, maar ik moet nog duidelijker maken welke elementen interactief zijn. In mijn schets zie je bijvoorbeeld niet meteen dat de laptop, camera en iPod klikbaar zijn. Dit wil ik duidelijker maken met hover- en focus-effecten. Daarnaast moet ik het menu nog even veranderen, want een slider met 10+ opties is niet heel overzichtelijk.
 
-<u>Volwassen</u>
+Volwassen
 
 Mijn ontwerp is grotendeels haalbaar met HTML en CSS. De grootste uitdaging is dat alle objecten op verschillende plekken staan en samen één compositie vormen. Ik moet daarom goed nadenken over hoe ik dit responsive opbouw.
 
-<u>Expressief</u>
+Expressief
 
 Mijn ontwerp is al vrij expressief omdat ik geen standaard website-indeling gebruik. De pagina voelt meer als een persoonlijke kamer die je kunt ontdekken. Mijn sfeerwoorden nostalgisch, levendig en cozy komen terug in de voorwerpen en vormgeving. Ik kan dit nog sterker maken door meer CSS-effecten toe te voegen, bijvoorbeeld een lamp die gaat gloeien, een album dat iets naar voren komt of objecten die subtiel bewegen bij hover.
 
-<u>Leuk/verrassend</u>
+Leuk/verrassend
 
 Het verrassende zit vooral in het ontdekken van de navigatie. De bezoeker navigeert niet via een standaard menu, maar door voorwerpen in mijn kamer aan te klikken. Ik wil nog beter zichtbaar maken dat de voorwerpen reageren op de gebruiker. Daardoor wordt het leuker om te ontdekken waar alles naartoe leidt.
 
@@ -155,18 +616,90 @@ Ik wil mijn pagina mobile-first opbouwen. In mijn HTML wil ik semantische elemen
 
 <strong>4. Maak waar nodig een laatste iteratie, zodat het helder is wat je definitieve bouwplan is in html/css.</strong></br>
 
+Na het analyseren van mijn eerste schets heb ik een nieuwe iteratie gemaakt. Ik heb de pagina duidelijker verdeeld in rows en columns. Hierdoor kon ik beter nadenken over waar de verschillende elementen moesten komen te staan en hoe de layout zich moest aanpassen op verschillende schermgroottes. Dit sloot ook goed aan bij wat ik tijdens de Deep Dive over Grid en responsive design had geleerd. Hieruit kon ik ook duidelijk zien hoe ik mijn html moest opbouwen en welke afbeelding ik als eerst moet komen en welke daarna.
+
+Daarnaast heb ik voor de mobiele versie gekozen voor een hamburgermenu. In mijn eerdere ontwerp zou het menu blijven doorlopen, waardoor je op een klein scherm niet alle menu-items overzichtelijk kon zien. Met een hamburgermenu kan ik de navigatie inklappen en blijft er meer ruimte over voor de content. Zo heb ik bij deze iteratie meer rekening gehouden met mobile-first en responsive ontwerpen.
+
+![Voorbereiding Biweekly 1](images/readme/Opdracht12_4.jpeg)
+
 </details>
 
 <details>
 <summary><strong>Opdracht 13 -Van schets naar HTML</strong></summary>
+Na mijn iteratieschets ben ik gaan kijken hoe ik mijn ontwerp kon vertalen naar HTML. Hierbij heb ik eerst gekeken naar wat ieder onderdeel van mijn schets daadwerkelijk is, in plaats van meteen na te denken over hoe ik het wilde positioneren. Zo is “My Life Through Music” mijn belangrijkste titel en dus een <h1>, hoort mijn menu binnen een <nav> en zijn de verschillende interactieve voorwerpen in mijn kamer links met afbeeldingen.
+
+Dit hielp mij om eerst een goede semantische HTML-structuur te bedenken. De rows en columns die ik in mijn vorige iteratie had getekend zijn vooral belangrijk voor de layout en ga ik daarom later met CSS Grid maken. Hierdoor houd ik de inhoud en structuur in HTML gescheiden van de vormgeving en positionering in CSS.
+
 </details>
 
 <details>
 <summary><strong>Opdracht 14 - eerste html opzet</strong></summary>
+
+Na mijn schets ben ik begonnen met de eerste HTML- en CSS-opzet van mijn Digital Garden. Ik heb eerst de belangrijkste onderdelen uit mijn schets vertaald naar semantische HTML, zoals een <header>, <nav>, <main>, links en afbeeldingen. Daarna heb ik een eerste simpele vormgeving toegevoegd met mijn kleuren en een Grid om de verschillende elementen te positioneren.
+
+Ik heb ook al een beetje gespeeld met media queries zodat er inplaats van 4 colommen, 2 komen op een laptop scherm.
+
+Dit was nog een hele vroege versie van mijn website. Voor mij was deze versie vooral bedoeld om eerst de HTML-structuur neer te zetten en te testen hoe ik mijn schets kon omzetten naar een echte webpagina. Vanuit deze basis ga ik de layout daarna steeds verder verbeteren.
+
+![Voorbereiding Biweekly 1](images/readme/opdracht14_1.png)
+![Voorbereiding Biweekly 1](images/readme/opdracht14_2.png)
+
+</details>
+
+<details>
+<summary><strong>Voorbereiding bi-weekly geek 1</strong></summary>
+
+![Voorbereiding Biweekly 1](images/readme/biweekly1_voorbereiding.png)
+
 </details>
 
 <details>
 <summary><strong>Deepdive - Grid 101 + Media queries</strong></summary>
+
+### Voorbereidingen
+
+Voor de Deep Dive over Grid 101 + Media Queries heb ik eerst de voorbereidende YouTube-video's gekeken over CSS Grid en media queries. Ik vond Grid in het begin nog best lastig en wist nog niet goed hoe ik het moest gebruiken. Door de video's kreeg ik een beter beeld van hoe een grid is opgebouwd en hoe je met verschillende properties de positie en grootte van elementen kunt bepalen.
+
+Daarna heb ik met de kennis uit de video's CSS Grid Garden gedaan. Dit is een interactief spel waarin je verschillende Grid-properties moet gebruiken om de levels op te lossen. Hierdoor kon ik gelijk oefenen met wat ik net in de video's had geleerd en begon ik beter te begrijpen hoe Grid in de praktijk werkt.
+
+Na deze voorbereiding had ik dus al wat meer kennis over CSS Grid, de verschillende properties en hoe je hiermee een layout kunt maken. Met deze basis kon ik beginnen aan de drie oefeningen van de Deep Dive.
+
+![Voorbereiding Deepdive](images/readme/Voorbereiding_grid101.png)
+
+### Oefening 1
+
+Na de voorbereiding ben ik begonnen met de eerste oefening van de Deep Dive: Meet the properties. Bij deze oefening kreeg ik elf verschillende ‘sommetjes’. Bij ieder sommetje stond een voorbeeld van een Grid-layout die ik zelf moest namaken met CSS. Ik moest hierbij steeds zelf bedenken welke Grid-properties ik nodig had om tot hetzelfde resultaat te komen.
+
+Bij de eerste opdrachten begon ik met de basis, zoals display: grid, grid-template-columns en gap. Daarna werden de opdrachten steeds wat uitgebreider en moest ik verschillende properties met elkaar combineren. Hierbij kon ik de kennis uit de YouTube-video's en Grid Garden meteen toepassen in mijn eigen code.
+
+Wat ik vooral merkte tijdens deze oefening, is dat ik Grid steeds beter begon te begrijpen. Bij de eerste sommetjes moest ik nog regelmatig terugdenken aan de voorbeelden uit de voorbereiding, maar na een aantal opdrachten wist ik steeds vaker uit mijn hoofd welke property ik nodig had en hoe ik deze moest schrijven. Hierdoor merkte ik dat ik niet alleen de voorbeelden aan het kopiëren was, maar ook begon te begrijpen wat de code daadwerkelijk met de layout deed.
+
+![Oefening 1 Deepdive Grid101](images/readme/Oefening1_Grid101_1.png)
+![Oefening 1 Deepdive Grid101](images/readme/Oefening1_Grid101_2.png)
+![Oefening 1 Deepdive Grid101](images/readme/Oefening1_Grid101_3.png)
+
+Wat ik uit deze oefening heb geleerd: ik kan zelfstandig een Grid aanmaken, kolommen bepalen, ruimte tussen Grid-items instellen en verschillende Grid-properties gebruiken om een voorbeeldlayout na te bouwen. Ook heb ik geleerd om niet direct code over te nemen, maar eerst naar een layout te kijken en te bedenken hoe het Grid is opgebouwd en welke CSS-property daarbij hoort. Dat is iets wat ik later in mijn eigen website ook kan toepassen.
+
+### Oefening 2
+
+Daarna ben ik verdergegaan met Cards cards cards. Bij deze opdracht moest ik vier cards namaken die steeds iets moeilijker werden. Ik probeerde hierbij zoveel mogelijk zelf te bedenken welke Grid-properties ik nodig had, zonder direct naar de voorgeschreven code te kijken. De eerste cards lukten goed uit mijn hoofd, maar bij de laatste twee heb ik soms de stappen van de opdracht gebruikt.
+
+Vooral bij de like-button moest ik goed nadenken over hoe ik deze over de afbeelding heen kon plaatsen. Uiteindelijk is dit gelukt en begreep ik beter hoe je verschillende onderdelen binnen een grid kunt positioneren en zelfs over elkaar heen kunt zetten.
+
+Deze oefening liet mij vooral het verschil zien tussen een macro-layout en een micro-layout. Grid hoeft dus niet alleen gebruikt te worden voor de indeling van een hele pagina, maar kan ook binnen één klein onderdeel, zoals een card, worden gebruikt. Ook merkte ik dat de kennis uit de vorige oefening bleef hangen, omdat ik steeds vaker zelf vanuit de gewenste layout kon bedenken welke code ik nodig had.
+
+![Oefening 2 Deepdive Grid101](images/readme/Oefening2_Grid101.png)
+
+### Oefening 3
+
+Als laatste heb ik Responsive webshop gedaan. Hierbij moest ik een viswinkel stap voor stap responsive maken voor verschillende schermgroottes. Bij deze oefening heb ik wel meer naar de gegeven stappen gekeken, omdat ik nog niet goed wist welke groottes en instellingen ik bij de verschillende schermformaten moest gebruiken.
+
+Ik heb hier vooral geleerd hoe je mobile-first begint met een layout voor een klein scherm en deze daarna met media queries aanpast voor grotere schermen. Daarbij zag ik hoe je binnen een media query het Grid kunt veranderen, bijvoorbeeld door op een groter scherm meer kolommen naast elkaar te zetten.
+
+Deze oefening was voor mij vooral nuttig omdat ik in mijn eigen website ook met Grid en responsive design wilde gaan werken. Ik wist na deze opdracht beter hoe ik mijn Grid kon laten veranderen op basis van de schermgrootte en hoe ik media queries daarvoor kon gebruiken. Hierdoor had ik kennis opgedaan die ik later direct kon toepassen op mijn eigen website.
+
+![Oefening 3 Deepdive Grid101](images/readme/Oefening3_Grid101.png)
+
 </details>
 
 ### 10 sept - Huiswerk voor Workshop 3
@@ -619,10 +1152,6 @@ Voorbereidende vragen:
 
    Je kunt bijvoorbeeld een styles.css gebruiken voor de algemene vormgeving van de hele website en daarnaast een product.css voor alleen productpagina's en een blog.css voor blogpagina's.
    </details>
-
-<details>
-<summary><strong>MMD, Micro-interacties, Forms</strong></summary>
-</details>
 
 ### 31 aug - Kickoff
 

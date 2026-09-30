@@ -61,7 +61,404 @@
         </section>
       </nav>
 
-      <section class="memories"></section>
+      <!--voor dit gedeelte heb ik gebruik gemaakt van de volgende bronnen:
+      https://markodenic.tech/seamless-css-marquees/
+      https://developer.mozilla.org/en-US/docs/Web/API/Popover_API
+      -->
+
+      <section class="memories">
+        <h2>memories</h2>
+
+        <section class="memory-row">
+          <ul>
+            <li>
+              <img src="images/website/knijper.png" alt="" class="knijper" />
+              <button popovertarget="memory-outside">
+                <img
+                  src="images/website/memories/memory1.jpeg"
+                  alt="Memory connected to Outside by Ellie Goulding"
+                />
+                <p>Outside - Ellie Goulding</p>
+              </button>
+            </li>
+
+            <li>
+              <img src="images/website/knijper.png" alt="" class="knijper" />
+              <button popovertarget="memory-yellow">
+                <img
+                  src="images/website/memories/yellow.jpg"
+                  alt="Memory connected to On the Floor by Jennifer Lopez"
+                />
+                <p>On the Floor - Jennifer Lopez</p>
+              </button>
+            </li>
+
+            <li>
+              <img src="images/website/knijper.png" alt="" class="knijper" />
+              <button popovertarget="memory-bestpart">
+                <img
+                  src="images/website/memories/memory3.jpeg"
+                  alt="Memory connected to Best Part - Daniel"
+                />
+                <p>Best Part - Daniel</p>
+              </button>
+            </li>
+
+            <li>
+              <img src="images/website/knijper.png" alt="" class="knijper" />
+              <button popovertarget="memory-manila">
+                <img
+                  src="images/website/memories/memory4.jpeg"
+                  alt="Memory connected to Raining In Manila by Lola Amour"
+                />
+                <p>Raining In Manila - Lola Amour</p>
+              </button>
+            </li>
+
+            <li>
+              <img src="images/website/knijper.png" alt="" class="knijper" />
+              <button popovertarget="memory-river">
+                <img
+                  src="images/website/memories/memory5.jpg"
+                  alt="Memory connected to River Flows In You by Yiruma "
+                />
+                <p>River Flows In You - Yiruma</p>
+              </button>
+            </li>
+
+            <li>
+              <img src="images/website/knijper.png" alt="" class="knijper" />
+              <button popovertarget="memory-outside">
+                <img
+                  src="images/website/memories/memory1.jpeg"
+                  alt="Memory connected to Outside by Ellie Goulding"
+                />
+                <p>Outside - Ellie Goulding</p>
+              </button>
+            </li>
+
+            <li>
+              <img src="images/website/knijper.png" alt="" class="knijper" />
+              <button popovertarget="memory-yellow">
+                <img
+                  src="images/website/memories/yellow.jpg"
+                  alt="Memory connected to Yellow by Coldplay"
+                />
+                <p>Yellow - Coldplay</p>
+              </button>
+            </li>
+
+            <li>
+              <img src="images/website/knijper.png" alt="" class="knijper" />
+              <button popovertarget="memory-bestpart">
+                <img
+                  src="images/website/memories/memory3.jpeg"
+                  alt="Memory connected to Best Part by Daniel Caesar"
+                />
+                <p>Best Part - Daniel Caesar</p>
+              </button>
+            </li>
+
+            <li>
+              <img src="images/website/knijper.png" alt="" class="knijper" />
+              <button popovertarget="memory-manila">
+                <img
+                  src="images/website/memories/memory4.jpeg"
+                  alt="Memory connected to Raining In Manila by Lola Amour"
+                />
+                <p>Raining In Manila - Lola Amour</p>
+              </button>
+            </li>
+
+            <li>
+              <img src="images/website/knijper.png" alt="" class="knijper" />
+              <button popovertarget="memory-river">
+                <img
+                  src="images/website/memories/memory5.jpg"
+                  alt="Memory connected to River Flows In You by Yiruma "
+                />
+                <p>River Flows In You - Yiruma</p>
+              </button>
+            </li>
+          </ul>
+        </section>
+
+        <section class="memory-row reverse">
+          <ul>
+            <li>
+              <img src="images/website/knijper.png" alt="" class="knijper" />
+              <button popovertarget="memory-boogie">
+                <img
+                  src="images/website/memories/memory6.png"
+                  alt="Memory connected to Yes Sir I Can Boogie by Baccara"
+                />
+                <p>Yes Sir I Can Boogie - Baccara</p>
+              </button>
+            </li>
+
+            <li>
+              <img src="images/website/knijper.png" alt="" class="knijper" />
+              <button popovertarget="memory-moonlight">
+                <img
+                  src="images/website/memories/memory7.jpeg"
+                  alt="Memory connected to Dancing in the Moonlight by Toploader"
+                />
+                <p>Dancing in the Moonlight - Toploader</p>
+              </button>
+            </li>
+
+            <li>
+              <img src="images/website/knijper.png" alt="" class="knijper" />
+              <button popovertarget="memory-plutoprojector">
+                <img
+                  src="images/website/memories/orbiter.jpg"
+                  alt="Memory connected to Pluto Projector by Rex Orange County"
+                />
+                <p>Pluto Projector - Rex Orange County</p>
+              </button>
+            </li>
+
+            <li>
+              <img src="images/website/knijper.png" alt="" class="knijper" />
+              <button popovertarget="memory-westcoast">
+                <img
+                  src="images/website/memories/westcoast.jpg"
+                  alt="Memory connected to West Coast by Lana Del Rey"
+                />
+                <p>West Coast - Lana Del Rey</p>
+              </button>
+            </li>
+
+            <li>
+              <img src="images/website/knijper.png" alt="" class="knijper" />
+              <button popovertarget="memory-ribs">
+                <img
+                  src="images/website/memories/ribs.jpg"
+                  alt="Memory connected to Ribs by Lorde"
+                />
+                <p>Ribs - Lorde</p>
+              </button>
+            </li>
+
+            <li>
+              <img src="images/website/knijper.png" alt="" class="knijper" />
+              <button popovertarget="memory-boogie">
+                <img
+                  src="images/website/memories/memory6.png"
+                  alt="Memory connected to Yes Sir I Can Boogie by Baccara"
+                />
+                <p>Yes Sir I Can Boogie - Baccara</p>
+              </button>
+            </li>
+
+            <li>
+              <img src="images/website/knijper.png" alt="" class="knijper" />
+              <button popovertarget="memory-moonlight">
+                <img
+                  src="images/website/memories/memory7.jpeg""
+                  alt="Memory connected to Dancing in the Moonlight by Toploader"
+                />
+                <p>Dancing in the Moonlight - Toploader</p>
+              </button>
+            </li>
+
+            <li>
+              <img src="images/website/knijper.png" alt="" class="knijper" />
+              <button popovertarget="memory-plutoprojector">
+                <img
+                  src="images/website/memories/orbiter.jpg"
+                  alt="Memory connected to Pluto Projector by Rex Orange County"
+                />
+                <p>Pluto Projector - Rex Orange County</p>
+              </button>
+            </li>
+
+            <li>
+              <img src="images/website/knijper.png" alt="" class="knijper" />
+              <button popovertarget="memory-westcoast">
+                <img
+                  src="images/website/memories/westcoast.jpg"
+                  alt="Memory connected to West Coast by Lana Del Rey"
+                />
+                <p>West Coast - Lana Del Rey</p>
+              </button>
+            </li>
+
+            <li>
+              <img src="images/website/knijper.png" alt="" class="knijper" />
+              <button popovertarget="memory-ribs">
+                <img
+                  src="images/website/memories/ribs.jpg"
+                  alt="Memory connected to Ribs by Lorde"
+                />
+                <p>Ribs - Lorde</p>
+              </button>
+            </li>
+          </ul>
+        </section>
+
+        <article id="memory-outside" popover>
+          <button popovertarget="memory-outside" popovertargetaction="hide">
+            ×
+          </button>
+          <img
+            src="images/website/memories/memory1.jpeg"
+            alt="Memory connected to Outside by Ellie Goulding"
+          />
+          <h3>Outside</h3>
+          <p>Ellie Goulding</p>
+          <p>
+            This memory brings me back to summer 2014, when me and my niece went
+            on vacation together for the very first time. This song always
+            played on the radio when we were
+          </p>
+        </article>
+
+        <article id="memory-yellow" popover>
+          <button popovertarget="memory-yellow" popovertargetaction="hide">
+            ×
+          </button>
+          <img
+            src="images/website/memories/yellow.jpg"
+            alt="Memory connected to Yellow by Coldplay"
+          />
+          <h3>Yellow</h3>
+          <p>Coldplay</p>
+          <p>
+            This song always makes me think of a calm memory and a moment that
+            felt simple but special.
+          </p>
+        </article>
+
+        <article id="memory-bestpart" popover>
+          <button popovertarget="memory-bestpart" popovertargetaction="hide">
+            ×
+          </button>
+          <img
+            src="images/website/memories/memory3.jpeg"
+            alt="Best Part by Daniel Caesar"
+          />
+          <h3>Best Part</h3>
+          <p>Daniel Caesar</p>
+          <p>
+            This memory feels like replaying a scene in my head over and over
+            again, but in a beautiful way.
+          </p>
+        </article>
+
+        <article id="memory-manila" popover>
+          <button popovertarget="memory-manila" popovertargetaction="hide">
+            ×
+          </button>
+          <img
+            src="images/website/memories/memory4.jpeg"
+            alt="Memory connected to Raining In Manila by Lola Amour"
+          />
+          <h3>Raining In Manila</h3>
+          <p>Lola Amour</p>
+          <p>
+            This one reminds me of a deeper emotional memory and a song that
+            says a lot without needing much.
+          </p>
+        </article>
+
+        <article id="memory-river" popover>
+          <button popovertarget="memory-river" popovertargetaction="hide">
+            ×
+          </button>
+          <img
+            src="images/website/memories/memory5.jpg"
+            alt="Memory connected to River Flows In You BY Yiruma" 
+          />
+          <h3>River Flows In You</h3>
+          <p>Yiruma </p>
+          <p>
+            This memory is more reflective and makes me think about slowing down
+            and just taking things in.
+          </p>
+        </article>
+
+        <article id="memory-boogie" popover>
+          <button popovertarget="memory-boogie" popovertargetaction="hide">
+            ×
+          </button>
+          <img
+            src="images/website/memories/memory6.png"
+            alt="Memory connected to Yes Sir I Can Boogie by Baccara"
+          />
+          <h3>Yes Sir I Can Boogie</h3>
+          <p>Baccara</p>
+          <p>
+            This memory feels dreamy and distant, like a moment that stayed in
+            my head long after it passed.
+          </p>
+        </article>
+
+        <article id="memory-moonlight" popover>
+          <button popovertarget="memory-moonlight" popovertargetaction="hide">
+            ×
+          </button>
+          <img
+            src="images/website/memories/memory7.jpeg"
+            alt="Memory connected to Dancing In The Moonlight by Toploader"
+          />
+          <h3>Dancing In The Moonlight</h3>
+          <p>Toploader</p>
+          <p>
+            This song was the song we danced to at my 18th birthday party. A
+            18th birthday party is a big deal in the Philippines, they call it a
+            debut.
+          </p>
+        </article>
+
+        <article id="memory-orbiter" popover>
+          <button popovertarget="memory-plutoprojector" popovertargetaction="hide">
+            ×
+          </button>
+          <img
+            src="images/website/memories/orbiter.jpg"
+            alt="Memory connected to Pluto Projector by Rex Orange County"
+          />
+          <h3>Pluto Projector</h3>
+          <p>Rex Orange County</p>
+          <p>
+            This memory feels personal and grounding, like something quiet but
+            really meaningful.
+          </p>
+        </article>
+
+        <article id="memory-westcoast" popover>
+          <button popovertarget="memory-westcoast" popovertargetaction="hide">
+            ×
+          </button>
+          <img
+            src="images/website/memories/westcoast.jpg"
+            alt="Memory connected to West Coast by Lana Del Rey"
+          />
+          <h3>West Coast</h3>
+          <p>Lana Del Rey</p>
+          <p>
+            This memory feels cinematic and a little dreamy, like a scene from a
+            film.
+          </p>
+        </article>
+
+        <article id="memory-ribs" popover>
+          <button popovertarget="memory-ribs" popovertargetaction="hide">
+            ×
+          </button>
+          <img
+            src="images/website/memories/ribs.jpg"
+            alt="Memory connected to Ribs by Lorde"
+          />
+          <h3>Ribs</h3>
+          <p>Lorde</p>
+          <p>
+            This memory feels nostalgic and emotional, like a moment I never
+            fully want to let go of.
+          </p>
+        </article>
+      </section>
 
       <nav class="menu-rechts">
         <img src="images/website/hangingplant.png" alt="" />
@@ -69,7 +466,7 @@
 
         <ul>
           <li><a href="about.html">about</a></li>
-          <li><a href="aura.html">musical aura</a></li>
+          <li><a href="aura.html">audio aura</a></li>
           <li><a href="moods.html">moods</a></li>
           <li><a href="shows.html">shows</a></li>
           <li><a href="digitalmusic.html">digital music</a></li>
