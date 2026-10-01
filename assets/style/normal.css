@@ -1656,8 +1656,9 @@ https://www.youtube.com/watch?v=uw5jVO1eNF8 */
   background: #d9d2c9;
 }
 
-.memory-row button p,
-.memories-static button {
+.memory-row button span,
+.memories-static button span {
+  display: block;
   margin: 0.7em 0 0;
   color: #4c4038;
   text-align: center;
