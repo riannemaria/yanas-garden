@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>July Songs of the Week - My Life Through Music</title>
+    <title>July Songs of the Week - Yana's Cozy Little Music Corner</title>
 
     <link rel="icon" type="image/x-icon" href="./images/website/favicon.ico" />
 
@@ -13,9 +13,11 @@
   </head>
 
   <body>
+    <a class="skip-link" href="#main-content"> Skip to main content </a>
+
     <header>
       <img src="images/website/leftheader.png" alt="" />
-      <a href="index.html">
+      <a href="index.html" aria-label="go to homepage">
         <h1>
           Yana's <span class="life">Cozy</span> little
           <span class="music">Music</span> Corner
@@ -32,34 +34,46 @@
       </p>
     </header>
 
-    <main>
-      <nav class="menu-links">
+    <main id="main-content">
+      <aside class="menu-links">
         <section>
           <h2>Song of the week</h2>
-          <a href="sotw.html">
-            <img src="images/website/lp.png" alt="Song of the week" />
+          <a href="sotw.html" aria-label="Go to songs of the week">
+            <img src="images/website/lp.png" alt="" />
           </a>
           <p>Linger - The Cranberries</p>
         </section>
 
         <section>
           <h2>My Mood</h2>
-          <a href="moods.html">
-            <img
-              src="images/website/me.png"
-              alt="Calm emoji describing my mood"
-            />
+          <a href="moods.html" aria-label="Go to the mood page">
+            <img src="images/website/me.png" alt="" />
           </a>
           <p>cozy</p>
         </section>
 
+        <!--Voor het volgende gedeelte maak ik gebruik van de deepdive light dark-->
+
         <section>
-          <h2>Concerts</h2>
-          <p>
-            <a href="concerts.html">random concert</a>
-          </p>
+          <h2>Color Scheme</h2>
+          <form class="theme-choice">
+            <label>
+              <input type="radio" name="color-theme" value="auto" checked />
+              Auto
+            </label>
+
+            <label>
+              <input type="radio" name="color-theme" value="light" />
+              Light
+            </label>
+
+            <label>
+              <input type="radio" name="color-theme" value="dark" />
+              Dark
+            </label>
+          </form>
         </section>
-      </nav>
+      </aside>
 
       <!--voor het volgende gedeelte heb ik gebruik gemaakt van de bron:
       https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/dl
@@ -68,8 +82,8 @@
       <section class="songs">
         <h2>Songs of the week - 2026</h2>
 
-        <nav>
-          <a class="active" href="july.html">july</a>
+        <nav aria-label="months">
+          <a href="july.html" aria-current="page">july</a>
           <a href="aug.html">aug</a>
           <a href="sept.html">sept</a>
           <a href="oct.html">oct</a>
@@ -77,23 +91,28 @@
 
         <ul>
           <li>
-            <button popovertarget="dance-with-me">
-              <img
-                src="images/website/sotw/julysong1.jpg"
-                alt="View details for Dance With Me by Bruno Mars"
-              />
+            <button
+              commandfor="dance-with-me"
+              command="show-modal"
+              aria-label="View details for Dance With Me by Bruno Mars"
+            >
+              <img src="images/website/sotw/julysong1.jpg" alt="" />
             </button>
 
             <p>Dance With Me - Bruno Mars</p>
 
-            <article id="dance-with-me" popover>
-              <button popovertarget="dance-with-me" popovertargetaction="hide">
+            <dialog id="dance-with-me">
+              <button
+                commandfor="dance-with-me"
+                command="close"
+                aria-label="Close Dance With Me details"
+              >
                 ×
               </button>
 
               <img
                 src="images/website/sotw/julysong1.jpg"
-                alt="Album cover Dance With Me by Bruno Mars"
+                alt="Album cover of Dance With Me by Bruno Mars"
               />
 
               <h3>Dance With Me</h3>
@@ -117,27 +136,32 @@
                 <dt>Mood:</dt>
                 <dd>Romantic / Happy</dd>
               </dl>
-            </article>
+            </dialog>
           </li>
 
           <li>
-            <button popovertarget="begged">
-              <img
-                src="images/website/sotw/julysong2.jpg"
-                alt="View details for Begged by Olivia Rodrigo"
-              />
+            <button
+              commandfor="begged"
+              command="show-modal"
+              aria-label="View details for Begged by Olivia Rodrigo"
+            >
+              <img src="images/website/sotw/julysong2.jpg" alt="" />
             </button>
 
             <p>Begged - Olivia Rodrigo</p>
 
-            <article id="begged" popover>
-              <button popovertarget="begged" popovertargetaction="hide">
+            <dialog id="begged">
+              <button
+                commandfor="begged"
+                command="close"
+                aria-label="Close Begged details"
+              >
                 ×
               </button>
 
               <img
                 src="images/website/sotw/julysong2.jpg"
-                alt="Album cover Begged by Olivia Rodrigo"
+                alt="Album cover of Begged by Olivia Rodrigo"
               />
 
               <h3>Begged</h3>
@@ -160,11 +184,15 @@
                 <dt>Mood:</dt>
                 <dd>Melancholic / emotional</dd>
               </dl>
-            </article>
+            </dialog>
           </li>
 
           <li>
-            <button popovertarget="hypnotize">
+            <button
+              commandfor="hypnotize"
+              command="show-modal"
+              aria-label="View details for Hypnotize by XG"
+            >
               <img
                 src="images/website/sotw/julysong3.jpg"
                 alt="View details for Hypnotize by XG"
@@ -173,14 +201,18 @@
 
             <p>Hypnotize - XG</p>
 
-            <article id="hypnotize" popover>
-              <button popovertarget="hypnotize" popovertargetaction="hide">
+            <dialog id="hypnotize">
+              <button
+                commandfor="hypnotize"
+                command="close"
+                aria-label="Close Hypnotize details"
+              >
                 ×
               </button>
 
               <img
                 src="images/website/sotw/julysong3.jpg"
-                alt="Album cover Hypnotize by XG"
+                alt="Album cover of Hypnotize by XG"
               />
 
               <h3>Hypnotize</h3>
@@ -203,21 +235,26 @@
                 <dt>Mood:</dt>
                 <dd>Dancing</dd>
               </dl>
-            </article>
+            </dialog>
           </li>
 
           <li>
-            <button popovertarget="aint-in-la">
-              <img
-                src="images/website/sotw/julysong4.jpg"
-                alt="View details for Ain't in LA by Adela"
-              />
+            <button
+              commandfor="aint-in-la"
+              command="show-modal"
+              aria-label="View details for Ain't in LA by Adela"
+            >
+              <img src="images/website/sotw/julysong4.jpg" alt="" />
             </button>
 
             <p>Ain't in LA - Adela</p>
 
-            <article id="aint-in-la" popover>
-              <button popovertarget="aint-in-la" popovertargetaction="hide">
+            <dialog id="aint-in-la">
+              <button
+                commandfor="aint-in-la"
+                command="close"
+                aria-label="Close Ain't in LA details"
+              >
                 ×
               </button>
 
@@ -246,25 +283,25 @@
                 <dt>Mood:</dt>
                 <dd>Nostalgic</dd>
               </dl>
-            </article>
+            </dialog>
           </li>
         </ul>
       </section>
 
-      <nav class="menu-rechts">
+      <nav class="menu-rechts" aria-label="Explore">
         <img src="images/website/hangingplant.png" alt="" />
         <h2>Explore ♪</h2>
 
         <ul>
           <li><a href="about.html">about</a></li>
           <li><a href="aura.html">audio aura</a></li>
-          <li><a href="moods.html">moods</a></li>
-          <li><a href="shows.html">shows</a></li>
-          <li><a href="digitalmusic.html">digital music</a></li>
           <li><a href="memories.html">memories</a></li>
-          <li><a href="experiences.html">experiences</a></li>
+          <li><a href="moods.html">moods</a></li>
           <li><a href="artists.html">artists I Love</a></li>
+          <li><a href="digitalmusic.html">digital music</a></li>
+          <li><a href="experiences.html">experiences</a></li>
           <li><a href="guiltypleasures.html">guilty pleasures</a></li>
+          <li><a href="shows.html">shows</a></li>
           <li><a href="songstoburn.html">songs to burn</a></li>
         </ul>
       </nav>

@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>September Songs of the Week - My Life Through Music</title>
+    <title>September Songs of the Week - Yana's Cozy Little Music Corner</title>
 
     <link rel="icon" type="image/x-icon" href="./images/website/favicon.ico" />
 
@@ -13,9 +13,11 @@
   </head>
 
   <body>
+    <a class="skip-link" href="#main-content"> Skip to main content </a>
+
     <header>
       <img src="images/website/leftheader.png" alt="" />
-      <a href="index.html">
+      <a href="index.html" aria-label="go to homepage">
         <h1>
           Yana's <span class="life">Cozy</span> little
           <span class="music">Music</span> Corner
@@ -33,33 +35,45 @@
     </header>
 
     <main>
-      <nav class="menu-links">
+      <aside class="menu-links">
         <section>
           <h2>Song of the week</h2>
-          <a href="sotw.html">
-            <img src="images/website/lp.png" alt="Song of the week" />
+          <a href="sotw.html" aria-label="Go to songs of the week">
+            <img src="images/website/lp.png" alt="" />
           </a>
           <p>Linger - The Cranberries</p>
         </section>
 
         <section>
           <h2>My Mood</h2>
-          <a href="moods.html">
-            <img
-              src="images/website/me.png"
-              alt="Calm emoji describing my mood"
-            />
+          <a href="moods.html" aria-label="Go to the mood page">
+            <img src="images/website/me.png" alt="" />
           </a>
           <p>cozy</p>
         </section>
 
+        <!--Voor het volgende gedeelte maak ik gebruik van de deepdive light dark-->
+
         <section>
-          <h2>Concerts</h2>
-          <p>
-            <a href="concerts.html">random concert</a>
-          </p>
+          <h2>Color Scheme</h2>
+          <form class="theme-choice">
+            <label>
+              <input type="radio" name="color-theme" value="auto" checked />
+              Auto
+            </label>
+
+            <label>
+              <input type="radio" name="color-theme" value="light" />
+              Light
+            </label>
+
+            <label>
+              <input type="radio" name="color-theme" value="dark" />
+              Dark
+            </label>
+          </form>
         </section>
-      </nav>
+      </aside>
 
       <!--voor het volgende gedeelte heb ik gebruik gemaakt van de bron:
       https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/dl
@@ -71,29 +85,34 @@
         <nav>
           <a href="july.html">july</a>
           <a href="aug.html">aug</a>
-          <a class="active" href="sept.html">sept</a>
+          <a href="sept.html" aria-current="page">sept</a>
           <a href="oct.html">oct</a>
         </nav>
 
         <ul>
           <li>
-            <button popovertarget="judas">
-              <img
-                src="images/website/sotw/septsong1.jpg"
-                alt="View details for Judas by Lady Gaga"
-              />
+            <button
+              commandfor="judas"
+              command="show-modal"
+              aria-label="View details for Judas by Lady Gaga"
+            >
+              <img src="images/website/sotw/septsong1.jpg" alt="" />
             </button>
 
             <p>Judas - Lady Gaga</p>
 
-            <article id="judas" popover>
-              <button popovertarget="judas" popovertargetaction="hide">
+            <dialog id="judas">
+              <button
+                commandfor="judas"
+                command="close"
+                aria-label="Close Judas details"
+              >
                 ×
               </button>
 
               <img
                 src="images/website/sotw/septsong1.jpg"
-                alt="Album cover Judas by Lady Gaga"
+                alt="Album cover of Judas by Lady Gaga"
               />
 
               <h3>Judas</h3>
@@ -116,27 +135,32 @@
                 <dt>Mood:</dt>
                 <dd>Dancing</dd>
               </dl>
-            </article>
+            </dialog>
           </li>
 
           <li>
-            <button popovertarget="we-never-dated">
-              <img
-                src="images/website/sotw/septsong2.jpg"
-                alt="View details for We Never Dated by Sombr"
-              />
+            <button
+              commandfor="we-never-dated"
+              command="show-modal"
+              aria-label="View details for We Never Dated by Sombr"
+            >
+              <img src="images/website/sotw/septsong2.jpg" alt="" />
             </button>
 
             <p>We Never Dated - Sombr</p>
 
-            <article id="we-never-dated" popover>
-              <button popovertarget="we-never-dated" popovertargetaction="hide">
+            <dialog id="we-never-dated">
+              <button
+                commandfor="we-never-dated"
+                command="close"
+                aria-label="Close We Never Dated details"
+              >
                 ×
               </button>
 
               <img
                 src="images/website/sotw/septsong2.jpg"
-                alt="Album cover We Never Dated by Sombr"
+                alt="Album cover of We Never Dated by Sombr"
               />
 
               <h3>We Never Dated</h3>
@@ -159,27 +183,32 @@
                 <dt>Mood:</dt>
                 <dd>Autumn Vibes</dd>
               </dl>
-            </article>
+            </dialog>
           </li>
 
           <li>
-            <button popovertarget="linger">
-              <img
-                src="images/website/sotw/septsong3.jpg"
-                alt="View details for Linger by The Cranberries"
-              />
+            <button
+              commandfor="linger"
+              command="show-modal"
+              aria-label="View details for Linger by The Cranberries"
+            >
+              <img src="images/website/sotw/septsong3.jpg" alt="" />
             </button>
 
             <p>Linger - The Cranberries</p>
 
-            <article id="linger" popover>
-              <button popovertarget="linger" popovertargetaction="hide">
+            <dialog id="linger">
+              <button
+                commandfor="linger"
+                command="close"
+                aria-label="Close Linger details"
+              >
                 ×
               </button>
 
               <img
                 src="images/website/sotw/septsong3.jpg"
-                alt="Album cover Linger by The Cranberries"
+                alt="Album cover of Linger by The Cranberries"
               />
 
               <h3>Linger</h3>
@@ -202,21 +231,26 @@
                 <dt>Mood:</dt>
                 <dd>Autumn Vibes</dd>
               </dl>
-            </article>
+            </dialog>
           </li>
 
           <li>
-            <button popovertarget="double-take">
-              <img
-                src="images/website/sotw/septsong4.jpg"
-                alt="View details for Double Take by Dhruv"
-              />
+            <button
+              commandfor="double-take"
+              command="show-modal"
+              aria-label="View details for Double Take by Dhruv"
+            >
+              <img src="images/website/sotw/septsong4.jpg" alt="" />
             </button>
 
             <p>Double Take - Dhruv</p>
 
-            <article id="double-take" popover>
-              <button popovertarget="double-take" popovertargetaction="hide">
+            <dialog id="double-take">
+              <button
+                commandfor="double-take"
+                command="close"
+                aria-label="Close Double Take details"
+              >
                 ×
               </button>
 
@@ -245,25 +279,25 @@
                 <dt>Mood:</dt>
                 <dd>Nostalgic</dd>
               </dl>
-            </article>
+            </dialog>
           </li>
         </ul>
       </section>
 
-      <nav class="menu-rechts">
+      <nav class="menu-rechts" aria-label="Explore">
         <img src="images/website/hangingplant.png" alt="" />
         <h2>Explore ♪</h2>
 
         <ul>
           <li><a href="about.html">about</a></li>
           <li><a href="aura.html">audio aura</a></li>
-          <li><a href="moods.html">moods</a></li>
-          <li><a href="shows.html">shows</a></li>
-          <li><a href="digitalmusic.html">digital music</a></li>
           <li><a href="memories.html">memories</a></li>
-          <li><a href="experiences.html">experiences</a></li>
+          <li><a href="moods.html">moods</a></li>
           <li><a href="artists.html">artists I Love</a></li>
+          <li><a href="digitalmusic.html">digital music</a></li>
+          <li><a href="experiences.html">experiences</a></li>
           <li><a href="guiltypleasures.html">guilty pleasures</a></li>
+          <li><a href="shows.html">shows</a></li>
           <li><a href="songstoburn.html">songs to burn</a></li>
         </ul>
       </nav>

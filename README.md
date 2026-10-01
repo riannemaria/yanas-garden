@@ -4,6 +4,153 @@ Het staat model voor digitale tuintjes welke bij 'Het web is voor iedereen' door
 
 ## Learning Log
 
+### 23 sept - Huiswerk voor Workshop 3
+
+<details>
+<summary><strong>Human Consent Component Schets</strong></summary>
+
+</details>
+
+<details>
+<summary><strong>Begin HTML van Human Consent Component</strong></summary>
+
+</details>
+
+<details>
+<summary><strong>Deepdive Buttons + Dialogs</strong></summary>
+
+</details>
+
+### 23 sept - Workshop 2
+
+<details>
+<summary><strong>Checkout</strong></summary>
+
+1. Wat is een wireflow en wat heb je eraan?
+   Een wireflow is een combinatie van een wireframe en een flowchart. Je laat niet alleen zien hoe een scherm eruitziet, maar ook hoe een gebruiker van het ene scherm naar het andere gaat. Met pijlen en stappen maak je duidelijk wat er gebeurt wanneer iemand op een knop klikt of een keuze maakt.
+
+2. Wat zijn dark UX patterns? Geef drie voorbeelden.
+   Dark UX patterns zijn ontwerpkeuzes die gebruikers sturen of onder druk zetten om iets te doen wat vooral voordelig is voor de website of het bedrijf, en niet per se voor de gebruiker. De keuzevrijheid van de gebruiker wordt daardoor minder eerlijk.
+
+- Confirm shaming
+  De optie om iets te weigeren wordt expres negatief of beschamend geformuleerd, bijvoorbeeld: “Nee bedankt, ik hou niet van verrassingen.” Hierdoor probeert de website de gebruiker richting accepteren te sturen.
+
+- Scarcity / schaarste
+  Een website laat bijvoorbeeld zien: “Nog maar 2 op voorraad.” Dit kan druk creëren om sneller iets te kopen.
+
+- Urgency / countdown timer
+  Een aftelklok zoals “Bestel binnen 12 minuten voor levering morgen” geeft de gebruiker het gevoel dat hij snel moet beslissen.
+
+3. Waar moet je als ontwerper rekening mee houden bij het maken van een Human Consent Component?
+   Bij een Human Consent Component moet je ervoor zorgen dat de gebruiker begrijpt waarvoor toestemming wordt gevraagd en echt vrij kan kiezen.
+
+</details>
+
+<details>
+<summary><strong>Human Consent Component</strong></summary>
+
+### Inventariseer welke diensten en gegevens jouw Digital Garden gebruikt
+
+![Diensten in mijn digital garden](images/readme/diensten_in_mijn_digitalgarden.png)
+
+### Onderzoek: hoe moet je gebruikers informeren?
+
+<strong>Wat moet ik mijn gebruiker vertellen?</strong></br>
+Voordat een gebruiker toestemming geeft, moet duidelijk zijn welke externe diensten mijn website gebruikt en waarom.
+
+Mijn Digital Garden maakt gebruik van GitHub Pages en digitaaltuintje.nl om de website te hosten en beschikbaar te maken. Daarnaast gebruik ik Spotify-embeds om muziek op mijn website te laten zien. Mogelijk gebruik ik ook links naar Spotify, YouTube, sociale media en andere externe websites.
+
+De gebruiker moet weten dat sommige onderdelen van mijn website verbinding maken met externe partijen. Bij een Spotify-embed kan Spotify bijvoorbeeld gegevens ontvangen en mogelijk cookies of vergelijkbare technieken gebruiken wanneer de embed wordt geladen.
+
+Daarom moet de gebruiker zelf kunnen kiezen of externe Spotify-content geladen mag worden. Als de gebruiker toestemming geeft, kan de Spotify-player worden geladen. Als de gebruiker geen toestemming geeft, moet mijn website nog steeds bruikbaar zijn, maar wordt de Spotify-content niet getoond. Dit geldt hetzelfde voor youtube embeds mocht ik die nog gaan gebruiken.
+
+Ook moet duidelijk zijn dat noodzakelijke diensten, zoals de hosting via GitHub Pages en digitaaltuintje.nl, nodig zijn om de website überhaupt te kunnen gebruiken.
+
+De gebruiker moet daarnaast:
+
+- zelf kunnen kiezen of hij toestemming geeft
+- toestemming ook kunnen weigeren
+- niet-noodzakelijke externe content niet automatisch geladen krijgen
+- kunnen zien waarvoor toestemming wordt gevraagd
+- zijn keuze later kunnen aanpassen
+
+### 10 manieren zoeken waarop websites toestemming vragen
+
+1. Grote modal in het midden van het scherm
+   De gebruiker krijgt bij het openen van de website meteen een groot venster te zien. De rest van de website is vaak nog wel zichtbaar, maar wordt naar de achtergrond geduwd.
+   Voorbeeld: YouTube gebruikt een groot consent-scherm met onder andere “Reject all”, “Accept all” en “More options”
+
+   ![Cookies op Youtube](images/readme/cookies_youtube.png)
+
+2. Accepteren en weigeren direct naast elkaar
+   Bij deze methode hoeft de gebruiker niet eerst naar instellingen om cookies te weigeren. Zowel accepteren als weigeren staat meteen op het eerste scherm.
+   YouTube laat bijvoorbeeld direct Accept all en Reject all zien.
+
+3. Knop voor meer instellingen
+   Naast accepteren of weigeren krijgt de gebruiker een optie zoals “Meer opties” of “Voorkeuren aanpassen”.
+   YouTube gebruikt hiervoor bijvoorbeeld More options.
+
+4. Cookies opdelen in categorieën
+   Sommige websites delen cookies op in groepen, bijvoorbeeld:
+
+- noodzakelijk;
+- voorkeuren;
+- statistieken;
+- marketing.
+  IKEA maakt bijvoorbeeld onderscheid tussen verschillende soorten cookies en geeft bezoekers controle over welke cookies zij willen accepteren.
+
+  ![Cookies op Ikea](images/readme/cookies_ikea_1.png)
+
+5. Toggles per categorie
+   Bij uitgebreidere cookie-instellingen kan iedere categorie een eigen schakelaar hebben:
+   Dit past bijvoorbeeld bij websites waar bezoekers zelf hun cookievoorkeuren kunnen bepalen. IKEA geeft expliciet aan dat gebruikers zelf kunnen aangeven welke cookies zij accepteren.
+
+6. Alleen informeren, zonder toestemmingspopup
+   Niet iedere website hoeft toestemming te vragen voor alle cookies. Sommige websites gebruiken alleen cookies met weinig gevolgen voor de privacy.
+   Rijksoverheid gebruikt bijvoorbeeld analytische cookies voor webstatistieken en geeft aan dat daarvoor geen toestemming nodig is omdat deze nauwelijks gevolgen hebben voor de privacy.
+
+7. Privacyvoorkeuren later opnieuw kunnen openen
+   Sommige websites hebben onderaan de pagina een blijvende link waarmee gebruikers hun keuze later kunnen wijzigen.
+   Op de abonnementswebsite van De Telegraaf staat bijvoorbeeld een knop “Privacyvoorkeuren beheren”.
+   ![Cookies op Telegraaf](images/readme/cookies_telegraaf.png)
+
+8. Externe content blokkeren totdat toestemming is gegeven
+   In plaats van alle externe content meteen te laden, kan de plek waar normaal bijvoorbeeld een video of muziekspeler staat eerst geblokkeerd worden zoals bij de Paradiso website.
+   ![Cookies op Paradiso](images/readme/cookies_paradiso.png)
+
+9. Cookiebanner onderaan de pagina
+   Deze popt niet op in het midden van het scherm en moet je verplicht antwoord opgeven om de website te gebruiken. Deze blijft onderaan het scherm terwijl je de website gewoon kan bekijken.
+   ![Cookies op Ikea](images/readme/cookies_ikea_2.png)
+
+10. Toestemming vragen op het moment dat een functie wordt gebruikt
+    Dit wordt vaak contextuele of just-in-time consent genoemd.
+    De website vraagt dan niet meteen overal toestemming voor. Pas wanneer iemand bijvoorbeeld Spotify-content wil bekijken, verschijnt:
+    Hiervoor moet content van Spotify worden geladen. Sta je dit toe?
+
+### Mijn gekozen oplossing
+
+Tijdens mijn onderzoek heb ik gezien dat websites op verschillende manieren toestemming vragen. Sommige websites gebruiken een grote popup bij het eerste bezoek, terwijl andere websites gebruikmaken van een kleine banner of pas toestemming vragen wanneer externe content wordt geopend.
+
+Voor mijn Digital Garden wil ik verschillende oplossingen combineren. Bij het eerste bezoek krijgt de gebruiker een duidelijke consent-popup met de keuzes “Alles accepteren”, “Alleen noodzakelijk” en “Voorkeuren aanpassen”. In de voorkeuren kan externe Spotify-content apart worden toegestaan.
+
+Wanneer Spotify niet is toegestaan, wordt de Spotify-embed niet direct geladen. Op die plek verschijnt een melding waarmee de gebruiker Spotify later alsnog kan toestaan. Daarnaast wil ik ervoor zorgen dat de privacyvoorkeuren later opnieuw aangepast kunnen worden.
+
+Deze oplossing past bij mijn Digital Garden omdat de website ook zonder Spotify bruikbaar blijft, maar de gebruiker wel zelf controle houdt over het laden van externe content.
+
+</details>
+
+<details>
+<summary><strong>Dark Pattern Herontwerp</strong></summary>
+
+</details>
+
+<details>
+<summary><strong>Wireframes & Wireflows</strong></summary>
+
+![Wireframes & Wireflow voor Human Consent Component](images/readme/wireframes_cookies.png)
+
+</details>
+
 ### 22 sept - Huiswerk voor Workshop 2
 
 <details>
@@ -28,14 +175,12 @@ Dit is voor mijn eigen website belangrijk omdat ik veel interactieve elementen g
 ![Oefening 1 - Deepdive Basic Button States](images/readme/oefening1_deepdive_buttonstates.png)
 https://codepen.io/editor/Rianne-Maria/pen/01a0eee0-cf51-75ce-9877-a05f68d6bb14
 
-### Oefening 2 - Basic button states
+### Oefening 2 - Details en summary
 
-Bij deze oefening heb ik gewerkt met <details> en <summary>. Deze elementen kende ik al, omdat ik ze zelf al gebruik in mijn README om onderdelen in- en uit te klappen. Wat nieuw voor mij was, is dat een <summary> eigenlijk ook interactief is en je deze daarom net als een button verschillende states kunt geven. Ik heb de :focus-visible, :hover en :active states uit de vorige oefening toegepast op mijn summary. Dit is belangrijk voor mijn eigen website omdat ik nu weet dat ik dezelfde principes voor feedback en toegankelijkheid ook kan toepassen op andere interactieve elementen dan alleen buttons.
+Bij deze oefening heb ik gewerkt met details en summary. Deze elementen kende ik al, omdat ik ze zelf al gebruik in mijn README om onderdelen in- en uit te klappen. Wat nieuw voor mij was, is dat een <summary> eigenlijk ook interactief is en je deze daarom net als een button verschillende states kunt geven. Ik heb de :focus-visible, :hover en :active states uit de vorige oefening toegepast op mijn summary. Dit is belangrijk voor mijn eigen website omdat ik nu weet dat ik dezelfde principes voor feedback en toegankelijkheid ook kan toepassen op andere interactieve elementen dan alleen buttons.
 
 ![Oefening 2 - Deepdive Basic Button States](images/readme/oefening2_deepdive_buttonstates.png)
 https://codepen.io/editor/Rianne-Maria/pen/01a0eee7-6cab-73bf-bd9c-39d7ca76b5ce
-
-### Oefening 2 - Details en summary
 
 </details>
 
@@ -82,10 +227,10 @@ Mijn notities:
 <summary><strong>Checkout</strong></summary>
 
 <strong>Wat zijn HTML landmark role elements?</strong></br>
-HTML landmark elements zijn semantische elementen die de grote onderdelen van een pagina structuur en betekenis geven, zoals <header>, <nav>, <main> en <footer>. Ze helpen niet alleen om mijn HTML overzichtelijk te houden, maar zorgen er ook voor dat bijvoorbeeld screenreaders begrijpen hoe de pagina is opgebouwd en gebruikers makkelijker door de website kunnen navigeren.
+HTML landmark elements zijn semantische elementen die de grote onderdelen van een pagina structuur en betekenis geven, zoals header, nav, main en footer. Ze helpen niet alleen om mijn HTML overzichtelijk te houden, maar zorgen er ook voor dat bijvoorbeeld screenreaders begrijpen hoe de pagina is opgebouwd en gebruikers makkelijker door de website kunnen navigeren.
 
 <strong>Wat zijn heading elementen en hoe horen deze ‘genest’ te worden?</strong></br>
-Heading elementen zijn de koppen <h1> t/m <h6>. Deze geven de hiërarchie van de content aan en moeten daarom in een logische volgorde worden gebruikt. Een <h1> is de belangrijkste kop, daaronder gebruik je bijvoorbeeld <h2> voor onderdelen en <h3> voor onderdelen binnen een <h2>. Ik gebruik headings dus niet omdat ik een tekst alleen groter wil maken, maar om de structuur en betekenis van mijn pagina aan te geven.
+Heading elementen zijn de koppen h1 t/m h6. Deze geven de hiërarchie van de content aan en moeten daarom in een logische volgorde worden gebruikt. Een h1 is de belangrijkste kop, daaronder gebruik je bijvoorbeeld h2 voor onderdelen en h3 voor onderdelen binnen een h2. Ik gebruik headings dus niet omdat ik een tekst alleen groter wil maken, maar om de structuur en betekenis van mijn pagina aan te geven.
 
 <strong>Hoe ga jij met cookies om? Beschrijf je beweegredenen en of die zijn veranderd na het volgen van dit college.</strong></br>
 Voor deze les dacht ik eigenlijk niet zo veel na over cookies en klikte ik vaak snel op accepteren om verder te kunnen. Door het onderzoek naar de verschillende cookiemeldingen ben ik me er veel bewuster van geworden waar ik precies toestemming voor geef en hoe het UX-design van een melding mijn keuze kan beïnvloeden. Ik zou nu eerder kijken welke cookies noodzakelijk zijn en onnodige cookies weigeren.

@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>My Life Through Music</title>
+    <title>Memories - Yana's Cozy Little Music Corner</title>
 
     <link rel="icon" type="image/x-icon" href="./images/website/favicon.ico" />
 
@@ -13,6 +13,8 @@
   </head>
 
   <body>
+    <a class="skip-link" href="#main-content"> Skip to main content </a>
+
     <header>
       <img src="images/website/leftheader.png" alt="" />
       <a href="index.html">
@@ -32,34 +34,46 @@
       </p>
     </header>
 
-    <main>
-      <nav class="menu-links">
+    <main id="main-content">
+      <aside class="menu-links">
         <section>
           <h2>Song of the week</h2>
-          <a href="sotw.html">
-            <img src="images/website/lp.png" alt="Song of the week" />
+          <a href="sotw.html" aria-label="Go to songs of the week">
+            <img src="images/website/lp.png" alt="" />
           </a>
           <p>Linger - The Cranberries</p>
         </section>
 
         <section>
           <h2>My Mood</h2>
-          <a href="moods.html">
-            <img
-              src="images/website/me.png"
-              alt="Calm emoji describing my mood"
-            />
+          <a href="moods.html" aria-label="Go to the mood page">
+            <img src="images/website/me.png" alt="" />
           </a>
           <p>cozy</p>
         </section>
 
+        <!--Voor het volgende gedeelte maak ik gebruik van de deepdive light dark-->
+
         <section>
-          <h2>Concerts</h2>
-          <p>
-            <a href="concerts.html">random concert</a>
-          </p>
+          <h2>Color Scheme</h2>
+          <form class="theme-choice">
+            <label>
+              <input type="radio" name="color-theme" value="auto" checked />
+              Auto
+            </label>
+
+            <label>
+              <input type="radio" name="color-theme" value="light" />
+              Light
+            </label>
+
+            <label>
+              <input type="radio" name="color-theme" value="dark" />
+              Dark
+            </label>
+          </form>
         </section>
-      </nav>
+      </aside>
 
       <!--voor dit gedeelte heb ik gebruik gemaakt van de volgende bronnen:
       https://markodenic.tech/seamless-css-marquees/
@@ -69,115 +83,211 @@
       <section class="memories">
         <h2>memories</h2>
 
+        <p>
+          These are little moments from my life, each connected to a song.
+          Whenever I hear that song again, it takes me right back to that memory
+          and the way it felt in that moment.
+        </p>
+
+        <ul>
+          <li>
+            <button
+              commandfor="memory-outside"
+              command="show-modal"
+              aria-label="Open memory 1: Summer 2014"
+            >
+              Memory 1
+            </button>
+          </li>
+
+          <li>
+            <button
+              commandfor="memory-bestpart"
+              command="show-modal"
+              aria-label="Open memory 2: Relationship Song"
+            >
+              Memory 2
+            </button>
+          </li>
+          <li>
+            <button
+              commandfor="memory-manila"
+              command="show-modal"
+              aria-label="Open memory 3: Reminder of Philippines"
+            >
+              Memory 3
+            </button>
+          </li>
+          <li>
+            <button
+              commandfor="memory-river"
+              command="show-modal"
+              aria-label="Open memory 4: First Piano Song"
+            >
+              Memory 4
+            </button>
+          </li>
+          <li>
+            <button
+              commandfor="memory-boogie"
+              command="show-modal"
+              aria-label="Open memory 5: Childhood Song"
+            >
+              Memory 5
+            </button>
+          </li>
+          <li>
+            <button
+              commandfor="memory-moonlight"
+              command="show-modal"
+              aria-label="Open memory 6: 18th Birthday Song"
+            >
+              Memory 6
+            </button>
+          </li>
+          <li>
+            <button
+              commandfor="memory-plutoprojector"
+              command="show-modal"
+              aria-label="Open memory 7: Beginning of Business"
+            >
+              Memory 7
+            </button>
+          </li>
+          <li>
+            <button
+              commandfor="memory-onthefloor"
+              command="show-modal"
+              aria-label="Open memory 8: Childhood Filipino Parties"
+            >
+              Memory 8
+            </button>
+          </li>
+        </ul>
+
         <section class="memory-row">
           <ul>
             <li>
               <img src="images/website/knijper.png" alt="" class="knijper" />
-              <button popovertarget="memory-outside">
+
+              <button
+                commandfor="memory-outside"
+                command="show-modal"
+                aria-label="View details for memory connected to summer 2014"
+              >
                 <img
                   src="images/website/memories/memory1.jpeg"
-                  alt="Memory connected to Outside by Ellie Goulding"
+                  alt="Yana and  her niece holding hands in flowerfield"
                 />
-                <p>Outside - Ellie Goulding</p>
+                <p>Summer 2014</p>
               </button>
             </li>
 
             <li>
               <img src="images/website/knijper.png" alt="" class="knijper" />
-              <button popovertarget="memory-yellow">
-                <img
-                  src="images/website/memories/yellow.jpg"
-                  alt="Memory connected to On the Floor by Jennifer Lopez"
-                />
-                <p>On the Floor - Jennifer Lopez</p>
-              </button>
-            </li>
 
-            <li>
-              <img src="images/website/knijper.png" alt="" class="knijper" />
-              <button popovertarget="memory-bestpart">
+              <button
+                commandfor="memory-bestpart"
+                command="show-modal"
+                aria-label="View details for memory connected to relationship song"
+              >
                 <img
                   src="images/website/memories/memory3.jpeg"
-                  alt="Memory connected to Best Part - Daniel"
+                  alt="Selfie of Yana and her boyfriend"
                 />
-                <p>Best Part - Daniel</p>
+                <p>Relationship Song</p>
               </button>
             </li>
 
             <li>
               <img src="images/website/knijper.png" alt="" class="knijper" />
-              <button popovertarget="memory-manila">
+              <button
+                commandfor="memory-manila"
+                command="show-modal"
+                aria-label="View details for memory connected to reminders of the Philippines"
+              >
                 <img
                   src="images/website/memories/memory4.jpeg"
-                  alt="Memory connected to Raining In Manila by Lola Amour"
+                  alt="Yana and her family swimming in the sea in the Philippines"
                 />
-                <p>Raining In Manila - Lola Amour</p>
+                <p>Reminder of Philippines</p>
               </button>
             </li>
 
             <li>
               <img src="images/website/knijper.png" alt="" class="knijper" />
-              <button popovertarget="memory-river">
+              <button
+                commandfor="memory-river"
+                command="show-modal"
+                aria-label="View details for memory connected to first piano song"
+              >
                 <img
                   src="images/website/memories/memory5.jpg"
-                  alt="Memory connected to River Flows In You by Yiruma "
+                  alt="Yana playing piano"
                 />
-                <p>River Flows In You - Yiruma</p>
+                <p>First Piano Song</p>
               </button>
             </li>
 
             <li>
               <img src="images/website/knijper.png" alt="" class="knijper" />
-              <button popovertarget="memory-outside">
+
+              <button
+                commandfor="memory-outside"
+                command="show-modal"
+                aria-label="View details for memory connected to summer 2014"
+              >
                 <img
                   src="images/website/memories/memory1.jpeg"
-                  alt="Memory connected to Outside by Ellie Goulding"
+                  alt="Yana and  her niece holding hands in flowerfield"
                 />
-                <p>Outside - Ellie Goulding</p>
+                <p>Summer 2014</p>
               </button>
             </li>
 
             <li>
               <img src="images/website/knijper.png" alt="" class="knijper" />
-              <button popovertarget="memory-yellow">
-                <img
-                  src="images/website/memories/yellow.jpg"
-                  alt="Memory connected to Yellow by Coldplay"
-                />
-                <p>Yellow - Coldplay</p>
-              </button>
-            </li>
 
-            <li>
-              <img src="images/website/knijper.png" alt="" class="knijper" />
-              <button popovertarget="memory-bestpart">
+              <button
+                commandfor="memory-bestpart"
+                command="show-modal"
+                aria-label="View details for memory connected to relationship song"
+              >
                 <img
                   src="images/website/memories/memory3.jpeg"
-                  alt="Memory connected to Best Part by Daniel Caesar"
+                  alt="Selfie of Yana and her boyfriend"
                 />
-                <p>Best Part - Daniel Caesar</p>
+                <p>Relationship Song</p>
               </button>
             </li>
 
             <li>
               <img src="images/website/knijper.png" alt="" class="knijper" />
-              <button popovertarget="memory-manila">
+              <button
+                commandfor="memory-manila"
+                command="show-modal"
+                aria-label="View details for memory connected to reminders of the Philippines"
+              >
                 <img
                   src="images/website/memories/memory4.jpeg"
-                  alt="Memory connected to Raining In Manila by Lola Amour"
+                  alt="Yana and her family swimming in the sea in the Philippines"
                 />
-                <p>Raining In Manila - Lola Amour</p>
+                <p>Reminder of Philippines</p>
               </button>
             </li>
 
             <li>
               <img src="images/website/knijper.png" alt="" class="knijper" />
-              <button popovertarget="memory-river">
+              <button
+                commandfor="memory-river"
+                command="show-modal"
+                aria-label="View details for memory connected to first piano song"
+              >
                 <img
                   src="images/website/memories/memory5.jpg"
-                  alt="Memory connected to River Flows In You by Yiruma "
+                  alt="Yana playing piano"
                 />
-                <p>River Flows In You - Yiruma</p>
+                <p>First Piano Song</p>
               </button>
             </li>
           </ul>
@@ -187,151 +297,283 @@
           <ul>
             <li>
               <img src="images/website/knijper.png" alt="" class="knijper" />
-              <button popovertarget="memory-boogie">
+              <button
+                commandfor="memory-boogie"
+                command="show-modal"
+                aria-label="View details for memory connected to childhood song"
+              >
                 <img
                   src="images/website/memories/memory6.png"
-                  alt="Memory connected to Yes Sir I Can Boogie by Baccara"
+                  alt="Yana's dad holding baby Yana in the air"
                 />
-                <p>Yes Sir I Can Boogie - Baccara</p>
+                <p>Childhood Song</p>
               </button>
             </li>
 
             <li>
               <img src="images/website/knijper.png" alt="" class="knijper" />
-              <button popovertarget="memory-moonlight">
+              <button
+                commandfor="memory-moonlight"
+                command="show-modal"
+                aria-label="View details for memory connected to Yana's 18th Birthday"
+              >
                 <img
                   src="images/website/memories/memory7.jpeg"
-                  alt="Memory connected to Dancing in the Moonlight by Toploader"
+                  alt="Decoration of Yana's 18th birthday"
                 />
-                <p>Dancing in the Moonlight - Toploader</p>
+                <p>18th Birthday</p>
               </button>
             </li>
 
             <li>
               <img src="images/website/knijper.png" alt="" class="knijper" />
-              <button popovertarget="memory-plutoprojector">
+              <button
+                commandfor="memory-plutoprojector"
+                command="show-modal"
+                aria-label="View details for memory connected to beginning of business"
+              >
                 <img
                   src="images/website/memories/orbiter.jpg"
-                  alt="Memory connected to Pluto Projector by Rex Orange County"
+                  alt="Packages of Yana's business"
                 />
-                <p>Pluto Projector - Rex Orange County</p>
+                <p>Beginning of Business</p>
               </button>
             </li>
 
             <li>
               <img src="images/website/knijper.png" alt="" class="knijper" />
-              <button popovertarget="memory-westcoast">
+              <button
+                commandfor="memory-onthefloor"
+                command="show-modal"
+                aria-label="View details for memory connected to childhood filipino parties"
+              >
                 <img
-                  src="images/website/memories/westcoast.jpg"
-                  alt="Memory connected to West Coast by Lana Del Rey"
+                  src="images/website/memories/yellow.jpg"
+                  alt="Filipino Disco Party"
                 />
-                <p>West Coast - Lana Del Rey</p>
+                <p>Childhood Filipino Parties</p>
               </button>
             </li>
 
             <li>
               <img src="images/website/knijper.png" alt="" class="knijper" />
-              <button popovertarget="memory-ribs">
-                <img
-                  src="images/website/memories/ribs.jpg"
-                  alt="Memory connected to Ribs by Lorde"
-                />
-                <p>Ribs - Lorde</p>
-              </button>
-            </li>
-
-            <li>
-              <img src="images/website/knijper.png" alt="" class="knijper" />
-              <button popovertarget="memory-boogie">
+              <button
+                commandfor="memory-boogie"
+                command="show-modal"
+                aria-label="View details for memory connected to childhood song"
+              >
                 <img
                   src="images/website/memories/memory6.png"
-                  alt="Memory connected to Yes Sir I Can Boogie by Baccara"
+                  alt="Yana's dad holding baby Yana in the air"
                 />
-                <p>Yes Sir I Can Boogie - Baccara</p>
+                <p>Childhood Song</p>
               </button>
             </li>
 
             <li>
               <img src="images/website/knijper.png" alt="" class="knijper" />
-              <button popovertarget="memory-moonlight">
+              <button
+                commandfor="memory-moonlight"
+                command="show-modal"
+                aria-label="View details for memory connected to Yana's 18th Birthday"
+              >
                 <img
-                  src="images/website/memories/memory7.jpeg""
-                  alt="Memory connected to Dancing in the Moonlight by Toploader"
+                  src="images/website/memories/memory7.jpeg"
+                  alt="Decoration of Yana's 18th birthday"
                 />
-                <p>Dancing in the Moonlight - Toploader</p>
+                <p>18th Birthday</p>
               </button>
             </li>
 
             <li>
               <img src="images/website/knijper.png" alt="" class="knijper" />
-              <button popovertarget="memory-plutoprojector">
+              <button
+                commandfor="memory-plutoprojector"
+                command="show-modal"
+                aria-label="View details for memory connected to beginning of business"
+              >
                 <img
                   src="images/website/memories/orbiter.jpg"
-                  alt="Memory connected to Pluto Projector by Rex Orange County"
+                  alt="Packages of Yana's business"
                 />
-                <p>Pluto Projector - Rex Orange County</p>
+                <p>Beginning of Business</p>
               </button>
             </li>
 
             <li>
               <img src="images/website/knijper.png" alt="" class="knijper" />
-              <button popovertarget="memory-westcoast">
+              <button
+                commandfor="memory-onthefloor"
+                command="show-modal"
+                aria-label="View details for memory connected to childhood filipino parties"
+              >
                 <img
-                  src="images/website/memories/westcoast.jpg"
-                  alt="Memory connected to West Coast by Lana Del Rey"
+                  src="images/website/memories/yellow.jpg"
+                  alt="Filipino Disco Party"
                 />
-                <p>West Coast - Lana Del Rey</p>
-              </button>
-            </li>
-
-            <li>
-              <img src="images/website/knijper.png" alt="" class="knijper" />
-              <button popovertarget="memory-ribs">
-                <img
-                  src="images/website/memories/ribs.jpg"
-                  alt="Memory connected to Ribs by Lorde"
-                />
-                <p>Ribs - Lorde</p>
+                <p>Childhood Filipino Parties</p>
               </button>
             </li>
           </ul>
         </section>
 
-        <article id="memory-outside" popover>
-          <button popovertarget="memory-outside" popovertargetaction="hide">
+        <section class="memories-static">
+          <ul>
+            <li>
+              <img src="images/website/knijper.png" alt="" class="knijper" />
+
+              <button
+                commandfor="memory-outside"
+                command="show-modal"
+                aria-label="View details for memory connected to summer 2014"
+              >
+                <img
+                  src="images/website/memories/memory1.jpeg"
+                  alt="Yana and  her niece holding hands in flowerfield"
+                />
+                <p>Summer 2014</p>
+              </button>
+            </li>
+
+            <li>
+              <img src="images/website/knijper.png" alt="" class="knijper" />
+
+              <button
+                commandfor="memory-bestpart"
+                command="show-modal"
+                aria-label="View details for memory connected to relationship song"
+              >
+                <img
+                  src="images/website/memories/memory3.jpeg"
+                  alt="Selfie of Yana and her boyfriend"
+                />
+                <p>Relationship Song</p>
+              </button>
+            </li>
+
+            <li>
+              <img src="images/website/knijper.png" alt="" class="knijper" />
+              <button
+                commandfor="memory-manila"
+                command="show-modal"
+                aria-label="View details for memory connected to reminders of the Philippines"
+              >
+                <img
+                  src="images/website/memories/memory4.jpeg"
+                  alt="Yana and her family swimming in the sea in the Philippines"
+                />
+                <p>Reminder of Philippines</p>
+              </button>
+            </li>
+
+            <li>
+              <img src="images/website/knijper.png" alt="" class="knijper" />
+              <button
+                commandfor="memory-river"
+                command="show-modal"
+                aria-label="View details for memory connected to first piano song"
+              >
+                <img
+                  src="images/website/memories/memory5.jpg"
+                  alt="Yana playing piano"
+                />
+                <p>First Piano Song</p>
+              </button>
+            </li>
+
+            <li>
+              <img src="images/website/knijper.png" alt="" class="knijper" />
+              <button
+                commandfor="memory-boogie"
+                command="show-modal"
+                aria-label="View details for memory connected to childhood song"
+              >
+                <img
+                  src="images/website/memories/memory6.png"
+                  alt="Yana's dad holding baby Yana in the air"
+                />
+                <p>Childhood Song</p>
+              </button>
+            </li>
+
+            <li>
+              <img src="images/website/knijper.png" alt="" class="knijper" />
+              <button
+                commandfor="memory-moonlight"
+                command="show-modal"
+                aria-label="View details for memory connected to Yana's 18th Birthday"
+              >
+                <img
+                  src="images/website/memories/memory7.jpeg"
+                  alt="Decoration of Yana's 18th birthday"
+                />
+                <p>18th Birthday</p>
+              </button>
+            </li>
+
+            <li>
+              <img src="images/website/knijper.png" alt="" class="knijper" />
+              <button
+                commandfor="memory-plutoprojector"
+                command="show-modal"
+                aria-label="View details for memory connected to beginning of business"
+              >
+                <img
+                  src="images/website/memories/orbiter.jpg"
+                  alt="Packages of Yana's business"
+                />
+                <p>Beginning of Business</p>
+              </button>
+            </li>
+
+            <li>
+              <img src="images/website/knijper.png" alt="" class="knijper" />
+              <button
+                commandfor="memory-onthefloor"
+                command="show-modal"
+                aria-label="View details for memory connected to childhood filipino parties"
+              >
+                <img
+                  src="images/website/memories/yellow.jpg"
+                  alt="Filipino Disco Party"
+                />
+                <p>Childhood Filipino Parties</p>
+              </button>
+            </li>
+          </ul>
+        </section>
+
+        <dialog id="memory-outside">
+          <button
+            commandfor="memory-outside"
+            command="close"
+            aria-label="Close summer 2014 memory"
+          >
             ×
           </button>
+
           <img
             src="images/website/memories/memory1.jpeg"
             alt="Memory connected to Outside by Ellie Goulding"
           />
+
           <h3>Outside</h3>
+
           <p>Ellie Goulding</p>
+
           <p>
             This memory brings me back to summer 2014, when me and my niece went
             on vacation together for the very first time. This song always
-            played on the radio when we were
+            played on the radio when we were...
           </p>
-        </article>
+        </dialog>
 
-        <article id="memory-yellow" popover>
-          <button popovertarget="memory-yellow" popovertargetaction="hide">
-            ×
-          </button>
-          <img
-            src="images/website/memories/yellow.jpg"
-            alt="Memory connected to Yellow by Coldplay"
-          />
-          <h3>Yellow</h3>
-          <p>Coldplay</p>
-          <p>
-            This song always makes me think of a calm memory and a moment that
-            felt simple but special.
-          </p>
-        </article>
-
-        <article id="memory-bestpart" popover>
-          <button popovertarget="memory-bestpart" popovertargetaction="hide">
+        <dialog id="memory-bestpart">
+          <button
+            commandfor="memory-bestpart"
+            command="close"
+            aria-label="Close relationship song memory"
+          >
             ×
           </button>
           <img
@@ -344,10 +586,14 @@
             This memory feels like replaying a scene in my head over and over
             again, but in a beautiful way.
           </p>
-        </article>
+        </dialog>
 
-        <article id="memory-manila" popover>
-          <button popovertarget="memory-manila" popovertargetaction="hide">
+        <dialog id="memory-manila">
+          <button
+            commandfor="memory-manila"
+            command="close"
+            aria-label="Close reminders of philippines memory"
+          >
             ×
           </button>
           <img
@@ -360,26 +606,34 @@
             This one reminds me of a deeper emotional memory and a song that
             says a lot without needing much.
           </p>
-        </article>
+        </dialog>
 
-        <article id="memory-river" popover>
-          <button popovertarget="memory-river" popovertargetaction="hide">
+        <dialog id="memory-river">
+          <button
+            commandfor="memory-river"
+            command="close"
+            aria-label="Close first piano song memory"
+          >
             ×
           </button>
           <img
             src="images/website/memories/memory5.jpg"
-            alt="Memory connected to River Flows In You BY Yiruma" 
+            alt="Memory connected to River Flows In You BY Yiruma"
           />
           <h3>River Flows In You</h3>
-          <p>Yiruma </p>
+          <p>Yiruma</p>
           <p>
             This memory is more reflective and makes me think about slowing down
             and just taking things in.
           </p>
-        </article>
+        </dialog>
 
-        <article id="memory-boogie" popover>
-          <button popovertarget="memory-boogie" popovertargetaction="hide">
+        <dialog id="memory-boogie">
+          <button
+            commandfor="memory-boogie"
+            command="close"
+            aria-label="Close childhood song memory"
+          >
             ×
           </button>
           <img
@@ -392,10 +646,14 @@
             This memory feels dreamy and distant, like a moment that stayed in
             my head long after it passed.
           </p>
-        </article>
+        </dialog>
 
-        <article id="memory-moonlight" popover>
-          <button popovertarget="memory-moonlight" popovertargetaction="hide">
+        <dialog id="memory-moonlight">
+          <button
+            commandfor="memory-moonlight"
+            command="close"
+            aria-label="Close 18th birthday memory"
+          >
             ×
           </button>
           <img
@@ -409,14 +667,18 @@
             18th birthday party is a big deal in the Philippines, they call it a
             debut.
           </p>
-        </article>
+        </dialog>
 
-        <article id="memory-orbiter" popover>
-          <button popovertarget="memory-plutoprojector" popovertargetaction="hide">
+        <dialog id="memory-plutoprojector">
+          <button
+            commandfor="memory-plutoprojector"
+            command="close"
+            aria-label="Close beginning of business memory"
+          >
             ×
           </button>
           <img
-            src="images/website/memories/orbiter.jpg"
+            src="images/website/memories/memory8.jpg"
             alt="Memory connected to Pluto Projector by Rex Orange County"
           />
           <h3>Pluto Projector</h3>
@@ -425,55 +687,43 @@
             This memory feels personal and grounding, like something quiet but
             really meaningful.
           </p>
-        </article>
+        </dialog>
 
-        <article id="memory-westcoast" popover>
-          <button popovertarget="memory-westcoast" popovertargetaction="hide">
+        <dialog id="memory-onthefloor">
+          <button
+            commandfor="memory-onthefloor"
+            command="close"
+            aria-label="Close childhood filipino parties memory"
+          >
             ×
           </button>
           <img
-            src="images/website/memories/westcoast.jpg"
-            alt="Memory connected to West Coast by Lana Del Rey"
+            src="images/website/memories/memory2.jpg"
+            alt="Memory connected to On the Floor by Jennifer Lopez"
           />
-          <h3>West Coast</h3>
-          <p>Lana Del Rey</p>
+          <h3>On the Floor</h3>
+          <p>Jennifer Lopez</p>
           <p>
-            This memory feels cinematic and a little dreamy, like a scene from a
-            film.
+            This memory feels personal and grounding, like something quiet but
+            really meaningful.
           </p>
-        </article>
-
-        <article id="memory-ribs" popover>
-          <button popovertarget="memory-ribs" popovertargetaction="hide">
-            ×
-          </button>
-          <img
-            src="images/website/memories/ribs.jpg"
-            alt="Memory connected to Ribs by Lorde"
-          />
-          <h3>Ribs</h3>
-          <p>Lorde</p>
-          <p>
-            This memory feels nostalgic and emotional, like a moment I never
-            fully want to let go of.
-          </p>
-        </article>
+        </dialog>
       </section>
 
-      <nav class="menu-rechts">
+      <nav class="menu-rechts" aria-label="Explore">
         <img src="images/website/hangingplant.png" alt="" />
         <h2>Explore ♪</h2>
 
         <ul>
           <li><a href="about.html">about</a></li>
           <li><a href="aura.html">audio aura</a></li>
+          <li><a href="memories.html" aria-current="page">memories</a></li>
           <li><a href="moods.html">moods</a></li>
-          <li><a href="shows.html">shows</a></li>
-          <li><a href="digitalmusic.html">digital music</a></li>
-          <li><a href="memories.html">memories</a></li>
-          <li><a href="experiences.html">experiences</a></li>
           <li><a href="artists.html">artists I Love</a></li>
+          <li><a href="digitalmusic.html">digital music</a></li>
+          <li><a href="experiences.html">experiences</a></li>
           <li><a href="guiltypleasures.html">guilty pleasures</a></li>
+          <li><a href="shows.html">shows</a></li>
           <li><a href="songstoburn.html">songs to burn</a></li>
         </ul>
       </nav>

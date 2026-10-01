@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>My Life Through Music</title>
+    <title>August Songs of the Week - Yana's Cozy Little Music Corner</title>
 
     <link rel="icon" type="image/x-icon" href="./images/website/favicon.ico" />
 
@@ -13,9 +13,11 @@
   </head>
 
   <body>
+    <a class="skip-link" href="#main-content"> Skip to main content </a>
+
     <header>
       <img src="images/website/leftheader.png" alt="" />
-      <a href="index.html">
+      <a href="index.html" aria-label="go to homepage">
         <h1>
           Yana's <span class="life">Cozy</span> little
           <span class="music">Music</span> Corner
@@ -32,34 +34,46 @@
       </p>
     </header>
 
-    <main>
-      <nav class="menu-links">
+    <main id="main-content">
+      <aside class="menu-links">
         <section>
           <h2>Song of the week</h2>
-          <a href="sotw.html">
-            <img src="images/website/lp.png" alt="Song of the week" />
+          <a href="sotw.html" aria-label="Go to songs of the week">
+            <img src="images/website/lp.png" alt="" />
           </a>
           <p>Linger - The Cranberries</p>
         </section>
 
         <section>
           <h2>My Mood</h2>
-          <a href="moods.html">
-            <img
-              src="images/website/me.png"
-              alt="Calm emoji describing my mood"
-            />
+          <a href="moods.html" aria-label="Go to the mood page">
+            <img src="images/website/me.png" alt="" />
           </a>
           <p>cozy</p>
         </section>
 
+        <!--Voor het volgende gedeelte maak ik gebruik van de deepdive light dark-->
+
         <section>
-          <h2>Concerts</h2>
-          <p>
-            <a href="concerts.html">random concert</a>
-          </p>
+          <h2>Color Scheme</h2>
+          <form class="theme-choice">
+            <label>
+              <input type="radio" name="color-theme" value="auto" checked />
+              Auto
+            </label>
+
+            <label>
+              <input type="radio" name="color-theme" value="light" />
+              Light
+            </label>
+
+            <label>
+              <input type="radio" name="color-theme" value="dark" />
+              Dark
+            </label>
+          </form>
         </section>
-      </nav>
+      </aside>
 
       <!--voor het volgende gedeelte heb ik gebruik gemaakt van de bron:
       https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/dl
@@ -70,30 +84,35 @@
 
         <nav>
           <a href="july.html">july</a>
-          <a class="active" href="aug.html">aug</a>
+          <a href="aug.html" aria-current="page">aug</a>
           <a href="sept.html">sept</a>
           <a href="oct.html">oct</a>
         </nav>
 
         <ul>
           <li>
-            <button popovertarget="animal">
-              <img
-                src="images/website/sotw/augustsong1.jpg"
-                alt="View details for Animal by Katseye"
-              />
+            <button
+              commandfor="animal"
+              command="show-modal"
+              aria-label="View details for Animal by Katseye"
+            >
+              <img src="images/website/sotw/augustsong1.jpg" alt="" />
             </button>
 
             <p>Animal - Katseye</p>
 
-            <article id="animal" popover>
-              <button popovertarget="animal" popovertargetaction="hide">
+            <dialog id="animal">
+              <button
+                commandfor="animal"
+                command="close"
+                aria-label="Close Animal details"
+              >
                 ×
               </button>
 
               <img
                 src="images/website/sotw/augustsong1.jpg"
-                alt="Album cover Animal by Katseye"
+                alt="Album cover of Animal by Katseye"
               />
 
               <h3>Animal</h3>
@@ -116,30 +135,32 @@
                 <dt>Mood:</dt>
                 <dd>Excited</dd>
               </dl>
-            </article>
+            </dialog>
           </li>
 
           <li>
-            <button popovertarget="great-expectations">
-              <img
-                src="images/website/sotw/augustsong2.jpg"
-                alt="View details for Great Expectations by Sienna Spiro"
-              />
+            <button
+              commandfor="great-expectations"
+              command="show-modal"
+              aria-label="View details for Great Expectations by Sienna Spiro"
+            >
+              <img src="images/website/sotw/augustsong2.jpg" alt="" />
             </button>
 
             <p>Great Expectations - Sienna Spiro</p>
 
-            <article id="great-expectations" popover>
+            <dialog id="great-expectations">
               <button
-                popovertarget="great-expectations"
-                popovertargetaction="hide"
+                commandfor="great-expectations"
+                command="close"
+                aria-label="Close Great Expectations details"
               >
                 ×
               </button>
 
               <img
                 src="images/website/sotw/augustsong2.jpg"
-                alt="Album cover Great Expectations by Sienna Spiro"
+                alt="Album cover of Great Expectations by Sienna Spiro"
               />
 
               <h3>Great Expectations</h3>
@@ -162,27 +183,32 @@
                 <dt>Mood:</dt>
                 <dd>Emotional</dd>
               </dl>
-            </article>
+            </dialog>
           </li>
 
           <li>
-            <button popovertarget="blazed">
-              <img
-                src="images/website/sotw/augustsong3.jpg"
-                alt="View details for Blazed by Ariana Grande"
-              />
+            <button
+              commandfor="blazed"
+              command="show-modal"
+              aria-label="View details for Blazed by Ariana Grande"
+            >
+              <img src="images/website/sotw/augustsong3.jpg" alt="" />
             </button>
 
             <p>Blazed - Ariana Grande</p>
 
-            <article id="blazed" popover>
-              <button popovertarget="blazed" popovertargetaction="hide">
+            <dialog id="blazed">
+              <button
+                commandfor="blazed"
+                command="close"
+                aria-label="Close Blazed details"
+              >
                 ×
               </button>
 
               <img
                 src="images/website/sotw/augustsong3.jpg"
-                alt="Album cover Blazed by Ariana Grande"
+                alt="Album cover of Blazed by Ariana Grande"
               />
 
               <h3>Blazed</h3>
@@ -205,21 +231,26 @@
                 <dt>Mood:</dt>
                 <dd>Funky</dd>
               </dl>
-            </article>
+            </dialog>
           </li>
 
           <li>
-            <button popovertarget="sex-drugs-etc">
-              <img
-                src="images/website/sotw/augustsong4.jpg"
-                alt="View details for Sex, Drugs, Etc. by Beach Weather"
-              />
+            <button
+              commandfor="sex-drugs-etc"
+              command="show-modal"
+              aria-label="View details for Sex, Drugs, Etc. by Beach Weather"
+            >
+              <img src="images/website/sotw/augustsong4.jpg" alt="" />
             </button>
 
             <p>Sex, Drugs, Etc. - Beach Weather</p>
 
-            <article id="sex-drugs-etc" popover>
-              <button popovertarget="sex-drugs-etc" popovertargetaction="hide">
+            <dialog id="sex-drugs-etc">
+              <button
+                commandfor="sex-drugs-etc"
+                command="close"
+                aria-label="Close Sex, Drugs, Etc. details"
+              >
                 ×
               </button>
 
@@ -248,25 +279,25 @@
                 <dt>Mood:</dt>
                 <dd>Cozy</dd>
               </dl>
-            </article>
+            </dialog>
           </li>
         </ul>
       </section>
 
-      <nav class="menu-rechts">
+      <nav class="menu-rechts" aria-label="Explore">
         <img src="images/website/hangingplant.png" alt="" />
         <h2>Explore ♪</h2>
 
         <ul>
           <li><a href="about.html">about</a></li>
           <li><a href="aura.html">audio aura</a></li>
-          <li><a href="moods.html">moods</a></li>
-          <li><a href="shows.html">shows</a></li>
-          <li><a href="digitalmusic.html">digital music</a></li>
           <li><a href="memories.html">memories</a></li>
-          <li><a href="experiences.html">experiences</a></li>
+          <li><a href="moods.html">moods</a></li>
           <li><a href="artists.html">artists I Love</a></li>
+          <li><a href="digitalmusic.html">digital music</a></li>
+          <li><a href="experiences.html">experiences</a></li>
           <li><a href="guiltypleasures.html">guilty pleasures</a></li>
+          <li><a href="shows.html">shows</a></li>
           <li><a href="songstoburn.html">songs to burn</a></li>
         </ul>
       </nav>

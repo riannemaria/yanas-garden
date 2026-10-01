@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>My Life Through Music</title>
+    <title>Yana's Cozy Little Music Corner</title>
 
     <link rel="icon" type="image/x-icon" href="./images/website/favicon.ico" />
 
@@ -13,9 +13,11 @@
   </head>
 
   <body>
+    <a class="skip-link" href="#main-content"> Skip to main content </a>
+
     <header>
       <img src="images/website/leftheader.png" alt="" />
-      <a href="index.html">
+      <a href="index.html" aria-current="page">
         <h1>
           Yana's <span class="life">Cozy</span> little
           <span class="music">Music</span> Corner
@@ -32,98 +34,108 @@
       </p>
     </header>
 
-    <main>
-      <nav class="menu-links">
+    <main id="main-content">
+      <aside class="menu-links">
         <section>
           <h2>Song of the week</h2>
-          <a href="sotw.html">
-            <img src="images/website/lp.png" alt="Song of the week" />
+          <a href="sotw.html" aria-label="Go to songs of the week">
+            <img src="images/website/lp.png" alt="" />
           </a>
           <p>Linger - The Cranberries</p>
         </section>
 
         <section>
           <h2>My Mood</h2>
-          <a href="moods.html">
-            <img
-              src="images/website/me.png"
-              alt="Calm emoji describing my mood"
-            />
+          <a href="moods.html" aria-label="Go to the mood page">
+            <img src="images/website/me.png" alt="" />
           </a>
           <p>cozy</p>
         </section>
 
+        <!--Voor het volgende gedeelte maak ik gebruik van de deepdive light dark-->
+
         <section>
-          <h2>Concerts</h2>
-          <p>
-            <a href="concerts.html">random concert</a>
-          </p>
+          <h2>Color Scheme</h2>
+          <form class="theme-choice">
+            <label>
+              <input type="radio" name="color-theme" value="auto" checked />
+              Auto
+            </label>
+
+            <label>
+              <input type="radio" name="color-theme" value="light" />
+              Light
+            </label>
+
+            <label>
+              <input type="radio" name="color-theme" value="dark" />
+              Dark
+            </label>
+          </form>
         </section>
-      </nav>
+      </aside>
 
       <section class="homepage">
         <h2>Explore my life through music</h2>
+
+        <p>
+          Welcome to my cozy little music corner. This digital garden is a
+          collection of songs, moods, memories and artists that are connected to
+          different moments in my life. Music can bring back a feeling, remind
+          me of a certain place or person, or simply match the mood I am in.
+          While exploring this garden, you can discover the music I love and the
+          little stories and memories connected to it.
+        </p>
+
         <ul>
           <li>
-            <a href="aura.html">
-              <img src="images/website/plant.png" alt="My audio aura" />
+            <a href="aura.html" aria-label="Go to audio aura page">
+              <img src="images/website/plant.png" alt="" />
             </a>
           </li>
 
           <li>
-            <a href="album2.html">
-              <img
-                src="images/albumcovers/album1.jpg"
-                alt="My favorite albums"
-              />
+            <a href="about.html" aria-label="Go to about me page">
+              <img src="images/albumcovers/album1.jpg" alt="" />
             </a>
           </li>
 
           <li>
-            <a href="album3.html">
-              <img
-                src="images/albumcovers/album3.jpg"
-                alt="My favorite artists"
-              />
+            <a href="moods.html" aria-label="Go to the mood page">
+              <img src="images/albumcovers/album3.jpg" alt="" />
             </a>
           </li>
 
           <li>
-            <a href="album4.html">
-              <img
-                src="images/albumcovers/album2.jpg"
-                alt="My guilty pleasures"
-              />
+            <a href="sotw.html" aria-label="Go to songs of the week">
+              <img src="images/albumcovers/album6.jpg" alt="" />
             </a>
           </li>
 
           <li>
-            <a href="album5.html">
-              <img src="images/website/Lamp1.png" alt="Best cozy mood music" />
+            <a href="artists.html" aria-label="Go to artist I love page">
+              <img src="images/website/Lamp1.png" alt="" />
             </a>
           </li>
 
           <li>
-            <a href="album6.html">
-              <img
-                src="images/albumcovers/album6.jpg"
-                alt="Changes in my music taste"
-              />
+            <a href="experiences.html" aria-label="Go to experiences page">
+              <img src="images/albumcovers/album6.jpg" alt="" />
             </a>
           </li>
 
           <li>
-            <a href="album7.html">
-              <img
-                src="images/website/Camera.png"
-                alt="My memories with music"
-              />
+            <a href="memories.html" aria-label="Go to my memories page">
+              <img src="images/website/Camera.png" alt="" />
             </a>
           </li>
 
           <li>
-            <a href="album8.html">
-              <img src="images/website/kaars.png" alt="Songs I want to burn" />
+            <a
+              href="songstoburn.html"
+              aria-label="Go to songs I want to burn page"
+            >
+              <img src="images/website/kaars.png" alt="" />
             </a>
           </li>
         </ul>
@@ -136,13 +148,13 @@
         <ul>
           <li><a href="about.html">about</a></li>
           <li><a href="aura.html">audio aura</a></li>
-          <li><a href="moods.html">moods</a></li>
-          <li><a href="shows.html">shows</a></li>
-          <li><a href="digitalmusic.html">digital music</a></li>
           <li><a href="memories.html">memories</a></li>
-          <li><a href="experiences.html">experiences</a></li>
+          <li><a href="moods.html">moods</a></li>
           <li><a href="artists.html">artists I Love</a></li>
+          <li><a href="digitalmusic.html">digital music</a></li>
+          <li><a href="experiences.html">experiences</a></li>
           <li><a href="guiltypleasures.html">guilty pleasures</a></li>
+          <li><a href="shows.html">shows</a></li>
           <li><a href="songstoburn.html">songs to burn</a></li>
         </ul>
       </nav>
@@ -151,5 +163,107 @@
     <footer>
       <p>♡ Digital Garden 2026 — Rianne Geilings</p>
     </footer>
+
+    <dialog class="cookie-dialog" id="cookie-dialog" open>
+      <h2>A cookie before you press play 🍪</h2>
+
+      <div class="cookie-text">
+        <p>
+          Yana's Cozy Little Music Corner uses external services to make the
+          website available and to display music. GitHub and digitaaltuintje.nl
+          are used to host and display the website. In the process, technical
+          data may be processed that is necessary to make the website available.
+        </p>
+
+        <p>
+          Spotify & YouTube are used to display and play music content. If you
+          allow this content, a connection will be made to these platforms.
+          Spotify & YouTube may then receive technical data and use cookies or
+          similar technologies.
+        </p>
+      </div>
+
+      <div class="cookie-options">
+        <img src="images/website/cookie_image.png" alt="" />
+
+        <button commandfor="cookie-dialog" command="close">Accept All</button>
+
+        <button commandfor="cookie-dialog" command="close">
+          Necessary only
+        </button>
+
+        <button commandfor="privacy-dialog" command="show-modal">
+          Manage preferences
+        </button>
+      </div>
+    </dialog>
+
+    <!--Voor het volgende gedeelte maak ik gebruik van de bron: https://www.w3schools.com/howto/howto_css_switch.asp om de toggles te maken-->
+
+    <dialog id="privacy-dialog" class="privacy-dialog">
+      <form method="dialog">
+        <h2>Privacy Preferences</h2>
+
+        <section class="preference-row">
+          <div class="preference-text">
+            <h3>Necessary services</h3>
+            <p>
+              GitHub and digitaaltuintje.nl are necessary to keep the website
+              working properly and available.
+            </p>
+          </div>
+
+          <label class="switch">
+            <input
+              type="checkbox"
+              checked
+              disabled
+              aria-label="Necessary services"
+            />
+            <span></span>
+          </label>
+        </section>
+
+        <section class="preference-row">
+          <div class="preference-text">
+            <h3>Spotify content</h3>
+            <p>
+              Allow Spotify content to be loaded. Spotify may receive technical
+              data and use cookies or similar technologies.
+            </p>
+          </div>
+
+          <label class="switch">
+            <input
+              type="checkbox"
+              name="spotify-content"
+              aria-label="Allow Spotify content"
+            />
+            <span></span>
+          </label>
+        </section>
+
+        <section class="preference-row">
+          <div class="preference-text">
+            <h3>YouTube content</h3>
+            <p>
+              Allow YouTube content to be loaded. YouTube may receive technical
+              data and use cookies or similar technologies.
+            </p>
+          </div>
+
+          <label class="switch">
+            <input
+              type="checkbox"
+              name="youtube-content"
+              aria-label="Allow YouTube content"
+            />
+            <span></span>
+          </label>
+        </section>
+
+        <button class="save-preferences-button">Save preferences</button>
+      </form>
+    </dialog>
   </body>
 </html>

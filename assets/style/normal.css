@@ -3,17 +3,31 @@
    ========================= */
 
 :root {
-  --kleur-achtergrond: #4a2f22;
-  --kleur-wit: white;
-  --kleur-rand: light-dark(#b2967d, #d79a7f);
-  --kleur-menu: #684735;
-  --kleur-menu-binnenrand: #fcebd8;
-  --kleur-menu-kop: #ecc5b8;
-  --kleur-hover-achtergrond: #f2cdb5;
-  --kleur-hover-tekst: #7d4638;
-  --kleur-plank: #26150e;
+  color-scheme: light dark;
 
+  /*kleuren*/
+  --kleur-achtergrond: light-dark(#a99a89, #4a2f22);
+  --kleur-tekst: light-dark(#2b1608, white);
+  --kleur-menu-opties: light-dark(#725b48, white);
+  --kleur-rand: light-dark(#2b1608, #d79a7f);
+  --kleur-menu: light-dark(#d8c8b5, #684735);
+  --kleur-menu-binnenrand: light-dark(#755a48, #fcebd8);
+  --kleur-menu-kop: light-dark(#2b1608, #ecc5b8);
+  --kleur-hover-achtergrond: light-dark(#725b48, #f2cdb5);
+  --kleur-hover-tekst: light-dark(#fcebd8, #7d4638);
+  --kleur-plank: #26150e;
+  --kleur-schaduw: #f3e9d7;
+  --kleur-achtergrond-gradient-1: light-dark(#725b48, #2b1608);
+  --kleur-achtergrond-gradient-2: light-dark(#9e886f, #5e4031);
+  --kleur-focus: light-dark(#2b1608, #fcebd8);
+
+  /*ruimtes*/
   --ruimte-tussen-albums: 2em;
+  --ruimte-xs: 0.25em;
+  --ruimte-s: 0.5em;
+  --ruimte-m: 1em;
+  --ruimte-l: 2em;
+  --ruimte-xl: 3em;
 }
 
 /* =========================
@@ -54,6 +68,14 @@ body {
   overflow-x: hidden;
 }
 
+html:has([value="light"]:checked) {
+  color-scheme: light;
+}
+
+html:has([value="dark"]:checked) {
+  color-scheme: dark;
+}
+
 body {
   margin: 0;
 
@@ -61,22 +83,249 @@ body {
 
   background: linear-gradient(
     to right,
-    #2b1608 0%,
-    #4a2f22 20%,
-    #2b1608 50%,
-    #4a2f22 80%,
-    #2b1608 100%
+    var(--kleur-achtergrond-gradient-1) 0%,
+    var(--kleur-achtergrond-gradient-2) 20%,
+    var(--kleur-achtergrond-gradient-1) 50%,
+    var(--kleur-achtergrond-gradient-2) 80%,
+    var(--kleur-achtergrond-gradient-1) 100%
   );
 
-  color: var(--kleur-wit);
+  color: var(--kleur-tekst);
 
   font-family: "sniglet", system-ui, sans-serif;
 
   cursor: url("../../images/website/cursor.cur"), auto;
 }
 
+h2 {
+  margin: 0 0 var(--ruimte-s);
+
+  text-align: center;
+
+  font-size: clamp(1.5rem, 1rem + 1.5vw, 2rem);
+
+  color: var(--kleur-menu-kop);
+}
+
 a {
   cursor: url("../../images/website/cursor2.cur"), pointer;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: solid var(--kleur-focus);
+  outline-offset: 0.3em;
+}
+
+a:active,
+button:active {
+  opacity: 0.75;
+}
+
+.skip-link {
+  position: absolute;
+  top: var(--ruimte-s);
+  left: var(--ruimte-s);
+  transform: translateY(-200%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+/* =========================
+   COOKIE DIALOG
+   ========================= */
+
+.cookie-dialog {
+  position: fixed;
+  inset: 0;
+  margin: auto;
+
+  width: min(90%, 34em);
+  padding: 1.5rem;
+  border: none;
+  border-radius: 1rem;
+
+  z-index: 999;
+}
+
+.cookie-dialog h2 {
+  margin-bottom: 1em;
+}
+
+.cookie-dialog p {
+  margin-bottom: 1em;
+  line-height: 1.5;
+}
+
+.cookie-text {
+  max-height: 15em;
+  overflow-y: auto;
+
+  margin-bottom: 1em;
+}
+
+.cookie-options {
+  display: grid;
+  grid-template-columns: 8em 1fr;
+  grid-template-areas:
+    "avatar accept"
+    "avatar necessary"
+    "avatar preferences";
+  gap: 1em;
+  align-items: center;
+}
+
+.cookie-options img {
+  grid-area: avatar;
+  width: 100%;
+  height: auto;
+}
+
+.cookie-options button:nth-of-type(1) {
+  grid-area: accept;
+}
+
+.cookie-options button:nth-of-type(2) {
+  grid-area: necessary;
+}
+
+.cookie-options button:nth-of-type(3) {
+  grid-area: preferences;
+}
+
+.cookie-options button {
+  width: 100%;
+  padding: 0.8rem 1em;
+  font-family: "sniglet", system-ui, sans-serif;
+
+  background-color: var(--kleur-menu);
+}
+
+.cookie-options button:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 0.4em var(--kleur-schaduw));
+
+  cursor: pointer;
+}
+
+/* =========================
+   PRIVACY DIALOG
+   ========================= */
+
+.privacy-dialog {
+  width: min(90%, 45em);
+  padding: 1.5em;
+  border: none;
+  border-radius: 1em;
+}
+
+.privacy-dialog::backdrop {
+  background-color: rgb(0 0 0 / 0.5);
+  backdrop-filter: blur(2px);
+}
+
+.privacy-dialog form {
+  display: grid;
+  gap: 1em;
+}
+
+.privacy-dialog h2 {
+  margin: 0;
+  padding-bottom: 0.75em;
+  border-bottom: 1px solid var(--kleur-rand);
+}
+
+.preference-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1em;
+  align-items: start;
+
+  padding: 1em 0;
+  border-bottom: 1px solid var(--kleur-rand);
+}
+
+.preference-text h3 {
+  margin: 0 0 0.5em;
+}
+
+.preference-text p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* =========================
+   TOGGLE SWITCH
+   ========================= */
+/* voor dit gedeelte maak ik gebruik van de bronnen
+ https://www.w3schools.com/howto/howto_css_switch.asp om de toggles te stylen
+ https://www.w3schools.com/cssref/sel_disabled.php
+ https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/cursor
+ */
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 3.5em;
+  height: 2em;
+}
+
+.switch input {
+  position: absolute;
+  opacity: 0;
+}
+
+.switch input:focus-visible + span {
+  outline: solid var(--kleur-focus);
+  outline-offset: 0.1em;
+}
+
+.switch span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #d9d9d9;
+  border-radius: 999px;
+  position: relative;
+  transition: 0.3s;
+}
+
+.switch span::before {
+  content: "";
+  position: absolute;
+  width: 1.4em;
+  height: 1.4em;
+  top: 0.3em;
+  left: 0.3em;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.switch input:checked + span {
+  background-color: #8f6b58;
+}
+
+.switch input:checked + span::before {
+  transform: translateX(1.5rem);
+}
+
+.switch input:disabled + span {
+  opacity: 0.8;
+  cursor: not-allowed;
+}
+
+/* =========================
+   SAVE BUTTON
+   ========================= */
+
+.save-preferences-button {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  margin-top: 0.5rem;
 }
 
 /* =========================
@@ -85,15 +334,19 @@ a {
 
 header {
   display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  grid-template-columns:
+    minmax(0, 1fr)
+    auto
+    minmax(0, 1fr);
   align-items: center;
 
-  padding: 2em;
+  padding: 1em 0.5em;
 }
 
 header img {
   width: 100%;
-  max-width: 15em;
+  max-width: 5em;
+  min-width: 0;
   height: auto;
 }
 
@@ -106,26 +359,30 @@ header img:last-of-type {
 }
 
 header h1 {
-  margin: 0 1em;
+  margin: 0 0.3em;
 
   text-align: center;
+  font-size: clamp(1rem, 0.7rem + 1.5vw, 1.8rem);
+
+  white-space: nowrap;
 }
 
 header a,
 header a:visited {
   color: inherit;
+
   text-decoration: none;
 }
 
 .life {
   font-family: "luxe", system-ui, sans-serif;
-  font-size: 2.5em;
+  font-size: 2em;
   font-weight: 10;
 }
 
 .music {
   font-family: "princess", system-ui, sans-serif;
-  font-size: 2em;
+  font-size: 1.7em;
   font-weight: 10;
 }
 
@@ -137,12 +394,15 @@ header p {
   grid-column: 1 / -1;
 
   width: 100%;
+
   padding: 0.7em 0;
 
   overflow: hidden;
+
   white-space: nowrap;
 
   border-top: 0.08em solid var(--kleur-rand);
+
   border-bottom: 0.08em solid var(--kleur-rand);
 
   margin: 0;
@@ -172,18 +432,17 @@ header p span {
 main {
   display: grid;
 
-  grid-template-columns:
-    1fr
-    minmax(8em, 13em)
-    minmax(25em, 50em)
-    minmax(8em, 13em)
-    1fr;
+  grid-template-columns: minmax(0, 1fr);
 
-  grid-template-areas: ". menu-links midden menu-rechts .";
+  grid-template-areas:
+    "menu-rechts"
+    "midden"
+    "menu-links";
 
   gap: 2em;
 
   width: 100%;
+  padding: 0;
 }
 
 .menu-links {
@@ -212,7 +471,9 @@ main {
 .menu-links,
 .menu-rechts {
   align-self: start;
-  min-height: 64em;
+
+  margin: 0 1em;
+  min-height: 10em;
 
   padding: 0.6em;
 
@@ -225,21 +486,29 @@ main {
 .menu-links h2,
 .menu-rechts h2 {
   margin: 0 0 0.4em;
+
   padding: 0.2em;
 
   text-align: center;
-  font-size: 1.4em;
+
+  font-size: clamp(1rem, 0.8rem + 0.6vw, 1.4rem);
 
   color: var(--kleur-menu-kop);
 
   border-top: 0.1em solid var(--kleur-rand);
+
   border-bottom: 0.1em solid var(--kleur-rand);
 }
 
 .menu-links ul,
 .menu-rechts ul {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  justify-content: center;
+
+  gap: 0.1em 1em;
 
   margin: 0;
   padding: 0;
@@ -253,13 +522,17 @@ main {
 
   padding: 0.25em 0.4em;
 
-  color: var(--kleur-wit);
+  color: var(--kleur-tekst);
+
   text-decoration: none;
 }
 
 .menu-links a:hover,
-.menu-rechts a:hover {
+.menu-links a:focus-visible,
+.menu-rechts a:hover,
+.menu-rechts a:focus-visible {
   background: var(--kleur-hover-achtergrond);
+
   color: var(--kleur-hover-tekst);
 }
 
@@ -267,10 +540,19 @@ main {
    LINKER MENU
    ========================= */
 
+.menu-links h2 {
+  min-height: 3.2em;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .menu-links section img {
   display: block;
 
   width: 100%;
+
   height: auto;
 
   object-fit: contain;
@@ -278,8 +560,38 @@ main {
 
 .menu-links section p {
   display: flex;
+
   justify-self: center;
+
   align-items: center;
+}
+
+.menu-links {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  grid-template-areas: "song mood random";
+}
+
+.menu-links section:nth-child(1) {
+  grid-area: song;
+}
+
+.menu-links section:nth-child(2) {
+  grid-area: mood;
+}
+
+.menu-links section:nth-child(3) {
+  grid-area: random;
+}
+
+.menu-links p {
+  text-align: center;
+}
+
+.menu-links img {
+  scale: 0.8;
 }
 
 .menu-links section:nth-child(1) img {
@@ -302,6 +614,36 @@ main {
   }
 }
 
+.theme-choice {
+  display: grid;
+  grid-template-rows: repeat(3, 2em);
+}
+
+.theme-choice label {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+
+  padding: 0.5em 0.7em;
+
+  color: var(--kleur-tekst);
+  background: var(--kleur-menu);
+
+  border: 0.1em solid var(--kleur-rand);
+  border-radius: 0.5em;
+
+  cursor: pointer;
+}
+
+.theme-choice label:hover {
+  background: var(--kleur-hover-achtergrond);
+  color: var(--kleur-hover-tekst);
+}
+
+.theme-choice input {
+  accent-color: var(--kleur-rand);
+}
+
 /* =========================
    RECHTER MENU
    ========================= */
@@ -310,9 +652,11 @@ main {
   position: absolute;
 
   top: -3em;
+
   right: -11em;
 
   width: 25em;
+
   height: auto;
 
   z-index: 2;
@@ -328,9 +672,13 @@ main {
    HOMEPAGE
    ========================= */
 
+.homepage p {
+  text-align: center;
+}
+
 .homepage ul {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 
   column-gap: var(--ruimte-tussen-albums);
   row-gap: calc(var(--ruimte-tussen-albums) * 2);
@@ -343,9 +691,7 @@ main {
 
 .homepage a {
   position: relative;
-
   display: grid;
-  place-items: end center;
 
   aspect-ratio: 1;
 }
@@ -357,7 +703,10 @@ main {
   height: 100%;
 
   object-fit: contain;
+
   object-position: center bottom;
+
+  transition: transform 0.2s ease;
 }
 
 /* Planken */
@@ -369,7 +718,9 @@ main {
   position: absolute;
 
   left: calc(var(--ruimte-tussen-albums) / -2 - 0.1em);
+
   right: calc(var(--ruimte-tussen-albums) / -2 - 0.1em);
+
   bottom: -1em;
 
   height: 0.7em;
@@ -382,7 +733,7 @@ main {
 .homepage li:nth-child(1) img {
   position: relative;
 
-  top: 69%;
+  top: 72%;
 
   scale: 2;
 
@@ -399,9 +750,11 @@ main {
   position: absolute;
 
   width: 65%;
+
   height: 65%;
 
   left: 45%;
+
   top: 65%;
 
   translate: -50% -50%;
@@ -423,8 +776,11 @@ main {
 
 /* Hover */
 
-.homepage a:hover img {
+.homepage a:hover img,
+.homepage a:focus-visible img {
   transform: scale(1.05);
+
+  filter: drop-shadow(0 0 0.4em var(--kleur-schaduw));
 }
 
 /* =========================
@@ -432,19 +788,7 @@ main {
    ========================= */
 
 .songs {
-  grid-area: midden;
-  padding: 0 2em;
-}
-
-/* Jaar */
-
-.songs h2 {
-  margin: 0 0 0.5em;
-
-  text-align: center;
-  font-size: 2em;
-
-  color: var(--kleur-menu-kop);
+  padding: 0 var(--ruimte-l);
 }
 
 /* Maanden */
@@ -453,10 +797,10 @@ main {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 
-  gap: 1em;
+  gap: var(--ruimte-m);
 
-  margin-bottom: 2em;
-  padding: 0.5em 0;
+  margin-bottom: var(--ruimte-l);
+  padding: var(--ruimte-s) 0;
 
   border-top: 0.1em solid var(--kleur-rand);
   border-bottom: 0.1em solid var(--kleur-rand);
@@ -468,14 +812,15 @@ main {
   text-align: center;
   text-decoration: none;
 
-  color: var(--kleur-wit);
+  color: var(--kleur-tekst);
   background: var(--kleur-menu);
 
   border: 0.1em solid var(--kleur-rand);
   border-radius: 0.5em;
 }
 
-.songs nav a:hover {
+.songs nav a:hover,
+.songs nav a:focus-visible {
   color: var(--kleur-hover-tekst);
   background: var(--kleur-hover-achtergrond);
 }
@@ -486,7 +831,7 @@ main {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 
-  gap: 3em 2em;
+  gap: var(--ruimte-xl) var(--ruimte-l);
 
   margin: 0;
   padding: 0;
@@ -507,20 +852,20 @@ main {
   aspect-ratio: 1;
 
   object-fit: cover;
-
   border: 0.15em solid var(--kleur-rand);
 }
 
 /* Songtitel */
 
 .songs li p {
-  margin: 0.5em 0 0;
+  margin: var(--ruimte-s) 0 0;
 
   text-align: center;
 }
 
 .songs nav a:hover,
-.songs nav a.active {
+.songs nav a:focus-visible,
+.songs nav a[aria-current="page"] {
   color: var(--kleur-hover-tekst);
   background: var(--kleur-hover-achtergrond);
 }
@@ -542,45 +887,47 @@ main {
   transition: transform 0.2s ease;
 }
 
-.songs li button:hover img {
+.songs li button:hover img,
+.songs li button:focus-visible img {
   transform: scale(1.05);
-  filter: drop-shadow(0 0 0.4em #f3e9d7);
+
+  filter: drop-shadow(0 0 0.4em var(--kleur-schaduw));
 }
 
-/* Popover */
+/* dialog */
 /*hier maak ik gebruik van de bron:
 https://developer.mozilla.org/en-US/docs/Web/API/Popover_API
 */
 
-.songs article {
+.songs dialog {
   position: fixed;
-
   inset: 0;
-  margin: auto;
 
   width: min(30em, 85vw);
   max-height: 90vh;
-  overflow-y: auto;
 
-  padding: 2em;
+  margin: auto;
+  padding: var(--ruimte-l);
+
+  overflow-y: auto;
 
   text-align: center;
 
-  color: var(--kleur-wit);
+  color: var(--kleur-tekst);
   background: var(--kleur-menu);
 
   border: 0.15em solid var(--kleur-rand);
 }
 
-/* Achtergrond achter popover */
+/* Achtergrond achter dialog */
 
-.songs article::backdrop {
+.songs dialog::backdrop {
   background: rgb(0 0 0 / 60%);
 }
 
 /* Grote albumcover */
 
-.songs article img {
+.songs dialog img {
   display: block;
 
   width: 100%;
@@ -591,18 +938,18 @@ https://developer.mozilla.org/en-US/docs/Web/API/Popover_API
 
 /* Kruisje */
 
-.songs article button {
+.songs dialog > button {
   position: absolute;
 
-  top: 0.5em;
-  right: 0.5em;
+  top: var(--ruimte-s);
+  right: var(--ruimte-s);
 
   width: 2em;
   height: 2em;
 
   font-size: 1.2em;
 
-  color: var(--kleur-wit);
+  color: var(--kleur-tekst);
   background: var(--kleur-achtergrond);
 
   border: 0.1em solid var(--kleur-rand);
@@ -611,29 +958,31 @@ https://developer.mozilla.org/en-US/docs/Web/API/Popover_API
   cursor: pointer;
 }
 
-.songs article button:hover {
+.songs dialog button:hover {
   color: var(--kleur-hover-tekst);
   background: var(--kleur-hover-achtergrond);
 }
 
-.songs article dl {
+.songs dialog dl {
   display: grid;
   grid-template-columns: auto 1fr;
 
   gap: 0.4em 1em;
 
   width: fit-content;
-  margin: 1em auto;
+
+  margin: var(--ruimte-m) auto;
 
   text-align: left;
 }
 
-.songs article dt {
+.songs dialog dt {
   font-weight: bold;
+
   color: var(--kleur-rand);
 }
 
-.songs article dd {
+.songs dialog dd {
   margin: 0;
 }
 
@@ -653,19 +1002,19 @@ https://developer.mozilla.org/en-US/docs/Web/API/Popover_API
     "naam naam"
     "quote quote"
     "profile details"
-    "socials socials"
+    "divider divider"
     "about-me work-school"
-    "blurbs blurbs";
+    "facts facts";
 
-  column-gap: 1em;
-  row-gap: 1em;
+  gap: var(--ruimte-m);
 
-  margin: 1em;
+  margin: var(--ruimte-m);
 }
 
 .about h2 {
   grid-area: naam;
-
+  text-align: start;
+  color: var(--kleur-tekst);
   margin: 0;
 }
 
@@ -727,23 +1076,24 @@ https://developer.mozilla.org/en-US/docs/Web/API/Popover_API
 .details {
   grid-area: details;
   display: grid;
-
   grid-template-rows: repeat(2, auto);
-  gap: 1em;
+
+  gap: var(--ruimte-m);
 
   align-self: start;
 }
 
 .details ul {
   margin: 0;
-  padding: 1em 0;
+  padding: var(--ruimte-m) 0;
 
   list-style: none;
 
   border-bottom: 0.1em solid var(--kleur-rand);
 }
+
 .details ul li {
-  margin-bottom: 0.5em;
+  margin-bottom: var(--ruimte-s);
 }
 
 .details img {
@@ -754,11 +1104,11 @@ https://developer.mozilla.org/en-US/docs/Web/API/Popover_API
   object-fit: contain;
 }
 
-.socials {
-  grid-area: socials;
+.decorative {
+  grid-area: divider;
 
   margin: 0;
-  padding: 0.5em 0;
+  padding: var(--ruimte-s) 0;
 
   text-align: center;
 
@@ -766,61 +1116,46 @@ https://developer.mozilla.org/en-US/docs/Web/API/Popover_API
   border-bottom: 0.1em solid var(--kleur-rand);
 }
 
-.about-me {
-  grid-area: about-me;
+.decorative::before {
+  content: "‿̩͙⊱༒︎༻♱༺༒︎⊰‿̩͙";
+}
 
-  list-style: none;
-  padding: 1em;
+.about-me,
+.work-school,
+.facts {
+  padding: var(--ruimte-m);
 
   border: 0.1em solid var(--kleur-rand);
 }
 
-.about-me h3 {
-  margin: 0 0 0.5em;
-
-  color: var(--kleur-menu-kop);
-}
-
-.about-me ul {
-  margin: 0;
-  padding-left: 1.5em;
+.about-me {
+  grid-area: about-me;
 }
 
 .work-school {
   grid-area: work-school;
-
-  padding: 1em;
-
-  border: 0.1em solid var(--kleur-rand);
 }
 
-.work-school h3 {
-  margin: 0 0 0.5em;
+.facts {
+  grid-area: facts;
+}
+
+.about-me h3,
+.work-school h3,
+.facts h3 {
+  margin: 0 0 var(--ruimte-s);
 
   color: var(--kleur-menu-kop);
+}
+
+.about-me ul,
+.facts ul {
+  margin: 0;
+  padding-left: 1.5em;
 }
 
 .work-school li {
   margin: 0;
-}
-
-.blurbs {
-  grid-area: blurbs;
-
-  padding: 1em;
-
-  border: 0.1em solid var(--kleur-rand);
-}
-
-.blurbs h3 {
-  margin: 0 0 0.5em;
-
-  color: var(--kleur-menu-kop);
-}
-
-.blurbs ul {
-  margin: 0;
-  padding-left: 1.5em;
 }
 
 /* =========================
@@ -839,7 +1174,7 @@ https://developer.mozilla.org/en-US/docs/Web/API/Popover_API
 
 .moods nav ul {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 
   margin: 0;
   padding: 1em;
@@ -866,7 +1201,7 @@ https://developer.mozilla.org/en-US/docs/Web/API/Popover_API
 .moods a:hover img {
   transform: scale(1.05);
 
-  filter: drop-shadow(0 0 0.4em #f3e9d7);
+  filter: drop-shadow(0 0 0.4em var(--kleur-schaduw));
 }
 
 /* =========================
@@ -990,8 +1325,8 @@ https://developer.mozilla.org/en-US/docs/Web/API/Popover_API
 }
 
 .playlist iframe {
-  width: 30em;
-  height: 10em;
+  width: 100%;
+  height: 12em;
 
   border: 0;
   border-radius: 0.8em;
@@ -1025,7 +1360,7 @@ https://developer.mozilla.org/en-US/docs/Web/API/Popover_API
 /*daarnaast maak ik gebruik van de bron: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/gradient/radial-gradient*/
 
 .aura {
-  margin-bottom: 2em;
+  margin-bottom: var(--ruimte-l);
 }
 
 .aura h2,
@@ -1046,7 +1381,7 @@ https://developer.mozilla.org/en-US/docs/Web/API/Popover_API
   aspect-ratio: 1;
   position: relative;
 
-  margin: 4em auto 2em;
+  margin: 4em auto var(--ruimte-l);
 }
 
 .aura figure::before {
@@ -1093,13 +1428,14 @@ https://developer.mozilla.org/en-US/docs/Web/API/Popover_API
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 
-  column-gap: 1em;
+  column-gap: var(--ruimte-m);
 
   padding: 0;
+
+  list-style: none;
 }
 
 .aura li {
-  list-style: none;
   aspect-ratio: 1;
 
   border: 0.15em solid var(--kleur-rand);
@@ -1158,11 +1494,6 @@ https://developer.mozilla.org/en-US/docs/Web/API/Popover_API
   );
 }
 
-.aura nav a {
-  color: var(--kleur-wit);
-  text-decoration: none;
-}
-
 /* =========================
    MEMORIES
    ========================= */
@@ -1180,7 +1511,70 @@ https://www.youtube.com/watch?v=uw5jVO1eNF8 */
 
 .memories h2 {
   text-align: center;
-  margin-bottom: 2em;
+}
+
+.memories > p:nth-of-type(1) {
+  text-align: center;
+  margin: 0 1em;
+}
+
+.memories > ul:nth-of-type(1) {
+  display: flex;
+  overflow-x: auto;
+
+  gap: 1em;
+
+  list-style: none;
+  padding: 0.5em;
+  border-top: 0.1em solid var(--kleur-rand);
+
+  border-bottom: 0.1em solid var(--kleur-rand);
+}
+
+.memories > ul button {
+  padding: 0.8em 2em;
+
+  text-align: center;
+
+  text-decoration: none;
+
+  color: var(--kleur-tekst);
+
+  background: var(--kleur-menu);
+
+  border: 0.1em solid var(--kleur-rand);
+
+  border-radius: 0.5em;
+}
+
+.memories > ul button:hover {
+  transform: scale(1.05);
+
+  filter: drop-shadow(0 0 0.4em var(--kleur-schaduw));
+}
+
+.memories-static {
+  display: none;
+}
+
+.memories-static li::before {
+  content: "";
+
+  position: absolute;
+
+  left: -1em;
+  right: -1em;
+
+  height: 0.12em;
+
+  background: #8f6d58;
+
+  z-index: 0;
+}
+
+.memories-static button {
+  position: relative;
+  z-index: 1;
 }
 
 .memory-row {
@@ -1213,16 +1607,22 @@ https://www.youtube.com/watch?v=uw5jVO1eNF8 */
   background: #8f6d58;
 }
 
-.memory-row li {
+.memory-row li,
+.memories-static li {
   position: relative;
   flex: 0 0 10em;
 }
+.memory-row li {
+  flex: 0 0 10em;
+}
 
-.memory-row li:nth-child(odd) button {
+.memory-row li:nth-child(odd) button,
+.memories-static li:nth-child(odd) button {
   rotate: -2deg;
 }
 
-.memory-row li:nth-child(even) button {
+.memory-row li:nth-child(even) button,
+.memories-static li:nth-child(even) button {
   rotate: 2deg;
 }
 
@@ -1235,7 +1635,8 @@ https://www.youtube.com/watch?v=uw5jVO1eNF8 */
   z-index: 2;
 }
 
-.memory-row button {
+.memory-row button,
+.memories-static button {
   display: block;
   width: 100%;
   margin-top: 1.2em;
@@ -1246,7 +1647,8 @@ https://www.youtube.com/watch?v=uw5jVO1eNF8 */
   cursor: pointer;
 }
 
-.memory-row button img {
+.memory-row button img,
+.memories-static button img {
   display: block;
   width: 100%;
   aspect-ratio: 1 / 1.05;
@@ -1254,7 +1656,8 @@ https://www.youtube.com/watch?v=uw5jVO1eNF8 */
   background: #d9d2c9;
 }
 
-.memory-row button p {
+.memory-row button p,
+.memories-static button {
   margin: 0.7em 0 0;
   color: #4c4038;
   text-align: center;
@@ -1278,44 +1681,60 @@ https://www.youtube.com/watch?v=uw5jVO1eNF8 */
 https://developer.mozilla.org/en-US/docs/Web/API/Popover_API/Using
 */
 
-.memories article[popover] {
+.memories dialog {
   width: min(28em, 90vw);
+  max-height: 90vh;
+
+  overflow-y: auto;
+
   padding: 1em;
+
   border: 0.15em solid var(--kleur-rand);
   box-shadow: inset 0 0 0 0.2em var(--kleur-menu-binnenrand);
+
   background: var(--kleur-menu);
-  color: var(--kleur-wit);
+  color: var(--kleur-tekst);
 }
 
-.memories article[popover]::backdrop {
+.memories dialog::backdrop {
   background: rgb(0 0 0 / 0.45);
 }
 
-.memories article[popover] > button {
+.memories dialog > button {
   display: block;
+
   margin-left: auto;
   margin-bottom: 0.5em;
+
   border: none;
+
   background: transparent;
-  color: var(--kleur-wit);
+  color: var(--kleur-tekst);
+
   font-size: 1.5em;
+
   cursor: pointer;
 }
 
-.memories article[popover] img {
+.memories dialog img {
   display: block;
+
   width: 100%;
+
   margin-bottom: 1em;
+
   border: 0.1em solid var(--kleur-rand);
 }
 
-.memories article[popover] h3 {
+.memories dialog h3 {
   margin: 0 0 0.3em;
+
   color: var(--kleur-menu-kop);
 }
 
-.memories article[popover] p {
+.memories dialog p {
   margin: 0 0 0.7em;
+
   line-height: 1.5;
 }
 
@@ -1355,10 +1774,57 @@ footer {
 }
 
 /* =========================
-   KLEINERE DESKTOP
+   TABLET
    ========================= */
 
-@media (max-width: 80em) {
+@media (min-width: 55em) {
+  /*cookie popup*/
+  .cookie-dialog {
+    width: min(80%, 50rem);
+    padding: 2rem;
+  }
+
+  .cookie-text {
+    max-height: none;
+    overflow-y: visible;
+    padding-right: 0;
+  }
+
+  .cookie-options {
+    grid-template-columns: 12rem 1fr;
+  }
+  /* Header */
+
+  header {
+    grid-template-columns:
+      minmax(0, 1fr)
+      auto
+      minmax(0, 1fr);
+
+    padding: 1em 0.5em;
+  }
+
+  header img {
+    max-width: 10em;
+    min-width: 0;
+  }
+
+  header h1 {
+    margin: 0 0.3em;
+
+    white-space: nowrap;
+  }
+
+  .life {
+    font-size: 2em;
+  }
+
+  .music {
+    font-size: 1.7em;
+  }
+
+  /* Hoofd-layout */
+
   main {
     grid-template-columns:
       10em
@@ -1372,46 +1838,125 @@ footer {
     padding: 0 1em;
   }
 
+  /* Menu's */
+
+  .menu-links,
+  .menu-rechts {
+    margin: 0;
+    min-height: 64em;
+  }
+
+  .menu-links ul,
+  .menu-rechts ul {
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+    justify-content: normal;
+
+    gap: normal;
+  }
+
+  /* Linker menu */
+
+  .menu-links {
+    display: block;
+  }
+
+  .menu-links h2 {
+    min-height: auto;
+  }
+
+  .menu-links section:nth-child(1),
+  .menu-links section:nth-child(2),
+  .menu-links section:nth-child(3) {
+    grid-area: auto;
+  }
+
+  .menu-links p {
+    text-align: start;
+  }
+
+  .menu-links img {
+    scale: 1;
+  }
+
+  /* Homepage */
+
   .homepage ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .about {
+    grid-template-columns: repeat(2, auto);
+  }
+
+  .moods nav ul {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .playlist iframe {
+    width: 30em;
+    height: 10em;
+  }
+
+  .aura nav ul {
+    grid-template-columns: repeat(3, 1fr);
+    margin: 1em 0;
+  }
+
+  .memories > ul:nth-of-type(1) {
+    display: grid;
     grid-template-columns: repeat(4, 1fr);
+
+    gap: 1em;
+
+    list-style: none;
+    padding: 0.5em;
+    border-top: 0.1em solid var(--kleur-rand);
+
+    border-bottom: 0.1em solid var(--kleur-rand);
+  }
+
+  .memories > ul button {
+    width: 100%;
+  }
+
+  .privacy-dialog {
+    width: min(80%, 50rem);
+    padding: 2rem;
   }
 }
 
 /* =========================
-   TABLET
+   KLEINERE DESKTOP
    ========================= */
 
-@media (max-width: 60em) {
+@media (min-width: 80em) {
   /* Header */
 
   header {
-    grid-template-columns:
-      minmax(0, 1fr)
-      auto
-      minmax(0, 1fr);
+    grid-template-columns: 1fr auto 1fr;
 
-    padding: 1em 0.5em;
+    padding: 2em;
   }
 
-  header > img {
-    max-width: 10em;
-    min-width: 0;
+  header img {
+    max-width: 15em;
+    min-width: initial;
   }
 
   header h1 {
-    margin: 0 0.3em;
+    margin: 0 1em;
 
-    font-size: 0.9em;
-
-    white-space: nowrap;
+    white-space: normal;
   }
 
   .life {
-    font-size: 2em;
+    font-size: 2.5em;
   }
 
   .music {
-    font-size: 1.7em;
+    font-size: 2em;
   }
 
   /* Hoofd-layout */
@@ -1432,134 +1977,78 @@ footer {
   /* Homepage */
 
   .homepage ul {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
 /* =========================
-   TELEFOON
+   GROTE DESKTOP
    ========================= */
 
-@media (max-width: 45em) {
-  /* Header */
-
-  header {
-    grid-template-columns:
-      minmax(0, 1fr)
-      auto
-      minmax(0, 1fr);
-
-    padding: 1em 0.5em;
-  }
-
-  header img {
-    max-width: 5em;
-    min-width: 0;
-  }
-
-  header h1 {
-    margin: 0 0.3em;
-
-    font-size: 1.2em;
-
-    white-space: nowrap;
-  }
-
-  .life {
-    font-size: 2em;
-  }
-
-  .music {
-    font-size: 1.7em;
-  }
-
-  /* Hoofd-layout */
-
+@media (min-width: 100em) {
   main {
-    grid-template-columns: minmax(0, 1fr);
+    grid-template-columns:
+      1fr
+      minmax(8em, 13em)
+      minmax(25em, 50em)
+      minmax(8em, 13em)
+      1fr;
 
-    grid-template-areas:
-      "menu-rechts"
-      "midden"
-      "menu-links";
+    grid-template-areas: ". menu-links midden menu-rechts .";
 
     gap: 2em;
 
     padding: 0;
   }
 
-  /* Menu's */
-
-  .menu-links,
-  .menu-rechts {
-    margin: 0 1em;
-    min-height: 10em;
+  .homepage ul {
+    grid-template-columns: repeat(4, 1fr);
   }
+}
 
-  .menu-links ul,
-  .menu-rechts ul {
-    flex-direction: row;
-    flex-wrap: wrap;
+/* =========================
+   REDUCED MOTION
+   ========================= */
 
+@media (prefers-reduced-motion: reduce) {
+  header p span {
+    animation: none;
+
+    display: flex;
     justify-content: center;
-
-    gap: 0.1em 1em;
-  }
-
-  /* Linker menu */
-
-  .menu-links {
-    display: grid;
-
-    grid-template-columns: repeat(3, 1fr);
-
-    grid-template-areas: "song mood random";
-  }
-
-  .menu-links section:nth-child(1) {
-    grid-area: song;
-  }
-
-  .menu-links section:nth-child(2) {
-    grid-area: mood;
-  }
-
-  .menu-links section:nth-child(3) {
-    grid-area: random;
-  }
-
-  .menu-links h2 {
-    font-size: 0.8em;
-  }
-
-  .menu-links p {
     text-align: center;
   }
 
-  .menu-links img {
-    scale: 0.8;
+  .profile img {
+    animation: none;
   }
 
-  .homepage ul {
-    grid-template-columns: repeat(3, 1fr);
+  .memory-row {
+    display: none;
   }
 
-  .about {
-    grid-template-columns: repeat(2, 1fr);
+  .memories-static {
+    display: block;
   }
 
-  .moods nav ul {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .playlist iframe {
-    width: 100%;
-    height: 12em;
-  }
-
-  .aura nav ul {
+  .memories-static ul {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    margin: 0 1em;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 5em 2em;
+
+    margin: 0;
+    padding: 2.5em 1em;
+
+    list-style: none;
+  }
+
+  .memories-static li {
+    position: relative;
+  }
+
+  .aura figure::before,
+  .aura nav figure::before {
+    animation: none;
   }
 }
