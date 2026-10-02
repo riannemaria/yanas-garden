@@ -4,21 +4,331 @@ Het staat model voor digitale tuintjes welke bij 'Het web is voor iedereen' door
 
 ## Learning Log
 
+### 30 sept - Werken aan toegankelijkheid
+
+<details>
+<summary><strong>WCAG checklist</strong></summary>
+Om te controleren hoe toegankelijk mijn website op dat moment was, heb ik de WCAG checklist gebruikt. Deze checklist helpt om stap voor stap te kijken of een website voldoet aan belangrijke toegankelijkheidspunten, bijvoorbeeld op het gebied van content, toetsenbordbediening, headings, afbeeldingen, animaties en kleurcontrast. Hierdoor kon ik veel gerichter zien welke onderdelen al goed waren en waar ik nog iets moest verbeteren.
+
+De eerste check heb ik samen met Hiba gedaan. Dit was op woensdag. We zijn toen door mijn website heen gegaan en hebben per onderdeel gekeken of mijn site eraan voldeed. Tijdens deze eerste check kwam ik erachter dat er nog een aantal punten niet goed waren. Vooral op het gebied van kleur en contrast had ik op dat moment nog bijna niets gecontroleerd of aangepast.
+
+Daarom ben ik daarna alle punten waarop ik ‘nee’ had ingevuld één voor één gaan verbeteren. Hieronder in mijn README is te zien wat ik precies heb aangepast, zoals mijn focus states, ARIA-labels, alt-teksten, reduced motion, contrast en extra toetsenbordtoegankelijkheid.
+
+Nadat ik deze verbeteringen had gedaan, heb ik de WCAG checklist opnieuw ingevuld. Bij de tweede check kon ik bij bijna alle onderdelen ‘ja’ invullen. Een paar dingen moet ik nog verder aanpassen en sommige punten zijn niet van toepassing op mijn website, waardoor ik daar niets aan hoef te veranderen.
+
+Na deze tweede check voldoet mijn website dus aan bijna alle punten uit deze checklist. Ongeveer 99% staat nu op ‘ja’, waardoor ik goed kan zien hoeveel toegankelijker mijn website is geworden ten opzichte van de eerste check.
+
+![WCAG checklist](images/readme/WCAG_checklist_1.png)
+![WCAG checklist](images/readme/WCAG_checklist_2.png)
+
+</details>
+
+<details>
+<summary><strong>Consistentie</strong></summary>
+Vandaag heb ik ook gekeken naar de consistentie van mijn website. Ik wilde dat dezelfde soort elementen op verschillende pagina’s ook op dezelfde manier werken en eruitzien. Zo heb ik bijvoorbeeld links op verschillende pagina’s dezelfde hoverstate gegeven. Ook afbeeldingen die als link of knop werken, heb ik zoveel mogelijk dezelfde hoverstate gegeven, zodat voor de gebruiker duidelijker wordt dat deze elementen interactief zijn.
+
+Daarnaast heb ik ook naar kleinere details gekeken. Zo heb ik de sluitknoppen van mijn dialogs/modals hetzelfde gemaakt. Eerst zag de sluitknop op mijn Song of the Week-pagina er anders uit dan die op mijn Memories-pagina. Die heb ik aangepast zodat ze dezelfde vorm, grootte, rand en hover hebben. Daardoor voelt de website meer als één geheel.
+
+Ik heb hierbij vooral gelet op dat een gebruiker niet steeds opnieuw hoeft te leren hoe iets werkt. Wanneer een link, afbeelding of sluitknop op de ene pagina op een bepaalde manier reageert, verwacht je eigenlijk dat hetzelfde element op een andere pagina ook zo werkt. Door dit gelijk te trekken wordt mijn website voorspelbaarder en makkelijker te gebruiken.
+
+![Consistentie](images/readme/consistentie_sluitknop.png)
+
+</details>
+
+<details>
+<summary><strong>Content</strong></summary>
+Over het algemeen gebruik ik op mijn website duidelijke en eenvoudige taal. Ik probeer ingewikkelde woorden, uitdrukkingen, idioms en moeilijke metaforen te vermijden, zodat de tekst voor zoveel mogelijk mensen makkelijk te begrijpen is.
+
+Op mijn About Me-pagina had ik wel een kopje met de tekst “My blurbs”. Dat vond ik achteraf niet duidelijk genoeg, omdat niet meteen duidelijk is wat daarmee bedoeld wordt. Daarom heb ik dit veranderd naar “Random facts”, zodat de gebruiker direct begrijpt wat er onder dat kopje staat.
+
+![Content](images/readme/content.png)
+
+Op dezelfde pagina staat nog de zin “I’m a mix of sugar and spice”. Dit is meer een figuurlijke uitdrukking en daarom weet ik nog niet zeker of dit duidelijk genoeg is volgens de toegankelijkheidsrichtlijnen. Dit wil ik nog even controleren en eventueel vervangen door een letterlijkere zin.
+
+</details>
+
+<details>
+<summary><strong>Focus state</strong></summary>
+
+Ik heb mijn focus state ook duidelijker gemaakt. Eerst kreeg een interactief element tijdens het navigeren met Tab alleen een dunne zwarte rand eromheen. Daardoor kon je wel zien waar de focus ongeveer zat, maar het was nog niet altijd even duidelijk welk element actief was.
+
+Daarom heb ik de focus state aangepast zodat deze nu ook de hover state van het element laat zien. Wanneer een gebruiker met Tab over een link, knop of andere interactief element gaat, verschijnt dus niet alleen de zwarte border, maar verandert het element ook op dezelfde manier als wanneer je er met de muis overheen hovert.
+
+Hierdoor is veel duidelijker waar de focus zich op dat moment bevindt en welk element je met Enter kunt activeren. Dit maakt het navigeren met alleen het toetsenbord overzichtelijker en toegankelijker.
+
+Ik ga waarschijnlijk nog wel meer werken aan de kleur want op sommige elementen is het nogsteeds niet helemaal duidelijk.
+
+![Focus](images/readme/focus.png)
+
+</details>
+
+<details>
+<summary><strong>ARIA-labels en alt-teksten</strong></summary>
+
+Ik had eerst nog geen ARIA-labels in mijn code staan. Tijdens de les van Sanne afgelopen woensdag kwam ik erachter hoe belangrijk deze zijn voor mensen die een screenreader gebruiken. Een aria-label kan duidelijk maken wat een interactief element doet of waar een link naartoe gaat. Daarom heb ik deze toegevoegd bij mijn interactieve elementen, zodat de bedoeling ervan duidelijker wordt wanneer de website wordt voorgelezen.
+
+Daarnaast heb ik ook al mijn alt-teksten van afbeeldingen opnieuw bekeken. Bij veel afbeeldingen gebruikte ik de alt-tekst eerst eigenlijk alsof het een ARIA-label was: ik beschreef wat je met de afbeelding kon doen in plaats van wat erop te zien was. Dat heb ik aangepast. Een alt-tekst hoort namelijk vooral te beschrijven wat er op de afbeelding te zien is.
+
+Bij afbeeldingen die alleen decoratief zijn en geen belangrijke informatie toevoegen, heb ik de alt-tekst leeg gemaakt. Bij afbeeldingen die wel inhoudelijk belangrijk zijn, heb ik de alt aangepast naar een duidelijke beschrijving van wat er daadwerkelijk op de foto of afbeelding te zien is. Hierdoor krijgt iemand met een screenreader een beter beeld van de inhoud van mijn website.
+
+![Aria & Alt labels](images/readme/aria_altlabels.png)
+
+Ook heb ik aria-current toegevoegd aan de navigatie. Sanne heeft in de les uitgelegd dat dit een screenreader laat weten op welke pagina de gebruiker zich op dat moment bevindt. Daardoor wordt de navigatie duidelijker, omdat niet alleen visueel maar ook voor screenreadergebruikers wordt aangegeven welke link de huidige pagina is.
+
+</details>
+
+<details>
+<summary><strong>prefers-reduced-motion</strong></summary>
+
+### Reduce motion op paginas
+
+Ik heb ook gekeken naar reduced motion. Dit is belangrijk voor toegankelijkheid, omdat veel of snelle bewegingen op een website voor sommige gebruikers onprettig of zelfs lichamelijk belastend kunnen zijn. Zo liet ik mijn Memories-pagina aan mijn vader zien en merkte hij dat de bewegende animatie invloed had op zijn evenwichtsgevoel en duizelig werd. Daardoor werd voor mij heel duidelijk waarom dit belangrijk is.
+
+Als eerste heb ik de animatie op mijn Memories-pagina langzamer gemaakt, zodat de beweging minder heftig is. Daarna heb ik met @media (prefers-reduced-motion: reduce) een alternatief gemaakt voor gebruikers die op hun apparaat hebben aangegeven dat ze minder beweging willen. Op de Memories-pagina wordt de bewegende versie dan verborgen en wordt in plaats daarvan een statische versie van de memories getoond.
+
+Uiteindelijk heb ik reduced motion niet alleen op deze pagina toegepast, maar ook op andere animaties op mijn website. Zo stopt de marquee bovenaan met bewegen, bewegen de Audio Auras niet meer en stopt de avatar op mijn About Me-pagina met de lichtjes/bounce-animatie. Dit wil ik ook nog toepassen op de bewegende plaat in mijn linkermenu.
+
+![Reduce Motion](images/readme/reducemotion_1.png)
+
+Hierdoor blijft alle content beschikbaar, maar hoeft een gebruiker die gevoelig is voor beweging de animaties niet te zien.
+
+### Nog verbeteren op de Memories-pagina
+
+Op mijn Memories-pagina wil ik reduced motion nog verder verbeteren. Normaal bewegen er meerdere memories per rij naar links of rechts. Wanneer prefers-reduced-motion aanstaat, stopt deze animatie. Het probleem is dat je dan op één rij soms maar twee of drie memories ziet, terwijl er eigenlijk meer memories in die rij zitten. Een deel van de content wordt dan dus niet goed zichtbaar.
+
+Daarom wilde ik voor reduced motion een aparte statische layout maken waarbij er extra rijen onder elkaar komen te staan. Zo kan de gebruiker nog steeds alle memories bekijken, maar zonder beweging. Dit zou de pagina toegankelijker maken, omdat reduced motion niet betekent dat iemand minder content zou moeten kunnen zien.
+
+Op mobiel werkt deze oplossing inmiddels gedeeltelijk, maar daar moet ik nog een paar dingen aan aanpassen. Voor de desktopvariant is het me nog niet gelukt om de layout precies goed te krijgen. Dit is daarom nog een verbeterpunt waar ik verder aan wil werken.
+
+![Reduce Motion](images/readme/reducemotion_2.png)
+
+</details>
+
+<details>
+<summary><strong>Extra toegankelijkheid op de Memories-pagina</strong></summary>
+Toen ik mijn pagina’s opnieuw bekeek op toegankelijkheid, merkte ik dat de Memories-pagina nog niet voor iedereen even makkelijk te gebruiken was. De memories bewegen namelijk over het scherm en je moest soms wachten totdat een bepaalde memory weer in beeld kwam voordat je erop kon klikken.
+
+Daarom heb ik bovenaan de pagina een extra, kleine navigatie gemaakt met acht knoppen, één voor elke memory. Elke knop is gekoppeld aan dezelfde dialog die ook opent wanneer je op de bewegende memory klikt. Hierdoor hoefde ik geen nieuwe content te maken, maar geef ik de gebruiker wel een extra manier om bij dezelfde informatie te komen.
+
+Als je bijvoorbeeld op Memory 1 klikt, opent direct de dialog van Memory 1, ook als die memory op dat moment niet zichtbaar is in de bewegende rij. Dit maakt de pagina vooral toegankelijker voor gebruikers die met Tab en het toetsenbord navigeren, omdat ze niet afhankelijk zijn van de animatie.
+
+Ik heb bij deze knoppen ook aria-labels toegevoegd, zodat voor een screenreader duidelijk is naar welke memory de knop leidt. Misschien wil ik de namen van de knoppen later nog iets duidelijker maken, maar deze extra navigatie zorgt er nu al voor dat de Memories-pagina makkelijker en sneller te bedienen is.
+
+![Memories Menu](images/readme/memories_menu.png)
+
+</details>
+
+<details>
+<summary><strong>Contrast</strong></summary>
+
+### Kleurenblind
+
+Daarna heb ik ook het contrast van mijn website getest. In de les van Sanne kreeg ik een tool waarmee je kunt bekijken hoe je website eruitziet voor iemand met verschillende vormen van kleurenblindheid. Daarmee heb ik mijn website gecontroleerd in zowel light mode als dark mode.
+
+Ik heb hierbij vooral gelet op mijn focus states, omdat deze ook zonder duidelijke kleurverschillen goed zichtbaar moeten blijven. Tijdens de test kon ik in beide modes nog steeds goed zien welk element op dat moment focus had. De combinatie van de duidelijke rand en de verandering van het element zelf bleef goed zichtbaar.
+
+Deze test was dus geslaagd. Hierdoor weet ik dat mijn focus states niet alleen afhankelijk zijn van kleur en dat het ook voor gebruikers met kleurenblindheid duidelijk blijft waar de focus zich bevindt, zowel in light mode als in dark mode.
+
+Hieronder is ook een voorbeeld te zien van mijn focused state in beide modes. Aan de linkerkant staat de focused state in light mode en aan de rechterkant in dark mode. In beide varianten blijft duidelijk zichtbaar welk interactief element op dat moment focus heeft.
+
+![Focus state color blind](images/readme/focusstate_colorblind.png)
+
+### Contrast van menu’s en knoppen
+
+Als eerste heb ik in de Inspector gekeken naar het contrast van mijn menu’s en knoppen. Vooral bij elementen met een eigen achtergrond heb ik gecontroleerd of er genoeg verschil zat tussen de tekstkleur en de achtergrondkleur.
+
+Bij deze elementen gaf de Inspector steeds een groen vinkje. Dat betekent dat het contrast hoog genoeg is om te voldoen aan de toegankelijkheidseisen voor leesbaarheid. Voor gewone tekst wordt meestal minimaal AA-niveau aangehouden. Omdat mijn menu’s en knoppen hieraan voldeden, hoefde ik daar niets aan te veranderen.
+
+Ik heb dit gecontroleerd in zowel light mode als dark mode, zodat ik zeker wist dat de tekst in beide varianten goed leesbaar blijft.
+
+![Focus state color blind](images/readme/contrast_lightdark.png)
+
+### Contrast van de gradient-achtergrond
+
+Mijn website gebruikt op veel plekken een gradient als achtergrond. Daardoor is het lastiger om het contrast alleen via de Inspector te controleren, omdat de achtergrondkleur op verschillende plekken verandert. Daarom heb ik een tool gebruikt die Sanne tijdens de les had laten zien. Met deze app kon ik de kleur van de tekst en de achtergrond rechtstreeks van mijn scherm color picken en vervolgens bekijken of het contrast voldoende was.
+
+In mijn dark mode was het contrast tussen de bruine gradient en de witte tekst goed en voldeed dit aan WCAG AA. Ook mijn roze headings voldeden aan AA, maar niet overal aan AAA. Omdat AA voldoende is voor de normale toegankelijkheidseisen, heb ik besloten deze kleuren zo te houden.
+
+In mijn light mode kwam er wel een probleem naar voren. Het contrast tussen de beige achtergrond van de gradient en mijn bruine tekst was op sommige plekken te laag en voldeed niet aan AA. Dit betekent dat de tekst voor sommige gebruikers moeilijker leesbaar kan zijn. Daarom moet ik de kleuren in mijn light mode nog aanpassen, bijvoorbeeld door de tekst donkerder te maken of de achtergrond lichter, zodat het contrast wel voldoende wordt.
+
+![Focus state color blind](images/readme/contrast_gradientbackground.png)
+
+</details>
+
+### 27 sept - Workshop 4
+
+<details>
+<summary><strong>Checkout</strong></summary>
+
+<strong>Wat bedoelt Vasilis met: “Semantiek doet mij niet zo veel, ik ben liever bezig met de UX van HTML”?</strong></br>
+Daarmee bedoelt hij dat HTML niet alleen technisch correct moet zijn, maar vooral ook prettig moet werken voor de gebruiker. Semantiek is belangrijk, maar het gaat er uiteindelijk ook om dat iemand logisch door de website kan navigeren en begrijpt wat knoppen, links en onderdelen doen.
+
+<strong>Wat voor type beperkingen hebben invloed op het gebruiken van websites?</strong></br>
+Bijvoorbeeld:
+
+- visuele beperkingen
+- auditieve beperkingen
+- motorische beperkingen
+- cognitieve beperkingen
+
+<strong>Noem drie manieren om door een website te navigeren met jouw screenreader.</strong></br>
+Je kunt bijvoorbeeld navigeren:
+
+- met Tab langs links, knoppen en andere interactieve elementen
+- met de pijltjestoetsen door de inhoud van de pagina
+- via headings/koppen, zodat je snel van het ene onderdeel naar het andere kunt springen. Dit doe je met H en 2.
+
+</details>
+
+<details>
+<summary><strong>Bi-weekly geek 2</strong></summary>
+
+![bi weekly 2](images/readme/biweekly2.png)
+
+</details>
+
+<details>
+<summary><strong>Werken met alleen-het-toetsenbord en screenreader</strong></summary>
+Voor deze opdracht moest ik ervaren hoe een website gebruikt wordt zonder muis en hoe een screenreader werkt. Hiervoor moest ik twee keer dezelfde reis plannen op de website van de NS: één keer met alleen het toetsenbord en één keer met een screenreader.
+
+Het doel van deze opdracht was om beter te begrijpen hoe mensen met bijvoorbeeld een visuele of motorische beperking een website gebruiken. Door zelf zonder muis te navigeren, merk je snel of alle knoppen en links bereikbaar zijn met Tab, of de focus duidelijk zichtbaar is en of de volgorde logisch is. Met een screenreader hoor je daarnaast hoe de website wordt voorgelezen en of teksten, links en knoppen duidelijk genoeg zijn omschreven.
+
+Dit is belangrijk voor mijn eigen website, omdat een website niet alleen mooi moet zijn, maar ook toegankelijk en bedienbaar voor iedereen. Door deze opdracht weet ik beter waar ik tijdens het ontwerpen en bouwen op moet letten, bijvoorbeeld bij focus, toetsenbordbediening, duidelijke teksten en semantische HTML.
+
+Het navigeren met alleen het toetsenbord vond ik nog wel lastig, ik wist niet alle snelkoppelingen waardoor ik steeds terug moest kijken in de lijst wat ik moest doen.
+
+![Opdracht screenreading](images/readme/opdracht_screenreading.png)
+
+</details>
+
+### 26 sept - Voorbereidingen voor Workshop 4
+
+<details>
+<summary><strong>Voorbereiding bi weekly geek 2</strong></summary>
+
+Voor de voorbereiding voor de bi weekly geek 2 heb ik de video en twee artikelen gekeken en gelezen die ons gegeven werden. Hier heb ik notities over gemaakt.
+![Voorbereiding bi weekly 2](images/readme/voorbereiding_biweekly2.png)
+
+</details>
+
+<details>
+<summary><strong>Deepdive Position & Dialogs</strong></summary>
+
+</details>
+
+### 25 sept - Workshop 3
+
+<details>
+<summary><strong>Compliance / Valide HTML</strong></summary>
+
+### HTML valideren
+
+Ik ben begonnen met het controleren van mijn index.html in de HTML Validator en ben daarna één voor één langs alle pagina’s uit mijn menu gegaan. De meeste pagina’s kwamen meteen goed door de check heen, zonder errors of waarschuwingen. Mijn homepagina, About Me-pagina en de andere pagina’s waren dus gewoon goed opgebouwd. Dat was fijn, omdat ik daardoor wist dat de basis van mijn HTML op de meeste plekken al klopte en semantisch goed was opgebouwd.
+
+![HTML validate](images/readme/validate_html_good.png)
+
+### Memories-pagina
+
+Bij mijn Memories-pagina kwamen er wel meerdere errors naar voren. Een van de grootste problemen zat in mijn buttons. In die buttons had ik onder de afbeelding een p gezet met een klein stukje tekst. De validator gaf aan dat dit in deze context niet goed was opgebouwd. Daarom heb ik die korte tekst veranderd naar een span. Dat past hier beter, omdat het maar om een klein stukje tekst binnen de button gaat en niet om een losse alinea. Daarna heb ik ook mijn CSS aangepast van p naar span. Daarmee waren meteen al veel errors opgelost.
+
+Een andere melding ging over mijn section-elementen. Ik had sections gebruikt zonder dat daar een eigen heading in stond. Een section is bedoeld voor een duidelijk inhoudelijk onderdeel van een pagina en hoort daarom normaal gesproken ook een eigen kop te hebben. In mijn geval waren deze elementen alleen bedoeld als containers voor de layout en niet als echte inhoudelijke secties. Daarom heb ik ze veranderd naar div. Dat paste semantisch beter bij wat ik ermee deed.
+
+![HTML validate memories page](images/readme/validate_memories_errors.png)
+![HTML change memories](images/readme/changes_memories.png)
+
+Nadat ik deze aanpassingen had gedaan, heb ik mijn Memories-pagina opnieuw door de validator gehaald. Toen kwamen er geen errors of warnings meer naar voren en was ook deze pagina volledig gevalideerd.
+
+![HTML validate memories good](images/readme/validate_memory_good.png)
+
+</details>
+
+<details>
+<summary><strong>Checkout</strong></summary>
+<strong>Wat is HTML-validatie, waarom is het belangrijk en hoe heb je dat vandaag uitgevoerd?</strong></br>
+HTML-validatie is het controleren of je HTML-code volgens de juiste regels is opgebouwd. Dit is belangrijk omdat fouten in je HTML ervoor kunnen zorgen dat onderdelen niet goed werken of dat de structuur van je pagina niet klopt. Ik heb vandaag mijn pagina’s gecontroleerd met de HTML Validator. Ik ben begonnen met mijn index.html en ben daarna alle pagina’s uit mijn menu langsgegaan. De meeste pagina’s hadden geen fouten. Op mijn Memories-pagina kwamen wel errors naar voren, die ik daarna één voor één heb aangepast.
+
+<strong>Welke dingen vielen je op?</strong></br>
+Wat mij vooral opviel, is dat kleine dingen toch voor best veel errors kunnen zorgen. Zo had ik tekst in een button met een p gemaakt, terwijl een span hier beter paste. Ook had ik section gebruikt op plekken waar eigenlijk geen echte inhoudelijke sectie met heading stond. Toen ik deze veranderde naar div, waren de meldingen weg. Ik merkte hierdoor dat semantiek niet alleen gaat over dat iets er goed uitziet, maar ook dat je het juiste HTML-element voor de juiste situatie gebruikt.
+
+<strong>Welke feedback heb je ontvangen tijdens het gesprek met je docenten?</strong></br>
+Ik was deze dag helaas ziek, maar heb afgesproken dat ik vrijdag 2 oktober al mijn feedback ontvang.
+
+</details>
+
 ### 23 sept - Huiswerk voor Workshop 3
 
 <details>
 <summary><strong>Human Consent Component Schets</strong></summary>
+Voor mijn Human Consent Component heb ik eerst schetsen gemaakt voor small, medium en large screens. Daarbij heb ik bewust gekozen voor een layout die duidelijk en overzichtelijk is. Ik wilde dat de gebruiker in één oogopslag kan begrijpen waar de melding over gaat, welke keuzes er zijn en wat het gevolg van die keuzes is. Daarom staat bovenaan kort uitgelegd waar de popup voor bedoeld is, en daaronder staan meteen de belangrijkste knoppen.
+
+Ik heb gekozen voor een duidelijke verdeling tussen informatie en actie. De gebruiker ziet eerst kort waar toestemming voor gevraagd wordt en krijgt daarna direct de keuze tussen alles accepteren, alleen noodzakelijke cookies en voorkeuren aanpassen. Deze opbouw heb ik gekozen omdat uit mijn onderzoek naar consent en privacy naar voren kwam dat gebruikers snel moeten kunnen begrijpen wat er gebeurt, maar ook de mogelijkheid moeten krijgen om hun keuze verder te specificeren. Niet iedereen wil namelijk meteen alles accepteren, maar ik wilde wel dat de gebruiker controle ervaart.
+
+Daarom heb ik ook een ‘voorkeuren aanpassen’ knop toegevoegd. Deze knop is belangrijk, omdat de gebruiker hiermee zelf kan bepalen welke extra content wel of niet geladen mag worden. In mijn uitwerking kan de gebruiker daar bijvoorbeeld Spotify embeds en YouTube embeds aan- of uitzetten. Als de gebruiker deze uitzet, wordt die content niet geladen en kan de embedded content dus ook niet bekeken of gebruikt worden. Op die manier blijft de keuze eerlijk en transparant: de gebruiker mag iets weigeren, maar ziet dan ook duidelijk wat daarvan het gevolg is. Dat past bij het idee van informed consent: de gebruiker krijgt niet alleen een ja/nee-keuze, maar ook meer controle over specifieke onderdelen van de website.
+
+In het voorkeurenscherm heb ik daarom gewerkt met een overzichtelijke lijst van onderdelen:
+
+- Noodzakelijke diensten (die automatisch aan staatn en niet uit kan worden gezet)
+- Spotify content
+- YouTube content
+  Die indeling maakt duidelijk dat er verschil is tussen wat echt nodig is om de website te laten werken en wat optioneel is voor extra content.
+
+Ik heb er bewust geen aparte ‘deny’-knop in gezet. De reden daarvoor is dat mijn website altijd verbonden is met GitHub en digitaaltuintje.nl. Deze diensten zijn noodzakelijk om de website überhaupt beschikbaar te maken en goed te laten functioneren. Daardoor zijn er altijd noodzakelijke cookies of noodzakelijke technische processen aanwezig. Als een gebruiker die volledig zou weigeren via een ‘deny’-knop, zou dat eigenlijk niet kloppen met hoe de website technisch werkt, omdat de site dan niet op de bedoelde manier gebruikt kan worden. Daarom kan de gebruiker wél kiezen voor alleen noodzakelijke cookies, maar niet voor een volledige afwijzing van alles.
+
+![Human Consent Component](images/readme/humanconsentcomponent_schets.png)
 
 </details>
 
 <details>
 <summary><strong>Begin HTML van Human Consent Component</strong></summary>
 
+### Begin html
+
+Ik ben begonnen met een vrij simpele HTML-opbouw voor mijn cookie popup. Hiervoor heb ik een dialog gebruikt, omdat ik eigenlijk wilde dat de cookie melding als een modal zou werken. Het idee daarvan was dat de rest van de website en de links eronder niet interactief zouden zijn totdat de gebruiker een keuze had gemaakt.
+
+Om de popup meteen zichtbaar te maken heb ik dialog class="cookie-dialog" id="cookie-dialog" open gebruikt. Door het open attribuut staat het dialog direct open, maar hierdoor wordt het niet als een echte modal geopend. De gebruiker kan daardoor nog steeds met Tab naar links en andere interactieve elementen achter de popup gaan en dat was eigenlijk niet de bedoeling.
+
+Ik wilde dit op dit moment niet met JavaScript oplossen, omdat ik JavaScript nog niet goed genoeg begrijp en ik liever technieken gebruik waarvan ik weet wat ik doe. Daarom heb ik er voor nu voor gekozen om de popup op deze manier te laten werken en dit later verder uit te zoeken.
+
+Een ander punt waar ik nog naar wil kijken, is de focus. Wanneer de pagina wordt geopend, begint de Tab-focus namelijk nog niet automatisch in de cookie popup. Dit wil ik later nog oplossen, zodat de gebruiker eerst door de keuzes in de popup navigeert voordat de rest van de website bereikbaar is.
+
+![begin van mijn html cookie popup](images/readme/beginhtml_cookies.png)
+
+### Privacy popup
+
+Daarna wilde ik een aparte popup voor de privacyvoorkeuren maken. Ik vond het belangrijk dat Manage preferences ook echt een aparte optie werd en niet alleen een knop zonder vervolg. Daarom heb ik hiervoor een tweede dialog gemaakt.
+
+In deze popup heb ik de verschillende soorten content opgesplitst in Necessary services, Spotify content en YouTube content. Zo kan de gebruiker duidelijk zien wat verplicht is en wat zelf aan- of uitgezet kan worden.
+
+Ik wilde daarnaast per se met werkende toggles werken, zodat iemand zijn voorkeuren echt zelf kan instellen. Voor het maken van deze switches heb ik deze bron gebruikt: https://www.w3schools.com/howto/howto_css_switch.asp
+
+De toggle bij de noodzakelijke diensten staat standaard aan en kan niet worden uitgezet, omdat deze nodig zijn om de website te laten werken. De toggles voor Spotify en YouTube kunnen wel aan- en uitgezet worden. Zo krijgt de gebruiker zelf controle over welke externe content geladen mag worden. Onderaan staat een knop om deze voorkeuren op te slaan en de popup weer te sluiten.
+
+![begin van mijn html cookie popup](images/readme/html_privacyvoorkeuren.png)
+
+### CSS styling voor cookie popup
+
+Daarna ben ik begonnen met de styling van de cookie popup. Ik heb eerst de basis van de dialog opgemaakt, zoals de breedte, padding, afgeronde hoeken en de positie op het scherm. Ook heb ik ervoor gezorgd dat de tekst niet te groot wordt en dat er gescrold kan worden als de inhoud te lang is.
+
+Voor de indeling van de afbeelding en de knoppen heb ik opnieuw CSS Grid gebruikt. Dit sluit aan op wat ik tijdens de deep dives over Grid heb geleerd. Met grid kon ik de afbeelding naast de knoppen zetten en de verschillende onderdelen overzichtelijk onder elkaar plaatsen.
+
+Ik wilde per se een afbeelding toevoegen aan de cookie banner, omdat ik niet wilde dat het eruit zou zien als een standaard technische popup. De banner moest juist passen bij de mood en stijl van mijn website, zodat het onderdeel voelt alsof het echt bij mijn Digital Garden hoort.
+
+Voor de toggles in de privacyvoorkeuren heb ik opnieuw gebruikgemaakt van een bestaande bron, omdat ik nog niet wist hoe ik zelf zo’n switch moest stylen. Daarbij heb ik gekeken naar:
+
+- https://www.w3schools.com/howto/howto_css_switch.asp voor het maken en stylen van de toggles
+- https://www.w3schools.com/cssref/sel_disabled.php voor de styling van de uitgeschakelde noodzakelijke toggle
+- https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/cursor voor het aanpassen van de cursor en het duidelijk maken wanneer iets wel of niet klikbaar is
+
+Zo heb ik geprobeerd de popup niet alleen functioneel te maken, maar ook visueel te laten aansluiten op de rest van mijn website.
+
+De styling is nog niet helemaal af, ik moet nog de kleuren bepalen en de knoppen stijlen, maar dit is al een goed begin.
+
+![Light en Dark mode van mijn eerst versie cookie banner](images/readme/cookiepopup_1.png)
+
 </details>
 
 <details>
 <summary><strong>Deepdive Buttons + Dialogs</strong></summary>
-
 </details>
 
 ### 23 sept - Workshop 2

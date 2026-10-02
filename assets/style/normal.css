@@ -20,6 +20,7 @@
   --kleur-achtergrond-gradient-1: light-dark(#725b48, #2b1608);
   --kleur-achtergrond-gradient-2: light-dark(#9e886f, #5e4031);
   --kleur-focus: light-dark(#2b1608, #fcebd8);
+  --kleur-waslijn: #8f6d58;
 
   /*ruimtes*/
   --ruimte-tussen-albums: 2em;
@@ -1503,8 +1504,6 @@ https://markodenic.tech/seamless-css-marquees/
 https://www.youtube.com/watch?v=uw5jVO1eNF8 */
 
 .memories {
-  overflow: hidden;
-
   padding-left: 0;
   padding-right: 0;
 }
@@ -1514,43 +1513,39 @@ https://www.youtube.com/watch?v=uw5jVO1eNF8 */
 }
 
 .memories > p:nth-of-type(1) {
+  margin: 0 var(--ruimte-m);
   text-align: center;
-  margin: 0 1em;
 }
 
 .memories > ul:nth-of-type(1) {
   display: flex;
   overflow-x: auto;
 
-  gap: 1em;
+  gap: var(--ruimte-m);
 
   list-style: none;
-  padding: 0.5em;
-  border-top: 0.1em solid var(--kleur-rand);
+  padding: var(--ruimte-s);
 
+  border-top: 0.1em solid var(--kleur-rand);
   border-bottom: 0.1em solid var(--kleur-rand);
 }
 
 .memories > ul button {
-  padding: 0.8em 2em;
+  padding: 0.8em var(--ruimte-l);
 
   text-align: center;
 
-  text-decoration: none;
-
   color: var(--kleur-tekst);
-
   background: var(--kleur-menu);
 
   border: 0.1em solid var(--kleur-rand);
-
   border-radius: 0.5em;
 }
 
-.memories > ul button:hover {
-  transform: scale(1.05);
-
-  filter: drop-shadow(0 0 0.4em var(--kleur-schaduw));
+.memories > ul button:hover,
+.memories > ul button:focus-visible {
+  color: var(--kleur-hover-tekst);
+  background: var(--kleur-hover-achtergrond);
 }
 
 .memories-static {
@@ -1567,7 +1562,7 @@ https://www.youtube.com/watch?v=uw5jVO1eNF8 */
 
   height: 0.12em;
 
-  background: #8f6d58;
+  background: var(--kleur-waslijn);
 
   z-index: 0;
 }
@@ -1579,17 +1574,21 @@ https://www.youtube.com/watch?v=uw5jVO1eNF8 */
 
 .memory-row {
   overflow: hidden;
-  margin: 2em 0;
+  margin: var(--ruimte-l) 0;
 }
 
 .memory-row ul {
+  position: relative;
+
   display: inline-flex;
+
   gap: 5em;
 
   margin: 0;
-  padding: 2.5em 0 1em;
+  padding: 2.5em 0 var(--ruimte-m);
+
   list-style: none;
-  position: relative;
+
   animation: marquee-links 65s linear infinite;
 }
 
@@ -1599,20 +1598,21 @@ https://www.youtube.com/watch?v=uw5jVO1eNF8 */
 
 .memory-row ul::before {
   content: "";
+
   position: absolute;
+
   left: 0;
   right: 0;
   top: 2.2em;
+
   height: 0.12em;
-  background: #8f6d58;
+
+  background: var(--kleur-waslijn);
 }
 
 .memory-row li,
 .memories-static li {
   position: relative;
-  flex: 0 0 10em;
-}
-.memory-row li {
   flex: 0 0 10em;
 }
 
@@ -1627,55 +1627,77 @@ https://www.youtube.com/watch?v=uw5jVO1eNF8 */
 }
 
 .knijper {
-  width: 8em;
   position: absolute;
+
+  width: 8em;
+
   top: -28%;
   left: 50%;
+
   transform: translateX(-50%);
+
   z-index: 2;
 }
 
 .memory-row button,
 .memories-static button {
   display: block;
+
   width: 100%;
+
   margin-top: 1.2em;
   padding: 0.6em 0.6em 0.9em;
-  border: none;
+
   background: #f3eee8;
+
+  border: none;
+
   box-shadow: 0 0.15em 0.45em rgb(0 0 0 / 0.18);
+
   cursor: pointer;
+
+  transition: transform 0.2s ease;
 }
 
 .memory-row button img,
 .memories-static button img {
   display: block;
+
   width: 100%;
   aspect-ratio: 1 / 1.05;
+
   object-fit: cover;
+
   background: #d9d2c9;
 }
 
 .memory-row button span,
 .memories-static button span {
   display: block;
+
   margin: 0.7em 0 0;
+
   color: #4c4038;
+
   text-align: center;
   font-size: 0.9em;
   line-height: 1.3;
 }
 
-.memory-row button:hover {
-  transform: translateY(-0.2em);
+.memory-row button:hover,
+.memory-row button:focus-visible {
+  transform: scale(1.05);
+
+  filter: drop-shadow(0 0 0.4em var(--kleur-schaduw));
 }
 
-.memory-row ul:hover {
+.memory-row ul:hover,
+.memory-row ul:focus-within {
   animation-play-state: paused;
 }
 
 /* =========================
-   POPOVER
+   DIALOGS
    ========================= */
 
 /*voor dit gedeelte heb ik gebruik gemaakt van de bron:
@@ -1688,13 +1710,13 @@ https://developer.mozilla.org/en-US/docs/Web/API/Popover_API/Using
 
   overflow-y: auto;
 
-  padding: 1em;
+  padding: var(--ruimte-m);
+
+  color: var(--kleur-tekst);
+  background: var(--kleur-menu);
 
   border: 0.15em solid var(--kleur-rand);
   box-shadow: inset 0 0 0 0.2em var(--kleur-menu-binnenrand);
-
-  background: var(--kleur-menu);
-  color: var(--kleur-tekst);
 }
 
 .memories dialog::backdrop {
@@ -1702,19 +1724,29 @@ https://developer.mozilla.org/en-US/docs/Web/API/Popover_API/Using
 }
 
 .memories dialog > button {
-  display: block;
+  position: absolute;
 
-  margin-left: auto;
-  margin-bottom: 0.5em;
+  top: var(--ruimte-s);
+  right: var(--ruimte-s);
 
-  border: none;
+  width: 2em;
+  height: 2em;
 
-  background: transparent;
+  font-size: 1.2em;
+
   color: var(--kleur-tekst);
+  background: var(--kleur-achtergrond);
 
-  font-size: 1.5em;
+  border: 0.1em solid var(--kleur-rand);
+  border-radius: 50%;
 
   cursor: pointer;
+}
+
+.memories dialog > button:hover,
+.memories dialog > button:focus-visible {
+  color: var(--kleur-hover-tekst);
+  background: var(--kleur-hover-achtergrond);
 }
 
 .memories dialog img {
@@ -1722,7 +1754,7 @@ https://developer.mozilla.org/en-US/docs/Web/API/Popover_API/Using
 
   width: 100%;
 
-  margin-bottom: 1em;
+  margin-bottom: var(--ruimte-m);
 
   border: 0.1em solid var(--kleur-rand);
 }
