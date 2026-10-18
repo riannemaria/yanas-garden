@@ -1,0 +1,438 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Memories - Yana's Cozy Little Music Corner</title>
+
+    <link rel="icon" type="image/x-icon" href="./images/website/favicon.ico" />
+
+    <link rel="stylesheet" href="./assets/style/normal.css" />
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main-content"> Skip to main content </a>
+
+    <header>
+      <img src="images/website/leftheader.png" alt="" />
+      <a href="index.html">
+        <h1>
+          Yana's <span class="life">Cozy</span> little
+          <span class="music">Music</span> Corner
+        </h1>
+      </a>
+
+      <img src="images/website/rightheader.png" alt="" />
+
+      <p>
+        <span>
+          hii,, welcome to my cozy little music corner ♡ enjoy exploring my life
+          through music
+        </span>
+      </p>
+    </header>
+
+    <main id="main-content">
+      <aside class="menu-links">
+        <section>
+          <h2>Song of the week</h2>
+          <a href="sotw.html" aria-label="Go to songs of the week">
+            <img src="images/website/lp.png" alt="" />
+          </a>
+          <p>Linger - The Cranberries</p>
+        </section>
+
+        <section>
+          <h2>My Mood</h2>
+          <a href="moods.html" aria-label="Go to the mood page">
+            <img src="images/website/me.png" alt="" />
+          </a>
+          <p>cozy</p>
+        </section>
+
+        <!--Voor het volgende gedeelte maak ik gebruik van de deepdive light dark-->
+
+        <section>
+          <h2>Color Scheme</h2>
+          <form class="theme-choice">
+            <label>
+              <input type="radio" name="color-theme" value="auto" checked />
+              Auto
+            </label>
+
+            <label>
+              <input type="radio" name="color-theme" value="light" />
+              Light
+            </label>
+
+            <label>
+              <input type="radio" name="color-theme" value="dark" />
+              Dark
+            </label>
+          </form>
+        </section>
+      </aside>
+
+      <!--voor dit gedeelte heb ik gebruik gemaakt van de volgende bronnen:
+      https://markodenic.tech/seamless-css-marquees/
+      https://developer.mozilla.org/en-US/docs/Web/API/Popover_API
+      -->
+
+      <section class="music-timeline">
+        <h2>Press play, rewind</h2>
+
+        <p>
+          From my very first music player to the devices I use today. A little
+          timeline of all the ways I've listened to music throughout my life.
+        </p>
+
+        <ol class="device-timeline">
+          <li>
+            <article>
+              <h3>2009-2010</h3>
+
+              <button
+                commandfor="radio"
+                command="show-modal"
+                aria-label="View details about my radio"
+              >
+                <img
+                  src="images/website/listeningeras/radio.png"
+                  alt="grey radio"
+                />
+              </button>
+
+              <p>This is where my music journey began.</p>
+            </article>
+
+            <dialog class="device-dialog" id="radio">
+              <button
+                commandfor="radio"
+                command="close"
+                aria-label="Close details about my radio"
+              >
+                ×
+              </button>
+
+              <h3>Radio</h3>
+
+              <img
+                src="images/website/listeningeras/radio.png"
+                alt="grey radio"
+              />
+
+              <p>
+                This was my very first way of listening music. I had a pink
+                radio in my room with a cd with Scooby Doo music on it. The
+                entire day I would listen to "Who let the dogs out" which would
+                drive my parents crazy.
+              </p>
+            </dialog>
+          </li>
+
+          <li>
+            <article>
+              <h3>2010-2011</h3>
+
+              <button
+                commandfor="first-mp3-player"
+                command="show-modal"
+                aria-label="View details about my first MP3 player"
+              >
+                <img
+                  src="images/website/listeningeras/mp3.png"
+                  alt="My first MP3 player"
+                />
+              </button>
+
+              <p>First time listening music on the go.</p>
+            </article>
+
+            <dialog class="device-dialog" id="first-mp3-player">
+              <button
+                commandfor="first-mp3-player"
+                command="close"
+                aria-label="Close dialog"
+              >
+                ×
+              </button>
+
+              <h3>My First MP3 Player</h3>
+
+              <img
+                src="images/website/listeningeras/mp3.png"
+                alt="My first MP3 player"
+              />
+
+              <p>
+                This was the first time I could take my music with me, whether
+                we were going somewhere by car or I was playing outside. I had
+                my dad download my favorite Barbie songs onto my MP3 player,
+                specifically songs from Barbie and the 12 Dancing Princesses,
+                which was my favorite movie at the time. There were only three
+                songs on there, but I loved them so much that I would listen to
+                them on repeat over and over again!
+              </p>
+            </dialog>
+          </li>
+
+          <li>
+            <article>
+              <h3>2010-2011</h3>
+
+              <button
+                commandfor="cd-player"
+                command="show-modal"
+                aria-label="View details about my cd player"
+              >
+                <img
+                  src="images/website/listeningeras/cdspeler.png"
+                  alt="black cd player"
+                />
+              </button>
+
+              <p>My bedroom was basically my own little concert stage.</p>
+            </article>
+
+            <dialog class="device-dialog" id="cd-player">
+              <button
+                commandfor="cd-player"
+                command="close"
+                aria-label="Close dialog"
+              >
+                ×
+              </button>
+
+              <h3>Cd Player</h3>
+
+              <img
+                src="images/website/listeningeras/cdspeler.png"
+                alt="My old iPod"
+              />
+
+              <p>
+                This was an upgrade from my old radio, which only had one CD. I
+                had all the K3 CDs and lots of Barbie soundtracks that I would
+                listen to all the time. I was always putting on little shows in
+                my room, singing and performing with my toy microphone and
+                instruments like I was a real pop star!
+              </p>
+            </dialog>
+          </li>
+
+          <li>
+            <article>
+              <h3>2012</h3>
+
+              <button
+                commandfor="my-phone"
+                command="show-modal"
+                aria-label="View details about my phone"
+              >
+                <img
+                  src="images/website/listeningeras/mp3_scherm.png"
+                  alt="My old phone"
+                />
+              </button>
+
+              <p>
+                Not really my music taste, but I felt so cool carrying it
+                around.
+              </p>
+            </article>
+
+            <dialog class="device-dialog" id="my-phone">
+              <button
+                commandfor="my-phone"
+                command="close"
+                aria-label="Close dialog"
+              >
+                ×
+              </button>
+
+              <h3>My second mp3 player</h3>
+
+              <img
+                src="images/website/listeningeras/mp3_scherm.png"
+                alt="My old phone"
+              />
+
+              <p>
+                This was my dad's old MP3 player, and I thought it was so cool
+                to carry around, especially because it had a little screen. It
+                still had all of his music on it, so I ended up listening to his
+                songs, even though I didn't really like most of them. But
+                honestly, I just loved having my own little music player to take
+                everywhere!
+              </p>
+            </dialog>
+          </li>
+
+          <li>
+            <article>
+              <h3>2013</h3>
+
+              <button
+                commandfor="sony-phone"
+                command="show-modal"
+                aria-label="View details about my first phone"
+              >
+                <img
+                  src="images/website/listeningeras/sony.png"
+                  alt="Sony Ericsson pink"
+                />
+              </button>
+
+              <p>One phone, one song, and a whole lot of Call Me Maybe.</p>
+            </article>
+
+            <dialog class="device-dialog" id="sony-phone">
+              <button
+                commandfor="sony-phone"
+                command="close"
+                aria-label="Close details about my first phone"
+              >
+                ×
+              </button>
+
+              <h3>My First Phone</h3>
+
+              <img
+                src="images/website/listeningeras/sony.png"
+                alt="Sony Ericsson pink"
+              />
+
+              <p>
+                This was my very first phone, and I mainly used it to listen to
+                music. I only had one song on it: Call Me Maybe by Carly Rae
+                Jepsen. Whenever I took my phone somewhere, I would listen to
+                that one song on repeat. I thought it was so cool that the phone
+                could slide open! And the best part? I actually still have it to
+                this day!
+              </p>
+            </dialog>
+          </li>
+
+          <li>
+            <article>
+              <h3>2014</h3>
+
+              <button
+                commandfor="ipod"
+                command="show-modal"
+                aria-label="View details about my ipod"
+              >
+                <img
+                  src="images/website/listeningeras/ipod.png"
+                  alt="Ipod silver"
+                />
+              </button>
+
+              <p>Same iPod era, same songs, just like my big sister..</p>
+            </article>
+
+            <dialog class="device-dialog" id="ipod">
+              <button
+                commandfor="ipod"
+                command="close"
+                aria-label="Close details about my ipod"
+              >
+                ×
+              </button>
+
+              <h3>My First iPod</h3>
+
+              <img
+                src="images/website/listeningeras/ipod.png"
+                alt="Ipod silver"
+              />
+
+              <p>
+                I got my first iPod at the same time as my cousin, who I've
+                always seen as my big sister. I looked up to her so much and
+                wanted to be just like her, so of course I had to have the exact
+                same songs on my iPod! Some of them were *Happiness* by Alexis
+                Jordan and *Problem* by Ariana Grande. Whenever I hear those
+                songs now, they instantly take me back to that time and bring
+                back so many nostalgic memories.
+              </p>
+            </dialog>
+          </li>
+
+          <li>
+            <article>
+              <h3>2015 - now</h3>
+
+              <button
+                commandfor="phone"
+                command="show-modal"
+                aria-label="View details about my phones"
+              >
+                <img
+                  src="images/website/listeningeras/iphone.png"
+                  alt="Iphone 17 pro silver"
+                />
+              </button>
+
+              <p>From YouTube with my screen on to Spotify on repeat.</p>
+            </article>
+
+            <dialog class="device-dialog" id="phone">
+              <button
+                commandfor="phone"
+                command="close"
+                aria-label="Close dialog"
+              >
+                ×
+              </button>
+
+              <h3>My phones</h3>
+
+              <img
+                src="images/website/listeningeras/iphone.png"
+                alt="Iphone 17 pro silver"
+              />
+
+              <p>
+                I've had quite a few different phones over the years, but the
+                way I listened to music on them was pretty much the same. It all
+                started with YouTube, where I had to keep my screen on just to
+                listen to my favorite songs. I remember wishing I could listen
+                to music with my screen off or while using other apps. So I
+                started downloading all kinds of free music apps that would let
+                me do that. Eventually, I discovered Spotify, and I've been
+                using it ever since. It's still my go-to music app to this day!
+              </p>
+            </dialog>
+          </li>
+        </ol>
+      </section>
+
+      <nav class="menu-rechts" aria-label="Explore">
+        <img src="images/website/hangingplant.png" alt="" />
+        <h2>Explore ♪</h2>
+
+        <ul>
+          <li><a href="about.html">about</a></li>
+          <li><a href="aura.html">audio aura</a></li>
+          <li><a href="memories.html">memories</a></li>
+          <li><a href="moods.html">moods</a></li>
+          <li><a href="artists.html">artists I Love</a></li>
+          <li>
+            <a href="digitalmusic.html" aria-current="page"> how I listened </a>
+          </li>
+          <li><a href="experiences.html">experiences</a></li>
+          <li><a href="guiltypleasures.html">guilty pleasures</a></li>
+          <li><a href="shows.html">shows</a></li>
+          <li><a href="songstoburn.html">songs to burn</a></li>
+        </ul>
+      </nav>
+    </main>
+
+    <footer>
+      <p>♡ Digital Garden 2026 — Rianne Geilings</p>
+    </footer>
+  </body>
+</html>

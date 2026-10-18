@@ -136,10 +136,11 @@ button:active {
 }
 
 /* =========================
-   COOKIE DIALOG
+   COOKIE POPUP
    ========================= */
 
 .cookie-dialog {
+  background-color: var(--);
   position: fixed;
   inset: 0;
   margin: auto;
@@ -150,15 +151,21 @@ button:active {
   border-radius: 1rem;
 
   z-index: 999;
-}
 
-.cookie-dialog h2 {
-  margin-bottom: 1em;
-}
+  h2 {
+    margin-bottom: 1em;
+  }
 
-.cookie-dialog p {
-  margin-bottom: 1em;
-  line-height: 1.5;
+  p {
+    margin-bottom: 1em;
+    line-height: 1.5;
+  }
+
+  /* Tablet */
+  @media (min-width: 55em) {
+    width: min(80%, 50rem);
+    padding: 2rem;
+  }
 }
 
 .cookie-text {
@@ -166,6 +173,13 @@ button:active {
   overflow-y: auto;
 
   margin-bottom: 1em;
+
+  /* Tablet */
+  @media (min-width: 55em) {
+    max-height: none;
+    overflow-y: visible;
+    padding-right: 0;
+  }
 }
 
 .cookie-options {
@@ -177,39 +191,44 @@ button:active {
     "avatar preferences";
   gap: 1em;
   align-items: center;
-}
 
-.cookie-options img {
-  grid-area: avatar;
-  width: 100%;
-  height: auto;
-}
+  img {
+    grid-area: avatar;
+    width: 100%;
+    height: auto;
+  }
 
-.cookie-options button:nth-of-type(1) {
-  grid-area: accept;
-}
+  button {
+    width: 100%;
+    padding: 0.8rem 1em;
+    font-family: "sniglet", system-ui, sans-serif;
 
-.cookie-options button:nth-of-type(2) {
-  grid-area: necessary;
-}
+    background-color: var(--kleur-menu);
 
-.cookie-options button:nth-of-type(3) {
-  grid-area: preferences;
-}
+    &:nth-of-type(1) {
+      grid-area: accept;
+    }
 
-.cookie-options button {
-  width: 100%;
-  padding: 0.8rem 1em;
-  font-family: "sniglet", system-ui, sans-serif;
+    &:nth-of-type(2) {
+      grid-area: necessary;
+    }
 
-  background-color: var(--kleur-menu);
-}
+    &:nth-of-type(3) {
+      grid-area: preferences;
+    }
 
-.cookie-options button:hover {
-  transform: scale(1.05);
-  filter: drop-shadow(0 0 0.4em var(--kleur-schaduw));
+    &:hover {
+      transform: scale(1.05);
+      filter: drop-shadow(0 0 0.4em var(--kleur-schaduw));
 
-  cursor: pointer;
+      cursor: pointer;
+    }
+  }
+
+  /* Tablet */
+  @media (min-width: 55em) {
+    grid-template-columns: 12rem 1fr;
+  }
 }
 
 /* =========================
@@ -221,22 +240,28 @@ button:active {
   padding: 1.5em;
   border: none;
   border-radius: 1em;
-}
 
-.privacy-dialog::backdrop {
-  background-color: rgb(0 0 0 / 0.5);
-  backdrop-filter: blur(2px);
-}
+  &::backdrop {
+    background-color: rgb(0 0 0 / 0.5);
+    backdrop-filter: blur(2px);
+  }
 
-.privacy-dialog form {
-  display: grid;
-  gap: 1em;
-}
+  form {
+    display: grid;
+    gap: 1em;
+  }
 
-.privacy-dialog h2 {
-  margin: 0;
-  padding-bottom: 0.75em;
-  border-bottom: 1px solid var(--kleur-rand);
+  h2 {
+    margin: 0;
+    padding-bottom: 0.75em;
+    border-bottom: 1px solid var(--kleur-rand);
+  }
+
+  /* Tablet */
+  @media (min-width: 55em) {
+    width: min(80%, 50rem);
+    padding: 2rem;
+  }
 }
 
 .preference-row {
@@ -249,74 +274,77 @@ button:active {
   border-bottom: 1px solid var(--kleur-rand);
 }
 
-.preference-text h3 {
-  margin: 0 0 0.5em;
-}
+.preference-text {
+  h3 {
+    margin: 0 0 0.5em;
+  }
 
-.preference-text p {
-  margin: 0;
-  line-height: 1.5;
+  p {
+    margin: 0;
+    line-height: 1.5;
+  }
 }
 
 /* =========================
    TOGGLE SWITCH
    ========================= */
+
 /* voor dit gedeelte maak ik gebruik van de bronnen
- https://www.w3schools.com/howto/howto_css_switch.asp om de toggles te stylen
- https://www.w3schools.com/cssref/sel_disabled.php
- https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/cursor
- */
+   https://www.w3schools.com/howto/howto_css_switch.asp om de toggles te stylen
+   https://www.w3schools.com/cssref/sel_disabled.php
+   https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/cursor
+*/
 
 .switch {
   position: relative;
   display: inline-block;
   width: 3.5em;
   height: 2em;
-}
 
-.switch input {
-  position: absolute;
-  opacity: 0;
-}
+  input {
+    position: absolute;
+    opacity: 0;
 
-.switch input:focus-visible + span {
-  outline: solid var(--kleur-focus);
-  outline-offset: 0.1em;
-}
+    &:focus-visible + span {
+      outline: solid var(--kleur-focus);
+      outline-offset: 0.1em;
+    }
 
-.switch span {
-  display: block;
-  width: 100%;
-  height: 100%;
-  background-color: #d9d9d9;
-  border-radius: 999px;
-  position: relative;
-  transition: 0.3s;
-}
+    &:checked + span {
+      background-color: #8f6b58;
 
-.switch span::before {
-  content: "";
-  position: absolute;
-  width: 1.4em;
-  height: 1.4em;
-  top: 0.3em;
-  left: 0.3em;
-  background-color: white;
-  border-radius: 50%;
-  transition: 0.3s;
-}
+      &::before {
+        transform: translateX(1.5rem);
+      }
+    }
 
-.switch input:checked + span {
-  background-color: #8f6b58;
-}
+    &:disabled + span {
+      opacity: 0.8;
+      cursor: not-allowed;
+    }
+  }
 
-.switch input:checked + span::before {
-  transform: translateX(1.5rem);
-}
+  span {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #d9d9d9;
+    border-radius: 999px;
+    position: relative;
+    transition: 0.3s;
 
-.switch input:disabled + span {
-  opacity: 0.8;
-  cursor: not-allowed;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 1.4em;
+      height: 1.4em;
+      top: 0.3em;
+      left: 0.3em;
+      background-color: white;
+      border-radius: 50%;
+      transition: 0.3s;
+    }
+  }
 }
 
 /* =========================
@@ -342,49 +370,102 @@ header {
   align-items: center;
 
   padding: 1em 0.5em;
-}
 
-header img {
-  width: 100%;
-  max-width: 5em;
-  min-width: 0;
-  height: auto;
-}
+  img {
+    width: 100%;
+    max-width: 5em;
+    min-width: 0;
+    height: auto;
 
-header img:first-of-type {
-  justify-self: end;
-}
+    &:first-of-type {
+      justify-self: end;
+    }
 
-header img:last-of-type {
-  justify-self: start;
-}
+    &:last-of-type {
+      justify-self: start;
+    }
 
-header h1 {
-  margin: 0 0.3em;
+    /* Tablet */
+    @media (min-width: 55em) {
+      max-width: 10em;
+      min-width: 0;
+    }
 
-  text-align: center;
-  font-size: clamp(1rem, 0.7rem + 1.5vw, 1.8rem);
+    /* Kleinere desktop */
+    @media (min-width: 80em) {
+      max-width: 15em;
+      min-width: initial;
+    }
+  }
 
-  white-space: nowrap;
-}
+  h1 {
+    margin: 0 0.3em;
 
-header a,
-header a:visited {
-  color: inherit;
+    text-align: center;
+    font-size: clamp(1rem, 0.7rem + 1.5vw, 1.8rem);
 
-  text-decoration: none;
+    white-space: nowrap;
+
+    /* Kleinere desktop */
+    @media (min-width: 80em) {
+      margin: 0 1em;
+      white-space: normal;
+    }
+  }
+
+  a,
+  a:visited {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  /* Tablet */
+  @media (min-width: 55em) {
+    grid-template-columns:
+      minmax(0, 1fr)
+      auto
+      minmax(0, 1fr);
+
+    padding: 1em 0.5em;
+  }
+
+  /* Kleinere desktop */
+  @media (min-width: 80em) {
+    grid-template-columns: 1fr auto 1fr;
+    padding: 2em;
+  }
 }
 
 .life {
   font-family: "luxe", system-ui, sans-serif;
   font-size: 2em;
   font-weight: 10;
+
+  /* Tablet */
+  @media (min-width: 55em) {
+    font-size: 2em;
+  }
+
+  /* Kleinere desktop */
+  @media (min-width: 80em) {
+    font-size: 2.5em;
+  }
 }
 
 .music {
   font-family: "princess", system-ui, sans-serif;
   font-size: 1.7em;
   font-weight: 10;
+
+  /* Tablet */
+  @media (min-width: 55em) {
+    font-size: 1.7em;
+  }
+
+  /* Kleinere desktop */
+  @media (min-width: 80em) {
+    font-size: 2em;
+  }
 }
 
 /* =========================
@@ -429,7 +510,9 @@ header p span {
    HOOFDLAYOUT
    ========================= */
 
-/* in dit gedeelte maak ik gebruik van de kennis opgedaan uit de deepdive grid-template-areas*/
+/* in dit gedeelte maak ik gebruik van de kennis opgedaan
+   uit de deepdive grid-template-areas */
+
 main {
   display: grid;
 
@@ -444,10 +527,101 @@ main {
 
   width: 100%;
   padding: 0;
-}
 
-.menu-links {
-  grid-area: menu-links;
+  /* Tablet */
+  @media (min-width: 55em) {
+    grid-template-columns:
+      10em
+      minmax(0, 1fr)
+      10em;
+
+    grid-template-areas: "menu-links midden menu-rechts";
+
+    gap: 1em;
+    padding: 0 1em;
+
+    /* Scrollbaar middenvak */
+    > .music-timeline {
+      height: 64em;
+      min-height: 0;
+
+      box-sizing: border-box;
+
+      overflow-y: auto;
+      overflow-x: hidden;
+      overscroll-behavior-y: contain;
+    }
+  }
+
+  /* Grote desktop */
+  @media (min-width: 100em) {
+    grid-template-columns:
+      1fr
+      minmax(8em, 13em)
+      minmax(25em, 50em)
+      minmax(8em, 13em)
+      1fr;
+
+    grid-template-areas: ". menu-links midden menu-rechts .";
+
+    gap: 2em;
+    padding: 0;
+  }
+}
+main {
+  display: grid;
+
+  grid-template-columns: minmax(0, 1fr);
+
+  grid-template-areas:
+    "menu-rechts"
+    "midden"
+    "menu-links";
+
+  gap: 2em;
+
+  width: 100%;
+  padding: 0;
+
+  /* Tablet */
+  @media (min-width: 55em) {
+    grid-template-columns:
+      10em
+      minmax(0, 1fr)
+      10em;
+
+    grid-template-areas: "menu-links midden menu-rechts";
+
+    gap: 1em;
+    padding: 0 1em;
+
+    /* Scrollbaar middenvak */
+    > .music-timeline {
+      height: 64em;
+      min-height: 0;
+
+      box-sizing: border-box;
+
+      overflow-y: auto;
+      overflow-x: hidden;
+      overscroll-behavior-y: contain;
+    }
+  }
+
+  /* Grote desktop */
+  @media (min-width: 100em) {
+    grid-template-columns:
+      1fr
+      minmax(8em, 13em)
+      minmax(25em, 50em)
+      minmax(8em, 13em)
+      1fr;
+
+    grid-template-areas: ". menu-links midden menu-rechts .";
+
+    gap: 2em;
+    padding: 0;
+  }
 }
 
 .homepage,
@@ -455,14 +629,11 @@ main {
 .about,
 .moods,
 .aura,
-.memories {
+.memories,
+.music-timeline,
+.artists,
+.oliviarodrigo {
   grid-area: midden;
-}
-
-.menu-rechts {
-  grid-area: menu-rechts;
-
-  position: relative;
 }
 
 /* =========================
@@ -482,127 +653,169 @@ main {
 
   border: 0.15em solid var(--kleur-rand);
   box-shadow: inset 0 0 0 0.2em var(--kleur-menu-binnenrand);
-}
 
-.menu-links h2,
-.menu-rechts h2 {
-  margin: 0 0 0.4em;
+  h2 {
+    margin: 0 0 0.4em;
 
-  padding: 0.2em;
+    padding: 0.2em;
 
-  text-align: center;
+    text-align: center;
 
-  font-size: clamp(1rem, 0.8rem + 0.6vw, 1.4rem);
+    font-size: clamp(1rem, 0.8rem + 0.6vw, 1.4rem);
 
-  color: var(--kleur-menu-kop);
+    color: var(--kleur-menu-kop);
 
-  border-top: 0.1em solid var(--kleur-rand);
+    border-top: 0.1em solid var(--kleur-rand);
+    border-bottom: 0.1em solid var(--kleur-rand);
+  }
 
-  border-bottom: 0.1em solid var(--kleur-rand);
-}
+  ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 
-.menu-links ul,
-.menu-rechts ul {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+    justify-content: center;
 
-  justify-content: center;
+    gap: 0.1em 1em;
 
-  gap: 0.1em 1em;
+    margin: 0;
+    padding: 0;
 
-  margin: 0;
-  padding: 0;
+    list-style: none;
 
-  list-style: none;
-}
+    /* Tablet */
+    @media (min-width: 55em) {
+      flex-direction: column;
+      flex-wrap: nowrap;
 
-.menu-links a,
-.menu-rechts a {
-  display: block;
+      justify-content: normal;
 
-  padding: 0.25em 0.4em;
+      gap: normal;
+    }
+  }
 
-  color: var(--kleur-tekst);
+  a {
+    display: block;
 
-  text-decoration: none;
-}
+    padding: 0.25em 0.4em;
 
-.menu-links a:hover,
-.menu-links a:focus-visible,
-.menu-rechts a:hover,
-.menu-rechts a:focus-visible {
-  background: var(--kleur-hover-achtergrond);
+    color: var(--kleur-tekst);
 
-  color: var(--kleur-hover-tekst);
+    text-decoration: none;
+
+    &:hover,
+    &:focus-visible {
+      background: var(--kleur-hover-achtergrond);
+
+      color: var(--kleur-hover-tekst);
+    }
+  }
+
+  /* Tablet */
+  @media (min-width: 55em) {
+    margin: 0;
+    min-height: 64em;
+  }
 }
 
 /* =========================
    LINKER MENU
    ========================= */
 
-.menu-links h2 {
-  min-height: 3.2em;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.menu-links section img {
-  display: block;
-
-  width: 100%;
-
-  height: auto;
-
-  object-fit: contain;
-}
-
-.menu-links section p {
-  display: flex;
-
-  justify-self: center;
-
-  align-items: center;
-}
-
 .menu-links {
+  grid-area: menu-links;
+
   display: grid;
 
   grid-template-columns: repeat(3, 1fr);
 
   grid-template-areas: "song mood random";
-}
 
-.menu-links section:nth-child(1) {
-  grid-area: song;
-}
+  h2 {
+    min-height: 3.2em;
 
-.menu-links section:nth-child(2) {
-  grid-area: mood;
-}
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-.menu-links section:nth-child(3) {
-  grid-area: random;
-}
+    /* Tablet */
+    @media (min-width: 55em) {
+      min-height: auto;
+    }
+  }
 
-.menu-links p {
-  text-align: center;
-}
+  section {
+    img {
+      display: block;
 
-.menu-links img {
-  scale: 0.8;
-}
+      width: 100%;
+      height: auto;
 
-.menu-links section:nth-child(1) img {
-  animation: draaien 5s linear infinite;
-}
+      object-fit: contain;
+    }
 
-.menu-links section a:hover {
-  background: none;
+    p {
+      display: flex;
 
-  transform: scale(1.1);
+      justify-self: center;
+
+      align-items: center;
+    }
+
+    &:nth-child(1) {
+      grid-area: song;
+
+      img {
+        animation: draaien 5s linear infinite;
+      }
+    }
+
+    &:nth-child(2) {
+      grid-area: mood;
+    }
+
+    &:nth-child(3) {
+      grid-area: random;
+    }
+
+    a:hover {
+      background: none;
+
+      transform: scale(1.1);
+    }
+
+    /* Tablet */
+    @media (min-width: 55em) {
+      &:nth-child(1),
+      &:nth-child(2),
+      &:nth-child(3) {
+        grid-area: auto;
+      }
+    }
+  }
+
+  p {
+    text-align: center;
+
+    /* Tablet */
+    @media (min-width: 55em) {
+      text-align: start;
+    }
+  }
+
+  img {
+    scale: 0.8;
+
+    /* Tablet */
+    @media (min-width: 55em) {
+      scale: 1;
+    }
+  }
+
+  /* Tablet */
+  @media (min-width: 55em) {
+    display: block;
+  }
 }
 
 @keyframes draaien {
@@ -615,173 +828,188 @@ main {
   }
 }
 
+/* =========================
+   THEME CHOICE
+   ========================= */
+
 .theme-choice {
   display: grid;
   grid-template-rows: repeat(3, 2em);
-}
 
-.theme-choice label {
-  display: flex;
-  align-items: center;
-  gap: 0.5em;
+  label {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
 
-  padding: 0.5em 0.7em;
+    padding: 0.5em 0.7em;
 
-  color: var(--kleur-tekst);
-  background: var(--kleur-menu);
+    color: var(--kleur-tekst);
+    background: var(--kleur-menu);
 
-  border: 0.1em solid var(--kleur-rand);
-  border-radius: 0.5em;
+    border: 0.1em solid var(--kleur-rand);
+    border-radius: 0.5em;
 
-  cursor: pointer;
-}
+    cursor: pointer;
 
-.theme-choice label:hover {
-  background: var(--kleur-hover-achtergrond);
-  color: var(--kleur-hover-tekst);
-}
+    &:hover {
+      background: var(--kleur-hover-achtergrond);
+      color: var(--kleur-hover-tekst);
+    }
+  }
 
-.theme-choice input {
-  accent-color: var(--kleur-rand);
+  input {
+    accent-color: var(--kleur-rand);
+  }
 }
 
 /* =========================
    RECHTER MENU
    ========================= */
 
-.menu-rechts img {
-  position: absolute;
+.menu-rechts {
+  grid-area: menu-rechts;
 
-  top: -3em;
-
-  right: -11em;
-
-  width: 25em;
-
-  height: auto;
-
-  z-index: 2;
-}
-
-.menu-rechts li {
   position: relative;
 
-  z-index: 5;
+  img {
+    position: absolute;
+
+    top: -3em;
+    right: -11em;
+
+    width: 25em;
+    height: auto;
+
+    z-index: 2;
+
+    pointer-events: none;
+  }
+
+  li {
+    position: relative;
+
+    z-index: 5;
+  }
 }
 
 /* =========================
    HOMEPAGE
    ========================= */
 
-.homepage p {
-  text-align: center;
-}
+.homepage {
+  p {
+    text-align: center;
+  }
 
-.homepage ul {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 
-  column-gap: var(--ruimte-tussen-albums);
-  row-gap: calc(var(--ruimte-tussen-albums) * 2);
+    column-gap: var(--ruimte-tussen-albums);
+    row-gap: calc(var(--ruimte-tussen-albums) * 2);
 
-  margin: 0;
-  padding: 2em;
+    margin: 0;
+    padding: 2em;
 
-  list-style: none;
-}
+    list-style: none;
 
-.homepage a {
-  position: relative;
-  display: grid;
+    /* Kleinere desktop */
+    @media (min-width: 80em) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
 
-  aspect-ratio: 1;
-}
+  a {
+    position: relative;
+    display: grid;
 
-.homepage img {
-  display: block;
+    aspect-ratio: 1;
 
-  width: 100%;
-  height: 100%;
+    /* Planken */
+    /* Voor dit gedeelte heb ik gebruik gemaakt van de bron:
+       https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements */
 
-  object-fit: contain;
+    &::after {
+      content: "";
 
-  object-position: center bottom;
+      position: absolute;
 
-  transition: transform 0.2s ease;
-}
+      left: calc(var(--ruimte-tussen-albums) / -2 - 0.1em);
+      right: calc(var(--ruimte-tussen-albums) / -2 - 0.1em);
 
-/* Planken */
-/* Voor dit gedeelte heb ik gebruik gemaakt van de bron: https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements*/
+      bottom: -1em;
 
-.homepage a::after {
-  content: "";
+      height: 0.7em;
 
-  position: absolute;
+      background: var(--kleur-plank);
+    }
 
-  left: calc(var(--ruimte-tussen-albums) / -2 - 0.1em);
+    /* Hover */
+    &:hover img,
+    &:focus-visible img {
+      transform: scale(1.05);
 
-  right: calc(var(--ruimte-tussen-albums) / -2 - 0.1em);
+      filter: drop-shadow(0 0 0.4em var(--kleur-schaduw));
+    }
+  }
 
-  bottom: -1em;
+  img {
+    display: block;
 
-  height: 0.7em;
+    width: 100%;
+    height: 100%;
 
-  background: var(--kleur-plank);
-}
+    object-fit: contain;
+    object-position: center bottom;
 
-/* Plant */
+    transition: transform 0.2s ease;
+  }
 
-.homepage li:nth-child(1) img {
-  position: relative;
+  /* Plant */
+  li:nth-child(1) {
+    img {
+      position: relative;
 
-  top: 72%;
+      top: 72%;
 
-  scale: 2;
+      scale: 2;
 
-  z-index: 3;
-}
+      z-index: 3;
+    }
 
-.homepage li:nth-child(1) a {
-  pointer-events: none;
-}
+    a {
+      pointer-events: none;
 
-.homepage li:nth-child(1) a::before {
-  content: "";
+      &::before {
+        content: "";
 
-  position: absolute;
+        position: absolute;
 
-  width: 65%;
+        width: 65%;
+        height: 65%;
 
-  height: 65%;
+        left: 45%;
+        top: 65%;
 
-  left: 45%;
+        translate: -50% -50%;
 
-  top: 65%;
+        pointer-events: auto;
 
-  translate: -50% -50%;
+        z-index: 4;
+      }
+    }
+  }
 
-  pointer-events: auto;
+  /* Lamp */
+  li:nth-child(5) {
+    img {
+      position: relative;
 
-  z-index: 4;
-}
+      top: 10%;
 
-/* Lamp */
-
-.homepage li:nth-child(5) img {
-  position: relative;
-
-  top: 10%;
-
-  z-index: 2;
-}
-
-/* Hover */
-
-.homepage a:hover img,
-.homepage a:focus-visible img {
-  transform: scale(1.05);
-
-  filter: drop-shadow(0 0 0.4em var(--kleur-schaduw));
+      z-index: 2;
+    }
+  }
 }
 
 /* =========================
@@ -790,209 +1018,238 @@ main {
 
 .songs {
   padding: 0 var(--ruimte-l);
-}
 
-/* Maanden */
+  /* Maanden */
 
-.songs nav {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  nav {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
 
-  gap: var(--ruimte-m);
+    gap: var(--ruimte-m);
 
-  margin-bottom: var(--ruimte-l);
-  padding: var(--ruimte-s) 0;
+    margin-bottom: var(--ruimte-l);
+    padding: var(--ruimte-s) 0;
 
-  border-top: 0.1em solid var(--kleur-rand);
-  border-bottom: 0.1em solid var(--kleur-rand);
-}
+    border-top: 0.1em solid var(--kleur-rand);
+    border-bottom: 0.1em solid var(--kleur-rand);
 
-.songs nav a {
-  padding: 0.4em;
+    a {
+      padding: 0.4em;
 
-  text-align: center;
-  text-decoration: none;
+      text-align: center;
+      text-decoration: none;
 
-  color: var(--kleur-tekst);
-  background: var(--kleur-menu);
+      color: var(--kleur-tekst);
+      background: var(--kleur-menu);
 
-  border: 0.1em solid var(--kleur-rand);
-  border-radius: 0.5em;
-}
+      border: 0.1em solid var(--kleur-rand);
+      border-radius: 0.5em;
 
-.songs nav a:hover,
-.songs nav a:focus-visible {
-  color: var(--kleur-hover-tekst);
-  background: var(--kleur-hover-achtergrond);
-}
+      &:hover,
+      &:focus-visible,
+      &[aria-current="page"] {
+        color: var(--kleur-hover-tekst);
+        background: var(--kleur-hover-achtergrond);
+      }
+    }
+  }
 
-/* Songs */
+  /* Songs */
 
-.songs ul {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 
-  gap: var(--ruimte-xl) var(--ruimte-l);
+    gap: var(--ruimte-xl) var(--ruimte-l);
 
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 
-  list-style: none;
-}
+    list-style: none;
+  }
 
-.songs li {
-  text-align: center;
-}
+  li {
+    text-align: center;
 
-/* Afbeeldingen */
+    /* Afbeeldingen */
 
-.songs li img {
-  display: block;
+    img {
+      display: block;
 
-  width: 100%;
-  aspect-ratio: 1;
+      width: 100%;
+      aspect-ratio: 1;
 
-  object-fit: cover;
-  border: 0.15em solid var(--kleur-rand);
-}
+      object-fit: cover;
+      border: 0.15em solid var(--kleur-rand);
+    }
 
-/* Songtitel */
+    /* Songtitel */
 
-.songs li p {
-  margin: var(--ruimte-s) 0 0;
+    p {
+      margin: var(--ruimte-s) 0 0;
 
-  text-align: center;
-}
+      text-align: center;
+    }
 
-.songs nav a:hover,
-.songs nav a:focus-visible,
-.songs nav a[aria-current="page"] {
-  color: var(--kleur-hover-tekst);
-  background: var(--kleur-hover-achtergrond);
-}
+    /* Album knop */
 
-/* Album knop */
+    button {
+      padding: 0;
 
-.songs li button {
-  padding: 0;
+      background: none;
+      border: none;
 
-  background: none;
-  border: none;
+      cursor: inherit;
 
-  cursor: inherit;
-}
+      img {
+        transition: transform 0.2s ease;
+      }
 
-/* Album wordt groter bij hover */
+      /* Album wordt groter bij hover */
 
-.songs li button img {
-  transition: transform 0.2s ease;
-}
+      &:hover img,
+      &:focus-visible img {
+        transform: scale(1.05);
 
-.songs li button:hover img,
-.songs li button:focus-visible img {
-  transform: scale(1.05);
+        filter: drop-shadow(0 0 0.4em var(--kleur-schaduw));
+      }
+    }
+  }
 
-  filter: drop-shadow(0 0 0.4em var(--kleur-schaduw));
-}
+  /* Dialog */
+  /* hier maak ik gebruik van de bron:
+     https://developer.mozilla.org/en-US/docs/Web/API/Popover_API */
 
-/* dialog */
-/*hier maak ik gebruik van de bron:
-https://developer.mozilla.org/en-US/docs/Web/API/Popover_API
-*/
+  dialog {
+    position: fixed;
+    inset: 0;
 
-.songs dialog {
-  position: fixed;
-  inset: 0;
+    width: min(30em, 85vw);
+    max-height: 90vh;
 
-  width: min(30em, 85vw);
-  max-height: 90vh;
+    margin: auto;
+    padding: var(--ruimte-l);
 
-  margin: auto;
-  padding: var(--ruimte-l);
+    overflow-y: auto;
 
-  overflow-y: auto;
+    text-align: center;
 
-  text-align: center;
+    color: var(--kleur-tekst);
+    background: var(--kleur-menu);
 
-  color: var(--kleur-tekst);
-  background: var(--kleur-menu);
+    border: 0.15em solid var(--kleur-rand);
 
-  border: 0.15em solid var(--kleur-rand);
-}
+    /* Achtergrond achter dialog */
 
-/* Achtergrond achter dialog */
+    &::backdrop {
+      background: rgb(0 0 0 / 60%);
+    }
 
-.songs dialog::backdrop {
-  background: rgb(0 0 0 / 60%);
-}
+    /* Grote albumcover */
 
-/* Grote albumcover */
+    img {
+      display: block;
 
-.songs dialog img {
-  display: block;
+      width: 100%;
+      height: auto;
 
-  width: 100%;
-  height: auto;
+      object-fit: contain;
+    }
 
-  object-fit: contain;
-}
+    /* Kruisje */
 
-/* Kruisje */
+    > button {
+      position: absolute;
 
-.songs dialog > button {
-  position: absolute;
+      top: var(--ruimte-s);
+      right: var(--ruimte-s);
 
-  top: var(--ruimte-s);
-  right: var(--ruimte-s);
+      width: 2em;
+      height: 2em;
 
-  width: 2em;
-  height: 2em;
+      font-size: 1.2em;
 
-  font-size: 1.2em;
+      color: var(--kleur-tekst);
+      background: var(--kleur-achtergrond);
 
-  color: var(--kleur-tekst);
-  background: var(--kleur-achtergrond);
+      border: 0.1em solid var(--kleur-rand);
+      border-radius: 50%;
 
-  border: 0.1em solid var(--kleur-rand);
-  border-radius: 50%;
+      cursor: pointer;
+    }
 
-  cursor: pointer;
-}
+    button {
+      &:hover {
+        color: var(--kleur-hover-tekst);
+        background: var(--kleur-hover-achtergrond);
+      }
+    }
 
-.songs dialog button:hover {
-  color: var(--kleur-hover-tekst);
-  background: var(--kleur-hover-achtergrond);
-}
+    dl {
+      display: grid;
+      grid-template-columns: auto 1fr;
 
-.songs dialog dl {
-  display: grid;
-  grid-template-columns: auto 1fr;
+      gap: 0.4em 1em;
 
-  gap: 0.4em 1em;
+      width: fit-content;
 
-  width: fit-content;
+      margin: var(--ruimte-m) auto;
 
-  margin: var(--ruimte-m) auto;
+      text-align: left;
+    }
 
-  text-align: left;
-}
+    dt {
+      font-weight: bold;
 
-.songs dialog dt {
-  font-weight: bold;
+      color: var(--kleur-rand);
 
-  color: var(--kleur-rand);
-}
+      &:last-of-type {
+        grid-column: 1 / -1;
 
-.songs dialog dd {
-  margin: 0;
+        margin-top: 1em;
+
+        text-align: center;
+
+        a {
+          display: inline-block;
+
+          padding: 0.7em 1.2em;
+
+          color: var(--kleur-tekst);
+          background: var(--kleur-menu);
+
+          border: 0.1em solid var(--kleur-rand);
+          border-radius: 0.5em;
+
+          text-decoration: none;
+
+          cursor: pointer;
+
+          &:hover,
+          &:focus-visible {
+            color: var(--kleur-hover-tekst);
+            background: var(--kleur-hover-achtergrond);
+          }
+        }
+      }
+    }
+
+    dd {
+      margin: 0;
+    }
+  }
 }
 
 /* =========================
    ABOUT ME
    ========================= */
 
-/*in dit gedeelte maak ik gebruik van de kennis opgedaan uit de deepdive grid-template-areas*/
-/*daarnaast maak ik gebruik van de bron: https://codepen.io/MarioDesigns/pen/woJgeo voor de animatie*/
+/* in dit gedeelte maak ik gebruik van de kennis opgedaan
+   uit de deepdive grid-template-areas */
+
+/* daarnaast maak ik gebruik van de bron:
+   https://codepen.io/MarioDesigns/pen/woJgeo
+   voor de animatie */
 
 .about {
   display: grid;
@@ -1010,19 +1267,28 @@ https://developer.mozilla.org/en-US/docs/Web/API/Popover_API
   gap: var(--ruimte-m);
 
   margin: var(--ruimte-m);
+
+  h2 {
+    grid-area: naam;
+    text-align: start;
+    color: var(--kleur-tekst);
+    margin: 0;
+  }
+
+  p:first-of-type {
+    grid-area: quote;
+    margin: -0.7em 0 0;
+  }
+
+  /* Tablet */
+  @media (min-width: 55em) {
+    grid-template-columns: repeat(2, auto);
+  }
 }
 
-.about h2 {
-  grid-area: naam;
-  text-align: start;
-  color: var(--kleur-tekst);
-  margin: 0;
-}
-
-.about p:first-of-type {
-  grid-area: quote;
-  margin: -0.7em 0 0;
-}
+/* =========================
+   PROFILE
+   ========================= */
 
 .profile {
   grid-area: profile;
@@ -1033,31 +1299,33 @@ https://developer.mozilla.org/en-US/docs/Web/API/Popover_API
 
   border: 0.15em solid var(--kleur-rand);
   box-shadow: inset 0 0 0 0.2em var(--kleur-menu-binnenrand);
-}
 
-.profile img {
-  width: 100%;
-  height: 100%;
+  img {
+    width: 100%;
+    height: 100%;
 
-  object-fit: contain;
+    object-fit: contain;
 
-  animation: zweven 2s infinite;
-}
+    animation: zweven 2s infinite;
 
-.profile img:first-child {
-  display: block;
-}
+    &:first-child {
+      display: block;
+    }
 
-.profile img:last-child {
-  display: none;
-}
+    &:last-child {
+      display: none;
+    }
+  }
 
-.profile:hover img:first-child {
-  display: none;
-}
+  &:hover {
+    img:first-child {
+      display: none;
+    }
 
-.profile:hover img:last-child {
-  display: block;
+    img:last-child {
+      display: block;
+    }
+  }
 }
 
 @keyframes zweven {
@@ -1074,6 +1342,10 @@ https://developer.mozilla.org/en-US/docs/Web/API/Popover_API
   }
 }
 
+/* =========================
+   DETAILS
+   ========================= */
+
 .details {
   grid-area: details;
   display: grid;
@@ -1082,28 +1354,32 @@ https://developer.mozilla.org/en-US/docs/Web/API/Popover_API
   gap: var(--ruimte-m);
 
   align-self: start;
+
+  ul {
+    margin: 0;
+    padding: var(--ruimte-m) 0;
+
+    list-style: none;
+
+    border-bottom: 0.1em solid var(--kleur-rand);
+
+    li {
+      margin-bottom: var(--ruimte-s);
+    }
+  }
+
+  img {
+    display: block;
+
+    width: 13em;
+
+    object-fit: contain;
+  }
 }
 
-.details ul {
-  margin: 0;
-  padding: var(--ruimte-m) 0;
-
-  list-style: none;
-
-  border-bottom: 0.1em solid var(--kleur-rand);
-}
-
-.details ul li {
-  margin-bottom: var(--ruimte-s);
-}
-
-.details img {
-  display: block;
-
-  width: 13em;
-
-  object-fit: contain;
-}
+/* =========================
+   DECORATIVE
+   ========================= */
 
 .decorative {
   grid-area: divider;
@@ -1115,11 +1391,15 @@ https://developer.mozilla.org/en-US/docs/Web/API/Popover_API
 
   border-top: 0.1em solid var(--kleur-rand);
   border-bottom: 0.1em solid var(--kleur-rand);
+
+  &::before {
+    content: "‿̩͙⊱༒︎༻♱༺༒︎⊰‿̩͙";
+  }
 }
 
-.decorative::before {
-  content: "‿̩͙⊱༒︎༻♱༺༒︎⊰‿̩͙";
-}
+/* =========================
+   INFORMATION BLOCKS
+   ========================= */
 
 .about-me,
 .work-school,
@@ -1127,36 +1407,38 @@ https://developer.mozilla.org/en-US/docs/Web/API/Popover_API
   padding: var(--ruimte-m);
 
   border: 0.1em solid var(--kleur-rand);
+
+  h3 {
+    margin: 0 0 var(--ruimte-s);
+
+    color: var(--kleur-menu-kop);
+  }
 }
 
 .about-me {
   grid-area: about-me;
+
+  ul {
+    margin: 0;
+    padding-left: 1.5em;
+  }
 }
 
 .work-school {
   grid-area: work-school;
+
+  li {
+    margin: 0;
+  }
 }
 
 .facts {
   grid-area: facts;
-}
 
-.about-me h3,
-.work-school h3,
-.facts h3 {
-  margin: 0 0 var(--ruimte-s);
-
-  color: var(--kleur-menu-kop);
-}
-
-.about-me ul,
-.facts ul {
-  margin: 0;
-  padding-left: 1.5em;
-}
-
-.work-school li {
-  margin: 0;
+  ul {
+    margin: 0;
+    padding-left: 1.5em;
+  }
 }
 
 /* =========================
@@ -1165,50 +1447,59 @@ https://developer.mozilla.org/en-US/docs/Web/API/Popover_API
 
 .moods {
   padding: 0 2em;
-}
 
-.moods h2 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+  h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-.moods nav ul {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  nav {
+    ul {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
 
-  margin: 0;
-  padding: 1em;
+      margin: 0;
+      padding: 1em;
 
-  column-gap: 0.2em;
+      column-gap: 0.2em;
 
-  list-style: none;
+      list-style: none;
 
-  border: 0.15em solid var(--kleur-rand);
-  box-shadow: inset 0 0 0 0.2em var(--kleur-menu-binnenrand);
-}
+      border: 0.15em solid var(--kleur-rand);
+      box-shadow: inset 0 0 0 0.2em var(--kleur-menu-binnenrand);
 
-.moods nav li {
-  display: grid;
-  place-items: center;
-}
+      /* Tablet */
+      @media (min-width: 55em) {
+        grid-template-columns: repeat(6, 1fr);
+      }
+    }
 
-.moods nav img {
-  width: 4em;
+    li {
+      display: grid;
+      place-items: center;
+    }
 
-  transition: transform 0.2s ease;
-}
+    img {
+      width: 4em;
 
-.moods a:hover img {
-  transform: scale(1.05);
+      transition: transform 0.2s ease;
+    }
+  }
 
-  filter: drop-shadow(0 0 0.4em var(--kleur-schaduw));
+  a:hover img {
+    transform: scale(1.05);
+
+    filter: drop-shadow(0 0 0.4em var(--kleur-schaduw));
+  }
 }
 
 /* =========================
-  DETAIL
+   DETAIL
    ========================= */
-/*in dit gedeelte maak ik gebruik van de kennis opgedaan uit de deepdive grid-template-areas*/
+
+/* in dit gedeelte maak ik gebruik van de kennis
+   opgedaan uit de deepdive grid-template-areas */
 
 .mood-detail {
   display: grid;
@@ -1228,22 +1519,37 @@ https://developer.mozilla.org/en-US/docs/Web/API/Popover_API
   row-gap: 1em;
 
   margin-top: 2em;
-}
 
-/* Titel */
+  /* Titel */
 
-.mood-detail h3 {
-  grid-area: title;
+  h3 {
+    grid-area: title;
 
-  margin: 0;
-}
+    margin: 0;
+  }
 
-/* Intro */
+  /* Intro */
 
-.mood-detail p {
-  grid-area: intro;
+  p {
+    grid-area: intro;
 
-  margin: 0;
+    margin: 0;
+  }
+
+  /* Quote */
+
+  blockquote {
+    grid-area: quote;
+
+    margin: 0;
+    padding: 1em 0;
+
+    text-align: center;
+    font-size: 1.2em;
+
+    border-top: 0.1em solid var(--kleur-rand);
+    border-bottom: 0.1em solid var(--kleur-rand);
+  }
 }
 
 /* Favorite ritual */
@@ -1254,15 +1560,15 @@ https://developer.mozilla.org/en-US/docs/Web/API/Popover_API
   padding: 1em;
 
   border: 0.1em solid var(--kleur-rand);
-}
 
-.favorite-ritual h4 {
-  margin-top: 0;
-}
+  h4 {
+    margin-top: 0;
+  }
 
-.favorite-ritual ul {
-  margin: 0;
-  padding-left: 1em;
+  ul {
+    margin: 0;
+    padding-left: 1em;
+  }
 }
 
 /* Confidence boost */
@@ -1271,29 +1577,15 @@ https://developer.mozilla.org/en-US/docs/Web/API/Popover_API
   grid-area: boost;
 
   padding: 1em;
-}
 
-.mood-boost h4 {
-  margin-top: 0;
-}
+  h4 {
+    margin-top: 0;
+  }
 
-.mood-boost img {
-  width: 12em;
-  height: auto;
-}
-/* Quote */
-
-.mood-detail blockquote {
-  grid-area: quote;
-
-  margin: 0;
-  padding: 1em 0;
-
-  text-align: center;
-  font-size: 1.2em;
-
-  border-top: 0.1em solid var(--kleur-rand);
-  border-bottom: 0.1em solid var(--kleur-rand);
+  img {
+    width: 12em;
+    height: auto;
+  }
 }
 
 /* Foto */
@@ -1319,18 +1611,24 @@ https://developer.mozilla.org/en-US/docs/Web/API/Popover_API
   grid-area: playlist;
 
   align-self: start;
-}
 
-.playlist h4 {
-  margin-top: 0;
-}
+  h4 {
+    margin-top: 0;
+  }
 
-.playlist iframe {
-  width: 100%;
-  height: 12em;
+  iframe {
+    width: 100%;
+    height: 12em;
 
-  border: 0;
-  border-radius: 0.8em;
+    border: 0;
+    border-radius: 0.8em;
+
+    /* Tablet */
+    @media (min-width: 55em) {
+      width: 30em;
+      height: 10em;
+    }
+  }
 }
 
 /* When to listen */
@@ -1343,65 +1641,165 @@ https://developer.mozilla.org/en-US/docs/Web/API/Popover_API
   padding: 1em;
 
   border: 0.1em solid var(--kleur-rand);
-}
 
-.listen h4 {
-  margin-top: 0;
-}
+  h4 {
+    margin-top: 0;
+  }
 
-.listen ul {
-  margin: 0;
-  padding-left: 1.5em;
+  ul {
+    margin: 0;
+    padding-left: 1.5em;
+  }
 }
 
 /* =========================
    AURA
    ========================= */
-/*in dit gedeelte maak ik gebruik van de kennis opgedaan uit de deepdive gradients*/
-/*daarnaast maak ik gebruik van de bron: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/gradient/radial-gradient*/
+
+/* in dit gedeelte maak ik gebruik van de kennis
+   opgedaan uit de deepdive gradients */
+
+/* daarnaast maak ik gebruik van de bron:
+   https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/gradient/radial-gradient */
 
 .aura {
   margin-bottom: var(--ruimte-l);
-}
 
-.aura h2,
-.aura p {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  h2,
+  p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-  text-align: center;
-}
+    text-align: center;
+  }
 
-.aura p {
-  margin: 0 1.5em;
-}
+  p {
+    margin: 0 1.5em;
+  }
 
-.aura figure {
-  width: 50%;
-  aspect-ratio: 1;
-  position: relative;
+  figure {
+    width: 50%;
+    aspect-ratio: 1;
+    position: relative;
 
-  margin: 4em auto var(--ruimte-l);
-}
+    margin: 4em auto var(--ruimte-l);
 
-.aura figure::before {
-  content: "";
-  position: absolute;
-  inset: -1em;
-  border-radius: 50%;
+    &::before {
+      content: "";
+      position: absolute;
+      inset: -1em;
+      border-radius: 50%;
 
-  background: radial-gradient(
-    circle,
-    #ffb000 0%,
-    #ff9800 35%,
-    #f57c00 65%,
-    rgb(245 124 0 / 0.45) 82%,
-    transparent 100%
-  );
+      background: radial-gradient(
+        circle,
+        #ffb000 0%,
+        #ff9800 35%,
+        #f57c00 65%,
+        rgb(245 124 0 / 0.45) 82%,
+        transparent 100%
+      );
 
-  filter: blur(1em);
-  animation: pulseren 5s ease-in-out infinite;
+      filter: blur(1em);
+      animation: pulseren 5s ease-in-out infinite;
+    }
+  }
+
+  nav {
+    margin-top: 7em;
+
+    h3 {
+      text-align: center;
+    }
+
+    ul {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+
+      column-gap: var(--ruimte-m);
+
+      padding: 0 1em;
+
+      list-style: none;
+
+      /* Tablet */
+      @media (min-width: 55em) {
+        margin: 1em 0;
+        padding: 0;
+      }
+    }
+
+    li {
+      aspect-ratio: 1;
+
+      border: 0.15em solid var(--kleur-rand);
+      box-shadow: inset 0 0 0 0.2em var(--kleur-menu-binnenrand);
+
+      /* Eerste aura */
+
+      &:nth-child(1) {
+        figure::before {
+          background: radial-gradient(
+            circle,
+            #51d6ff 0%,
+            #9cfff2 35%,
+            #d4f8ff 65%,
+            rgba(71, 218, 255, 0.45) 82%,
+            transparent 100%
+          );
+        }
+      }
+
+      /* Tweede aura */
+
+      &:nth-child(2) {
+        figure::before {
+          background: radial-gradient(
+            circle,
+            #9e1f78 0%,
+            #e266c7 35%,
+            #f1a5c5 65%,
+            rgba(206, 61, 169, 0.45) 82%,
+            transparent 100%
+          );
+        }
+      }
+
+      /* Derde aura */
+
+      &:nth-child(3) {
+        figure::before {
+          background: radial-gradient(
+            circle,
+            #6b3e2e 0%,
+            #9a6347 35%,
+            #c48a63 65%,
+            rgba(196, 138, 99, 0.45) 82%,
+            transparent 100%
+          );
+        }
+      }
+    }
+
+    figure {
+      width: 30%;
+      aspect-ratio: 1;
+      position: relative;
+
+      margin: 4em auto;
+
+      &::before {
+        content: "";
+        position: absolute;
+        inset: -1em;
+
+        border-radius: 50%;
+
+        filter: blur(1em);
+        animation: pulseren 5s ease-in-out infinite;
+      }
+    }
+  }
 }
 
 @keyframes pulseren {
@@ -1417,82 +1815,145 @@ https://developer.mozilla.org/en-US/docs/Web/API/Popover_API
     transform: scale(0.8);
   }
 }
-.aura nav {
-  margin-top: 7em;
-}
 
-.aura nav h3 {
+/* =========================
+   ARTISTS
+   ========================= */
+
+.artists {
   text-align: center;
+  padding: 0 1em;
+
+  ul {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    justify-items: center;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+  }
+
+  li {
+    min-width: 0;
+
+    img {
+      width: 100%;
+      max-width: 15em;
+      height: auto;
+
+      transition: transform 0.2s ease;
+
+      &:hover,
+      &:focus-visible {
+        transform: scale(1.05);
+        filter: drop-shadow(0 0 0.4em var(--kleur-schaduw));
+      }
+    }
+
+    h3 {
+      margin-bottom: -1em;
+    }
+  }
+
+  /* Tablet */
+  @media (min-width: 55em) {
+    li {
+      img {
+        max-width: 30em;
+      }
+    }
+  }
 }
 
-.aura nav ul {
+/* =========================
+   OLIVIA RODRIGO
+   ========================= */
+.artist {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
 
-  column-gap: var(--ruimte-m);
+  grid-template-areas:
+    "title title"
+    "image olivia"
+    "lyrics lyrics"
+    "experience experience"
+    "concert concert";
 
-  padding: 0;
+  align-content: start;
+  row-gap: 0.1em;
 
-  list-style: none;
-}
+  h2 {
+    grid-area: title;
+    text-align: center;
+  }
 
-.aura li {
-  aspect-ratio: 1;
+  > img {
+    grid-area: image;
+    width: 100%;
+    height: auto;
+  }
 
-  border: 0.15em solid var(--kleur-rand);
-  box-shadow: inset 0 0 0 0.2em var(--kleur-menu-binnenrand);
-}
+  .details-artist {
+    grid-area: olivia;
 
-.aura nav figure {
-  width: 30%;
-  aspect-ratio: 1;
-  position: relative;
+    dl {
+      display: grid;
+      grid-template-columns: auto 1fr;
 
-  margin: 4em auto;
-}
+      gap: 0.5em 1em;
 
-.aura nav figure::before {
-  content: "";
-  position: absolute;
-  inset: -1em;
+      margin: 0;
+    }
 
-  border-radius: 50%;
+    dt {
+      font-weight: bold;
+    }
 
-  filter: blur(1em);
-  animation: pulseren 5s ease-in-out infinite;
-}
+    dd {
+      margin: 0;
+      text-align: left;
+    }
+  }
 
-.aura nav li:nth-child(1) figure::before {
-  background: radial-gradient(
-    circle,
-    #51d6ff 0%,
-    #9cfff2 35%,
-    #d4f8ff 65%,
-    rgba(71, 218, 255, 0.45) 82%,
-    transparent 100%
-  );
-}
+  .lyrics {
+    grid-area: lyrics;
+    text-align: center;
+  }
 
-.aura nav li:nth-child(2) figure::before {
-  background: radial-gradient(
-    circle,
-    #9e1f78 0%,
-    #e266c7 35%,
-    #f1a5c5 65%,
-    rgba(206, 61, 169, 0.45) 82%,
-    transparent 100%
-  );
-}
+  .my-era {
+    grid-area: experience;
 
-.aura nav li:nth-child(3) figure::before {
-  background: radial-gradient(
-    circle,
-    #6b3e2e 0%,
-    #9a6347 35%,
-    #c48a63 65%,
-    rgba(196, 138, 99, 0.45) 82%,
-    transparent 100%
-  );
+    padding: 0.6em;
+
+    border: 0.15em solid var(--kleur-rand);
+    box-shadow: inset 0 0 0 0.2em var(--kleur-menu-binnenrand);
+
+    dl {
+      display: grid;
+      grid-template-columns: auto 1fr;
+
+      gap: 0.5em 1em;
+
+      width: fit-content;
+      margin: 0 auto;
+    }
+
+    dt {
+      font-weight: bold;
+    }
+
+    dd {
+      margin: 0;
+      text-align: left;
+    }
+  }
+
+  .my-experience {
+    grid-area: concert;
+  }
 }
 
 /* =========================
@@ -1500,131 +1961,333 @@ https://developer.mozilla.org/en-US/docs/Web/API/Popover_API
    ========================= */
 
 /* voor dit gedeelte maak ik gebruik van de bronnen:
-https://markodenic.tech/seamless-css-marquees/
-https://www.youtube.com/watch?v=uw5jVO1eNF8 */
+   https://markodenic.tech/seamless-css-marquees/
+   https://www.youtube.com/watch?v=uw5jVO1eNF8 */
 
 .memories {
   padding-left: 0;
   padding-right: 0;
+
+  h2 {
+    text-align: center;
+  }
+
+  > p:nth-of-type(1) {
+    margin: 0 var(--ruimte-m);
+    text-align: center;
+  }
+
+  > ul:nth-of-type(1) {
+    display: flex;
+    overflow-x: auto;
+
+    gap: var(--ruimte-m);
+
+    list-style: none;
+    padding: var(--ruimte-s);
+
+    border-top: 0.1em solid var(--kleur-rand);
+    border-bottom: 0.1em solid var(--kleur-rand);
+
+    /* Tablet */
+    @media (min-width: 55em) {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+
+      gap: 1em;
+
+      list-style: none;
+      padding: 0.5em;
+
+      border-top: 0.1em solid var(--kleur-rand);
+      border-bottom: 0.1em solid var(--kleur-rand);
+    }
+  }
+
+  > ul {
+    button {
+      padding: 0.8em var(--ruimte-l);
+
+      text-align: center;
+
+      color: var(--kleur-tekst);
+      background: var(--kleur-menu);
+
+      border: 0.1em solid var(--kleur-rand);
+      border-radius: 0.5em;
+
+      &:hover,
+      &:focus-visible {
+        color: var(--kleur-hover-tekst);
+        background: var(--kleur-hover-achtergrond);
+      }
+
+      /* Tablet */
+      @media (min-width: 55em) {
+        width: 100%;
+      }
+    }
+  }
+
+  /* =========================
+     DIALOGS
+     ========================= */
+
+  /* voor dit gedeelte heb ik gebruik gemaakt van de bron:
+     https://developer.mozilla.org/en-US/docs/Web/API/Popover_API/Using */
+
+  dialog {
+    width: min(28em, 90vw);
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    padding: var(--ruimte-m);
+
+    color: var(--kleur-tekst);
+    background: var(--kleur-menu);
+
+    border: 0.15em solid var(--kleur-rand);
+    box-shadow: inset 0 0 0 0.2em var(--kleur-menu-binnenrand);
+
+    &::backdrop {
+      background: rgb(0 0 0 / 0.45);
+    }
+
+    > button {
+      position: absolute;
+
+      top: var(--ruimte-s);
+      right: var(--ruimte-s);
+
+      width: 2em;
+      height: 2em;
+
+      font-size: 1.2em;
+
+      color: var(--kleur-tekst);
+      background: var(--kleur-achtergrond);
+
+      border: 0.1em solid var(--kleur-rand);
+      border-radius: 50%;
+
+      cursor: pointer;
+
+      &:hover,
+      &:focus-visible {
+        color: var(--kleur-hover-tekst);
+        background: var(--kleur-hover-achtergrond);
+      }
+    }
+
+    img {
+      display: block;
+
+      width: 100%;
+
+      margin-bottom: var(--ruimte-m);
+
+      border: 0.1em solid var(--kleur-rand);
+    }
+
+    h3 {
+      margin: 0 0 0.3em;
+
+      color: var(--kleur-menu-kop);
+    }
+
+    p {
+      margin: 0 0 0.7em;
+
+      line-height: 1.5;
+    }
+  }
 }
 
-.memories h2 {
-  text-align: center;
-}
-
-.memories > p:nth-of-type(1) {
-  margin: 0 var(--ruimte-m);
-  text-align: center;
-}
-
-.memories > ul:nth-of-type(1) {
-  display: flex;
-  overflow-x: auto;
-
-  gap: var(--ruimte-m);
-
-  list-style: none;
-  padding: var(--ruimte-s);
-
-  border-top: 0.1em solid var(--kleur-rand);
-  border-bottom: 0.1em solid var(--kleur-rand);
-}
-
-.memories > ul button {
-  padding: 0.8em var(--ruimte-l);
-
-  text-align: center;
-
-  color: var(--kleur-tekst);
-  background: var(--kleur-menu);
-
-  border: 0.1em solid var(--kleur-rand);
-  border-radius: 0.5em;
-}
-
-.memories > ul button:hover,
-.memories > ul button:focus-visible {
-  color: var(--kleur-hover-tekst);
-  background: var(--kleur-hover-achtergrond);
-}
-
-.memories-static {
-  display: none;
-}
-
-.memories-static li::before {
-  content: "";
-
-  position: absolute;
-
-  left: -1em;
-  right: -1em;
-
-  height: 0.12em;
-
-  background: var(--kleur-waslijn);
-
-  z-index: 0;
-}
-
-.memories-static button {
-  position: relative;
-  z-index: 1;
-}
+/* =========================
+   BEWEGENDE MEMORIES
+   ========================= */
 
 .memory-row {
   overflow: hidden;
   margin: var(--ruimte-l) 0;
+
+  ul {
+    position: relative;
+
+    display: inline-flex;
+
+    gap: 5em;
+
+    margin: 0;
+    padding: 2.5em 0 var(--ruimte-m);
+
+    list-style: none;
+
+    /* Onderste rij beweegt naar links */
+    animation: marquee-links 65s linear infinite;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+
+      left: 0;
+      right: 0;
+      top: 2.2em;
+
+      height: 0.12em;
+
+      background: var(--kleur-waslijn);
+    }
+
+    &:hover,
+    &:has(button:focus-visible) {
+      animation-play-state: paused;
+    }
+  }
+
+  /* Bovenste rij beweegt naar rechts */
+
+  &.reverse {
+    ul {
+      animation: marquee-rechts 65s linear infinite;
+    }
+  }
+
+  button {
+    &:hover,
+    &:focus-visible {
+      transform: scale(1.05);
+
+      filter: drop-shadow(0 0 0.4em var(--kleur-schaduw));
+    }
+  }
+
+  /* Reduced motion */
+
+  @media (prefers-reduced-motion: reduce) {
+    display: none;
+  }
 }
 
-.memory-row ul {
-  position: relative;
+/* =========================
+   STATISCHE MEMORIES
+   ========================= */
 
-  display: inline-flex;
+.memories-static {
+  display: none;
 
-  gap: 5em;
+  li {
+    &::before {
+      content: "";
 
-  margin: 0;
-  padding: 2.5em 0 var(--ruimte-m);
+      position: absolute;
 
-  list-style: none;
+      left: -1em;
+      right: -1em;
 
-  animation: marquee-links 65s linear infinite;
+      height: 0.12em;
+
+      background: var(--kleur-waslijn);
+
+      z-index: 0;
+    }
+  }
+
+  button {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Reduced motion */
+
+  @media (prefers-reduced-motion: reduce) {
+    display: block;
+
+    ul {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 5em 2em;
+
+      margin: 0;
+      padding: 2.5em 1em;
+
+      list-style: none;
+    }
+  }
 }
 
-.memory-row.reverse ul {
-  animation: marquee-rechts 65s linear infinite;
+/* =========================
+   POLAROID STYLING
+   ========================= */
+
+.memory-row,
+.memories-static {
+  li {
+    position: relative;
+    flex: 0 0 10em;
+
+    &:nth-child(odd) {
+      button {
+        rotate: -2deg;
+      }
+    }
+
+    &:nth-child(even) {
+      button {
+        rotate: 2deg;
+      }
+    }
+  }
+
+  button {
+    display: block;
+
+    width: 100%;
+
+    margin-top: 1.2em;
+    padding: 0.6em 0.6em 0.9em;
+
+    background: #f3eee8;
+
+    border: none;
+
+    box-shadow: 0 0.15em 0.45em rgb(0 0 0 / 0.18);
+
+    cursor: pointer;
+
+    transition: transform 0.2s ease;
+
+    img {
+      display: block;
+
+      width: 100%;
+      aspect-ratio: 1 / 1.05;
+
+      object-fit: cover;
+
+      background: #d9d2c9;
+    }
+
+    span {
+      display: block;
+
+      margin: 0.7em 0 0;
+
+      color: #4c4038;
+
+      text-align: center;
+      font-size: 0.9em;
+      line-height: 1.3;
+    }
+  }
 }
 
-.memory-row ul::before {
-  content: "";
-
-  position: absolute;
-
-  left: 0;
-  right: 0;
-  top: 2.2em;
-
-  height: 0.12em;
-
-  background: var(--kleur-waslijn);
-}
-
-.memory-row li,
-.memories-static li {
-  position: relative;
-  flex: 0 0 10em;
-}
-
-.memory-row li:nth-child(odd) button,
-.memories-static li:nth-child(odd) button {
-  rotate: -2deg;
-}
-
-.memory-row li:nth-child(even) button,
-.memories-static li:nth-child(even) button {
-  rotate: 2deg;
-}
+/* =========================
+   KNIJPER
+   ========================= */
 
 .knijper {
   position: absolute;
@@ -1639,146 +2302,15 @@ https://www.youtube.com/watch?v=uw5jVO1eNF8 */
   z-index: 2;
 }
 
-.memory-row button,
-.memories-static button {
-  display: block;
-
-  width: 100%;
-
-  margin-top: 1.2em;
-  padding: 0.6em 0.6em 0.9em;
-
-  background: #f3eee8;
-
-  border: none;
-
-  box-shadow: 0 0.15em 0.45em rgb(0 0 0 / 0.18);
-
-  cursor: pointer;
-
-  transition: transform 0.2s ease;
-}
-
-.memory-row button img,
-.memories-static button img {
-  display: block;
-
-  width: 100%;
-  aspect-ratio: 1 / 1.05;
-
-  object-fit: cover;
-
-  background: #d9d2c9;
-}
-
-.memory-row button span,
-.memories-static button span {
-  display: block;
-
-  margin: 0.7em 0 0;
-
-  color: #4c4038;
-
-  text-align: center;
-  font-size: 0.9em;
-  line-height: 1.3;
-}
-
-.memory-row button:hover,
-.memory-row button:focus-visible {
-  transform: scale(1.05);
-
-  filter: drop-shadow(0 0 0.4em var(--kleur-schaduw));
-}
-
-.memory-row ul:hover,
-.memory-row ul:focus-within {
-  animation-play-state: paused;
-}
-
-/* =========================
-   DIALOGS
-   ========================= */
-
-/*voor dit gedeelte heb ik gebruik gemaakt van de bron:
-https://developer.mozilla.org/en-US/docs/Web/API/Popover_API/Using
-*/
-
-.memories dialog {
-  width: min(28em, 90vw);
-  max-height: 90vh;
-
-  overflow-y: auto;
-
-  padding: var(--ruimte-m);
-
-  color: var(--kleur-tekst);
-  background: var(--kleur-menu);
-
-  border: 0.15em solid var(--kleur-rand);
-  box-shadow: inset 0 0 0 0.2em var(--kleur-menu-binnenrand);
-}
-
-.memories dialog::backdrop {
-  background: rgb(0 0 0 / 0.45);
-}
-
-.memories dialog > button {
-  position: absolute;
-
-  top: var(--ruimte-s);
-  right: var(--ruimte-s);
-
-  width: 2em;
-  height: 2em;
-
-  font-size: 1.2em;
-
-  color: var(--kleur-tekst);
-  background: var(--kleur-achtergrond);
-
-  border: 0.1em solid var(--kleur-rand);
-  border-radius: 50%;
-
-  cursor: pointer;
-}
-
-.memories dialog > button:hover,
-.memories dialog > button:focus-visible {
-  color: var(--kleur-hover-tekst);
-  background: var(--kleur-hover-achtergrond);
-}
-
-.memories dialog img {
-  display: block;
-
-  width: 100%;
-
-  margin-bottom: var(--ruimte-m);
-
-  border: 0.1em solid var(--kleur-rand);
-}
-
-.memories dialog h3 {
-  margin: 0 0 0.3em;
-
-  color: var(--kleur-menu-kop);
-}
-
-.memories dialog p {
-  margin: 0 0 0.7em;
-
-  line-height: 1.5;
-}
-
 /* =========================
    ANIMATIES
    ========================= */
 
-/*voor dit gedeelte heb ik gebruik gemaakt van de bronnen:
-https://markodenic.tech/seamless-css-marquees/
-https://www.youtube.com/watch?v=uw5jVO1eNF8
-*/
+/* voor dit gedeelte heb ik gebruik gemaakt van de bronnen:
+   https://markodenic.tech/seamless-css-marquees/
+   https://www.youtube.com/watch?v=uw5jVO1eNF8 */
+
+/* Naar links */
 
 @keyframes marquee-links {
   from {
@@ -1790,6 +2322,8 @@ https://www.youtube.com/watch?v=uw5jVO1eNF8
   }
 }
 
+/* Naar rechts */
+
 @keyframes marquee-rechts {
   from {
     transform: translateX(-50%);
@@ -1800,243 +2334,329 @@ https://www.youtube.com/watch?v=uw5jVO1eNF8
   }
 }
 
+/* =========================
+   MUSIC TIMELINE
+   ========================= */
+
+/* voor dit gedeelte maak ik gebruik van de bron:
+   https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines 
+   https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/scroll-timeline-name?utm_source=chatgpt.com
+   */
+
+.music-timeline {
+  min-width: 0;
+  box-sizing: border-box;
+
+  padding: var(--ruimte-l);
+
+  /* Scrolltijdlijn */
+  scroll-timeline-name: --music-scroll;
+  scroll-timeline-axis: block;
+
+  h2 {
+    text-align: center;
+  }
+
+  > p {
+    text-align: center;
+    margin-bottom: var(--ruimte-xl);
+  }
+
+  /* Tablet en desktop */
+  @media (min-width: 55em) {
+    height: 64em;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    overscroll-behavior-y: contain;
+  }
+}
+
+/* =========================
+   DEVICE TIMELINE
+   ========================= */
+
+.device-timeline {
+  position: relative;
+
+  display: grid;
+  gap: 2em;
+
+  margin: 0;
+  padding: 1em 0;
+
+  list-style: none;
+
+  /* Achtergrondlijn */
+
+  &::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    bottom: 0;
+    left: 1em;
+
+    width: 0.3em;
+
+    background: var(--kleur-rand);
+
+    border-radius: 1em;
+  }
+
+  /* Scrollende lijn */
+
+  &::after {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 1em;
+
+    width: 0.3em;
+    height: 100%;
+
+    background: var(--kleur-menu);
+
+    border-radius: 1em;
+
+    transform: scaleY(0);
+    transform-origin: top;
+
+    animation: tijdlijn-kleuren linear both;
+    animation-timeline: --music-scroll;
+  }
+
+  /* Apparaten */
+
+  li {
+    position: relative;
+    z-index: 1;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+
+    padding-left: 3em;
+
+    /* Rondje op de lijn */
+
+    &::before {
+      content: "";
+
+      position: absolute;
+
+      top: 2em;
+      left: 1.15em;
+
+      width: 1em;
+      height: 1em;
+
+      transform: translateX(-50%);
+
+      background: var(--kleur-menu);
+
+      border: 0.2em solid var(--kleur-rand);
+      border-radius: 50%;
+
+      z-index: 2;
+    }
+
+    /* Informatieblok */
+
+    article {
+      min-width: 0;
+
+      padding: 1em;
+
+      color: var(--kleur-tekst);
+
+      border: 0.15em solid var(--kleur-rand);
+      border-radius: 0.5em;
+
+      text-align: center;
+
+      h3 {
+        margin: 0 0 var(--ruimte-m);
+
+        color: var(--kleur-menu-kop);
+      }
+
+      /* Klikbare afbeelding */
+
+      button {
+        display: block;
+
+        width: 100%;
+        padding: 0;
+
+        background: none;
+        border: none;
+
+        cursor: pointer;
+
+        img {
+          display: block;
+
+          width: 100%;
+          max-height: 15em;
+
+          object-fit: contain;
+
+          transition: transform 0.2s ease;
+        }
+
+        &:hover img,
+        &:focus-visible img {
+          transform: scale(1.05);
+
+          filter: drop-shadow(0 0 0.4em var(--kleur-schaduw));
+        }
+      }
+
+      p {
+        margin-bottom: 0;
+        line-height: 1.5;
+      }
+    }
+  }
+
+  /* Tablet en desktop */
+
+  @media (min-width: 55em) {
+    &::before,
+    &::after {
+      left: calc(50% - 0.15em);
+    }
+
+    li {
+      grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1fr);
+
+      gap: 3em;
+      padding-left: 0;
+
+      &::before {
+        left: 50%;
+      }
+
+      &:nth-child(odd) {
+        article {
+          grid-column: 1;
+        }
+      }
+
+      &:nth-child(even) {
+        article {
+          grid-column: 2;
+        }
+      }
+    }
+  }
+}
+
+/* =========================
+   DEVICE DIALOGS
+   ========================= */
+
+.device-dialog {
+  width: min(30em, 85vw);
+  max-height: 90vh;
+
+  overflow-y: auto;
+
+  padding: var(--ruimte-l);
+
+  text-align: center;
+
+  color: var(--kleur-tekst);
+  background: var(--kleur-menu);
+
+  border: 0.15em solid var(--kleur-rand);
+
+  &::backdrop {
+    background: rgb(0 0 0 / 60%);
+  }
+
+  h3 {
+    margin: 0 0 var(--ruimte-m);
+
+    color: var(--kleur-menu-kop);
+  }
+
+  img {
+    display: block;
+
+    width: 100%;
+    max-height: 20em;
+    height: auto;
+
+    object-fit: contain;
+
+    margin-bottom: var(--ruimte-m);
+  }
+
+  /* Sluitknop */
+
+  > button {
+    position: absolute;
+
+    top: var(--ruimte-s);
+    right: var(--ruimte-s);
+
+    width: 2em;
+    height: 2em;
+
+    font-size: 1.2em;
+
+    color: var(--kleur-tekst);
+    background: var(--kleur-achtergrond);
+
+    border: 0.1em solid var(--kleur-rand);
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    &:hover,
+    &:focus-visible {
+      color: var(--kleur-hover-tekst);
+      background: var(--kleur-hover-achtergrond);
+    }
+  }
+}
+
+/* =========================
+   SCROLL ANIMATIE
+   ========================= */
+
+@keyframes tijdlijn-kleuren {
+  from {
+    transform: scaleY(0);
+  }
+
+  to {
+    transform: scaleY(1);
+  }
+}
+
+/* =========================
+   REDUCED MOTION
+   ========================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .device-timeline::after {
+    animation: none;
+    transform: scaleY(1);
+  }
+}
+
 footer {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-/* =========================
-   TABLET
-   ========================= */
-
-@media (min-width: 55em) {
-  /*cookie popup*/
-  .cookie-dialog {
-    width: min(80%, 50rem);
-    padding: 2rem;
-  }
-
-  .cookie-text {
-    max-height: none;
-    overflow-y: visible;
-    padding-right: 0;
-  }
-
-  .cookie-options {
-    grid-template-columns: 12rem 1fr;
-  }
-  /* Header */
-
-  header {
-    grid-template-columns:
-      minmax(0, 1fr)
-      auto
-      minmax(0, 1fr);
-
-    padding: 1em 0.5em;
-  }
-
-  header img {
-    max-width: 10em;
-    min-width: 0;
-  }
-
-  header h1 {
-    margin: 0 0.3em;
-
-    white-space: nowrap;
-  }
-
-  .life {
-    font-size: 2em;
-  }
-
-  .music {
-    font-size: 1.7em;
-  }
-
-  /* Hoofd-layout */
-
-  main {
-    grid-template-columns:
-      10em
-      minmax(0, 1fr)
-      10em;
-
-    grid-template-areas: "menu-links midden menu-rechts";
-
-    gap: 1em;
-
-    padding: 0 1em;
-  }
-
-  /* Menu's */
-
-  .menu-links,
-  .menu-rechts {
-    margin: 0;
-    min-height: 64em;
-  }
-
-  .menu-links ul,
-  .menu-rechts ul {
-    flex-direction: column;
-    flex-wrap: nowrap;
-
-    justify-content: normal;
-
-    gap: normal;
-  }
-
-  /* Linker menu */
-
-  .menu-links {
-    display: block;
-  }
-
-  .menu-links h2 {
-    min-height: auto;
-  }
-
-  .menu-links section:nth-child(1),
-  .menu-links section:nth-child(2),
-  .menu-links section:nth-child(3) {
-    grid-area: auto;
-  }
-
-  .menu-links p {
-    text-align: start;
-  }
-
-  .menu-links img {
-    scale: 1;
-  }
-
-  /* Homepage */
-
-  .homepage ul {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .about {
-    grid-template-columns: repeat(2, auto);
-  }
-
-  .moods nav ul {
-    grid-template-columns: repeat(6, 1fr);
-  }
-
-  .playlist iframe {
-    width: 30em;
-    height: 10em;
-  }
-
-  .aura nav ul {
-    grid-template-columns: repeat(3, 1fr);
-    margin: 1em 0;
-  }
-
-  .memories > ul:nth-of-type(1) {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-
-    gap: 1em;
-
-    list-style: none;
-    padding: 0.5em;
-    border-top: 0.1em solid var(--kleur-rand);
-
-    border-bottom: 0.1em solid var(--kleur-rand);
-  }
-
-  .memories > ul button {
-    width: 100%;
-  }
-
-  .privacy-dialog {
-    width: min(80%, 50rem);
-    padding: 2rem;
-  }
-}
-
-/* =========================
-   KLEINERE DESKTOP
-   ========================= */
-
-@media (min-width: 80em) {
-  /* Header */
-
-  header {
-    grid-template-columns: 1fr auto 1fr;
-
-    padding: 2em;
-  }
-
-  header img {
-    max-width: 15em;
-    min-width: initial;
-  }
-
-  header h1 {
-    margin: 0 1em;
-
-    white-space: normal;
-  }
-
-  .life {
-    font-size: 2.5em;
-  }
-
-  .music {
-    font-size: 2em;
-  }
-
-  /* Hoofd-layout */
-
-  main {
-    grid-template-columns:
-      10em
-      minmax(0, 1fr)
-      10em;
-
-    grid-template-areas: "menu-links midden menu-rechts";
-
-    gap: 1em;
-
-    padding: 0 1em;
-  }
-
-  /* Homepage */
-
-  .homepage ul {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-/* =========================
-   GROTE DESKTOP
-   ========================= */
-
-@media (min-width: 100em) {
-  main {
-    grid-template-columns:
-      1fr
-      minmax(8em, 13em)
-      minmax(25em, 50em)
-      minmax(8em, 13em)
-      1fr;
-
-    grid-template-areas: ". menu-links midden menu-rechts .";
-
-    gap: 2em;
-
-    padding: 0;
-  }
-
-  .homepage ul {
-    grid-template-columns: repeat(4, 1fr);
-  }
 }
 
 /* =========================

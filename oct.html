@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>October Songs of the Week - Yana's Cozy Little Music Corner</title>
+    <title>September Songs of the Week - Yana's Cozy Little Music Corner</title>
 
     <link rel="icon" type="image/x-icon" href="./images/website/favicon.ico" />
 
@@ -34,7 +34,7 @@
       </p>
     </header>
 
-    <main id="main-content">
+    <main>
       <aside class="menu-links">
         <section>
           <h2>Song of the week</h2>
@@ -75,8 +75,9 @@
         </section>
       </aside>
 
-      <!--voor het volgende gedeelte heb ik gebruik gemaakt van de bron:
+      <!--voor het volgende gedeelte heb ik gebruik gemaakt van de bronnen:
       https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/dl
+      https://www.w3schools.com/html/html_links.asp
     -->
 
       <section class="songs">
@@ -91,19 +92,233 @@
 
         <ul>
           <li>
-            <p>Song to be announced</p>
+            <button
+              commandfor="we-fell-in-love-in-october"
+              command="show-modal"
+              aria-label="View details for We Never Dated by Girl in Red"
+            >
+              <img src="images/website/sotw/octsong1.jpeg" alt="" />
+            </button>
+
+            <p>We Fell In Love In October - Girl in Red</p>
+
+            <dialog id="we-fell-in-love-in-october">
+              <button
+                commandfor="we-fell-in-love-in-october"
+                command="close"
+                aria-label="Close We Fell In Love In October details"
+              >
+                ×
+              </button>
+
+              <img
+                src="images/website/sotw/octsong1.jpeg"
+                alt="Album cover of We Fell In Love In October by Girl in Red"
+              />
+
+              <h3>We Fell In Love In October</h3>
+              <dl>
+                <dt>Artist:</dt>
+                <dd>Girl in Red</dd>
+
+                <dt>Album:</dt>
+                <dd>
+                  A Collection of Every Song I've Ever Poster on Soundcloud
+                </dd>
+
+                <dt>Released:</dt>
+                <dd>November 21, 2018</dd>
+
+                <dt>Genre:</dt>
+                <dd>Indie pop</dd>
+
+                <dt>Listened:</dt>
+                <dd>15 times</dd>
+
+                <dt>Mood:</dt>
+                <dd>Autumn Vibes</dd>
+
+                <dt>
+                  <a
+                    href="https://www.youtube.com/watch?v=iggmiF7DNoM"
+                    target="_blank"
+                  >
+                    Watch official music video
+                  </a>
+                </dt>
+              </dl>
+            </dialog>
           </li>
 
           <li>
-            <p>Song to be announced</p>
+            <button
+              commandfor="stupidsong"
+              command="show-modal"
+              aria-label="View details for Stupid Song by Olivia Rodrigo"
+            >
+              <img src="images/website/sotw/julysong2.jpg" alt="" />
+            </button>
+
+            <p>Stupid Song - Olivia Rodrigo</p>
+
+            <dialog id="stupidsong">
+              <button
+                commandfor="stupidsong"
+                command="close"
+                aria-label="Close Stupid Song details"
+              >
+                ×
+              </button>
+
+              <img
+                src="images/website/sotw/julysong2.jpg"
+                alt="Album cover of Stupid Song by Olivia Rodrigo"
+              />
+
+              <h3>Stupid Song</h3>
+              <dl>
+                <dt>Artist:</dt>
+                <dd>Olivia Rodrigo</dd>
+
+                <dt>Album:</dt>
+                <dd>You Seem Pretty Sad For A Girl So In Love</dd>
+
+                <dt>Released:</dt>
+                <dd>June 12, 2026</dd>
+
+                <dt>Genre:</dt>
+                <dd>Pop</dd>
+
+                <dt>Listened:</dt>
+                <dd>24 times</dd>
+
+                <dt>Mood:</dt>
+                <dd>Melancholic / Manic</dd>
+
+                <dt>
+                  <a
+                    href="https://www.youtube.com/watch?v=Rt9tW3cMLhI"
+                    target="_blank"
+                  >
+                    Watch official music video
+                  </a>
+                </dt>
+              </dl>
+            </dialog>
           </li>
 
           <li>
-            <p>Song to be announced</p>
+            <button
+              commandfor="expectations"
+              command="show-modal"
+              aria-label="View details for Expectations by Olivia Rodrigo"
+            >
+              <img src="images/website/sotw/octsong3.jpg" alt="" />
+            </button>
+
+            <p>Expectations - Olivia Rodrigo ft. Chappel Roan</p>
+
+            <dialog id="expectations">
+              <button
+                commandfor="expectations"
+                command="close"
+                aria-label="Close Expectations details"
+              >
+                ×
+              </button>
+
+              <img
+                src="images/website/sotw/octsong3.jpg"
+                alt="Album cover of Expectations by Olivia Rodrigo"
+              />
+
+              <h3>Expectations</h3>
+              <dl>
+                <dt>Artist:</dt>
+                <dd>Olivia Rodrigo ft. Chappel Roan</dd>
+
+                <dt>Album:</dt>
+                <dd>You Seem Pretty Sad For A Girl So In Love</dd>
+
+                <dt>Released:</dt>
+                <dd>June 12, 2026</dd>
+
+                <dt>Genre:</dt>
+                <dd>Pop</dd>
+
+                <dt>Listened:</dt>
+                <dd>16 times</dd>
+
+                <dt>Mood:</dt>
+                <dd>Empowered</dd>
+
+                <dt>
+                  <a
+                    href="https://www.youtube.com/watch?v=gsZauX8gwxo&list=RDgsZauX8gwxo&start_radio=1"
+                    target="_blank"
+                  >
+                    Watch official music video
+                  </a>
+                </dt>
+              </dl>
+            </dialog>
           </li>
 
           <li>
-            <p>Song to be announced</p>
+            <button
+              commandfor="double-take"
+              command="show-modal"
+              aria-label="View details for Double Take by Dhruv"
+            >
+              <img src="images/website/sotw/septsong4.jpg" alt="" />
+            </button>
+
+            <p>Double Take - Dhruv</p>
+
+            <dialog id="double-take">
+              <button
+                commandfor="double-take"
+                command="close"
+                aria-label="Close Double Take details"
+              >
+                ×
+              </button>
+
+              <img
+                src="images/website/sotw/septsong4.jpg"
+                alt="Album cover of Double Take by Dhruv"
+              />
+
+              <h3>Double Take</h3>
+              <dl>
+                <dt>Artist:</dt>
+                <dd>Dhruv</dd>
+
+                <dt>Album:</dt>
+                <dd>Single</dd>
+
+                <dt>Released:</dt>
+                <dd>May 24, 2019</dd>
+
+                <dt>Genre:</dt>
+                <dd>Contemporary R&B</dd>
+
+                <dt>Listened:</dt>
+                <dd>10 times</dd>
+
+                <dt>Mood:</dt>
+                <dd>Nostalgic</dd>
+
+                <dt>
+                  <a
+                    href="https://www.youtube.com/watch?v=gsZauX8gwxo&list=RDgsZauX8gwxo&start_radio=1"
+                    target="_blank"
+                  >
+                    Watch official music video
+                  </a>
+                </dt>
+              </dl>
+            </dialog>
           </li>
         </ul>
       </section>
