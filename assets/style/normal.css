@@ -187,9 +187,8 @@ button:active {
   grid-template-columns: 8em 1fr;
   grid-template-areas:
     "avatar accept"
-    "avatar necessary"
-    "avatar preferences";
-  gap: 1em;
+    "avatar necessary";
+
   align-items: center;
 
   img {
@@ -200,7 +199,8 @@ button:active {
 
   button {
     width: 100%;
-    padding: 0.8rem 1em;
+    padding: 1.2rem 1em;
+
     font-family: "sniglet", system-ui, sans-serif;
 
     background-color: var(--kleur-menu);
@@ -228,133 +228,13 @@ button:active {
   /* Tablet */
   @media (min-width: 55em) {
     grid-template-columns: 12rem 1fr;
-  }
-}
 
-/* =========================
-   PRIVACY DIALOG
-   ========================= */
-
-.privacy-dialog {
-  width: min(90%, 45em);
-  padding: 1.5em;
-  border: none;
-  border-radius: 1em;
-
-  &::backdrop {
-    background-color: rgb(0 0 0 / 0.5);
-    backdrop-filter: blur(2px);
-  }
-
-  form {
-    display: grid;
-    gap: 1em;
-  }
-
-  h2 {
-    margin: 0;
-    padding-bottom: 0.75em;
-    border-bottom: 1px solid var(--kleur-rand);
-  }
-
-  /* Tablet */
-  @media (min-width: 55em) {
-    width: min(80%, 50rem);
-    padding: 2rem;
-  }
-}
-
-.preference-row {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 1em;
-  align-items: start;
-
-  padding: 1em 0;
-  border-bottom: 1px solid var(--kleur-rand);
-}
-
-.preference-text {
-  h3 {
-    margin: 0 0 0.5em;
-  }
-
-  p {
-    margin: 0;
-    line-height: 1.5;
-  }
-}
-
-/* =========================
-   TOGGLE SWITCH
-   ========================= */
-
-/* voor dit gedeelte maak ik gebruik van de bronnen
-   https://www.w3schools.com/howto/howto_css_switch.asp om de toggles te stylen
-   https://www.w3schools.com/cssref/sel_disabled.php
-   https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/cursor
-*/
-
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 3.5em;
-  height: 2em;
-
-  input {
-    position: absolute;
-    opacity: 0;
-
-    &:focus-visible + span {
-      outline: solid var(--kleur-focus);
-      outline-offset: 0.1em;
-    }
-
-    &:checked + span {
-      background-color: #8f6b58;
-
-      &::before {
-        transform: translateX(1.5rem);
+    .cookie-options {
+      button {
+        margin-bottom: -3em;
       }
     }
-
-    &:disabled + span {
-      opacity: 0.8;
-      cursor: not-allowed;
-    }
   }
-
-  span {
-    display: block;
-    width: 100%;
-    height: 100%;
-    background-color: #d9d9d9;
-    border-radius: 999px;
-    position: relative;
-    transition: 0.3s;
-
-    &::before {
-      content: "";
-      position: absolute;
-      width: 1.4em;
-      height: 1.4em;
-      top: 0.3em;
-      left: 0.3em;
-      background-color: white;
-      border-radius: 50%;
-      transition: 0.3s;
-    }
-  }
-}
-
-/* =========================
-   SAVE BUTTON
-   ========================= */
-
-.save-preferences-button {
-  width: 100%;
-  padding: 0.9rem 1rem;
-  margin-top: 0.5rem;
 }
 
 /* =========================
@@ -632,7 +512,9 @@ main {
 .memories,
 .music-timeline,
 .artists,
-.oliviarodrigo {
+.artist,
+.concerts,
+.piano {
   grid-area: midden;
 }
 
@@ -729,7 +611,9 @@ main {
 
   grid-template-columns: repeat(3, 1fr);
 
-  grid-template-areas: "song mood random";
+  grid-template-areas:
+    "song mood random"
+    "cookies cookies cookies";
 
   h2 {
     min-height: 3.2em;
@@ -762,6 +646,28 @@ main {
       align-items: center;
     }
 
+    .cookie-button {
+      display: flex;
+
+      align-self: end;
+      text-align: center;
+
+      padding: 0.5em 0.7em;
+
+      color: var(--kleur-tekst);
+      background: var(--kleur-menu);
+
+      border: 0.1em solid var(--kleur-rand);
+      border-radius: 0.5em;
+
+      cursor: pointer;
+
+      &:hover {
+        background: var(--kleur-hover-achtergrond);
+        color: var(--kleur-hover-tekst);
+      }
+    }
+
     &:nth-child(1) {
       grid-area: song;
 
@@ -776,6 +682,15 @@ main {
 
     &:nth-child(3) {
       grid-area: random;
+    }
+
+    &:nth-child(4) {
+      grid-area: cookies;
+
+      /* Tablet */
+      @media (min-width: 55em) {
+        margin-top: auto;
+      }
     }
 
     a:hover {
@@ -814,7 +729,8 @@ main {
 
   /* Tablet */
   @media (min-width: 55em) {
-    display: block;
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -2340,7 +2256,8 @@ main {
 
 /* voor dit gedeelte maak ik gebruik van de bron:
    https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines 
-   https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/scroll-timeline-name?utm_source=chatgpt.com
+   https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/scroll-timeline-name
+   https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/scrollbar-width
    */
 
 .music-timeline {
@@ -2352,6 +2269,10 @@ main {
   /* Scrolltijdlijn */
   scroll-timeline-name: --music-scroll;
   scroll-timeline-axis: block;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 
   h2 {
     text-align: center;
@@ -2474,7 +2395,7 @@ main {
       color: var(--kleur-tekst);
 
       border: 0.15em solid var(--kleur-rand);
-      border-radius: 0.5em;
+      box-shadow: inset 0 0 0 0.2em var(--kleur-menu-binnenrand);
 
       text-align: center;
 
@@ -2643,13 +2564,248 @@ main {
 }
 
 /* =========================
-   REDUCED MOTION
+   CONCERTS
    ========================= */
 
-@media (prefers-reduced-motion: reduce) {
-  .device-timeline::after {
-    animation: none;
-    transform: scaleY(1);
+.concerts {
+  min-width: 0;
+  padding: var(--ruimte-l);
+
+  /*titel en introductie*/
+
+  h2,
+  h3,
+  p {
+    text-align: center;
+  }
+
+  .concert-slider {
+    width: 100%;
+    min-width: 0;
+
+    .concert-cards {
+      position: relative;
+
+      display: grid;
+      place-items: center;
+
+      min-height: 24em;
+
+      perspective: 60em;
+
+      .concert-card {
+        position: absolute;
+
+        width: 65%;
+        max-width: 14em;
+        aspect-ratio: 3 / 4;
+
+        overflow: hidden;
+
+        background: var(--kleur-menu);
+
+        border: 0.15em solid var(--kleur-rand);
+        border-radius: 0.5em;
+
+        box-shadow: 0 0.3em 1em var(--kleur-schaduw);
+
+        opacity: 0;
+        transform: scale(0.7);
+
+        transition:
+          transform 0.6s ease,
+          opacity 0.6s ease;
+
+        /* Actieve kaart */
+
+        &.active {
+          opacity: 1;
+
+          transform: translateX(0) scale(1);
+
+          z-index: 3;
+        }
+
+        /* Vorige kaart */
+
+        &.previous {
+          opacity: 0.7;
+
+          transform: translateX(-55%) rotateY(25deg) scale(0.8);
+
+          z-index: 2;
+        }
+
+        /* Volgende kaart */
+
+        &.next {
+          opacity: 0.7;
+
+          transform: translateX(55%) rotateY(-25deg) scale(0.8);
+
+          z-index: 2;
+        }
+
+        /* Concertafbeelding */
+
+        > video {
+          display: block;
+
+          width: 100%;
+          height: 100%;
+
+          object-fit: cover;
+        }
+
+        /* Concertinformatie */
+
+        .concert-info {
+          position: absolute;
+
+          left: 0;
+          right: 0;
+          bottom: 0;
+
+          padding: 1em;
+
+          color: white;
+
+          background: linear-gradient(transparent, rgb(0 0 0 / 0.8));
+
+          h3 {
+            margin: 0 0 0.3em;
+
+            font-size: 1.1em;
+          }
+
+          p {
+            margin: 0;
+
+            font-size: 0.9em;
+          }
+        }
+      }
+    }
+
+    /* Navigatie */
+
+    .concert-navigation {
+      display: flex;
+      justify-content: center;
+
+      gap: 1em;
+      margin-top: 1em;
+
+      button {
+        width: 3em;
+        height: 3em;
+
+        color: var(--kleur-tekst);
+        background: var(--kleur-menu);
+
+        border: 0.15em solid var(--kleur-rand);
+        border-radius: 50%;
+
+        cursor: pointer;
+
+        &:hover,
+        &:focus-visible {
+          color: var(--kleur-hover-tekst);
+          background: var(--kleur-hover-achtergrond);
+        }
+      }
+    }
+  }
+}
+
+.upcoming {
+  border: 0.15em solid var(--kleur-rand);
+  box-shadow: inset 0 0 0 0.2em var(--kleur-menu-binnenrand);
+
+  margin-top: var(--ruimte-l);
+}
+
+/* =========================
+     TABLET
+     ========================= */
+
+@media (min-width: 55em) {
+  .concert-slider {
+    .concert-cards {
+      min-height: 28em;
+
+      .concert-card {
+        max-width: 16em;
+      }
+    }
+  }
+}
+
+/* =========================
+   KLEINERE DESKTOP
+   ========================= */
+
+@media (min-width: 80em) {
+  .concert-slider {
+    .concert-cards {
+      .concert-card {
+        &.previous-two {
+          opacity: 0.4;
+
+          transform: translateX(-105%) rotateY(35deg) scale(0.6);
+
+          z-index: 1;
+        }
+
+        &.next-two {
+          opacity: 0.4;
+
+          transform: translateX(105%) rotateY(-35deg) scale(0.6);
+
+          z-index: 1;
+        }
+      }
+    }
+  }
+}
+
+/* =========================
+   PIANO
+   ========================= */
+.piano {
+  h2,
+  p {
+    text-align: center;
+  }
+
+  .piano-videos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    article {
+      margin: 1em 1em;
+
+      padding: 0.6em;
+
+      border: 0.15em solid var(--kleur-rand);
+      box-shadow: inset 0 0 0 0.2em var(--kleur-menu-binnenrand);
+
+      h3 {
+        margin: 0.5em 0 0.2em;
+        text-align: center;
+      }
+
+      p {
+        margin: 0;
+        text-align: center;
+      }
+
+      video {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+    }
   }
 }
 

@@ -73,6 +73,16 @@
             </label>
           </form>
         </section>
+
+        <section>
+          <button
+            class="cookie-button"
+            commandfor="cookie-dialog"
+            command="show-modal"
+          >
+            cookies?
+          </button>
+        </section>
       </aside>
 
       <section class="homepage">
@@ -174,13 +184,6 @@
           are used to host and display the website. In the process, technical
           data may be processed that is necessary to make the website available.
         </p>
-
-        <p>
-          Spotify & YouTube are used to display and play music content. If you
-          allow this content, a connection will be made to these platforms.
-          Spotify & YouTube may then receive technical data and use cookies or
-          similar technologies.
-        </p>
       </div>
 
       <div class="cookie-options">
@@ -188,82 +191,8 @@
 
         <button commandfor="cookie-dialog" command="close">Accept All</button>
 
-        <button commandfor="cookie-dialog" command="close">
-          Necessary only
-        </button>
-
-        <button commandfor="privacy-dialog" command="show-modal">
-          Manage preferences
-        </button>
+        <button commandfor="cookie-dialog" command="close">Deny All</button>
       </div>
-    </dialog>
-
-    <!--Voor het volgende gedeelte maak ik gebruik van de bron: https://www.w3schools.com/howto/howto_css_switch.asp om de toggles te maken-->
-
-    <dialog id="privacy-dialog" class="privacy-dialog">
-      <form method="dialog">
-        <h2>Privacy Preferences</h2>
-
-        <section class="preference-row">
-          <div class="preference-text">
-            <h3>Necessary services</h3>
-            <p>
-              GitHub and digitaaltuintje.nl are necessary to keep the website
-              working properly and available.
-            </p>
-          </div>
-
-          <label class="switch">
-            <input
-              type="checkbox"
-              checked
-              disabled
-              aria-label="Necessary services"
-            />
-            <span></span>
-          </label>
-        </section>
-
-        <section class="preference-row">
-          <div class="preference-text">
-            <h3>Spotify content</h3>
-            <p>
-              Allow Spotify content to be loaded. Spotify may receive technical
-              data and use cookies or similar technologies.
-            </p>
-          </div>
-
-          <label class="switch">
-            <input
-              type="checkbox"
-              name="spotify-content"
-              aria-label="Allow Spotify content"
-            />
-            <span></span>
-          </label>
-        </section>
-
-        <section class="preference-row">
-          <div class="preference-text">
-            <h3>YouTube content</h3>
-            <p>
-              Allow YouTube content to be loaded. YouTube may receive technical
-              data and use cookies or similar technologies.
-            </p>
-          </div>
-
-          <label class="switch">
-            <input
-              type="checkbox"
-              name="youtube-content"
-              aria-label="Allow YouTube content"
-            />
-            <span></span>
-          </label>
-        </section>
-
-        <button class="save-preferences-button">Save preferences</button>
-      </form>
     </dialog>
   </body>
 </html>
