@@ -1806,22 +1806,40 @@ main {
     text-align: center;
   }
 
+  button {
+    grid-area: title;
+    width: 2em;
+    height: 2em;
+
+    font-size: 1.2em;
+
+    color: var(--kleur-tekst);
+    background: var(--kleur-achtergrond);
+
+    border: 0.1em solid var(--kleur-rand);
+    border-radius: 50%;
+
+    cursor: pointer;
+  }
+
   > img {
     grid-area: image;
-    width: 100%;
+    width: 15em;
     height: auto;
+
+    border: 0.15em solid var(--kleur-rand);
+    box-shadow: inset 0 0 0 0.2em var(--kleur-menu-binnenrand);
   }
 
   .details-artist {
     grid-area: olivia;
+    margin-top: -1em;
 
     dl {
       display: grid;
       grid-template-columns: auto 1fr;
 
       gap: 0.5em 1em;
-
-      margin: 0;
     }
 
     dt {
@@ -1837,12 +1855,21 @@ main {
   .lyrics {
     grid-area: lyrics;
     text-align: center;
+
+    margin: 0;
+    padding: var(--ruimte-s) 0;
+
+    text-align: center;
+
+    border-top: 0.1em solid var(--kleur-rand);
+    border-bottom: 0.1em solid var(--kleur-rand);
   }
 
   .my-era {
     grid-area: experience;
 
-    padding: 0.6em;
+    padding: 0 var(--ruimte-m) var(--ruimte-m);
+    margin-top: var(--ruimte-m);
 
     border: 0.15em solid var(--kleur-rand);
     box-shadow: inset 0 0 0 0.2em var(--kleur-menu-binnenrand);
@@ -1853,7 +1880,6 @@ main {
 
       gap: 0.5em 1em;
 
-      width: fit-content;
       margin: 0 auto;
     }
 
@@ -1869,6 +1895,45 @@ main {
 
   .my-experience {
     grid-area: concert;
+
+    display: grid;
+
+    grid-template-areas:
+      "title title title"
+      "tour tour tour"
+      "video1 video2 video3";
+
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0 var(--ruimte-m) var(--ruimte-m);
+
+    h3 {
+      grid-area: title;
+    }
+
+    p {
+      grid-area: tour;
+      margin-top: -1em;
+    }
+
+    img {
+      width: 15em;
+    }
+
+    video {
+      width: 10em;
+
+      &:nth-child(1) {
+        grid-area: video1;
+      }
+
+      &:nth-child(2) {
+        grid-area: video3;
+      }
+
+      &:nth-child(3) {
+        grid-area: video2;
+      }
+    }
   }
 }
 
