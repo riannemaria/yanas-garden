@@ -9,6 +9,7 @@
   --kleur-achtergrond: light-dark(#a99a89, #4a2f22);
   --kleur-tekst: light-dark(#2b1608, white);
   --kleur-menu-opties: light-dark(#725b48, white);
+  --kleur-cookie-text: light-dark(white, #725b48);
   --kleur-rand: light-dark(#2b1608, #d79a7f);
   --kleur-menu: light-dark(#d8c8b5, #684735);
   --kleur-menu-binnenrand: light-dark(#755a48, #fcebd8);
@@ -145,15 +146,21 @@ button:active {
   inset: 0;
   margin: auto;
 
+  text-align: center;
+
   width: min(90%, 34em);
   padding: 1.5rem;
   border: none;
   border-radius: 1rem;
 
+  background-color: var(--kleur-menu-binnenrand);
+  color: var(--kleur-cookie-text);
+
   z-index: 999;
 
   h2 {
     margin-bottom: 1em;
+    color: var(--kleur-cookie-text);
   }
 
   p {
@@ -197,7 +204,8 @@ button:active {
     height: auto;
   }
 
-  button {
+  button,
+  a {
     width: 100%;
     padding: 1.2rem 1em;
 
@@ -205,16 +213,14 @@ button:active {
 
     background-color: var(--kleur-menu);
 
-    &:nth-of-type(1) {
-      grid-area: accept;
-    }
+    border: 0.1em solid var(--kleur-rand);
+    border-radius: 0.5em;
 
-    &:nth-of-type(2) {
-      grid-area: necessary;
-    }
+    cursor: pointer;
 
-    &:nth-of-type(3) {
-      grid-area: preferences;
+    &:hover {
+      background: var(--kleur-hover-achtergrond);
+      color: var(--kleur-hover-tekst);
     }
 
     &:hover {
@@ -223,6 +229,19 @@ button:active {
 
       cursor: pointer;
     }
+  }
+
+  button {
+    grid-area: accept;
+  }
+
+  a {
+    grid-area: necessary;
+    text-decoration: none;
+
+    display: grid;
+    place-items: center;
+    color: var(--kleur-tekst);
   }
 
   /* Tablet */
@@ -648,23 +667,25 @@ main {
 
     .cookie-button {
       display: flex;
+      align-items: center;
+      justify-content: center;
 
-      align-self: end;
-      text-align: center;
-
-      padding: 0.5em 0.7em;
-
-      color: var(--kleur-tekst);
-      background: var(--kleur-menu);
-
-      border: 0.1em solid var(--kleur-rand);
-      border-radius: 0.5em;
+      padding: 0;
+      background: transparent;
+      border: none;
 
       cursor: pointer;
 
-      &:hover {
-        background: var(--kleur-hover-achtergrond);
-        color: var(--kleur-hover-tekst);
+      img {
+        width: 5em;
+        height: auto;
+
+        filter: drop-shadow(0 0 0.15em var(--kleur-rand));
+      }
+
+      &:hover img {
+        transform: scale(1.05);
+        filter: drop-shadow(0 0 0.3em var(--kleur-schaduw));
       }
     }
 
@@ -1364,12 +1385,6 @@ main {
 .moods {
   padding: 0 2em;
 
-  h2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
   nav {
     ul {
       display: grid;
@@ -1426,7 +1441,7 @@ main {
 
   grid-template-areas:
     "title title"
-    "intro intro"
+    "text text"
     "ritual boost"
     "quote quote"
     "photo playlist"
@@ -1436,23 +1451,75 @@ main {
 
   margin-top: 2em;
 
-  /* Titel */
-
-  h3 {
-    grid-area: title;
-
-    margin: 0;
+  h2,
+  p {
+    text-align: center;
   }
 
-  /* Intro */
+  h2 {
+    grid-area: title;
+    margin-bottom: 0;
+  }
 
   p {
-    grid-area: intro;
-
-    margin: 0;
+    grid-area: text;
+    margin-top: 0;
   }
 
-  /* Quote */
+  button {
+    grid-area: title;
+    width: 2em;
+    height: 2em;
+
+    font-size: 1.2em;
+
+    color: var(--kleur-tekst);
+    background: var(--kleur-achtergrond);
+
+    border: 0.1em solid var(--kleur-rand);
+    border-radius: 50%;
+
+    cursor: pointer;
+  }
+
+  .favorite-ritual {
+    grid-area: ritual;
+
+    padding: 1em;
+
+    border: 0.1em solid var(--kleur-rand);
+
+    h3 {
+      margin-top: 0;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 1em;
+    }
+  }
+
+  .mood-boost {
+    grid-area: boost;
+    justify-self: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-top: 1em;
+
+    h3 {
+      margin-top: 0;
+    }
+
+    img {
+      width: 15em;
+      height: auto;
+
+      margin-top: -3em;
+    }
+  }
 
   blockquote {
     grid-area: quote;
@@ -1468,44 +1535,6 @@ main {
   }
 }
 
-/* Favorite ritual */
-
-.favorite-ritual {
-  grid-area: ritual;
-
-  padding: 1em;
-
-  border: 0.1em solid var(--kleur-rand);
-
-  h4 {
-    margin-top: 0;
-  }
-
-  ul {
-    margin: 0;
-    padding-left: 1em;
-  }
-}
-
-/* Confidence boost */
-
-.mood-boost {
-  grid-area: boost;
-
-  padding: 1em;
-
-  h4 {
-    margin-top: 0;
-  }
-
-  img {
-    width: 12em;
-    height: auto;
-  }
-}
-
-/* Foto */
-
 .mood-photo {
   grid-area: photo;
 
@@ -1520,8 +1549,6 @@ main {
 
   z-index: 2;
 }
-
-/* Spotify */
 
 .playlist {
   grid-area: playlist;
@@ -1547,23 +1574,20 @@ main {
   }
 }
 
-/* When to listen */
-
 .listen {
   grid-area: listen;
 
-  align-self: start;
-
   padding: 1em;
+  align-self: start;
 
   border: 0.1em solid var(--kleur-rand);
 
-  h4 {
+  h3 {
     margin-top: 0;
   }
 
   ul {
-    margin: 0;
+    margin-bottom: 0;
     padding-left: 1.5em;
   }
 }

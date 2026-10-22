@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>My Life Through Music</title>
+    <title>Happy Page - My Life Through Music</title>
 
     <link rel="icon" type="image/x-icon" href="./images/website/favicon.ico" />
 
@@ -13,9 +13,11 @@
   </head>
 
   <body>
+    <a class="skip-link" href="#main-content"> Skip to main content </a>
+
     <header>
       <img src="images/website/leftheader.png" alt="" />
-      <a href="index.html">
+      <a href="index.html" aria-current="page">
         <h1>
           Yana's <span class="life">Cozy</span> little
           <span class="music">Music</span> Corner
@@ -32,103 +34,61 @@
       </p>
     </header>
 
-    <main>
-      <nav class="menu-links">
+    <main id="main-content">
+      <aside class="menu-links">
         <section>
           <h2>Song of the week</h2>
-          <a href="sotw.html">
-            <img src="images/website/lp.png" alt="Song of the week" />
+          <a href="sotw.html" aria-label="Go to songs of the week page">
+            <img src="images/website/lp.png" alt="" />
           </a>
           <p>Linger - The Cranberries</p>
         </section>
 
         <section>
           <h2>My Mood</h2>
-          <a href="moods.html">
-            <img
-              src="images/website/me.png"
-              alt="Calm emoji describing my mood"
-            />
+          <a href="moods.html" aria-label="Go to the mood page">
+            <img src="images/website/emotions/avatar_calm.png" alt="" />
           </a>
           <p>cozy</p>
         </section>
 
+        <!--Voor het volgende gedeelte maak ik gebruik van de deepdive light dark-->
+
         <section>
-          <h2>Concerts</h2>
-          <p>
-            <a href="concerts.html">random concert</a>
-          </p>
+          <h2>Color Scheme</h2>
+          <form class="theme-choice">
+            <label>
+              <input type="radio" name="color-theme" value="auto" checked />
+              Auto
+            </label>
+
+            <label>
+              <input type="radio" name="color-theme" value="light" />
+              Light
+            </label>
+
+            <label>
+              <input type="radio" name="color-theme" value="dark" />
+              Dark
+            </label>
+          </form>
         </section>
-      </nav>
+      </aside>
 
       <section class="moods">
-        <h2>Choose your music based on your mood</h2>
-
-        <nav>
-          <ul>
-            <li>
-              <a class="active" href="confident.html">
-                <img
-                  src="images/website/emotions/confident.png"
-                  alt="directs to confident songs"
-                />
-              </a>
-            </li>
-
-            <li>
-              <a href="happy.html">
-                <img
-                  src="images/website/emotions/happy.png"
-                  alt="directs to happy songs"
-                />
-              </a>
-            </li>
-
-            <li>
-              <a href="calm.html">
-                <img
-                  src="images/website/emotions/calm.png"
-                  alt="directs to calm songs"
-                />
-              </a>
-            </li>
-
-            <li>
-              <a href="sleepy.html">
-                <img
-                  src="images/website/emotions/sleepy.png"
-                  alt="directs to sleepy songs"
-                />
-              </a>
-            </li>
-
-            <li>
-              <a href="sad.html">
-                <img
-                  src="images/website/emotions/sad.png"
-                  alt="directs to sad songs"
-                />
-              </a>
-            </li>
-
-            <li>
-              <a href="angry.html">
-                <img
-                  src="images/website/emotions/angry.png"
-                  alt="directs to angry songs"
-                />
-              </a>
-            </li>
-          </ul>
-        </nav>
-
         <section class="mood-detail">
-          <h3>Happy</h3>
-
+          <h2>Happy</h2>
           <p>For the days when everything feels a little lighter.</p>
 
+          <button
+            onclick="location.href = 'moods.html'"
+            aria-label="Go back to Moods page"
+          >
+            ←
+          </button>
+
           <section class="favorite-ritual">
-            <h4>Favorite ritual</h4>
+            <h3>Favorite ritual</h3>
 
             <ul>
               <li>windows open</li>
@@ -139,25 +99,29 @@
           </section>
 
           <section class="mood-boost">
-            <h4>Confidence boost</h4>
-            <img src="images/website/stars.gif" alt="Happy mood animation" />
+            <h3>Confidence boost</h3>
+            <img src="images/sterren_transparant.gif" alt="" />
           </section>
 
           <blockquote>“music up, worries down”</blockquote>
 
           <img
             class="mood-photo"
-            src="images/website/mehover.png"
-            alt="Happy mood photo"
+            src="images/website/emotions/avatar_happy.png"
+            alt=""
           />
 
           <section class="playlist">
-            <h4>Spotify playlist</h4>
+            <h3>Spotify playlist</h3>
 
             <iframe
-              src="https://open.spotify.com/embed/playlist/1vuGU2VAvck4IDXPNa2CX8?utm_source=generator&si=0509caf662e742e9"
-              title="Confident Spotify playlist"
-              loading="lazy"
+              data-testid="embed-iframe"
+              style="border-radius: 12px"
+              src="https://open.spotify.com/embed/playlist/1vuGU2VAvck4IDXPNa2CX8?utm_source=generator&theme=0&si=13c8494582494d19"
+              width="100%"
+              height="152"
+              frameborder="0"
+              allowfullscreen=""
               allow="
                 autoplay;
                 clipboard-write;
@@ -165,12 +129,12 @@
                 fullscreen;
                 picture-in-picture;
               "
-              allowfullscreen
+              loading="lazy"
             ></iframe>
           </section>
 
           <section class="listen">
-            <h4>When to listen to this playlist</h4>
+            <h3>When to listen to this playlist</h3>
 
             <ul>
               <li>sunny mornings</li>
@@ -188,16 +152,16 @@
         <h2>Explore ♪</h2>
 
         <ul>
-          <li><a href="about.html">about</a></li>
+          <li><a href="about.html">about me</a></li>
+          <li><a href="artists.html">artists I love</a></li>
           <li><a href="aura.html">audio aura</a></li>
+          <li><a href="experiences.html">experiences</a></li>
+          <li><a href="digitalmusic.html">how I listened</a></li>
           <li><a href="memories.html">memories</a></li>
           <li><a href="moods.html">moods</a></li>
-          <li><a href="artists.html">artists I Love</a></li>
-          <li><a href="digitalmusic.html">digital music</a></li>
-          <li><a href="experiences.html">experiences</a></li>
-          <li><a href="guiltypleasures.html">guilty pleasures</a></li>
-          <li><a href="shows.html">shows</a></li>
-          <li><a href="songstoburn.html">songs to burn</a></li>
+          <li><a href="piano.html">piano</a></li>
+          <li><a href="songtext.html">songtext</a></li>
+          <li><a href="sources.html">sources</a></li>
         </ul>
       </nav>
     </main>

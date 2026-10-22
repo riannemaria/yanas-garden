@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>My Life Through Music</title>
+    <title>Moods - My Life Through Music</title>
 
     <link rel="icon" type="image/x-icon" href="./images/website/favicon.ico" />
 
@@ -13,6 +13,8 @@
   </head>
 
   <body>
+    <a class="skip-link" href="#main-content"> Skip to main content </a>
+
     <header>
       <img src="images/website/leftheader.png" alt="" />
       <a href="index.html">
@@ -32,34 +34,46 @@
       </p>
     </header>
 
-    <main>
-      <nav class="menu-links">
+    <main id="main-content">
+      <aside class="menu-links">
         <section>
           <h2>Song of the week</h2>
-          <a href="sotw.html">
-            <img src="images/website/lp.png" alt="Song of the week" />
+          <a href="sotw.html" aria-label="Go to songs of the week page">
+            <img src="images/website/lp.png" alt="" />
           </a>
           <p>Linger - The Cranberries</p>
         </section>
 
         <section>
           <h2>My Mood</h2>
-          <a href="moods.html">
-            <img
-              src="images/website/me.png"
-              alt="Calm emoji describing my mood"
-            />
+          <a href="moods.html" aria-label="Go to the mood page">
+            <img src="images/website/emotions/avatar_calm.png" alt="" />
           </a>
           <p>cozy</p>
         </section>
 
+        <!--Voor het volgende gedeelte maak ik gebruik van de deepdive light dark-->
+
         <section>
-          <h2>Concerts</h2>
-          <p>
-            <a href="concerts.html">random concert</a>
-          </p>
+          <h2>Color Scheme</h2>
+          <form class="theme-choice">
+            <label>
+              <input type="radio" name="color-theme" value="auto" checked />
+              Auto
+            </label>
+
+            <label>
+              <input type="radio" name="color-theme" value="light" />
+              Light
+            </label>
+
+            <label>
+              <input type="radio" name="color-theme" value="dark" />
+              Dark
+            </label>
+          </form>
         </section>
-      </nav>
+      </aside>
 
       <section class="moods">
         <h2>Choose your music based on your mood</h2>
@@ -67,54 +81,45 @@
         <nav>
           <ul>
             <li>
-              <a href="confident.html">
-                <img
-                  src="images/website/emotions/confident.png"
-                  alt="directs to confident songs"
-                />
-              </a>
-            </li>
-            <li>
-              <a href="happy.html">
-                <img
-                  src="images/website/emotions/happy.png"
-                  alt="directs to happy songs"
-                />
-              </a>
-            </li>
-            <li>
-              <a href="calm.html">
-                <img
-                  src="images/website/emotions/calm.png"
-                  alt="directs to calm songs"
-                />
+              <a
+                href="energetic.html"
+                aria-label="Explore the energetic mood page"
+              >
+                <img src="images/website/emotions/angry.png" alt="" />
               </a>
             </li>
 
             <li>
-              <a href="sleepy.html">
-                <img
-                  src="images/website/emotions/sleepy.png"
-                  alt="directs to sleepy songs"
-                />
+              <a
+                href="confident.html"
+                aria-label="Explore the confident mood page"
+              >
+                <img src="images/website/emotions/confident.png" alt="" />
+              </a>
+            </li>
+            <li>
+              <a href="happy.html" aria-label="Explore the happy mood page">
+                <img src="images/website/emotions/happy.png" alt="" />
+              </a>
+            </li>
+            <li>
+              <a href="calm.html" aria-label="Explore the calm mood page">
+                <img src="images/website/emotions/calm.png" alt="" />
               </a>
             </li>
 
             <li>
-              <a href="sad.html">
-                <img
-                  src="images/website/emotions/sad.png"
-                  alt="directs to sad songs"
-                />
+              <a
+                href="nostalgic.html"
+                aria-label="Explore the nostalgic mood page"
+              >
+                <img src="images/website/emotions/sleepy.png" alt="" />
               </a>
             </li>
 
             <li>
-              <a href="angry.html">
-                <img
-                  src="images/website/emotions/angry.png"
-                  alt="directs to angry songs"
-                />
+              <a href="sad.html" aria-label="Explore the sad mood page">
+                <img src="images/website/emotions/sad.png" alt="" />
               </a>
             </li>
           </ul>
@@ -126,16 +131,16 @@
         <h2>Explore ♪</h2>
 
         <ul>
-          <li><a href="about.html">about</a></li>
+          <li><a href="about.html">about me</a></li>
+          <li><a href="artists.html">artists I love</a></li>
           <li><a href="aura.html">audio aura</a></li>
-          <li><a href="memories.html">memories</a></li>
-          <li><a href="moods.html">moods</a></li>
-          <li><a href="artists.html">artists I Love</a></li>
-          <li><a href="digitalmusic.html">digital music</a></li>
           <li><a href="experiences.html">experiences</a></li>
-          <li><a href="guiltypleasures.html">guilty pleasures</a></li>
-          <li><a href="shows.html">shows</a></li>
-          <li><a href="songstoburn.html">songs to burn</a></li>
+          <li><a href="digitalmusic.html">how I listened</a></li>
+          <li><a href="memories.html">memories</a></li>
+          <li><a href="moods.html" aria-current="page">moods</a></li>
+          <li><a href="piano.html">piano</a></li>
+          <li><a href="songtext.html">songtext</a></li>
+          <li><a href="sources.html">sources</a></li>
         </ul>
       </nav>
     </main>
