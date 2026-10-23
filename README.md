@@ -4,6 +4,548 @@ Het staat model voor digitale tuintjes welke bij 'Het web is voor iedereen' door
 
 ## Learning Log
 
+### 21 okt - Sprint 3 Workshop 5
+
+<details>
+<summary><strong>Bi-Weekly Geek 3</strong></summary>
+
+![BiWeekly 3](images/readme/biweekly3.jpeg)
+
+</details>
+
+<details>
+<summary><strong>Peerfeedback</strong></summary>
+Mijn beoordelaar was Ingar en mijn rubriekbewaker was Fleur.
+
+Uit de feedback kwam naar voren dat mijn website al aan veel criteria voldoet. Vooral mijn typografische experimenten, het gebruik van Grid, de visuele hiërarchie, animaties en de toegankelijkheid werden positief beoordeeld.
+
+Er waren nog een paar verbeterpunten waar ik aan moet werken:
+
+Variable font: Ik moet nog beter gebruikmaken van de mogelijkheden van mijn variabele lettertype.
+
+Screenreader: Tijdens het testen werkte de screenreader niet op mijn laptop. Ik heb hier vaker problemen mee gehad, terwijl deze eerder wel werkte. Daarom wil ik dit opnieuw testen om zeker te weten dat alles goed werkt.
+
+Bronnen: Mijn bronnen staan op dit moment voornamelijk als commentaar in mijn HTML en CSS. Deze moet ik ook nog toevoegen aan mijn learning log, op de plekken waar ik uitleg welke technieken ik heb gebruikt.
+
+Over het algemeen ben ik tevreden met de feedback, omdat de meeste onderdelen al goed gaan. Ik weet nu vooral welke laatste punten ik nog moet verbeteren.
+
+![Peerfeedback 3](images/readme/peerfeedback_3.png)
+
+</details>
+
+### 20 okt - Huiswerk voor Workshop 5
+
+<details>
+<summary><strong>Voorbereiding Bi-Weekly Geek 3</strong></summary>
+
+</details>
+
+### 19 okt - Sprint 3 Workshop 4
+
+<details>
+<summary><strong>Webby Formulier</strong></summary>
+
+Tijdens de les hebben we het formulier Hoe webby is jouw website? ingevuld. Hierbij heb ik gekeken naar mijn Digital Garden en mijn typografische songtekst.
+
+Uit het formulier kwam naar voren dat mijn websites al aan veel punten voldoen. Ik probeer tijdens het ontwerpen namelijk al rekening te houden met responsiviteit, toegankelijkheid, contrast, visuele hiërarchie en interacties. Ook vind ik dat mijn websites expressief zijn, omdat de animaties en layouts bewust aansluiten bij de inhoud.
+
+Er zijn nog wel een paar dingen die ik wil verbeteren:
+
+Menuknoppen: De knoppen op mijn homepage zijn misschien iets te klein voor mensen met grotere vingers. Deze wil ik nog controleren en eventueel vergroten.
+
+Witruimte: Op sommige pagina's mogen links en langere teksten iets meer ruimte krijgen.
+
+Cookie-pop-up: Ik moet de informatie over de Spotify-embeds nog toevoegen, omdat ik deze uiteindelijk toch heb gebruikt.
+
+Code opschonen: Mijn HTML en CSS zijn op sommige plekken nog wat rommelig. Deze wil ik overzichtelijker maken.
+
+Screenreader: Ik wil nog een keer controleren of alles goed werkt met een screenreader.
+
+Over het algemeen ben ik tevreden met het resultaat. Ik heb tijdens dit project veel nieuwe technieken geleerd, vooral op het gebied van CSS Grid. Mijn websites zijn ook erg persoonlijk geworden en passen goed bij mijn eigen stijl. Ik wil me nu vooral richten op de laatste verbeterpunten om mijn werk netjes af te ronden.
+
+![Webby formulier check](images/readme/webby_formulier.jpeg)
+
+</details>
+
+### 9 okt - Sprint 3 Workshop 3
+
+### 8 okt - Animaties op Songtekst
+
+<details>
+<summary><strong>Animaties en effecten toevoegen aan mijn songtekst</strong></summary>
+
+Nadat ik de indeling en typografie van mijn website verder had uitgewerkt, ben ik begonnen met het toevoegen van animaties en effecten. Ik wilde hiermee mijn ontwerp nog beter laten aansluiten op hoe ik Let It Happen van Tame Impala hoor.
+
+Bij het kiezen van de animaties heb ik steeds opnieuw naar het nummer geluisterd en gekeken welke bewegingen het beste pasten bij de verschillende stukken tekst. Ik wilde namelijk niet zomaar animaties toevoegen omdat het er leuk uitziet, maar juist omdat ze het ritme, de dynamiek en de betekenis van de muziek versterken.
+
+<details>
+<summary><strong>Echo-effect - I cannot vanish en You will not scare me</strong></summary>
+Als eerste heb ik animaties toegevoegd aan de zinnen I cannot vanish en You will not scare me. Deze zinnen had ik eerder al meerdere keren onder elkaar geplaatst en verschillende grijstinten gegeven om een echo-effect te creëren. Nu wilde ik dat effect ook echt laten bewegen.
+
+Hiervoor heb ik gebruikgemaakt van CSS @keyframes en opacity. Met opacity kun je bepalen hoe zichtbaar een element is. Bij opacity: 0 is de tekst volledig onzichtbaar en bij opacity: 1 is deze volledig zichtbaar.
+
+Ik heb de volgende bron gebruikt om beter te begrijpen hoe @keyframes werkt en hoe je op verschillende momenten binnen de animatieduur de opacity kunt veranderen:
+
+[Bron: A Deep Dive into CSS Animations with Keyframes – DEV Community](https://dev.to/mechcloud_academy/a-deep-dive-into-css-animations-with-keyframes-7n6)
+
+Bij I cannot vanish heb ik de tweede, lichtere regel langzaam laten verschijnen en weer laten verdwijnen. Hierdoor lijkt het alsof de woorden steeds opnieuw op de achtergrond te horen zijn.
+
+Bij You will not scare me heb ik hetzelfde principe gebruikt, maar dan met twee echo's. De eerste grijze herhaling verschijnt eerder dan de tweede, lichtgrijze herhaling. Hierdoor ontstaat er een soort opeenvolgende echo, waarbij de tekst steeds verder lijkt te vervagen.
+
+Ik heb deze animaties gekozen omdat de herhaling van deze zinnen erg opvalt in het liedje. Door de teksten op verschillende momenten zichtbaar te maken, wilde ik het gevoel van die herhalende zang ook visueel overbrengen.
+
+![Animation Echo](images/readme/animation_vanish.png)
+
+</details>
+
+<details>
+<summary><strong>BABY NOW I'm ready - Text reveal animation</strong></summary>
+Daarna ben ik aan de slag gegaan met BABY NOW I'm ready, MOVING ON. Dit is een van de belangrijkste momenten in mijn ontwerp, omdat deze zang ineens veel harder en duidelijker naar voren komt dan de achtergrondvocalen.
+
+Ik heb geprobeerd om de timing van deze animaties af te stemmen op hoe de woorden in het echte nummer worden gezongen.
+
+Als eerste verschijnt BABY NOW I'm ready. Hiervoor heb ik een text reveal animation gemaakt met clip-path: inset() en @keyframes.
+
+Met clip-path kan ik een deel van de tekst verbergen. Aan het begin van de animatie is de tekst volledig verborgen. Vervolgens wordt steeds meer van de tekst zichtbaar, van links naar rechts, totdat de hele zin te zien is. De tekst zelf blijft ondertussen op dezelfde plek staan.
+
+Voor deze techniek heb ik de volgende bron gebruikt:
+
+[Bron: Text Reveal Animation – CodePen](https://codepen.io/AdePhil/pen/WNvzYvR)
+
+Ik heb bewust voor deze animatie gekozen omdat de woorden in het liedje duidelijk naar voren komen en langer worden aangehouden. Door ze langzaam van links naar rechts te laten verschijnen, wilde ik dat moment extra benadrukken en de aandacht van de bezoeker naar deze tekst trekken.
+
+</details>
+
+<details>
+<summary><strong>MOVING ON - Bewegende animatie</strong></summary>
+Nadat BABY NOW I'm ready is verschenen, komt MOVING ON in beeld. Hiervoor heb ik een andere animatie gebruikt, omdat ik wilde dat dit gedeelte krachtiger en bewegelijker zou aanvoelen.
+
+Ik heb ervoor gekozen om de tekst van links naar rechts te laten bewegen, terwijl deze tegelijkertijd verschijnt.
+
+Dit heb ik gedaan met translate, opacity en @keyframes. Aan het begin staat de tekst iets naar links en is deze onzichtbaar. Vervolgens beweegt de tekst naar zijn oorspronkelijke positie en wordt hij steeds duidelijker zichtbaar. Daarna blijft hij even staan en vervaagt hij weer.
+
+Voor deze animatie heb ik de volgende bron gebruikt:
+
+[Bron: Text Slide and Fade – CodePen](https://codepen.io/nsmeds/pen/PNxgRL)
+
+Ik vond deze beweging goed passen bij de woorden MOVING ON, omdat die letterlijk gaan over verdergaan. Door de tekst ook echt naar rechts te laten bewegen, probeer ik die betekenis visueel te versterken.
+
+Ook heb ik de animatie bewust iets later laten beginnen dan BABY NOW I'm ready, zodat de volgorde beter overeenkomt met hoe de woorden in het nummer worden gezongen.
+
+![Animation Moving](images/readme/animation_movingon.png)
+
+</details>
+
+<details>
+<summary><strong>Oh, but maybe - Fade-in animatie</strong></summary>
+Bij de zinnen Oh, but maybe en Oh, I'm ready heb ik gekozen voor een rustiger effect. Deze woorden klinken in het nummer namelijk zacht, vaag en een beetje vervagend. De zinnen die daarna komen, zoals I was ready all along, zijn juist duidelijker te horen.
+
+Daarom heb ik een fade-in en fade-out animatie toegevoegd met opacity en @keyframes.
+
+Ik heb hiervoor dezelfde techniek gebruikt als bij mijn eerdere echo-animaties. Door op verschillende percentages van de animatieduur de opacity te veranderen, kan ik bepalen wanneer de teksten verschijnen en verdwijnen.
+
+Eerst verschijnt de lichtgrijze tekst en daarna de zwarte tekst eronder. Hierdoor ontstaat er een rustig verloop tussen de twee zinnen.
+
+Ik vond dit effect goed passen bij de manier waarop deze tekst wordt gezongen. De woorden komen rustig op en verdwijnen weer, waardoor het lijkt alsof ze langzaam in de muziek opgaan.
+
+![fade in Effect](images/readme/animation_oh.png)
+
+</details>
+
+<details>
+<summary><strong>Ticket en train - Stretch hover-effect</strong></summary>
+Daarna heb ik een interactief effect toegevoegd aan de woorden ticket en train.
+
+Deze woorden komen voor in het stukje Take the next ticket, get the next train. Voor mijn gevoel zit er veel beweging en een gevoel van vooruitgaan in deze tekst. Daarom wilde ik dat de bezoeker zelf ook beweging kon creëren.
+
+Ik heb hiervoor een hover-effect gebruikt. Wanneer je met de muis over de woorden ticket of train gaat, worden deze horizontaal uitgerekt.
+
+Dit heb ik gedaan met scale: 2 1. Hierbij wordt de breedte van het woord twee keer zo groot, terwijl de hoogte hetzelfde blijft. Met transition heb ik ervoor gezorgd dat het uitrekken vloeiend verloopt en het woord weer rustig teruggaat naar zijn oorspronkelijke vorm.
+
+Ik vond dit een passende interactie, omdat het de beweging in de songtekst versterkt. Daarnaast wilde ik niet alleen automatische animaties gebruiken, maar ook een effect toevoegen waarmee de bezoeker zelf kan experimenteren.
+
+![Stretch Effect](images/readme/animation_train.png)
+
+</details>
+
+<details>
+<summary><strong>Blur-effect - Vervagende woorden</strong></summary>
+Als laatste heb ik nog een blur-effect toegevoegd aan twee woorden uit mijn songtekst.
+
+Toen ik opnieuw naar het nummer luisterde, viel het me op dat deze woorden wat onduidelijker klinken, alsof ze een beetje vervagen of wegvallen in de muziek.
+
+Daarom heb ik in mijn CSS gebruikgemaakt van filter: blur(1px). Hierdoor worden de letters iets waziger weergegeven.
+
+Ik heb dit effect bewust subtiel gehouden, omdat de woorden nog wel herkenbaar moeten blijven. Het doel was vooral om het verschil te laten zien tussen de duidelijke zang en de woorden die wat zachter en minder scherp klinken.
+
+![Blur Effect](images/readme/animation_blur.png)
+
+</details>
+
+</details>
+
+### 7 okt - Sprint 3 Workshop 2
+
+<details>
+<summary><strong>Hiërarchie en grid</strong></summary>
+Nadat ik mijn eerste opzet had gemaakt, ben ik verdergegaan met het verbeteren van mijn CSS. Ik wilde mijn ontwerp meer laten lijken op mijn definitieve schets en ervoor zorgen dat de verschillende teksten beter op de juiste plekken kwamen te staan.
+
+### Werken met CSS-variabelen
+
+Als eerste ben ik mijn CSS overzichtelijker gaan maken door gebruik te maken van variabelen in :root. Hierin heb ik onder andere mijn kleuren, lettergroottes, regelafstanden, letterafstanden en ruimtes vastgelegd.
+
+Dit heb ik gedaan zodat ik niet telkens dezelfde waardes opnieuw hoefde in te vullen. Als ik bijvoorbeeld een bepaalde lettergrootte wilde aanpassen, hoefde ik dit alleen bij de variabele te veranderen en werd het automatisch aangepast bij alle teksten die deze variabele gebruiken.
+
+Bij het bepalen van mijn lettergroottes heb ik ook rekening gehouden met typografische hiërarchie. Ik heb verschillende groottes gekozen om onderscheid te maken tussen de rustige en krachtige delen van het nummer. De tekst You will not scare me is bijvoorbeeld groter en dikker, omdat die voor mij meer opvalt in de muziek. De achtergrondvocalen heb ik juist kleiner en lichter gemaakt, zodat er meer contrast ontstaat.
+
+### Opdracht – Hiërarchie en Grid
+
+Tijdens de les kregen we ook een opdracht waarbij we moesten kijken naar de verhouding tussen onze font-size, line-height en de breedte van onze Grid-kolommen. Het doel hiervan was om een Grid te maken dat gebaseerd is op de typografie, zodat de verschillende onderdelen meer samenhang krijgen.
+
+Voor deze opdracht moest ik eerst een basislettergrootte kiezen en daarbij de regelhoogte bepalen. Ik heb gekozen voor --tekst-normaal: 1.5em, omdat dit de lettergrootte is die ik gebruik voor mijn gewone songtekst. De grotere teksten, zoals You will not scare me, gebruik ik juist om nadruk te leggen en daarom vond ik die minder geschikt als basis.
+
+Mijn normale line-height is 1.3. Om de werkelijke regelhoogte te berekenen, heb ik deze vermenigvuldigd met mijn basislettergrootte:
+
+1.5em × 1.3 = 1.95em
+
+Vervolgens moest ik volgens de opdracht de kolombreedte baseren op een veelvoud van deze regelhoogte.
+
+Hier heb ik verschillende regelhoogtes geprobeerd. Ik begon met 2, maar deze lieten alle elenten door elkaar gaan. Daarna had ik 3 geprobeerd, en deze was eigenlijk perfect voor mijn gevoel, maar ik had voor de zekerheid ook nog 4 geprobeerd om te kijken hoe dat stond. Deze vond ik te ver uitelkaar staan.
+
+![Verschillende regelhoogtes proberen](images/readme/regelhoogtes.png)
+
+Ik heb ervoor gekozen om de regelhoogte met 3 te vermenigvuldigen:
+
+1.95em × 3 = 5.85em
+
+Ik heb voor drie keer de regelhoogte gekozen als uitgangspunt, omdat één keer de regelhoogte een erg smalle kolom zou opleveren. Door een veelvoud te gebruiken, kan ik mijn kolommen breder maken terwijl ze nog steeds gebaseerd zijn op mijn typografie.
+
+Om dit in CSS toe te passen, heb ik twee nieuwe variabelen toegevoegd:
+
+--grid-regelhoogte: calc(var(--tekst-normaal) _ var(--regelafstand-normaal));
+--grid-kolombreedte: calc(var(--grid-regelhoogte) _ 3);
+
+Daarna heb ik mijn Grid-kolommen gekoppeld aan deze berekende breedte, in plaats van de beschikbare ruimte automatisch over zeven gelijke kolommen te verdelen.
+
+Op deze manier zijn mijn lettergroottes, regelafstanden en Grid niet meer helemaal los van elkaar bepaald, maar vormen ze samen de basis van mijn compositie.
+
+</details>
+
+<details>
+<summary><strong>Check-out</strong></summary>
+
+### Waarom is het goed om een grid in je ontwerp toe te passen? Noem een reden voor de ontwerper en een voor de bezoeker.
+
+Voor de ontwerper is een grid handig omdat je hiermee structuur en overzicht creëert. Je kunt elementen makkelijker op de juiste plek zetten en ervoor zorgen dat alles goed op elkaar aansluit. Bij mijn eigen ontwerp hielp CSS Grid bijvoorbeeld om de songteksten trapsgewijs te positioneren.
+
+Voor de bezoeker zorgt een grid voor meer samenhang en duidelijkheid. Het helpt om de verschillende onderdelen van een ontwerp makkelijker te volgen en te begrijpen.
+
+### Noem drie manieren om chaos in je ontwerp te voorkomen.
+
+Een grid gebruiken: hiermee zorg je voor een duidelijke structuur en uitlijning van elementen.
+
+Consistentie behouden: door dezelfde lettergroottes, afstanden en stijlen op meerdere plekken te gebruiken, ontstaat er meer samenhang.
+
+Bewust witruimte gebruiken: hiermee geef je verschillende onderdelen genoeg ruimte en voorkom je dat alles te dicht op elkaar staat.
+
+### Hoeveel gekkigheid moet er in je werk zitten?
+
+Ik denk dat er genoeg gekkigheid in een ontwerp mag zitten om het interessant en uniek te maken, maar het moet wel een doel hebben. Als je te veel verschillende effecten en stijlen gebruikt, kan het ontwerp onoverzichtelijk worden.
+
+Bij mijn Let It Happen-ontwerp heb ik bijvoorbeeld teksten laten overlappen en uitrekken. Dit ziet er misschien een beetje chaotisch uit, maar ik heb dit bewust gedaan om het ritme en de verschillende zangstemmen weer te geven.
+
+Voor mij is het dus belangrijk om een balans te vinden tussen creativiteit en structuur, zodat het ontwerp interessant blijft, maar de boodschap nog steeds duidelijk overkomt.
+
+</details>
+
+### 6 okt - Werken aan songtekst
+
+<details>
+<summary><strong>Final schets – Mijn definitieve ontwerp</strong></summary>
+<details>
+Vandaag ben ik verdergegaan met het maken van mijn final schets voor Let It Happen van Tame Impala. Hiervoor heb ik mijn eerste 10 schetsen er weer bij gepakt en gekeken welke elementen ik het sterkst vond en welke het beste pasten bij hoe ik de muziek hoor. Uiteindelijk heb ik verschillende onderdelen uit mijn eerdere schetsen gecombineerd tot één definitief ontwerp.
+
+<summary><strong>Herhaling en echo-effect</strong></summary>
+Een van de elementen die ik wilde behouden, was het echo-effect bij de eerste twee zinnen: I cannot vanish en You will not scare me. Deze zinnen vallen voor mij erg op in het nummer, omdat ze een herhalend en bijna echoënd geluid hebben. Dit heb ik geprobeerd weer te geven door dezelfde tekst meerdere keren onder elkaar te plaatsen, waarbij de letters steeds kleiner en lichter worden. Zo lijkt het alsof de tekst langzaam vervaagt, net zoals het geluid in de muziek.
+</details>
+
+<details>
+<summary><strong>Contrast en verschillende zangstemmen</strong></summary>
+Ook wilde ik de overlappende teksten uit een van mijn eerdere schetsen behouden. In het nummer hoor je namelijk op een bepaald moment meerdere zangstemmen tegelijk. Op de achtergrond wordt de eerdere tekst zacht herhaald, terwijl BABY NOW I'm ready, MOVING ON veel harder en duidelijker naar voren komt.
+
+Dit heb ik weergegeven door de achtergrondtekst lichtgrijs te maken en de belangrijkste zang er in grote, zwarte letters overheen te plaatsen. Hierdoor ontstaat er een duidelijk contrast tussen de twee stemmen. Ik vond dit belangrijk om te behouden, omdat dit een van de opvallendste momenten in het nummer is. Als ik de teksten gewoon onder elkaar zou zetten, zou je minder goed zien dat deze stukken tegelijkertijd gezongen worden.
+
+</details>
+
+<details>
+<summary><strong>Ritme en beweging</strong></summary>
+Daarnaast heb ik ervoor gekozen om de teksten steeds verder naar rechts te laten verschuiven. Wanneer je de tekst van boven naar beneden leest, ontstaat er een soort trapsgewijze beweging. Dit geeft een gevoel van richting en vooruitgang, wat goed past bij het ritme en de betekenis van het nummer.
+
+Ik heb bewust niet alle teksten op dezelfde plek gezet, omdat ik wilde voorkomen dat de compositie te statisch werd. Door de plaatsing af te wisselen, ontstaat er meer dynamiek.
+
+</details>
+
+<details>
+<summary><strong>Compositie en typografie</strong></summary>
+Bij het maken van mijn definitieve schets heb ik ook rekening gehouden met de artikelen die we hebben gelezen over typografie, ritme en compositie.
+
+Uit het artikel Rhythm & Tension heb ik bijvoorbeeld meegenomen dat je door herhaling, uitlijning en witruimte ritme en spanning kunt creëren. Daarom heb ik sommige teksten dichter bij elkaar geplaatst en op andere plekken juist meer witruimte gelaten. Ook zorgen de verschillende posities ervoor dat je ogen door de compositie worden geleid.
+
+Daarnaast heb ik rekening gehouden met Respect Thy Typography, waarin het belangrijk is dat typografie niet alleen mooi is, maar ook de betekenis en het gevoel van de tekst ondersteunt. Daarom heb ik bewust gekozen voor verschillende lettergroottes, grijstinten en overlappingen. De rustige zang is bijvoorbeeld kleiner en lichter, terwijl de krachtige zang juist groot en zwart is.
+
+Ook heb ik gekeken naar de typografische hiërarchie. Door contrast aan te brengen tussen grote en kleine teksten, wordt duidelijk welke stukken het belangrijkst zijn en waar je als eerste naar kijkt.
+
+</details>
+
+<details>
+<summary><strong>Waarom ik voor deze schets heb gekozen</strong></summary>
+Uiteindelijk heb ik voor deze schets gekozen, omdat ik vind dat deze het beste laat zien hoe ik het nummer ervaar. De combinatie van echo-effecten, overlappende teksten, verschillende lettergroottes, witruimte en beweging zorgt ervoor dat de compositie niet alleen de songtekst laat zien, maar ook iets vertelt over hoe de muziek klinkt.
+
+Ik vind vooral dat de rustige en krachtige momenten goed naar voren komen. Daarnaast heeft het ontwerp een duidelijke opbouw en wordt je blik van boven naar beneden door de tekst geleid. Daarom vond ik dit de sterkste combinatie van mijn eerdere schetsen en heb ik besloten hiermee verder te gaan in HTML en CSS.
+
+</details>
+
+![Eerste opzet HTML CSS code](images/readme/final_schets_lyrics.jpeg)
+
+</details>
+
+<details>
+<summary><strong>Eerste opzet van mijn HTML en CSS</strong></summary>
+
+Nadat ik mijn definitieve schets had gemaakt, ben ik begonnen met het omzetten van mijn ontwerp naar HTML en CSS. Ik ben eerst gaan kijken hoe ik de verschillende onderdelen van mijn schets het beste kon indelen, zodat ik ze later makkelijk kon vormgeven en positioneren. Dit vond ik best wel lastig, omdat ik echt moest puzzellen met grid areas. Uiteindelijk heb ik online opgezocht hoe ik beste een grid-template-area kon maken met empty spaces.
+
+<details>
+<summary><strong>HTML</strong></summary>
+In mijn HTML heb ik de songtekst verder opgedeeld in verschillende onderdelen. Ik heb hiervoor onder andere <section>, <div> en <p> gebruikt. Ook heb ik de verschillende teksten een eigen class gegeven, zoals intro-echo, intro-begin en intro-thinking. Hierdoor kon ik elk stukje tekst apart aanpassen in mijn CSS.
+
+Daarnaast heb ik de intro en de stukjes lyrics van elkaar gescheiden. Bij de countermelodies heb ik ook onderscheid gemaakt tussen de achtergrondtekst en de voorgrondtekst, omdat deze in mijn schets over elkaar heen staan.
+
+</details>
+
+<details>
+<summary><strong>CSS</strong></summary>
+
+Voor mijn CSS ben ik vooral bezig geweest met het maken van de juiste indeling. Hiervoor heb ik gebruikgemaakt van CSS Grid.
+
+In het begin vond ik het lastig om de verschillende teksten precies op de juiste plek te positioneren. Daarom heb ik de bron [W3Schools – grid-template-areas](https://www.w3schools.com/cssref/pr_grid-template-areas.php) gebruikt. Hier heb ik geleerd dat je met puntjes (.) lege plekken kunt maken binnen je Grid. Hierdoor kon ik bepaalde Grid-cellen bewust leeg laten en de teksten op verschillende posities plaatsen. Dit maakte het een stuk makkelijker om de trapsgewijze opbouw uit mijn schets na te maken, zonder dat ik alle elementen afzonderlijk hoefde te verschuiven.
+
+Ook ben ik begonnen met het toepassen van verschillende lettergroottes en grijstinten om onderscheid te maken tussen de rustige en krachtige delen van het nummer. Daarnaast heb ik de titel verticaal geplaatst met writing-mode, zodat deze langs de linkerkant van mijn compositie kwam te staan. Hier heb ik ook een bron voor gebruikt: [W3Schools – grid-template-areas](https://www.w3schools.com/cssref/css3_pr_writing-mode.php) Ik heb dit gebruikt om mijn h1 verticaal te krijgen zonder dat de header uit de grid valt.
+
+Bij deze eerste opzet heb ik me vooral gericht op de structuur, plaatsing en typografische hiërarchie. Mijn ontwerp kwam op dit moment nog niet helemaal overeen met mijn schets. Zo had ik bijvoorbeeld de echo-effecten nog niet volledig uitgewerkt en had ik nog geen animaties toegevoegd. Dit was vooral de basis waarmee ik verder kon experimenteren.
+
+![Eerste opzet code](images/readme/eerste_opzet_code.png)
+
+</details>
+
+<details>
+<summary><strong>HTML CSS Schets uitwerken uit eerste opzet</strong></summary>
+
+Nadat ik mijn eerste HTML- en CSS-opzet had gemaakt, ben ik verdergegaan met het uitwerken van mijn definitieve schets. Bij iedere aanpassing heb ik mijn schets erbij gehouden om te kijken of de teksten op de juiste plekken stonden en of de typografie goed overeenkwam met hoe ik de muziek hoor.
+
+In mijn eerste versie had ik vooral de basisstructuur gemaakt en de verschillende stukken tekst op hun plek gezet met CSS Grid. Nu wilde ik me meer gaan focussen op de effecten in de songtekst, zodat mijn ontwerp niet alleen de tekst laat zien, maar ook het ritme, de herhaling en de dynamiek van het nummer overbrengt.
+
+<details>
+<summary><strong>Echo-effecten bij de eerste zinnen</strong></summary>
+
+Als eerste ben ik aan de slag gegaan met de zinnen I cannot vanish en You will not scare me. In mijn eerste opzet stonden deze zinnen nog maar één keer, terwijl ik in mijn schets juist een echo-effect had getekend.
+
+Daarom heb ik in mijn HTML extra p-elementen toegevoegd en deze allemaal een eigen class gegeven. Bij I cannot vanish heb ik een tweede, kleinere versie van de zin toegevoegd. Bij You will not scare me heb ik zelfs twee extra herhalingen onder de originele tekst gezet.
+
+In mijn CSS heb ik deze teksten verschillende lettergroottes en grijstinten gegeven. De originele tekst is het duidelijkst zichtbaar en de herhalingen worden steeds kleiner en lichter. Hierdoor lijkt het alsof de tekst langzaam vervaagt, net zoals een echo in de muziek. Bij You will not scare me heb ik de regels ook iets over elkaar heen laten lopen, waardoor het echo-effect nog sterker wordt.
+
+Ik vond dit belangrijk om toe te voegen, omdat de herhaling van deze zinnen erg opvalt in het nummer en het echo effect waarmee ze het zingen ook wordt versterkt. Door de tekst ook visueel te herhalen, probeer ik hetzelfde gevoel over te brengen als wanneer je naar de muziek luistert.
+
+![Stretch effect op lyrics](images/readme/stretch_lyrics.png)
+
+</details>
+
+<details>
+<summary><strong>Overlappende teksten bij BABY NOW I'm ready, MOVING ON</strong></summary>
+
+Als derde ben ik verdergegaan met een van de belangrijkste onderdelen van mijn schets: BABY NOW I'm ready, MOVING ON.
+
+In mijn eerste opzet had ik al geprobeerd om deze tekst over de achtergrondvocalen heen te plaatsen, maar de positie en overlapping waren nog niet helemaal goed. Daarom heb ik dit verder aangepast met CSS Grid.
+
+Ik heb de achtergrondtekst en de voorgrondtekst in dezelfde Grid-area geplaatst, zodat ze over elkaar heen kunnen staan. Met z-index heb ik ervoor gezorgd dat BABY NOW I'm ready, MOVING ON duidelijk vóór de achtergrondtekst zichtbaar is.
+
+Daarnaast heb ik bewust een groot verschil gemaakt in lettergrootte en kleur. De achtergrondvocalen zijn lichtgrijs en kleiner, terwijl de belangrijkste zang groot en zwart is.
+
+Dit heb ik gedaan omdat je in het nummer op dat moment meerdere stemmen tegelijkertijd hoort. De achtergrondzang gaat gewoon door, terwijl BABY NOW I'm ready, MOVING ON ineens heel duidelijk en krachtig naar voren komt.
+
+Ik wilde dat je dit ook meteen in mijn ontwerp kon herkennen. Daarom ligt de focus op de grote zwarte woorden, terwijl de andere tekst op de achtergrond zichtbaar blijft. Zo probeer ik met typografie het verschil in volume en de overlapping van de stemmen weer te geven.
+
+![Overlapping effect op lyrics](images/readme/overlapping_lyrics.png)
+
+</details>
+
+<details>
+<summary><strong>Teksten uitrekken met letter-spacing</strong></summary>
+
+Daarna ben ik verdergegaan met de zinnen You were not thinking, that I will not do it en They be lovin' someone, and I'm another story.
+
+In mijn eerste versie stonden deze zinnen nog vrij compact bij elkaar. Maar toen ik opnieuw naar mijn schets en het nummer keek, vond ik dat dit niet helemaal paste bij hoe deze stukken worden gezongen.
+
+Deze zinnen worden namelijk vrij vloeiend achter elkaar gezongen, zonder een duidelijke adempauze ertussen. Het voelt voor mij alsof de woorden als één lange reeks doorgaan.
+
+Daarom heb ik in mijn CSS gebruikgemaakt van letter-spacing om de afstand tussen de letters groter te maken. Hierdoor worden de zinnen langer en meer uitgerekt. Ook heb ik white-space: nowrap gebruikt, zodat de tekst niet zomaar naar een nieuwe regel verspringt.
+
+Dit geeft voor mij beter het gevoel van de lange, doorlopende zang. Daarnaast zorgt de grotere letterafstand voor een ander ritme binnen mijn compositie en meer contrast met de compactere teksten erboven en eronder.
+
+![Echo effect op lyrics](images/readme/echo_effect_lyrics.png)
+
+</details>
+
+<details>
+<summary><strong>Extra songtekst toegevoegd</strong></summary>
+
+Daarnaast heb ik nog een extra stukje van de songtekst toegevoegd aan mijn ontwerp, namelijk de zinnen Oh, but maybe, Oh, I'm ready en de zinnen die daarop volgen.
+
+Toen ik opnieuw naar het nummer luisterde, merkte ik dat deze stukken op een bijzondere manier worden gezongen. De eerste woorden klinken namelijk heel zacht, vaag en een beetje alsof ze echoën. De zinnen die daarna komen, zoals I was ready all along en For the moment and sound, zijn juist veel duidelijker te horen.
+
+Dit verschil wilde ik ook terug laten komen in mijn typografie. Daarom heb ik in mijn HTML de zinnen opgesplitst in twee verschillende p-elementen met de classes soft-bg en soft-fg.
+
+In mijn CSS heb ik de eerste, zachtere zinnen een grotere lettergrootte en een lichtgrijze kleur gegeven. Hierdoor vallen ze minder op en krijgen ze een soort vervaagd effect. De zinnen die daarna komen, heb ik juist kleiner en zwart gemaakt en direct onder de grijze tekst geplaatst. Door het verschil in kleur en contrast trekken deze zinnen meer aandacht, ondanks dat ze kleiner zijn.
+
+Ik heb de drie tekstblokken onder elkaar geplaatst en links tussen de twee refreinen gepositioneerd met CSS Grid. Hierdoor kon ik de lege ruimte uit mijn schets benutten en bleef de compositie beter in balans. Ook omdat deze na de overlappende lyrics komen dus zo zie je dat ze bij elkaar horen.
+
+Op deze manier probeer ik opnieuw met kleur, lettergrootte, contrast en plaatsing het verschil tussen de verschillende zangstemmen en de manier waarop de tekst wordt gezongen visueel over te brengen.
+
+![Echo effect op lyrics](images/readme/oh_lyrics.png)
+
+</details>
+
+<details>
+<summary><strong>Andere aanpassingen aan mijn HTML en CSS</strong></summary>
+
+Naast deze drie onderdelen heb ik ook nog verschillende kleinere aanpassingen gemaakt om mijn ontwerp steeds dichter bij mijn schets te brengen.
+
+Ik heb bijvoorbeeld extra <div>-elementen en classes toegevoegd om teksten die bij elkaar horen te groeperen. Hierdoor kon ik de verschillende onderdelen makkelijker afzonderlijk vormgeven, zonder dat ik steeds de rest van mijn layout hoefde aan te passen.
+
+Ook heb ik mijn Grid verder aangepast om de trapsgewijze opbouw beter terug te laten komen. Ik heb gekeken naar de plaatsing van de teksten, de witruimte tussen de onderdelen en de afstanden tussen de verschillende zinnen. Hierbij heb ik geprobeerd om zo veel mogelijk met CSS Grid te werken in plaats van teksten los te verschuiven.
+
+</details>
+
+<details>
+<summary><strong>Resultaat</strong></summary>
+
+![Resultat lyrics](images/readme/final_lyrics_layout.png)
+
+</details>
+
+</details>
+
+</details>
+
+### 5 okt - Sprint 3 Workshop 1
+
+<details>
+<summary><strong>Artikelen Lezen</strong></summary>
+
+![Notes Articles](images/readme/notes_articles_sprint3.png)
+
+</details>
+
+<details>
+<summary><strong>Play the rules</strong></summary>
+
+### Opdracht 1: Songtekst analyseren
+
+<strong>Liedjeskeuze: Let It Happen – Tame Impala:</strong><br>
+Ik heb uiteindelijk gekozen voor Let It Happen van Tame Impala, omdat ik vond dat dit nummer het meeste gevoel, emotie, dynamiek, ritme en contrast bevatte. In het nummer wisselen rustige en harde stukken elkaar af. Ook worden sommige zinnen herhaald en hoor je op bepaalde momenten meerdere zangstemmen door elkaar heen. Daarnaast zijn sommige woorden langer uitgerekt en worden andere juist sneller gezongen.
+
+Dit vond ik interessant om visueel te vertalen naar typografie. Ik wilde bijvoorbeeld met verschillende lettergroottes, grijstinten, herhaling en de plaatsing van tekst laten zien hoe ik de muziek ervaar.
+
+Daarom ben ik begonnen met het maken van verschillende schetsen, waarin ik heb geprobeerd om het ritme, de dynamiek en de emoties van het nummer weer te geven zoals ik ze hoor.
+
+![WCAG checklist](images/readme/schetsen_lyrics.png)
+
+### Opdracht 2: Bespreek je schetsen met een ander
+
+<strong>Wat wil je bij de kijker bereiken met je vormgeving?</strong><br>
+Ik wil dat de kijker het ritme en de dynamiek van het nummer kan voelen zonder de muziek te horen. Vooral het contrast tussen de zachte, herhalende achtergrondvocalen en de plotseling luide hoofdvocalen wil ik duidelijk laten zien.
+
+<strong>Wat wil je bij de kijker bereiken met je vormgeving?</strong><br>
+Door te spelen met lettergroottes, herhaling, witruimte, regelafstand en plaatsing maak ik het ritme van de muziek zichtbaar. De zachtere echo's krijgen minder nadruk, terwijl "Baby, now I'm ready" juist groot en opvallend wordt weergegeven. Zo versterkt de typografie het gevoel van de muziek.
+
+<strong>Wat wil je bij de kijker bereiken met je vormgeving?</strong><br>
+Ik wil de schets kiezen waarin het contrast tussen de achtergrondvocalen en de hoofdvocalen het duidelijkst is en waar het duidelijk is hoe je bepaalde zinnen of woorden hoort. Of het lang wordt gezongen, of het zachter of harder wordt.
+
+Mijn voorkeur gaat nu uit naar schets 1 en 9
+
+<strong>Hoe zou je dit kunnen aanpakken in code? (vraag hulp wanneer je het niet zeker weet)</strong><br>
+Ik wil de songtekst eerst in logische onderdelen verdelen in HTML. Daarna kan ik met CSS de verschillende tekstlagen vormgeven. Met font-size, font-weight, letter-spacing, line-height en positionering kan ik spelen met hiërarchie, ritme en witruimte. Ik kan grid gebruiken om het op de juiste plek te positioneren. Ook kan ik met een lichtere tekstkleur binnen grijstinten de achtergrondvocalen minder laten opvallen.
+
+### Opdracht 3 – HTML structureren
+
+Voor deze opdracht heb ik de HTML die we hebben gekregen aangepast. Eerst stond de hele songtekst in lange stukken tekst, waardoor het lastig was om overzicht te houden.
+
+Daarom heb ik de songtekst opgedeeld in kleinere, logische stukken met verschillende <p>-elementen. Zo kan ik beter zien welke zinnen bij elkaar horen en welke onderdelen ik later apart wil vormgeven.
+
+Door de tekst op deze manier te structureren, heb ik meer overzicht gekregen en kan ik straks makkelijker met CSS aan de slag om de verschillende stukken tekst op de juiste plek te zetten.
+
+![HTML structureren](images/readme/html_structureren.png)
+
+</details>
+
+<details>
+<summary><strong>Check-out</strong></summary>
+
+### 1. Leg uit wat er met de volgende termen bedoeld wordt.
+
+<strong>Kerning:</strong> De ruimte tussen twee specifieke letters aanpassen, zodat ze visueel beter bij elkaar passen.
+
+<strong>Tracking:</strong> De letterafstand van een heel woord of een stuk tekst vergroten of verkleinen.
+
+<strong>Leading:</strong> De verticale ruimte tussen de regels tekst. In CSS gebruik je hiervoor line-height.
+
+<strong>Flush-left:</strong> Tekst is links uitgelijnd. De rechterkant is ongelijk.
+
+<strong>Flush-right:</strong> Tekst is rechts uitgelijnd. De linkerkant is ongelijk.
+
+<strong>Centered:</strong> Tekst staat gecentreerd, waardoor beide kanten ongelijk kunnen zijn.
+
+<strong>Justified:</strong> Tekst wordt uitgevuld, zodat de linker- en rechterkant allebei recht zijn. Hiervoor wordt de ruimte tussen woorden aangepast.
+
+<strong>Indent:</strong> Een regel tekst laten inspringen, meestal de eerste regel van een alinea.
+
+<strong>Outdent:</strong> Een regel tekst juist naar buiten laten springen ten opzichte van de rest van de tekst.
+
+<strong>Modular scale:</strong> Een systeem waarbij je lettergroottes bepaalt met een vaste verhouding. Hierdoor ontstaat er een duidelijke en consistente typografische hiërarchie.
+
+<strong>Movable type:</strong> Een oude druktechniek waarbij losse letters werden gebruikt om teksten samen te stellen en af te drukken.
+
+<strong>Focus point:</strong> Het onderdeel van een ontwerp dat als eerste de aandacht trekt.
+
+<strong>Vijf soorten contrast:</strong> Contrast door grootte, gewicht, vorm, kleur en plaatsing. Hiermee kun je onderscheid maken tussen verschillende onderdelen van een ontwerp.
+
+<strong>Spatial tension:</strong> Spanning die ontstaat door de plaatsing van elementen en de witruimte ertussen. Bijvoorbeeld wanneer tekst dicht bij de rand staat of bewust asymmetrisch is geplaatst.
+
+### 2. Wat is jouw ideale regellengte (measure)? Leg uit waarom.
+
+Voor gewone lopende tekst zou ik kiezen voor ongeveer 75 tot 100 tekens per regel, omdat dit prettig leest. Als regels te lang zijn, wordt het moeilijker om met je ogen de volgende regel terug te vinden. Als regels te kort zijn, moet je juist heel vaak naar een nieuwe regel springen.
+
+Voor mijn Let It Happen-ontwerp ligt dit anders. Hier werk ik niet met lange alinea's, maar met korte zinnen uit de songtekst. Daarom vind ik het belangrijker dat de regellengte past bij het ritme en de compositie. Ik heb sommige zinnen bewust op één regel gehouden om de vormgeving uit mijn schets te behouden en sommige juist bewust op meerdere regels.
+
+### 3. Als je maar één variabele mocht gebruiken om hiërarchie aan te brengen, welke zou je kiezen en waarom?
+
+Ik zou kiezen voor grootte (font-size), omdat je hiermee meteen duidelijk kunt maken welke onderdelen van een tekst belangrijker zijn.
+
+Bij mijn typografische ontwerp heb ik bijvoorbeeld BABY NOW I'm ready en MOVING ON veel groter gemaakt dan de achtergrondvocalen. Hierdoor vallen deze woorden meteen op en zie je duidelijk het verschil tussen de krachtige zang en de rustigere achtergrond.
+
+Met alleen verschillende lettergroottes kun je dus al een duidelijke hiërarchie en contrast creëren, zonder dat je andere kleuren of lettertypes nodig hebt.
+
+</details>
+
+### 2 okt - Voortgang + Retrospect
+
+<details>
+<summary><strong>Retrospect</strong></summary>
+</details>
+
+<details>
+<summary><strong>Voortgangsgesprek</strong></summary>
+</details>
+
 ### 30 sept - Werken aan toegankelijkheid
 
 <details>
