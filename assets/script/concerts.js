@@ -1,6 +1,10 @@
 /* =========================
    CONCERT SLIDER
    ========================= */
+/* voor dit gedeelte heb ik hulp gekregen van een vriend van me: Tom, en hebben we ook gebruik gemaakt van de volgende bronnen:
+  https://learndevtoday.com/how-to-build-image-carousel-slider/
+  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Remainder
+  */
 
 const cards = document.querySelectorAll(".concert-card");
 const nextButton = document.querySelector(".concert-next");
