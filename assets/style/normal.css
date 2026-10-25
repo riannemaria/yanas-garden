@@ -833,6 +833,10 @@ main {
    HOMEPAGE
    ========================= */
 
+/* =========================
+   HOMEPAGE
+   ========================= */
+
 .homepage {
   p {
     text-align: center;
@@ -881,12 +885,55 @@ main {
       background: var(--kleur-plank);
     }
 
-    /* Hover */
+    /* Naamlabel */
+    span {
+      position: absolute;
+
+      bottom: -2em;
+      left: 50%;
+
+      transform: translateX(-50%) translateY(0.5em);
+
+      padding: 0.4em 0.8em;
+
+      font-family: inherit;
+      font-size: 0.85em;
+
+      white-space: nowrap;
+      text-align: center;
+
+      color: var(--kleur-tekst);
+      background: var(--kleur-menu);
+
+      border: 0.1em solid var(--kleur-rand);
+      border-radius: 0.5em;
+
+      opacity: 0;
+      visibility: hidden;
+
+      z-index: 5;
+
+      transition:
+        opacity 0.2s ease,
+        transform 0.2s ease,
+        visibility 0.2s ease;
+    }
+
+    /* Hover op afbeelding */
     &:hover img,
     &:focus-visible img {
       transform: scale(1.05);
 
       filter: drop-shadow(0 0 0.4em var(--kleur-schaduw));
+    }
+
+    /* Label zichtbaar bij hover en focus */
+    &:hover span,
+    &:focus-visible span {
+      opacity: 1;
+      visibility: visible;
+
+      transform: translateX(-50%) translateY(0);
     }
   }
 
@@ -945,6 +992,15 @@ main {
       top: 10%;
 
       z-index: 2;
+    }
+  }
+
+  /* Minder beweging voor gebruikers
+     die dit hebben ingesteld */
+  @media (prefers-reduced-motion: reduce) {
+    img,
+    a span {
+      transition: none;
     }
   }
 }
@@ -1385,6 +1441,11 @@ main {
 .moods {
   padding: 0 2em;
 
+  .moods-intro {
+    text-align: center;
+    margin-top: var(--ruimte-m);
+  }
+
   nav {
     ul {
       display: grid;
@@ -1400,7 +1461,6 @@ main {
       border: 0.15em solid var(--kleur-rand);
       box-shadow: inset 0 0 0 0.2em var(--kleur-menu-binnenrand);
 
-      /* Tablet */
       @media (min-width: 55em) {
         grid-template-columns: repeat(6, 1fr);
       }
@@ -1411,16 +1471,29 @@ main {
       place-items: center;
     }
 
+    a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5em;
+
+      text-decoration: none;
+      color: var(--kleur-tekst);
+    }
+
     img {
       width: 4em;
-
       transition: transform 0.2s ease;
+    }
+
+    span {
+      font-size: 0.9em;
+      text-align: center;
     }
   }
 
   a:hover img {
     transform: scale(1.05);
-
     filter: drop-shadow(0 0 0.4em var(--kleur-schaduw));
   }
 }

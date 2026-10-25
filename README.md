@@ -4,6 +4,117 @@ Het staat model voor digitale tuintjes welke bij 'Het web is voor iedereen' door
 
 ## Learning Log
 
+### 23 okt - Puntjes op de i zetten
+
+<details>
+<summary><strong>Font variable toevoegen</strong></summary>
+Nadat ik het peerfeedbackformulier had doorgenomen, ben ik gaan kijken welke onderdelen ik nog moest toevoegen of verbeteren aan mijn songtekst. Een van de dingen die ik nog niet had toegepast, was het gebruik van variable fonts. Daarom ben ik gaan experimenteren met de verschillende eigenschappen van mijn lettertype Seraphs en heb ik deze op meerdere plekken in mijn songtekst toegepast.
+
+Op de afbeelding is een van deze aanpassingen te zien, namelijk bij I Cannot Vanish. Hier heb ik font-variation-settings gebruikt om de dikte van de letters aan te passen. Ik heb bewust gekozen voor een dunnere lettervorm, omdat dit beter past bij het zachte, vervagende geluid van de zang. Ook heb ik op andere plekken verschillende diktes en serif-vormen gebruikt om meer contrast te creëren en bepaalde accenten uit de muziek te benadrukken. Op deze manier gebruik ik de variabele eigenschappen van het lettertype om de sfeer en het ritme van het nummer beter over te brengen.
+![Fontvariables](images/readme/fontvariable.png)
+
+</details>
+
+<details>
+<summary><strong>Font variable toevoegen</strong></summary>
+Daarnaast heb ik ook mijn animaties verder aangepast. Bij het gedeelte Take the Next Ticket / Get the Next Train had ik eerst alleen een stretch-animatie toegevoegd, waarbij de tekst horizontaal uitrekt wanneer je eroverheen hovert. Ik had hiervoor gekozen omdat de woorden in het nummer op een snelle, uitgerekte manier worden gezongen en ik dat ook visueel wilde laten terugkomen.
+
+Omdat ik ook meer wilde experimenteren met variable fonts, heb ik deze animatie uitgebreid met font-variation-settings. Hierdoor wordt de tekst tijdens het uitrekken niet alleen breder, maar veranderen ook de dikte en de vorm van de letters. Met transition heb ik ervoor gezorgd dat deze veranderingen vloeiend verlopen. Op deze manier combineer ik mijn oorspronkelijke stretch-effect met de mogelijkheden van een variabel lettertype, waardoor de animatie expressiever wordt en beter aansluit bij de manier waarop dit gedeelte in het nummer klinkt.
+![Fontvariables](images/readme/fontvariable_animatie.png)
+
+</details>
+
+### 23 okt - Retrospect & Voortgangsgeprek
+
+<details>
+<summary><strong>Retrospect</strong></summary>
+
+Vandaag hebben we de allerlaatste Retrospect gedaan van dit blok. Deze retrospect gaat over hoe je de afgelopen 6 weken van dit blok heb ervaren. We zijn begonnen met het schrijven van de getallen 0 - 9 en daaruit een tekening maken met het getal erin verwerkt.
+
+![Retrospect sprint 3](images/readme/retrospect3_1.jpeg)
+
+### 23 okt - Piek en Dal tekening
+
+Voor deze retrospect heb ik een piek- en daltekening gemaakt waarin ik terugblik op de afgelopen zes weken. Mijn lijn laat zien dat mijn motivatie, energie en voortgang erg wisselden. Ik had meerdere hoogtepunten waarin ik goed op schema liep, maar ook dieptepunten waarin ik door ziekte, stress en werkdruk achterliep met mijn schoolopdrachten.
+
+<strong>Begin sprint 0 & 1 – Eerste hoogtepunt</strong><br>
+
+Ik begon met veel motivatie, een goede planning en liep goed bij met mijn opdrachten. Ik zocht inspiratie voor typografie, kleuren en de sfeer van mijn website en maakte mijn eerste schetsen. Dit hoort vooral bij persoonlijk en geëngageerd ontwerpen, omdat ik mijn eigen ideeën en interesses verwerkte in mijn ontwerp.
+
+<strong>Begin sprint 2 – Eerste dieptepunt</strong><br>
+
+Ik voelde me erg ziek en had veel stress door school en werk, waardoor ik achter begon te lopen. Ik probeerde thuis nog schetsen te maken, maar deze waren niet helemaal uitgewerkt. Dit was een aandachtspunt bij georganiseerd en professioneel ontwerpen, vooral op het gebied van planning en voortgang.
+
+<strong>Eind sprint 2 – Tweede hoogtepunt</strong><br>
+
+Ik heb mijn achterstand ingehaald, mijn cookiepop-up afgerond en de toegankelijkheid van mijn website verbeterd. Ik testte onder andere de screenreader, toetsenbordnavigatie, ARIA-labels, alt-teksten en kleurcontrast. Hier kwamen beide competenties terug: professioneel door mijn website systematisch te testen en verbeteren, en persoonlijk en geëngageerd door rekening te houden met verschillende gebruikers.
+
+<strong>Begin sprint 3 – Tweede dieptepunt</strong><br>
+
+Doordat ik te weinig rust had genomen, voelde ik me opnieuw niet goed en liep ik achter met mijn schoolopdrachten. Ik werkte wel verder aan mijn website en deed onderzoek voor mijn songtekst-opdracht, maar door tijdsdruk is deze nog niet responsive. Dit was opnieuw een aandachtspunt bij georganiseerd en professioneel ontwerpen.
+
+<strong>Eind sprint 3 – Laatste stijging</strong><br>
+
+Ik pakte mijn opdrachten weer op, controleerde mijn website met het Webby-formulier en vroeg feedback aan studenten en docenten. Dit hoort bij georganiseerd en professioneel ontwerpen, omdat ik mijn werk kritisch beoordeelde en keek wat ik nog kon verbeteren.
+
+<strong>Wat heb ik geleerd?</strong><br>
+
+De afgelopen zes weken heb ik veel geleerd over ontwerpen, toegankelijkheid en het verbeteren van mijn website. Tegelijkertijd merkte ik dat ik beter moet omgaan met mijn planning en energie. Voor de volgende sprint wil ik daarom beter mijn grenzen bewaken en meer rustmomenten inplannen.
+
+![Retrospect sprint 3](images/readme/retrospect3_2.jpeg)
+
+### 23 okt - Metafoor tekening
+
+Voor mijn laatste metafoortekening heb ik gekozen voor een sterrenhemel met de titel Even Stars Have Cloudy Days. Deze metafoor laat zien hoe mijn afgelopen zes weken zijn verlopen. Net zoals een sterrenhemel niet altijd helder is, verliep mijn leerproces ook niet altijd even soepel. Soms had ik veel motivatie en overzicht, terwijl ik op andere momenten werd tegengehouden door ziekte, stress en werkdruk.
+
+<strong>De sterren en sterrenbeelden</strong><br>
+
+De sterren staan symbool voor mijn taken, ideeën en doelen. De gele stippellijnen die de sterren verbinden, vertegenwoordigen mijn planning en het overzicht over mijn schoolopdrachten. Wanneer de sterren goed zichtbaar en verbonden zijn, betekent dit dat ik gemotiveerd ben en goed op schema loop. De sterrenbeelden veranderen gedurende de tekening, omdat mijn voortgang en overzicht ook steeds veranderden.
+
+<strong>De wolken</strong><br>
+
+De donkere wolken staan voor de moeilijke momenten tijdens sprint 2 en 3. Ze symboliseren ziekte, stress, werkdruk en achterstanden. De sterren verdwijnen soms achter de wolken, maar zijn niet echt weg. Hiermee wil ik laten zien dat mijn motivatie en doelen er nog steeds waren, maar dat ik door omstandigheden tijdelijk het overzicht verloor.
+
+<strong>De vijf fases van mijn sterrenhemel</strong><br>
+
+Week 1–2: Mijn sterrenhemel is helder en de sterren zijn verbonden. Ik had veel motivatie, een goede planning en liep bij met mijn opdrachten.
+
+Week 3: Donkere wolken bedekken mijn sterren. Ik was ziek, had veel stress en liep achter met mijn schoolwerk. Hierdoor raakte ik een deel van mijn overzicht kwijt.
+
+Week 4: De wolken trekken langzaam weg en mijn sterren worden weer zichtbaar. Ik pakte mijn opdrachten op, verbeterde de toegankelijkheid van mijn website en kreeg mijn planning weer op orde.
+
+Week 5: Er verschijnen opnieuw donkere wolken. Ik voelde me weer niet goed, had te weinig rust genomen en liep opnieuw achter. Ik werkte wel aan mijn songtekst, maar deze was nog niet helemaal responsive.
+
+Week 6: De hemel wordt weer helder en de sterren vormen opnieuw een sterrenbeeld. Ik heb mijn opdrachten opgepakt, feedback gevraagd en mijn website gecontroleerd met het Webby-formulier. Hierdoor kreeg ik weer meer overzicht en motivatie.
+
+<strong>De bergen en bomen</strong><br>
+
+Onderaan mijn tekening heb ik bergen en bomen getekend. De bergen staan symbool voor de pieken en dalen in mijn leerproces. Net zoals een berglandschap uit hoge en lage punten bestaat, kende mijn afgelopen zes weken ook hoogtepunten en dieptepunten. De donkere bomen en bergen vormen de achtergrond van mijn reis en laten zien dat mijn ontwikkeling niet altijd over een rechte weg verloopt.
+
+<strong>De kleuren en de titel</strong><br>
+
+Ik heb gekozen voor een donkere sterrenhemel met gele sterren. Het geel staat voor motivatie, hoop en vooruitgang, terwijl de grijze wolken juist de moeilijke periodes vertegenwoordigen. Ook in de titel heb ik dit kleurverschil verwerkt: Even Stars is geel en Cloudy Days heeft verschillende blauwtinten.
+
+Met de titel 'Even Stars Have Cloudy Days' wil ik laten zien dat het normaal is om soms moeilijke momenten te hebben. Zelfs wanneer mijn sterren achter de wolken verdwijnen, blijven ze bestaan. Mijn motivatie en doelen zijn dus niet verdwenen, maar soms tijdelijk minder zichtbaar.
+
+Mijn belangrijkste boodschap is dat een moeilijke periode niet betekent dat je geen vooruitgang meer boekt. Ondanks mijn pieken en dalen heb ik veel geleerd, ben ik blijven werken aan mijn website en heb ik uiteindelijk mijn overzicht weer teruggevonden.
+
+![Retrospect sprint 3](images/readme/retrospect3_3.jpeg)
+
+</details>
+
+<details>
+<summary><strong>Voortgangsgesprek</strong></summary>
+Mijn voortgangsgesprek van sprint 3 had ik met Justus en dit ging gelukkig ook erg goed! Hij heeft mijn hele website bekeken, waaronder mijn code, de toegankelijkheid, de vormgeving en mijn songtekst-opdracht.
+
+Over mijn songtekst-opdracht was hij erg positief. Hij vond de uitwerking en de code erachter goed en was ook tevreden over het gebruik van animaties. Daarnaast vond hij mijn ontwerpproces sterk. Ik had meerdere schetsen gemaakt, verschillende ideeën uitgeprobeerd en uiteindelijk onderdelen uit verschillende schetsen gecombineerd tot één definitief ontwerp. Het enige verbeterpunt was dat mijn songtekst nog niet responsive is en daardoor op een telefoon niet goed wordt weergegeven.
+
+Ook over mijn Digital Garden was Justus erg enthousiast. Hij vond de layout heel leuk en origineel en was tevreden over de responsiveness en toegankelijkheid van mijn website. Het enige aandachtspunt was mijn beginscherm. Op de planken staan verschillende elementen waarop je kunt klikken, maar het mag duidelijker worden naar welke pagina's deze elementen leiden.
+
+Over het algemeen ben ik erg tevreden met de feedback die ik heb gekregen. Vooral de positieve opmerkingen over mijn creatieve proces, schetsen en animaties vond ik fijn om te horen, omdat ik daar veel tijd in heb gestoken. De komende tijd wil ik me daarom vooral richten op het responsive maken van mijn songtekst en het duidelijker maken van de navigatie op mijn beginscherm.
+
+</details>
+
 ### 21 okt - Sprint 3 Workshop 5
 
 <details>
@@ -66,6 +177,16 @@ Over het algemeen ben ik tevreden met het resultaat. Ik heb tijdens dit project 
 ![Webby formulier check](images/readme/webby_formulier.jpeg)
 
 </details>
+
+### 10 okt - Deepdive Animations
+
+Tijdens deze Deep Dive heb ik meer geleerd over het verschil tussen CSS-transitions en CSS-animations. Een transition gebruik je vooral om soepel tussen twee verschillende statussen te veranderen, terwijl je met animations complexere bewegingen kunt maken die bijvoorbeeld automatisch of herhaaldelijk worden afgespeeld.
+
+Ik heb geleerd hoe @keyframes werkt. Hiermee bepaal ik de belangrijkste stappen van een animatie met percentages, waarbij 0% het begin is en 100% het einde. Door extra keyframes toe te voegen kan ik uitgebreidere bewegingen maken. De browser berekent automatisch de tussenliggende stappen, wat ook wel tweening wordt genoemd.
+
+Daarnaast heb ik verschillende animation properties leren kennen, zoals animation-duration, animation-delay, animation-iteration-count en animation-direction. Ook heb ik geleerd hoe easing werkt. Met animation-timing-function en bijvoorbeeld cubic-bezier() kan ik bepalen hoe een animatie versnelt of vertraagt.
+
+Een ander belangrijk onderdeel was toegankelijkheid. Met prefers-reduced-motion kan ik rekening houden met bezoekers die minder beweging willen zien.
 
 ### 9 okt - Sprint 3 Workshop 3
 
@@ -183,6 +304,35 @@ Ik heb dit effect bewust subtiel gehouden, omdat de woorden nog wel herkenbaar m
 </details>
 
 </details>
+
+### 8 okt - Deepdive Variabele Fonts
+
+### Oefening 1
+
+Tijdens deze oefening heb ik gewerkt met de variabele lettertypen Dyna Puff, Honk en Rocher Color. Ik heb geleerd dat een variable font meerdere variaties binnen één fontbestand kan bevatten. Met @font-face kan ik deze lettertypen lokaal inladen en vervolgens met CSS aanpassen.
+
+Bij Dyna Puff heb ik geëxperimenteerd met font-weight en font-stretch, waarmee ik de dikte en breedte van letters kan veranderen. Bij Honk en Rocher Color heb ik gewerkt met font-variation-settings. Hiermee kan ik speciale eigenschappen van een lettertype aanpassen, zoals de vorm of schaduw van letters.
+
+Ook heb ik ontdekt dat sommige variabele lettertypen ingebouwde kleurenpaletten hebben. Met @font-palette-values en font-palette kan ik bepalen welk kleurenpalet wordt gebruikt. Ik vond het interessant dat ieder variable font andere mogelijkheden heeft, afhankelijk van welke eigenschappen het ondersteunt.
+![Deepdive Variable Fonts](images/readme/deepdive_variablefonts_1.png)
+
+### Oefening 2
+
+Tijdens deze oefening heb ik geleerd hoe ik variable fonts kan combineren met CSS-transitions om interactieve typografie te maken. Hiervoor heb ik gewerkt met de lettertypen Saira Stencil, Kablammo, Plastic en Cheeeze.
+
+Door gebruik te maken van :hover kan ik de eigenschappen van een lettertype veranderen wanneer iemand er met de muis overheen beweegt. Met transition kan ik ervoor zorgen dat deze veranderingen geleidelijk plaatsvinden in plaats van direct. Zo heb ik geëxperimenteerd met het veranderen van de dikte, breedte en vorm van letters.
+
+Daarnaast heb ik geleerd hoe transition-duration bepaalt hoelang een overgang duurt en hoe transition-timing-function invloed heeft op de snelheid en het verloop van de verandering. Wat ik vooral interessant vond, is dat tekst hierdoor niet alleen statisch hoeft te zijn, maar ook kan reageren op interacties van de gebruiker.
+![Deepdive Variable Fonts](images/readme/deepdive_variablefonts_2.png)
+
+### Oefening 3
+
+Tijdens deze oefening heb ik geleerd hoe ik staggered transitions kan maken met de lettertypen Noto Serif, Climate Crisis, Nabla en Poo. Bij een staggered transition veranderen niet alle letters tegelijkertijd, maar begint iedere letter net iets later met de overgang.
+
+Hiervoor stond iedere letter in een apart span-element, waardoor ik de letters individueel kon animeren. Het belangrijkste nieuwe onderdeel was het combineren van transition-delay met sibling-index(). Hiermee kan ik de positie van een element gebruiken om automatisch een vertraging te berekenen.
+
+Door bijvoorbeeld calc(sibling-index() \* .1s) te gebruiken, begint iedere volgende letter iets later met veranderen. Hierdoor ontstaat een soort golvend effect. Ik vond het interessant om te zien dat je met alleen een verschil in timing al een heel ander gevoel aan een animatie kunt geven.
+![Deepdive Variable Fonts](images/readme/deepdive_variablefonts_3.png)
 
 ### 7 okt - Sprint 3 Workshop 2
 
@@ -329,7 +479,7 @@ Voor mijn CSS ben ik vooral bezig geweest met het maken van de juiste indeling. 
 
 In het begin vond ik het lastig om de verschillende teksten precies op de juiste plek te positioneren. Daarom heb ik de bron [W3Schools – grid-template-areas](https://www.w3schools.com/cssref/pr_grid-template-areas.php) gebruikt. Hier heb ik geleerd dat je met puntjes (.) lege plekken kunt maken binnen je Grid. Hierdoor kon ik bepaalde Grid-cellen bewust leeg laten en de teksten op verschillende posities plaatsen. Dit maakte het een stuk makkelijker om de trapsgewijze opbouw uit mijn schets na te maken, zonder dat ik alle elementen afzonderlijk hoefde te verschuiven.
 
-Ook ben ik begonnen met het toepassen van verschillende lettergroottes en grijstinten om onderscheid te maken tussen de rustige en krachtige delen van het nummer. Daarnaast heb ik de titel verticaal geplaatst met writing-mode, zodat deze langs de linkerkant van mijn compositie kwam te staan. Hier heb ik ook een bron voor gebruikt: [W3Schools – grid-template-areas](https://www.w3schools.com/cssref/css3_pr_writing-mode.php) Ik heb dit gebruikt om mijn h1 verticaal te krijgen zonder dat de header uit de grid valt.
+Ook ben ik begonnen met het toepassen van verschillende lettergroottes en grijstinten om onderscheid te maken tussen de rustige en krachtige delen van het nummer. Daarnaast heb ik de titel verticaal geplaatst met writing-mode, zodat deze langs de linkerkant van mijn compositie kwam te staan. Hier heb ik de gebruik van de deepdive Interessante Layouts.
 
 Bij deze eerste opzet heb ik me vooral gericht op de structuur, plaatsing en typografische hiërarchie. Mijn ontwerp kwam op dit moment nog niet helemaal overeen met mijn schets. Zo had ik bijvoorbeeld de echo-effecten nog niet volledig uitgewerkt en had ik nog geen animaties toegevoegd. Dit was vooral de basis waarmee ik verder kon experimenteren.
 
@@ -436,6 +586,17 @@ Ook heb ik mijn Grid verder aangepast om de trapsgewijze opbouw beter terug te l
 
 </details>
 
+### 6 okt - Deepdive Interessantere Layouts
+
+[Deepdive in code pen](https://codepen.io/editor/Rianne-Maria/pen/01a17460-255e-742a-8ad8-48eb8ffddadb)
+![Resultat lyrics](images/readme/deepdive_interessantelayouts.png)
+
+Tijdens deze Deep Dive heb ik geëxperimenteerd met responsive typografie en creatievere layouts. Ik heb geleerd hoe ik tekst kan laten meeschalen met de schermbreedte door gebruik te maken van vw en vi. Met clamp() kan ik daarbij een minimale en maximale lettergrootte instellen, zodat teksten niet te klein of te groot worden.
+
+Daarnaast heb ik kennisgemaakt met container query units. Door container-type: inline-size te gebruiken, kan ik elementen laten reageren op de breedte van hun container. Met cqi kan ik bijvoorbeeld de lettergrootte aanpassen aan de beschikbare ruimte binnen een bepaald onderdeel van de pagina.
+
+Ook heb ik geëxperimenteerd met verticale tekst via writing-mode: sideways-lr. Met CSS Grid en media queries heb ik geleerd hoe ik zo'n verticale titel naast de content kan plaatsen op grotere schermen. Als laatste heb ik gewerkt met position: sticky, waarmee een element zichtbaar kan blijven tijdens het scrollen.
+
 ### 5 okt - Sprint 3 Workshop 1
 
 <details>
@@ -540,10 +701,52 @@ Met alleen verschillende lettergroottes kun je dus al een duidelijke hiërarchie
 
 <details>
 <summary><strong>Retrospect</strong></summary>
+Vandaag zijn we begonnen met de retrospect van sprint 2. We waren begonnen met het maken van kleine tekeningetjes uit simpele vormen. Zo heb ik wat vierkanten, cirkels en driehoeken getekend, en er een bijpassende tekening bij gemaakt waarin de vorm zit verwerkt.
+
+![Retrospect Sprint 2](images/readme/retrospect2_1.jpeg)
+
+### Piek & Dal tekening
+
+Tijdens sprint 2 heb ik een flinke piek en een diep dal ervaren. In de eerste week voelde ik me erg ziek en overwerkt, waardoor ik weinig aan school kon doen en achter begon te lopen. Dit was mijn dieptepunt. In de tweede week voelde ik me gelukkig wat beter en heb ik geprobeerd alles weer op te pakken. Ik heb veel aan mijn website gewerkt en mijn achterstand ingehaald.
+
+Bij georganiseerd en professioneel ontwerpen heb ik gewerkt aan het verbeteren van mijn HTML en CSS, het controleren van kleurcontrast, het toevoegen van light en dark mode en het maken van mijn cookiepop-up. Bij persoonlijk en geëngageerd ontwerpen heb ik vooral gefocust op toegankelijkheid, door onder andere screenreaders te testen en ARIA-labels en alt-teksten toe te voegen. Hiermee wilde ik ervoor zorgen dat mijn website voor zoveel mogelijk mensen toegankelijk is.
+
+Wat ik uit deze twee weken heb geleerd, is dat ik ondanks een moeilijke start toch veel vooruitgang kan boeken. Wel heb ik gemerkt hoe belangrijk het is om mijn rust te nemen en een goede balans te vinden tussen school en mijn eigen gezondheid.
+
+![Retrospect Sprint 2](images/readme/retrospect2_2.jpeg)
+
+### Metafoor tekening
+
+Voor mijn metafoortekening heb ik gekozen voor een bloem die langzaam weer opbloeit. De bloem staat symbool voor mijzelf en laat zien hoe ik me tijdens sprint 2 voelde en hoe ik me gedurende de twee weken heb ontwikkeld.
+
+In het begin hangt de bloem slap en heeft deze donkere, doffe kleuren. Dit staat voor mijn dieptepunt, waarin ik ziek was, weinig energie had en achterliep met mijn schoolopdrachten. De donkere regenwolk symboliseert de stress en hoge werkdruk die ik ervaarde. De wormen bij de wortels staan voor het ziek zijn en de achterstand die mij tegenhielden. De droge grond laat zien dat ik weinig energie had om verder te groeien.
+
+Bij de tweede bloem zie je een gieter met water. Het water staat voor de rust die ik heb genomen om te herstellen. De zon begint ook weer te schijnen, wat symboliseert dat mijn motivatie en energie langzaam terugkwamen.
+
+Bij de derde bloem zie je dat ik weer begin op te bloeien. Ik pakte mijn schoolwerk weer op en werkte aan het verbeteren van mijn website, zoals de toegankelijkheid en mijn cookiepop-up. De voedingsstoffen bij de wortels staan voor de nieuwe kennis die ik heb opgedaan door mijn schoolopdrachten. Hierdoor worden mijn wortels sterker en ontwikkel ik een betere basis om verder te groeien.
+
+De laatste bloem staat volledig in bloei. Dit symboliseert mijn hoogtepunt, waarin ik mijn achterstand had ingehaald en weer beter in mijn werkritme zat. De sterke wortels laten zien dat ik door alles wat ik heb geleerd sterker ben geworden en meer kennis heb opgebouwd. De zon schijnt weer volop, wat staat voor mijn teruggekeerde motivatie.
+
+Ook de kleuren veranderen gedurende de tekening. De bloem begint met donkere, sombere kleuren en wordt steeds lichter, feller en levendiger. Dit staat symbool voor mijn herstel: van ziek en uitgeput naar vrolijker, energieker en gemotiveerder.
+
+Met de titel 'Even uitgebloeid, niet uitgegroeid' wil ik laten zien dat ik tijdelijk een moeilijke periode had, maar dat mijn ontwikkeling niet stopte. Ondanks mijn dieptepunt heb ik nieuwe dingen geleerd, mijn werk weer opgepakt en ben ik uiteindelijk weer opgebloeid.
+
+![Retrospect Sprint 2](images/readme/retrospect2_3.jpeg)
+
 </details>
 
 <details>
 <summary><strong>Voortgangsgesprek</strong></summary>
+Mijn voortgangsgesprek van sprint 2 ging erg goed! Ik kreeg eigenlijk alleen maar positieve feedback en heb op alle onderdelen goed gescoord. Nicky was ook erg tevreden over de toegankelijkheid van mijn website en hoe ik dit had toegepast.
+
+Er waren wel een paar kleine verbeterpunten. Zo gebruik ik bovenaan mijn website een marquee-element, maar dit is een verouderd HTML-element dat niet meer gebruikt hoort te worden. Hiervoor moet ik dus nog een andere oplossing zoeken waarmee ik hetzelfde effect kan maken.
+
+Daarnaast kreeg ik van de student die bij het gesprek aanwezig was de tip om CSS nesting te gebruiken. Mijn CSS-bestand is inmiddels behoorlijk groot en niet alles is netjes genest. Door nesting toe te passen, kan ik mijn code overzichtelijker maken en duidelijker zien welke stijlen bij welke onderdelen horen. Ook moet ik oude en ongebruikte CSS verwijderen om mijn code verder op te schonen.
+
+Als laatste mag mijn cookiepop-up nog wat beter aansluiten bij de stijl en het thema van mijn website.
+
+Over het algemeen ben ik erg tevreden met hoe het gesprek is gegaan. Het was fijn om te horen dat mijn website al goed in elkaar zit en dat vooral de toegankelijkheid positief werd beoordeeld. De komende tijd wil ik me daarom vooral richten op het verbeteren en opschonen van mijn code en het verder afwerken van de kleine ontwerpdetails.
+
 </details>
 
 ### 30 sept - Werken aan toegankelijkheid
@@ -697,6 +900,10 @@ In mijn light mode kwam er wel een probleem naar voren. Het contrast tussen de b
 
 </details>
 
+### 28 sept - Deepdive - meer interactie met HTML en CSS
+
+![Deepdive meer interactie met HTML en CSS](images/readme/deepdive_meerinteractie.png)
+
 ### 27 sept - Workshop 4
 
 <details>
@@ -755,6 +962,16 @@ Voor de voorbereiding voor de bi weekly geek 2 heb ik de video en twee artikelen
 
 <details>
 <summary><strong>Deepdive Position & Dialogs</strong></summary>
+
+### Oefening 1
+
+[deepdive in code pen](https://codepen.io/editor/Rianne-Maria/pen/01a1744c-43f7-7753-a211-f96c6c5ee9aa)
+![Deepdive Positions](images/readme/deepdive_position_1.png)
+
+### Oefening 2
+
+[deepdive in code pen](https://codepen.io/editor/Rianne-Maria/pen/01a1744c-43f7-7753-a211-f96c6c5ee9aa)
+![Deepdive Positions](images/readme/deepdive_position_2.png)
 
 </details>
 
@@ -871,6 +1088,27 @@ De styling is nog niet helemaal af, ik moet nog de kleuren bepalen en de knoppen
 
 <details>
 <summary><strong>Deepdive Buttons + Dialogs</strong></summary>
+
+### Oefening 1
+
+[deepdive in codepen](https://codepen.io/editor/Rianne-Maria/pen/01a17407-9ec6-77db-8be6-714a51c37ed9)
+![Deepdive buttons + Dialogs](images/readme/deepdive_buttons_1.png)
+
+### Oefening 2
+
+[deepdive in codepen](https://codepen.io/editor/Rianne-Maria/pen/01a1741f-1c7a-7120-8cc3-be7471cddc89)
+![Deepdive buttons + Dialogs](images/readme/deepdive_buttons_2.png)
+
+### Oefening 3
+
+[text](https://codepen.io/editor/Rianne-Maria/pen/01a17438-7b66-76ca-b3b2-9aa8a0a90993)
+![Deepdive buttons + Dialogs](images/readme/deepdive_buttons_3.png)
+
+### Oefening 4
+
+[text](https://codepen.io/editor/Rianne-Maria/pen/01a17440-c083-734e-9c2d-c10ba6027ba3)
+![Deepdive buttons + Dialogs](images/readme/deepdive_buttons_4.png)
+
 </details>
 
 ### 23 sept - Workshop 2

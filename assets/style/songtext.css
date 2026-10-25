@@ -1,25 +1,22 @@
 /* =========================
    FONT
    ========================= */
-
 @font-face {
   font-family: "Seraphs";
-  src: url("font/SeraphsVF.woff2") format("woff2");
+  src: url("../type/SeraphsVF.woff2") format("woff2");
+  font-weight: 100 200;
   font-display: swap;
 }
 
-/* =========================
+/* ========================
    VARIABELEN
    ========================= */
-
 :root {
-  /* Kleuren */
   --kleur-zwart: #000000;
   --kleur-grijs: #777777;
   --kleur-lichtgrijs: #aaaaaa;
   --kleur-extra-licht: #cccccc;
 
-  /* Lettergroottes */
   --tekst-titel: clamp(3em, 5vw, 5em);
   --tekst-begin: 2.5em;
   --tekst-normaal: 1.5em;
@@ -28,63 +25,51 @@
   --tekst-baby: clamp(2em, 4vw, 3.5em);
   --tekst-moving: clamp(2.5em, 5vw, 4em);
 
-  /* Regelafstand */
   --regelafstand-klein: 1.1;
   --regelafstand-normaal: 1.3;
   --regelafstand-groot: 1.5;
 
-  /* Letterafstand */
   --letterafstand-moving: 0.03em;
 
-  /* Ruimtes */
   --ruimte-medium: 1.5em;
   --ruimte-groot: 2em;
   --ruimte-refrein: 5em;
 
-  /* Grid */
   --breedte-titelkolom: 5em;
   --ruimte-kolommen: 2em;
 
   /* Typografisch Grid
    Basis: 1.5em × 1.3 = 1.95em
-   Kolombreedte: 1.95em × 3 = 5.85em */
-
+  Kolombreedte: 1.95em × 3 = 5.85em */
   --grid-regelhoogte: calc(var(--tekst-normaal) * var(--regelafstand-normaal));
   --grid-kolombreedte: calc(var(--grid-regelhoogte) * 3);
 }
 
 /* =========================
    ALGEMEEN
-   ========================= */
-
+  ========================= */
 body {
   margin: 0;
   font-family: "Seraphs", serif;
   color: var(--kleur-zwart);
   background-color: white;
 }
-
 h1,
 p {
   margin: 0;
 }
 
 /* =========================
-   HOOFDGRID
+   HOOFDGRID*
    ========================= */
-
 .song {
   display: grid;
-
   grid-template-columns:
     var(--breedte-titelkolom)
     minmax(0, 1fr);
-
   grid-template-areas: "title lyrics";
-
   column-gap: var(--ruimte-kolommen);
   padding: 2em;
-
   main {
     grid-area: lyrics;
     min-width: 0;
@@ -92,30 +77,20 @@ p {
 }
 
 /* =========================
-   HEADER
-   ========================= */
-
-/* Voor dit gedeelte maak ik gebruik van de bron:
-   https://www.w3schools.com/cssref/css3_pr_writing-mode.php
-
-   Ik heb dit gebruikt om mijn h1 verticaal
-   te krijgen zonder dat de header uit
-   de Grid valt.
+  HEADER
+  ========================= */
+/* Voor dit gedeelte maak ik gebruik van de Deepdive Interessante layouts.
+  Ik heb dit gebruikt om mijn h1 verticaal te krijgen zonder dat de header uit  de Grid valt.
 */
-
 header {
   grid-area: title;
-
   display: flex;
   justify-content: flex-end;
   align-items: flex-start;
-
   min-width: 0;
-
   h1 {
     writing-mode: vertical-rl;
     transform: rotate(180deg);
-
     font-size: var(--tekst-titel);
     font-weight: bold;
     line-height: 1;
@@ -126,27 +101,20 @@ header {
 /* =========================
    SONGTEKST
    ========================= */
-
 .songtekst {
   width: min(100%, 50em);
 }
 
 /* =========================
-   FIRST SENTENCES
+   FIRST SENTENCES*
    ========================= */
-
 /* Voor dit gedeelte maak ik gebruik van de bron:
-   https://www.w3schools.com/cssref/pr_grid-template-areas.php
-
-   Om lege ruimtes te creëren in mijn
-   Grid-areas.
+  https://www.w3schools.com/cssref/pr_grid-template-areas.php
+  Om lege ruimtes te creëren in mijn Grid-areas.
 */
-
 .first-sentence {
   display: grid;
-
   grid-template-columns: repeat(7, var(--grid-kolombreedte));
-
   grid-template-areas:
     "echo echo . . . . ."
     "begin begin begin begin . . ."
@@ -155,119 +123,105 @@ header {
     ". . story story story . ."
     ". . . . ticket ticket ticket"
     ". . . . why why why";
-
   row-gap: var(--ruimte-medium);
   align-content: start;
 
-  /* I CANNOT VANISH */
-
   .first-sentence-echo {
     grid-area: echo;
-
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-
     .echo-main {
       color: var(--kleur-lichtgrijs);
       font-size: var(--tekst-normaal);
+      font-variation-settings:
+        "wght" 130,
+        "SRFS" 0;
       line-height: 1.1;
     }
-
     .echo-sub {
       color: var(--kleur-extra-licht);
       font-size: 1.2rem;
       line-height: 1.1;
       margin-top: -0.15rem;
-
       animation: echo 5s ease-in-out infinite;
     }
   }
 
-  /* YOU WILL NOT SCARE ME */
-
   .second-sentence {
     grid-area: begin;
-
     display: flex;
     flex-direction: column;
     align-items: center;
-
     .second-sentence-main,
     .second-sentence-echo-1,
     .second-sentence-echo-2 {
       position: relative;
       white-space: nowrap;
     }
-
     .second-sentence-main {
       color: var(--kleur-zwart);
       font-size: var(--tekst-begin);
-      font-weight: bold;
+      font-variation-settings:
+        "wght" 200,
+        "SRFS" 0;
       line-height: 1;
       z-index: 3;
     }
-
     .second-sentence-echo-1 {
       color: #8f8f8f;
+      font-variation-settings:
+        "wght" 140,
+        "SRFS" 0;
       font-size: 2.25em;
       line-height: 1;
       margin-top: -0.55rem;
       z-index: 2;
-
       animation: echo-een 3s ease-in-out infinite;
     }
-
     .second-sentence-echo-2 {
       color: var(--kleur-extra-licht);
       font-size: 2rem;
+      font-variation-settings:
+        "wght" 100,
+        "SRFS" 0;
       line-height: 1;
       margin-top: -0.65rem;
       z-index: 1;
-
       animation: echo-twee 3s ease-in-out infinite;
     }
   }
 
-  /* TRY TO GET THROUGH IT */
-
   .couplet-1 {
     grid-area: try;
-
     color: var(--kleur-zwart);
     font-size: var(--tekst-normaal);
     line-height: var(--regelafstand-normaal);
   }
 
-  /* YOU WERE NOT THINKING */
-
   .couplet-2 {
     grid-area: thinking;
-
     color: var(--kleur-grijs);
     font-size: var(--tekst-klein);
+    font-variation-settings:
+      "wght" 130,
+      "SRFS" 3;
     line-height: var(--regelafstand-normaal);
     letter-spacing: 0.5em;
     white-space: nowrap;
   }
-
   .blur {
     filter: blur(1px);
   }
 
-  /* THEY BE LOVIN' SOMEONE */
-
   .couplet-3 {
     grid-area: story;
-
     color: var(--kleur-grijs);
     font-size: var(--tekst-klein);
     line-height: var(--regelafstand-normaal);
     letter-spacing: 0.5em;
     white-space: nowrap;
   }
-
-  /* TAKE THE NEXT TICKET */
 
   .couplet-4 {
     grid-area: ticket;
@@ -278,22 +232,29 @@ header {
 
     .stretch {
       display: inline-block;
-
       transform-origin: left center;
-      transition: scale 0.4s ease-in-out;
+
+      scale: 1 1;
+      font-variation-settings:
+        "wght" 130,
+        "SRFS" 0;
+
+      transition:
+        scale 0.35s ease-out,
+        font-variation-settings 0.35s ease-out;
 
       &:hover,
       &:focus-visible {
         scale: 2 1;
+        font-variation-settings:
+          "wght" 180,
+          "SRFS" 5;
       }
     }
   }
 
-  /* WHY WOULD I DO IT */
-
   .couplet-5 {
     grid-area: why;
-
     color: var(--kleur-zwart);
     font-size: var(--tekst-klein);
     line-height: var(--regelafstand-normaal);
@@ -301,71 +262,54 @@ header {
 }
 
 /* ===========================
-   ANIMATIES - FIRST SENTENCES
+  ANIMATIES - FIRST SENTENCES
    =========================== */
-
 /* Voor het volgende gedeelte heb ik
    gebruikgemaakt van de bron:
-
    https://dev.to/mechcloud_academy/a-deep-dive-into-css-animations-with-keyframes-7n6
-
    Hierdoor kon ik de animaties op
    bepaalde momenten laten verschijnen
    en verdwijnen.
 */
 
-/* I CANNOT VANISH */
-
 @keyframes echo {
   0% {
     opacity: 0;
   }
-
   50% {
     opacity: 1;
   }
-
   100% {
     opacity: 0;
   }
 }
-
-/* EERSTE GRIJZE ECHO */
 
 @keyframes echo-een {
   0% {
     opacity: 0;
   }
-
   20% {
     opacity: 1;
   }
-
   60% {
     opacity: 1;
   }
-
   100% {
     opacity: 0;
   }
 }
-
-/* TWEEDE LICHTGRIJZE ECHO */
 
 @keyframes echo-twee {
   0%,
   20% {
     opacity: 0;
   }
-
   40% {
     opacity: 1;
   }
-
   70% {
     opacity: 1;
   }
-
   100% {
     opacity: 0;
   }
@@ -375,61 +319,46 @@ header {
    GRID - OH-TEKSTEN &
    COUNTERMELODIES
    ========================= */
-
 .chorus-layout {
   display: grid;
-
   /* Dezelfde kolombreedte als de intro */
   grid-template-columns: repeat(7, var(--grid-kolombreedte));
-
   margin-top: var(--ruimte-groot);
   align-items: center;
 }
 
 /* =========================
-   OH-TEKSTEN
-   ========================= */
-
+   OH-TEKSTEN*
+  ========================= */
 .oh-lines {
   grid-column: 2 / 5;
   grid-row: 1;
-
   align-self: center;
   justify-self: center;
-
   display: grid;
   gap: 1.25rem;
-
   min-width: 0;
 }
-
 .oh-line {
   display: grid;
   grid-template-rows: auto auto;
   justify-items: center;
-
   .soft-bg,
   .soft-fg {
     white-space: nowrap;
   }
-
   .soft-bg {
     grid-row: 1;
-
     color: var(--kleur-extra-licht);
     font-size: 1.5rem;
     line-height: 1;
-
     animation: maybe-achtergrond 5s ease-in-out infinite;
   }
-
   .soft-fg {
     grid-row: 2;
-
     color: var(--kleur-zwart);
     font-size: 0.75rem;
     line-height: 1.1;
-
     animation: maybe-voorgrond 5s ease-in-out infinite;
   }
 }
@@ -437,39 +366,31 @@ header {
 /* =========================
    ANIMATIES - OH-TEKSTEN
    ========================= */
-
 @keyframes maybe-achtergrond {
   0% {
     opacity: 0;
   }
-
   20% {
     opacity: 1;
   }
-
   85% {
     opacity: 1;
   }
-
   100% {
     opacity: 0;
   }
 }
-
 @keyframes maybe-voorgrond {
   0%,
   20% {
     opacity: 0;
   }
-
   40% {
     opacity: 1;
   }
-
   85% {
     opacity: 1;
   }
-
   100% {
     opacity: 0;
   }
@@ -478,65 +399,51 @@ header {
 /* =========================
    COUNTERMELODIES
    ========================= */
-
 .countermelodies {
   grid-column: 5 / -1;
   grid-row: 1;
-
   display: grid;
   row-gap: var(--ruimte-refrein);
-
   min-width: 0;
 }
 
 /* =========================
    ACHTERGROND + VOORGROND
    ========================= */
-
 .countermelody {
   display: grid;
   grid-template-areas: "overlap";
-
   align-items: center;
   min-height: 14em;
-
   .background {
     grid-area: overlap;
-
     color: var(--kleur-extra-licht);
     font-size: var(--tekst-achtergrond);
     line-height: var(--regelafstand-groot);
-
     white-space: nowrap;
   }
-
   .foreground {
     grid-area: overlap;
     z-index: 1;
-
     display: grid;
     justify-items: start;
     align-content: center;
-
     color: var(--kleur-zwart);
     text-align: left;
 
-    /* BABY NOW I'M READY */
-
     .baby {
       font-size: var(--tekst-baby);
+      font-variation-settings:
+        "wght" 200,
+        "SRFS" 0;
       line-height: var(--regelafstand-klein);
       white-space: nowrap;
-
       animation: baby-reveal 5s linear infinite;
-
       span {
         font-size: 0.55em;
         vertical-align: 0.25em;
       }
     }
-
-    /* MOVING ON */
 
     .moving {
       font-size: var(--tekst-moving);
@@ -544,7 +451,6 @@ header {
       letter-spacing: var(--letterafstand-moving);
       line-height: var(--regelafstand-klein);
       white-space: nowrap;
-
       animation: moving-on 5s ease-out infinite;
     }
   }
@@ -553,35 +459,26 @@ header {
 /* =========================
    ANIMATIES - COUNTERMELODIES
    ========================= */
-
 /* Voor het volgende gedeelte maak ik
    gebruik van de bronnen:
-
    https://codepen.io/AdePhil/pen/WNvzYvR
    https://codepen.io/nsmeds/pen/PNxgRL
-
    Daarnaast heb ik ChatGPT gebruikt
    om de werking van de animaties
    beter te begrijpen.
 */
-
 /* BABY VERSCHIJNT VAN LINKS NAAR RECHTS */
-
 @keyframes baby-reveal {
   0% {
     clip-path: inset(0 100% 0 0);
   }
-
   40% {
     clip-path: inset(0 0 0 0);
   }
-
   100% {
     clip-path: inset(0 0 0 0);
   }
 }
-
-/* MOVING ON SCHUIFT NAAR RECHTS */
 
 @keyframes moving-on {
   0%,
@@ -589,17 +486,14 @@ header {
     opacity: 0;
     translate: -1.5em 0;
   }
-
   70% {
     opacity: 1;
     translate: 0 0;
   }
-
   90% {
     opacity: 1;
     translate: 0 0;
   }
-
   100% {
     opacity: 0;
     translate: 0 0;
@@ -607,9 +501,8 @@ header {
 }
 
 /* =========================
-   FOOTER
-   ========================= */
-
+  FOOTER
+  ========================= */
 footer {
   padding: var(--ruimte-groot);
   text-align: center;
