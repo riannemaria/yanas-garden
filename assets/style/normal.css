@@ -533,7 +533,8 @@ main {
 .artists,
 .artist,
 .concerts,
-.piano {
+.piano,
+.sources {
   grid-area: midden;
 }
 
@@ -2966,6 +2967,108 @@ main {
         display: block;
         width: 100%;
         height: auto;
+      }
+    }
+  }
+}
+
+/* =========================
+   IMAGE CREDITS / SOURCES
+   ========================= */
+
+.sources {
+  min-width: 0;
+  min-height: 0;
+
+  height: 100%;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  padding: 1.5em;
+
+  /* Titel */
+  h2 {
+    text-align: center;
+
+    margin-top: 0;
+    margin-bottom: 0.5em;
+  }
+
+  /* Introductietekst */
+  .sources-intro {
+    max-width: 40em;
+
+    margin: 0 auto 2em;
+
+    text-align: center;
+  }
+
+  /* Grid met bronnen */
+  .sources-grid {
+    display: grid;
+
+    /* Mobiel: 2 kolommen */
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 1em;
+
+    align-items: start;
+
+    /* Laptop en desktop: 3 kolommen */
+    @media (min-width: 55em) {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+
+      gap: 1.5em;
+    }
+  }
+
+  /* Individuele bronbox */
+  .sources-box {
+    min-width: 0;
+
+    padding: 1em;
+
+    /* Dezelfde border als de rest van de website */
+    border: 0.15em solid var(--kleur-rand);
+    box-shadow: inset 0 0 0 0.2em var(--kleur-menu-binnenrand);
+
+    h3 {
+      margin-top: 0;
+      margin-bottom: 1em;
+    }
+
+    ul {
+      margin: 0;
+
+      padding-left: 1.2em;
+
+      list-style: disc;
+    }
+
+    li {
+      margin-bottom: 0.8em;
+
+      overflow-wrap: anywhere;
+    }
+
+    li:last-child {
+      margin-bottom: 0;
+    }
+
+    a {
+      color: var(--kleur-tekst);
+
+      text-decoration: underline;
+      text-underline-offset: 0.2em;
+
+      &:hover {
+        color: var(--kleur-hover-tekst);
+      }
+
+      &:focus-visible {
+        outline: 0.15em solid var(--kleur-rand);
+        outline-offset: 0.2em;
       }
     }
   }
