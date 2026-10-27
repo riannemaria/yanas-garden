@@ -4,6 +4,207 @@ Het staat model voor digitale tuintjes welke bij 'Het web is voor iedereen' door
 
 ## Learning Log
 
+### 27 okt - Aller laatste verwerkingen
+
+Vandaag ben ik mijn hele website nog een keer langsgegaan om de laatste verbeteringen door te voeren. Hierbij heb ik vooral gekeken naar de consistentie tussen mijn pagina's, de leesbaarheid van mijn teksten en de ruimte tussen verschillende elementen. Ik merkte dat sommige onderdelen op verschillende pagina's net anders waren vormgegeven, dus wilde ik deze laatste details nog verbeteren.
+
+<details>
+<summary><strong>Algemene padding toevoegen</strong></summary>
+Tijdens het controleren van mijn website merkte ik dat op verschillende pagina's de teksten, afbeeldingen en kaders erg dicht tegen de zijkanten van het middelste gedeelte stonden. Op sommige pagina's had ik dit al opgelost met extra padding, maar op andere pagina's ontbrak deze ruimte nog.
+
+Toen ik mijn CSS ging bekijken, kwam ik erachter dat ik geen algemene padding had ingesteld voor het middelste gedeelte van mijn website. In plaats daarvan had ik op verschillende pagina's afzonderlijk padding toegevoegd, waardoor er verschillen waren ontstaan.
+
+Daarom heb ik besloten om één algemene padding toe te voegen die op alle pagina's wordt toegepast. Vervolgens heb ik de overbodige padding uit de afzonderlijke paginastijlen verwijderd, zodat deze elkaar niet meer beïnvloeden.
+
+Hierdoor hebben alle pagina's nu dezelfde ruimte aan de zijkanten en staan de elementen niet meer zo dicht tegen de rand. Dit zorgt voor meer rust in de layout en een consistentere uitstraling.
+![padding toevoegen](images/readme/padding_aanpassen.png)
+
+</details>
+
+<details>
+<summary><strong>Responsive tekst met clamp()</strong></summary>
+Daarnaast merkte ik dat sommige teksten op mobiele schermen niet goed werden weergegeven. Vooral bij lijsten binnen kleinere kaders ontstond dit probleem. Omdat de tekst relatief groot was en er weinig ruimte beschikbaar was, kwamen er soms maar één of twee woorden op een regel te staan. Hierdoor werden de lijsten onnodig lang en minder prettig om te lezen.
+
+Om dit te verbeteren, heb ik clamp() toegevoegd aan mijn algemene tekststijlen, waaronder de paragrafen (p) en lijsten (ul en li).
+
+Met clamp() kan ik een minimale, flexibele en maximale lettergrootte instellen. Hierdoor worden de teksten op kleinere schermen iets kleiner, terwijl ze op grotere schermen weer meer ruimte krijgen. Op deze manier passen er meer woorden op één regel en blijft de tekst beter leesbaar.
+
+Ik heb deze aanpassing op meerdere pagina's toegepast, zodat de tekstgrootte zich overal op dezelfde manier aanpast aan het schermformaat.
+![padding toevoegen](images/readme/clamp_toevoegen.png)
+
+</details>
+
+<details>
+<summary><strong>Margins van paginatitels gelijkmaken</strong></summary>
+Als laatste heb ik gekeken naar de positionering van mijn paginatitels. Tijdens het navigeren tussen mijn pagina's merkte ik dat sommige titels (h2) iets hoger of lager stonden dan andere. Dit vond ik storend, omdat ik juist wilde dat alle pagina's dezelfde opbouw hadden.
+
+Toen ik mijn CSS controleerde, zag ik dat ik op sommige pagina's extra margin had toegevoegd aan de titels, terwijl dit op andere pagina's niet het geval was. Hierdoor ontstonden kleine verschillen in de verticale positionering.
+
+Daarom ben ik alle paginastijlen langsgegaan en heb ik de afwijkende margins bij de titels verwijderd. Hierdoor worden de titels weer op dezelfde manier gepositioneerd en beginnen ze op een consistente hoogte.
+
+Hoewel dit een kleine aanpassing lijkt, vind ik het belangrijk dat de verschillende pagina's visueel goed op elkaar aansluiten. Door deze verschillen weg te halen, voelt mijn website meer als één geheel.
+![padding toevoegen](images/readme/margin_aanpassen.png)
+
+</details>
+
+<details>
+<summary><strong>Responsiveness Songtext Update</strong></summary>
+Een verbeterpunt dat ik helaas nog niet heb kunnen uitvoeren, is het responsive maken van mijn songtekst. Tijdens mijn laatste voortgangsgesprek met Justus kreeg ik namelijk de feedback dat mijn songtekst op desktop goed werkte, maar op kleinere schermen nog niet goed werd weergegeven. Dit wilde ik heel graag verbeteren voordat ik mijn project zou afronden.
+
+Helaas heb ik de vrijdag voor de expo een erg heftige paniekaanval gehad, waardoor ik de dagen daarna lichamelijk erg uitgeput was. Wanneer ik probeerde verder te werken, merkte ik dat mijn hartslag snel omhoogging en mijn lichaam aangaf dat het te veel was. Hierdoor heb ik bewust een stap terug moeten doen en mijn gezondheid voorrang moeten geven.
+
+Ik vind het jammer dat ik dit onderdeel niet meer heb kunnen aanpassen, omdat ik mijn songtekst graag helemaal responsive had willen opleveren. Tegelijkertijd heb ik geleerd dat het ook belangrijk is om mijn eigen grenzen te herkennen en te accepteren dat niet alles altijd volgens planning kan verlopen. De responsiveness van mijn songtekst blijft daarom een verbeterpunt dat ik graag op een later moment alsnog wil oppakken.
+
+</details>
+
+### 26 okt - Expo dag
+
+<details>
+<summary><strong>Feedback met stickers</strong></summary>
+
+![Sticker Feedback](images/readme/sticker_feedback.jpeg)
+
+</details>
+
+<details>
+<summary><strong>Reflectie – Expo Digital Garden</strong></summary>
+
+Afgelopen maandag hebben we een expo gehad waarbij we elkaars Digital Gardens konden bekijken en beoordelen. Tijdens deze expo kregen we de mogelijkheid om te zien wat andere studenten hadden gemaakt en feedback geven op elkaars werk. Dit deden we met verschillende kleuren stickers. De blauwe stickers stonden voor toegankelijkheid en privacy, de rode stickers voor ontwerpvaardigheden en de groene stickers voor technische vaardigheden.
+
+Ik vond het erg leuk om te zien hoe iedereen de opdracht op zijn eigen manier had gemaakt en hoe je ieders persoonlijkheid heel goed kon zien in de websites. Daarnaast was ik ook erg benieuwd hoe anderen mijn website zouden ervaren, vooral omdat ik er de afgelopen weken veel tijd en aandacht aan heb besteed.
+
+### Ontvangen feedback
+
+Toen ik mijn feedback ging bekijken, viel het me op dat ik op alle drie de onderdelen positieve reacties had gekregen. Vooral op het gebied van technische vaardigheden en ontwerpvaardigheden kreeg ik veel complimenten.
+
+Bij de blauwe stickers werd onder andere mijn cookiepop-up meerdere keren benoemd. Studenten vonden deze duidelijk, gebruiksvriendelijk en leuk vormgegeven. Ook werd er aangegeven dat de focus goed zichtbaar was en dat mijn navigatie en responsiveness goed werkten. Dit vond ik fijn om terug te krijgen, omdat ik tijdens deze sprint bewust veel aandacht heb besteed aan de toegankelijkheid van mijn website. Ik heb bijvoorbeeld gewerkt aan mijn cookiepop-up, focus states en het gebruik van semantische HTML. Het was daarom fijn om te zien dat deze keuzes ook daadwerkelijk werden opgemerkt door anderen.
+
+Bij de rode stickers kreeg ik vooral complimenten over de uitstraling en vormgeving van mijn website. Studenten vonden dat mijn website veel persoonlijkheid had, dat er veel aandacht was besteed aan de details en dat de verschillende pagina's goed bij elkaar pasten. Ook werden mijn animaties en de sfeer van mijn website meerdere keren benoemd. Dit vond ik misschien wel een van de leukste onderdelen om terug te krijgen, omdat ik vanaf het begin een duidelijk beeld had van de sfeer die ik wilde overbrengen. Mijn doel was om een persoonlijke, gezellige en nostalgische omgeving te creëren die echt bij mij en mijn liefde voor muziek past. Uit de feedback blijkt dat deze sfeer ook bij anderen overkomt.
+
+Bij de groene stickers kreeg ik veel positieve reacties op mijn technische uitwerking. Vooral mijn animaties, hoverinteracties en de hoeveelheid interactieve elementen vielen op. Een student gaf zelfs aan dat de animaties supergoed waren en heel leuk waren om te onderzoeken. Dit vond ik erg motiverend, omdat ik tijdens het bouwen veel heb geëxperimenteerd met CSS en verschillende manieren om mijn website interactiever te maken. Sommige onderdelen kostten best veel tijd om goed werkend te krijgen, waardoor het extra leuk was om te zien dat anderen deze details ook waardeerden.
+
+### Wat neem ik mee uit deze expo?
+
+Wat mij vooral is bijgebleven, is dat de feedback goed aansluit bij de doelen die ik vooraf voor mijn website had opgesteld. Ik wilde niet alleen een website maken die er leuk uitziet, maar ook eentje die persoonlijk, interactief, toegankelijk en technisch goed uitgewerkt is. De reacties laten zien dat ik op deze gebieden al veel heb bereikt.
+
+Tegelijkertijd realiseer ik me dat positieve feedback niet automatisch betekent dat alles volledig af is. Hoewel mijn cookiepop-up en toegankelijkheid positief werden beoordeeld, wil ik kritisch blijven kijken of alle onderdelen ook daadwerkelijk goed werken voor verschillende gebruikers. Hetzelfde geldt voor mijn animaties: ze voegen veel toe aan de beleving, maar mogen de gebruiksvriendelijkheid niet in de weg zitten.
+
+Wat ik ook meeneem, is hoe waardevol het is om anderen mijn werk te laten bekijken. Doordat ik zelf al zo lang met mijn website bezig ben, raak ik gewend aan bepaalde ontwerpkeuzes en interacties. Tijdens de expo kon ik zien welke onderdelen anderen direct opvielen en hoe zij mijn website ervaarden. Hierdoor kreeg ik een beter beeld van hoe mijn ontwerp overkomt op iemand die het voor het eerst ziet.
+
+### Conclusie
+
+Ik kijk met een positief gevoel terug op de expo. Het was leuk en leerzaam om het werk van anderen te bekijken, maar vooral ook om te ontdekken hoe mijn eigen Digital Garden werd ontvangen. De feedback heeft mij meer vertrouwen gegeven in mijn ontwerpkeuzes en technische vaardigheden. Vooral de complimenten over mijn persoonlijke stijl, animaties en toegankelijkheid laten zien dat de tijd en moeite die ik hierin heb gestoken ook terug te zien zijn in het eindresultaat.
+
+Voor de komende periode wil ik deze feedback meenemen door mijn website verder te verfijnen en kritisch te blijven kijken naar de balans tussen vormgeving, interactie en gebruiksvriendelijkheid. Ik ben trots op wat ik tot nu toe heb gemaakt en zie deze expo als een mooie bevestiging van mijn ontwikkeling tijdens de afgelopen sprints.
+
+</details>
+
+<details>
+<summary><strong>Webby Formulier Check</strong></summary>
+Tijdens het invullen van dit formulier merkte ik dat mijn website eigenlijk al goed aan de verschillende criteria voldeed. Dit komt doordat ik tijdens mijn ontwerpproces steeds rekening heb gehouden met deze richtlijnen. Ik heb bijvoorbeeld bewust gewerkt aan responsiveness, toegankelijkheid, interactie en visuele consistentie. Hierdoor kwamen er tijdens het invullen geen grote verbeterpunten meer naar voren en was ik tevreden met mijn eindresultaat.
+![Webby formulier](images/readme/webby_formulier_2.jpeg)
+
+</details>
+
+<details>
+<summary><strong>Learning Log Formulier Check</strong></summary>
+Ook mijn Learning Log voldeed aan de meeste criteria. Ik heb mijn proces gedurende de sprints steeds bijgehouden en ervoor gezorgd dat mijn schetsen, onderzoeken, experimenten, feedback en reflecties duidelijk terug te vinden zijn. Daarnaast heb ik veel aandacht besteed aan de structuur en leesbaarheid van mijn Learning Log. Hierdoor hoefde ik op het laatste moment niet alles nog bij elkaar te zoeken.
+![Learning log formulier](images/readme/learninglog_formulier.jpeg)
+
+</details>
+
+### 25 okt - Websitepagina Credits
+
+<details>
+<summary><strong>Font variable toevoegen</strong></summary>
+Voor mijn Sources-pagina wilde ik een plek creëren waar bezoekers alle bronnen kunnen terugvinden van de afbeeldingen die ik op mijn Digital Garden heb gebruikt. Omdat ik op verschillende pagina's afbeeldingen van het internet gebruik, vond ik het belangrijk om de oorspronkelijke makers te vermelden en duidelijk te laten zien waar mijn afbeeldingen vandaan komen.
+
+Daarnaast wilde ik ervoor zorgen dat bezoekers gemakkelijk konden terugvinden welke afbeeldingen bij welke pagina horen. Daarom besloot ik om de bronnen per pagina te organiseren, bijvoorbeeld Homepage, Artists I Love, Moods en Song of the Week.
+
+### Eerste schetsen en ontwerpidee
+
+Voordat ik begon met coderen, had ik het idee om alle bronnen in aparte kaders te plaatsen. Ieder kader zou een eigen titel krijgen met de naam van de bijbehorende pagina en daaronder een lijst met links naar de gebruikte afbeeldingen.
+
+Op deze manier wilde ik de informatie overzichtelijk organiseren en ervoor zorgen dat bezoekers niet door één lange lijst met bronnen hoefden te zoeken.
+![schetsen credit pagina](images/readme/schetsen_credits.png)
+
+### Eerste uitwerking in HTML en CSS
+
+De volgende dag had ik een expo waarbij andere studenten mijn website gingen bekijken en beoordelen. Omdat ik mijn bronnen vóór deze expo nog wilde toevoegen, besloot ik om mijn eerste ontwerp direct uit te werken.
+
+Ik heb alle afbeeldingsbronnen verzameld en deze per pagina onderverdeeld in verschillende kaders. Binnen ieder kader heb ik de bronnen als links toegevoegd, zodat bezoekers direct naar de oorspronkelijke afbeelding of website kunnen gaan.
+
+Voor de indeling heb ik gebruikgemaakt van CSS Grid, zodat ik de verschillende kaders naast elkaar kon plaatsen. Hierdoor kreeg iedere pagina een eigen vak en kon ik de bronnen overzichtelijk groeperen.
+
+Hoewel deze eerste versie functioneel was en alle bronnen erin stonden, was ik nog niet helemaal tevreden over de uitstraling. Omdat sommige pagina's meer afbeeldingen bevatten dan andere, waren niet alle kaders even hoog. Hierdoor ontstond er een ongelijke indeling en vond ik dat de pagina er wat rommelig uitzag.
+![credit pagina](images/readme/website_credits.png)
+
+### Opnieuw schetsen en experimenteren
+
+Na de expo besloot ik om nog een keer naar mijn Sources-pagina te kijken. De pagina werkte op zich goed, maar ik vond dat de vormgeving beter kon aansluiten bij de rest van mijn website.
+
+Daarom ben ik opnieuw gaan schetsen om te onderzoeken hoe ik de bronnen op een andere manier kon presenteren. Ik wilde vooral een oplossing vinden waarbij de hoeveelheid bronnen per pagina minder invloed zou hebben op de indeling.
+
+Tijdens het schetsen kwam ik op het idee om uitklapbare menu's te gebruiken. In plaats van alle bronnen direct zichtbaar te maken, wilde ik alleen de namen van de pagina's laten zien. Wanneer een bezoeker op een naam klikt, klapt het menu open en worden de bijbehorende bronnen zichtbaar.
+
+Dit leek mij een betere oplossing, omdat de pagina hierdoor rustiger en overzichtelijker wordt. Bezoekers hoeven niet meteen alle bronnen te zien, maar kunnen zelf kiezen welke categorie ze willen openen. Hierdoor krijgen ze meer controle over welke informatie ze bekijken.
+
+Ik heb dit idee verder uitgewerkt in twee schetsen: één waarin alle categorieën ingeklapt zijn en één waarin een categorie is geopend.
+![schetsen credit pagina](images/readme/schetsen_credits_2.png)
+
+### Tweede uitwerking met HTML en CSS
+
+Na het maken van mijn nieuwe schetsen ben ik mijn HTML en CSS gaan aanpassen. Voor de uitklapbare menu's heb ik gebruikgemaakt van de HTML-elementen <details> en <summary>. Hiermee kunnen bezoekers de bronnen per categorie open- en dichtklappen, zonder dat ik JavaScript hoef te gebruiken.
+
+Om te begrijpen hoe deze elementen werken en hoe ik ze kon vormgeven, heb ik gebruikgemaakt van de documentatie van MDN Web Docs over <details>, <summary> en de CSS-selector ::after.
+
+bronnen die ik heb gebruikt:
+[text](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/details)
+[text](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/summary)
+[text](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/::after)
+
+### Tweede uitwerking met HTML en CSS
+
+Voor de responsive layout heb ik gebruikgemaakt van CSS Grid. Op mobiele schermen heb ik gekozen voor één kolom, zodat de menu's voldoende ruimte krijgen en overzichtelijk blijven. Op desktop heb ik twee kolommen gebruikt, omdat de knoppen anders onnodig breed werden. Hierdoor wordt de beschikbare ruimte beter benut en ziet de pagina er rustiger en evenwichtiger uit.
+![credit pagina](images/readme/website_credits_2.png)
+
+### Bronnen openen in een nieuw tabblad
+
+Naast de vormgeving heb ik ook nagedacht over wat er gebeurt wanneer bezoekers op een bron klikken.
+
+Ik heb ervoor gekozen om de links naar de oorspronkelijke afbeeldingen in een nieuw tabblad te laten openen met target="\_blank". Hierdoor blijft mijn Digital Garden geopend wanneer iemand een bron wil bekijken.
+
+Dit vond ik een belangrijke keuze, omdat bezoekers op deze manier gemakkelijk de oorspronkelijke afbeelding kunnen bekijken zonder hun plek op mijn website kwijt te raken. Ze kunnen eenvoudig teruggaan naar mijn Sources-pagina en eventueel meerdere bronnen bekijken.
+
+Ook heb ik rel="noopener noreferrer" toegevoegd aan de externe links. Hiermee voorkom ik dat de geopende pagina toegang krijgt tot het oorspronkelijke tabblad via window.opener. Daarnaast wordt de verwijzende pagina-informatie niet meegestuurd.
+
+Zo wilde ik het bekijken van bronnen gemakkelijker en veiliger maken. Omdat een nieuw tabblad onverwacht kan zijn, is het wel belangrijk dat bezoekers kunnen herkennen dat een externe link op deze manier opent.
+
+bronnen die ik heb gebruikt:
+https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/a
+https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/rel/noopener
+https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/rel/noreferrer
+
+</details>
+
+### 25 okt - Homepage verbeteren
+
+<details>
+<summary><strong>Homepage verbeteren</strong></summary>
+Vlak voor de expo heb ik nog een aanpassing gedaan aan mijn homepage. Tijdens mijn laatste voortgangsgesprek met Justus kreeg ik namelijk de feedback dat het niet altijd duidelijk was waar de verschillende voorwerpen op mijn planken naartoe leidden wanneer je erop klikte.
+
+Op mijn homepage had ik eerst vooral willekeurige afbeeldingen en albums geplaatst die goed bij de uitstraling van mijn website pasten. Alleen hadden deze niet altijd een duidelijke connectie met de pagina waarnaar ze verwezen. Daarom besloot ik om de voorwerpen beter aan te laten sluiten bij de inhoud van de bijbehorende pagina's.
+
+Zo heb ik bijvoorbeeld concerttickets toegevoegd voor mijn Concert Experiences-pagina, bladmuziek voor mijn Piano-pagina en een iPod voor mijn How I Listened-pagina. Hierdoor krijgen bezoekers al aan de hand van de afbeeldingen een beter idee van wat ze kunnen verwachten wanneer ze ergens op klikken. Tegelijkertijd heb ik geprobeerd om de cozy en nostalgische uitstraling van mijn homepage te behouden.
+![Nieuwe Afbeeldingen](images/readme/nieuwe_homeafbeeldingen.png)
+
+Daarnaast heb ik een hover-effect toegevoegd aan de klikbare voorwerpen. Wanneer een bezoeker met de muis over een voorwerp beweegt, verschijnt er een klein label met de naam van de pagina waar het voorwerp naartoe leidt. Hiermee wilde ik extra duidelijkheid geven, zodat bezoekers niet hoeven te gokken waar ze terechtkomen.
+![Hover](images/readme/hover_home.png)
+
+Door deze aanpassingen heb ik geprobeerd de navigatie op mijn homepage intuïtiever te maken. Ik heb geleerd dat afbeeldingen niet alleen decoratief moeten zijn, maar ook kunnen helpen om de functie van een interactief element duidelijk te maken. Zo heb ik de feedback van Justus kunnen verwerken en is mijn homepage niet alleen visueel aantrekkelijk, maar ook begrijpelijker geworden voor bezoekers.
+
+</details>
+
 ### 23 okt - Puntjes op de i zetten
 
 <details>
@@ -144,10 +345,93 @@ Over het algemeen ben ik tevreden met de feedback, omdat de meeste onderdelen al
 
 </details>
 
-### 20 okt - Huiswerk voor Workshop 5
+### 19 okt - Websitepagina Concerten
 
 <details>
-<summary><strong>Voorbereiding Bi-Weekly Geek 3</strong></summary>
+<summary><strong>Ontwerpprocess</strong></summary>
+Voor mijn My Concert Experiences-pagina wilde ik een plek creëren waar ik alle concerten die ik heb bezocht op een leuke en interactieve manier kon laten zien. Omdat concerten voor mij belangrijke muziekherinneringen zijn, wilde ik niet zomaar een lijst met artiesten maken, maar iets waarmee bezoekers echt door mijn ervaringen kunnen bladeren.
+
+Al helemaal aan het begin van mijn Digital Garden had ik het idee om een soort kaartencarrousel te maken. In een van mijn allereerste schetsen voor mijn homepage had ik namelijk al zo'n kaartenslider getekend. Uiteindelijk heb ik dit idee niet gebruikt voor mijn homepage, maar ik wilde het nog steeds graag ergens in mijn website verwerken. Daarom leek mijn concertpagina mij de perfecte plek om dit idee alsnog uit te werken.
+
+### Schetsen en experimenteren
+
+Voordat ik begon met coderen, heb ik eerst verschillende schetsen gemaakt. Omdat ik mobile-first werk, ben ik begonnen met het ontwerpen van de mobiele schermen.
+
+Hierbij heb ik geëxperimenteerd met verschillende manieren om mijn concerten weer te geven. Zo heb ik een ontwerp gemaakt met kleine ronde afbeeldingen van artiesten, een lange alfabetische lijst en verschillende versies van een kaartencarrousel.
+
+Mijn voorkeur ging eigenlijk meteen uit naar de carrousel. Ik vond het leuk dat de concertkaarten gedeeltelijk achter elkaar staan en dat je met pijltjes naar het volgende concert kunt gaan. Hierdoor wordt de pagina interactiever en kunnen bezoekers mijn concerten één voor één ontdekken.
+
+Daarnaast vond ik dit concept goed passen bij het onderwerp Experiences. Bezoekers kijken niet alleen naar mijn ervaringen, maar hebben ook zelf een actieve rol doordat ze door de kaarten kunnen navigeren.
+![Schetsen Concerten](images/readme/schetsen_concerten.png)
+
+Uiteindelijk heb ik gekozen voor de middelste schets met de kaartencarrousel en navigatiepijlen eronder. Vervolgens heb ik ook een desktopschets gemaakt. Hierbij wilde ik hetzelfde concept behouden, maar door de extra schermruimte aan beide kanten een extra kaart zichtbaar maken. Zo wordt de ruimte beter benut en ontstaat er minder lege ruimte rondom de carrousel.
+![Schetsen Concerten](images/readme/schetsen_concerten_2.png)
+
+### Inspiratie en onderzoek naar de uitvoering
+
+Toen ik mijn ontwerp wilde uitwerken, wist ik eigenlijk niet goed waar ik moest beginnen. Ik had al wel ervaring met HTML en CSS, maar nog niet met JavaScript. Voor de werking die ik wilde bereiken, waarbij de kaarten automatisch van positie veranderen wanneer je op een pijltje klikt, bleek JavaScript de meest geschikte oplossing.
+
+Ik heb eerst gezocht naar manieren om dit alleen met HTML en CSS te maken. Hier vond ik wel verschillende voorbeelden van, maar deze werkten niet zoals ik wilde. Vooral het toevoegen van video's aan de kaarten en het op de juiste manier laten bewegen van de verschillende kaarten lukte mij niet.
+
+Daarom heb ik mijn vriend Tom om hulp gevraagd, omdat hij meer ervaring heeft met JavaScript. Ik heb hem eerst mijn schetsen laten zien en uitgelegd wat ik precies wilde bereiken. Vervolgens hebben we samen online naar voorbeelden gezocht om te onderzoeken hoe zo'n carrousel technisch opgebouwd kan worden.
+
+Ik heb verschillende voorbeelden verzameld die qua vormgeving en interactie aansloten bij mijn idee. Vooral de manier waarop de kaarten achter elkaar staan en de middelste kaart wordt uitgelicht, vond ik interessant.
+![Inspiratie beelden Concerten](images/readme/inspiratiebeelden_concerten.png)
+
+Tijdens ons onderzoek hebben we ook gebruikgemaakt van een tutorial over het bouwen van een carrousel en de documentatie van MDN. Deze bronnen hielpen ons om beter te begrijpen hoe je met JavaScript tussen de verschillende kaarten kunt navigeren.
+
+[text](https://learndevtoday.com/how-to-build-image-carousel-slider/)
+[text](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Remainder)
+[text](https://www.youtube.com/watch?v=jR29wFSTeYM)
+
+### Opbouw in HTML en CSS
+
+Toen we een duidelijk beeld hadden van hoe de carrousel moest werken, zijn we begonnen met het opbouwen van de HTML en CSS.
+
+Ik heb voor ieder concert een apart article-element gemaakt met de class concert-card. Binnen iedere kaart heb ik een afbeelding of video toegevoegd, samen met de naam van de tour, de artiest en het jaartal.
+
+Ik wilde namelijk niet alleen foto's gebruiken, maar ook video's van mijn concerten laten zien. Hierdoor krijgen bezoekers een beter beeld van de sfeer en wordt mijn pagina persoonlijker.
+
+Voor de video's heb ik gebruikgemaakt van het HTML-element video, met onder andere muted, loop en playsinline. Hierdoor kunnen video's zonder geluid worden afgespeeld, blijven ze herhalen en kunnen ze ook op mobiele apparaten binnen de pagina worden weergegeven.
+
+Om te begrijpen hoe het automatisch afspelen van video's werkt, heb ik een bron van W3Schools gebruikt.
+[text](https://www.w3schools.com/tags/att_video_autoplay.asp)
+
+Daarna heb ik twee knoppen toegevoegd waarmee bezoekers naar het vorige of volgende concert kunnen navigeren. Deze hebben de classes concert-prev en concert-next gekregen, zodat ik ze later met JavaScript kon selecteren.
+
+Ook heb ik aria-label toegevoegd aan de knoppen, zodat gebruikers van een screenreader kunnen begrijpen waarvoor de pijltjes bedoeld zijn.
+
+### JavaScript voor de interactieve carrousel
+
+Als eerste worden alle concertkaarten en de twee navigatieknoppen geselecteerd met querySelectorAll() en querySelector(). Hierdoor kan JavaScript deze HTML-elementen herkennen en aanpassen.
+
+Daarna wordt met let currentIndex = 0; bijgehouden welke kaart op dat moment actief is. De waarde begint bij 0, waardoor de eerste concertkaart als eerste wordt weergegeven.
+
+Vervolgens hebben we de functie updateConcerts() gemaakt. Deze functie zorgt ervoor dat de kaarten telkens op de juiste plek komen te staan wanneer iemand op een navigatieknop klikt.
+
+Binnen deze functie gebruiken we classList.remove() om eerst de bestaande positieclasses van alle kaarten te verwijderen. Daarna wordt met classList.add() opnieuw bepaald welke kaart actief is en welke kaarten links en rechts daarvan staan.
+
+Hiervoor gebruiken we de classes active, previous, next, previous-two en next-two. Deze classes zijn gekoppeld aan de CSS, waardoor iedere kaart automatisch de juiste grootte en positie krijgt.
+
+Om ervoor te zorgen dat bezoekers eindeloos door de concerten kunnen bladeren, hebben we gebruikgemaakt van de remainder-operator %.
+
+Deze operator helpt om de index van de kaarten binnen het totale aantal concerten te houden. Wanneer de bezoeker voorbij het laatste concert gaat, begint de carrousel weer bij het eerste concert. Andersom werkt dit ook, waardoor de bezoeker vanaf het eerste concert naar het laatste kan gaan.
+
+Hiervoor hebben we de documentatie van MDN gebruikt om beter te begrijpen hoe deze operator werkt.
+[text](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Remainder)
+
+Daarnaast hebben we JavaScript gebruikt om de video's te besturen. Wanneer een andere kaart actief wordt, worden de video's eerst gepauzeerd en teruggezet naar het begin. Vervolgens wordt alleen de video van de actieve kaart afgespeeld. Hierdoor spelen niet alle video's tegelijkertijd af en blijft de aandacht op het concert in het midden gericht.
+
+Tot slot hebben we met addEventListener("click", ...) ervoor gezorgd dat de navigatieknoppen daadwerkelijk werken. Wanneer een bezoeker op een van de pijltjes klikt, wordt currentIndex aangepast en wordt de functie updateConcerts() opnieuw uitgevoerd.
+
+### Resultaat en responsive design
+
+Na het toevoegen van de JavaScript en het aanpassen van de CSS had ik uiteindelijk een werkende interactieve concertcarrousel. Bezoekers kunnen met de pijltjes door mijn concerten bladeren, terwijl de kaarten van positie veranderen en de actieve kaart centraal komt te staan.
+
+Ik heb ervoor gekozen om de middelste kaart extra nadruk te geven door deze groter en duidelijker weer te geven dan de omliggende kaarten. Hierdoor ontstaat een duidelijke visuele hiërarchie en weten bezoekers meteen welk concert op dat moment centraal staat.
+
+Op desktop zijn er meer kaarten zichtbaar, terwijl de weergave op mobiel compacter is. Zo blijft het concept hetzelfde, maar past de vormgeving zich aan de beschikbare schermruimte aan.
+![Resultaat Concerten](images/readme/resultaat_concerten.png)
 
 </details>
 
@@ -178,7 +462,65 @@ Over het algemeen ben ik tevreden met het resultaat. Ik heb tijdens dit project 
 
 </details>
 
+### 18 okt - Websitepagina Artists I Love
+
+<details>
+<summary><strong>ontwerpprocess</strong></summary>
+Voor mijn pagina Artists I Love wilde ik een plek creëren waar ik meer kon vertellen over mijn favoriete artiesten. Naast algemene informatie over de artiesten, zoals hun naam, leeftijd en muziekgenre, wilde ik ook mijn persoonlijke connectie met hun muziek laten zien. Daarom heb ik onderdelen toegevoegd zoals My Artist Era, waarin ik vertel hoe ik de artiest heb ontdekt en welke nummers voor mij belangrijk zijn, en een onderdeel met concerten.
+
+### Schetsen en experimenteren
+
+Voordat ik begon met coderen, heb ik eerst verschillende schetsen gemaakt om te onderzoeken welke indeling het beste zou werken. Omdat ik mobile-first werk, ben ik begonnen met drie verschillende ontwerpen voor het mobiele scherm. Hierbij heb ik geëxperimenteerd met de plaatsing van de foto's, de informatie over de artiest en de verschillende onderdelen op de pagina.
+
+Bij de ene schets stond de foto naast de informatie, terwijl ik bij een andere schets de foto boven de tekst plaatste. Ook heb ik gekeken naar hoe de onderdelen onder elkaar zouden komen te staan en welke indeling het meest overzichtelijk zou zijn op een klein scherm.
+![Schetsen mobiele schermen Artist I Love pagina](images/readme/schetsen_artistsIlove.png)
+
+Uiteindelijk heb ik ervoor gekozen om eerst de eerste schets uit te werken. Deze indeling kwam namelijk overeen met de layout die ik eerder voor mijn About Me-pagina had gebruikt. Door dezelfde opbouw aan te houden, wilde ik meer consistentie creëren tussen de verschillende pagina's van mijn website.
+
+Daarna heb ik ook een schets gemaakt voor de desktopversie. Hierbij had ik meer ruimte om de verschillende onderdelen naast elkaar te plaatsen. Ik heb de content verdeeld in vijf rijen en twee kolommen, zodat ik met CSS Grid de verschillende onderdelen overzichtelijk kon positioneren.
+![Schetsen mobiele schermen Artist I Love pagina](images/readme/schetsen_artistsIlove_2.png)
+
+### Eerste uitwerking in HTML en CSS
+
+Na het maken van mijn schetsen ben ik de pagina gaan uitwerken in HTML en CSS. Ik heb eerst de structuur van de pagina opgebouwd en vervolgens de informatie over mijn favoriete artiesten toegevoegd, waaronder Olivia Rodrigo, Bruno Mars, Ariana Grande en Rihanna.
+
+Ik heb hierbij onder andere foto's, persoonlijke informatie, quotes en mijn favoriete nummers toegevoegd. Ook heb ik een apart onderdeel gemaakt voor mijn persoonlijke muziekervaringen en concerten. Zo wilde ik ervoor zorgen dat de pagina niet alleen informatie geeft over de artiesten, maar ook echt iets vertelt over mijn eigen muzieksmaak.
+
+Tijdens het uitwerken heb ik geprobeerd om de visuele stijl van mijn Digital Garden terug te laten komen, bijvoorbeeld door dezelfde kleuren, borders en typografie te gebruiken als op mijn andere pagina's.
+
+### Testen en verbeteren van de mobiele layout
+
+Toen ik mijn eerste versie op een mobiel scherm bekeek, merkte ik dat de layout toch niet helemaal werkte zoals ik had verwacht. Hoewel de indeling in mijn schets overzichtelijk leek, zag het er op een echt scherm een stuk krapper uit.
+
+Vooral de foto en de informatie naast elkaar namen veel ruimte in beslag. Hierdoor werden de teksten erg smal en was de informatie minder prettig te lezen. Ik merkte dat de layout die op mijn About Me-pagina werkte, niet automatisch ook geschikt was voor deze pagina, omdat ik hier veel meer informatie wilde laten zien.
+
+Daarom besloot ik om mijn oorspronkelijke ontwerp aan te passen. In plaats van de foto en informatie naast elkaar te houden, heb ik de mobiele layout veranderd naar een indeling waarin de onderdelen meer onder elkaar staan. De foto krijgt hierdoor meer ruimte en de informatie over de artiest kan over de volledige beschikbare breedte worden weergegeven.
+
+Ook heb ik de afstanden tussen de verschillende onderdelen aangepast, zodat er meer rust en overzicht ontstaat. Hierdoor is de informatie makkelijker te scannen en wordt de pagina minder druk op kleinere schermen.
+![ mobiele schermen Artist I Love pagina](images/readme/artistsIlove_screens.png)
+
+### Desktoplayout behouden
+
+Voor de desktopversie heb ik ervoor gekozen om dichter bij mijn oorspronkelijke ontwerp te blijven. Op een groter scherm was er namelijk voldoende ruimte om de foto en informatie naast elkaar te plaatsen, zonder dat de tekst te smal werd.
+
+Ik vond dat de desktoplayout al een duidelijke visuele hiërarchie had. De naam van de artiest staat bovenaan, gevolgd door de foto en informatie, en daaronder de persoonlijke onderdelen en concerten. Hierdoor kan de gebruiker de pagina gemakkelijk van boven naar beneden bekijken.
+
+Daarom heb ik vooral de mobiele versie aangepast en de desktopindeling grotendeels behouden. Op deze manier krijgt ieder schermformaat een layout die past bij de beschikbare ruimte, terwijl de pagina's visueel wel bij elkaar blijven horen.
+
+### Reflectie
+
+Tijdens het maken van deze pagina heb ik geleerd dat een ontwerp dat op papier goed lijkt, niet altijd hetzelfde werkt wanneer je het daadwerkelijk in HTML en CSS uitwerkt. Door mijn eerste schets te testen op een mobiel scherm, kwam ik erachter dat de beschikbare ruimte een grotere invloed had op de leesbaarheid dan ik vooraf had verwacht.
+
+Ook heb ik gemerkt dat consistentie tussen pagina's belangrijk is, maar dat dit niet betekent dat iedere pagina precies dezelfde indeling moet hebben. De content bepaalt uiteindelijk welke layout het beste werkt.
+
+Door verschillende schetsen te maken, mijn eerste ontwerp uit te werken en vervolgens aanpassingen te doen op basis van wat ik op het scherm zag, heb ik mijn ontwerp stap voor stap verbeterd. Dit heeft mij geholpen om bewuster na te denken over responsive design, visuele hiërarchie en de gebruiksvriendelijkheid van mijn website.
+
+</details>
+
 ### 10 okt - Deepdive Animations
+
+<details>
+<summary><strong>Deepdive Animations</strong></summary>
 
 Tijdens deze Deep Dive heb ik meer geleerd over het verschil tussen CSS-transitions en CSS-animations. Een transition gebruik je vooral om soepel tussen twee verschillende statussen te veranderen, terwijl je met animations complexere bewegingen kunt maken die bijvoorbeeld automatisch of herhaaldelijk worden afgespeeld.
 
@@ -188,7 +530,7 @@ Daarnaast heb ik verschillende animation properties leren kennen, zoals animatio
 
 Een ander belangrijk onderdeel was toegankelijkheid. Met prefers-reduced-motion kan ik rekening houden met bezoekers die minder beweging willen zien.
 
-### 9 okt - Sprint 3 Workshop 3
+</details>
 
 ### 8 okt - Animaties op Songtekst
 
@@ -307,7 +649,8 @@ Ik heb dit effect bewust subtiel gehouden, omdat de woorden nog wel herkenbaar m
 
 ### 8 okt - Deepdive Variabele Fonts
 
-### Oefening 1
+<details>
+<summary><strong>Oefening 1</strong></summary>
 
 Tijdens deze oefening heb ik gewerkt met de variabele lettertypen Dyna Puff, Honk en Rocher Color. Ik heb geleerd dat een variable font meerdere variaties binnen één fontbestand kan bevatten. Met @font-face kan ik deze lettertypen lokaal inladen en vervolgens met CSS aanpassen.
 
@@ -316,8 +659,10 @@ Bij Dyna Puff heb ik geëxperimenteerd met font-weight en font-stretch, waarmee 
 Ook heb ik ontdekt dat sommige variabele lettertypen ingebouwde kleurenpaletten hebben. Met @font-palette-values en font-palette kan ik bepalen welk kleurenpalet wordt gebruikt. Ik vond het interessant dat ieder variable font andere mogelijkheden heeft, afhankelijk van welke eigenschappen het ondersteunt.
 ![Deepdive Variable Fonts](images/readme/deepdive_variablefonts_1.png)
 
-### Oefening 2
+</details>
 
+<details>
+<summary><strong>Oefening 2</strong></summary>
 Tijdens deze oefening heb ik geleerd hoe ik variable fonts kan combineren met CSS-transitions om interactieve typografie te maken. Hiervoor heb ik gewerkt met de lettertypen Saira Stencil, Kablammo, Plastic en Cheeeze.
 
 Door gebruik te maken van :hover kan ik de eigenschappen van een lettertype veranderen wanneer iemand er met de muis overheen beweegt. Met transition kan ik ervoor zorgen dat deze veranderingen geleidelijk plaatsvinden in plaats van direct. Zo heb ik geëxperimenteerd met het veranderen van de dikte, breedte en vorm van letters.
@@ -325,7 +670,10 @@ Door gebruik te maken van :hover kan ik de eigenschappen van een lettertype vera
 Daarnaast heb ik geleerd hoe transition-duration bepaalt hoelang een overgang duurt en hoe transition-timing-function invloed heeft op de snelheid en het verloop van de verandering. Wat ik vooral interessant vond, is dat tekst hierdoor niet alleen statisch hoeft te zijn, maar ook kan reageren op interacties van de gebruiker.
 ![Deepdive Variable Fonts](images/readme/deepdive_variablefonts_2.png)
 
-### Oefening 3
+</details>
+
+<details>
+<summary><strong>Oefening 3</strong></summary>
 
 Tijdens deze oefening heb ik geleerd hoe ik staggered transitions kan maken met de lettertypen Noto Serif, Climate Crisis, Nabla en Poo. Bij een staggered transition veranderen niet alle letters tegelijkertijd, maar begint iedere letter net iets later met de overgang.
 
@@ -333,6 +681,8 @@ Hiervoor stond iedere letter in een apart span-element, waardoor ik de letters i
 
 Door bijvoorbeeld calc(sibling-index() \* .1s) te gebruiken, begint iedere volgende letter iets later met veranderen. Hierdoor ontstaat een soort golvend effect. Ik vond het interessant om te zien dat je met alleen een verschil in timing al een heel ander gevoel aan een animatie kunt geven.
 ![Deepdive Variable Fonts](images/readme/deepdive_variablefonts_3.png)
+
+</details>
 
 ### 7 okt - Sprint 3 Workshop 2
 
@@ -588,6 +938,8 @@ Ook heb ik mijn Grid verder aangepast om de trapsgewijze opbouw beter terug te l
 
 ### 6 okt - Deepdive Interessantere Layouts
 
+<details>
+<summary><strong>Deepdive Interessantere Layouts</strong></summary>
 [Deepdive in code pen](https://codepen.io/editor/Rianne-Maria/pen/01a17460-255e-742a-8ad8-48eb8ffddadb)
 ![Resultat lyrics](images/readme/deepdive_interessantelayouts.png)
 
@@ -596,6 +948,76 @@ Tijdens deze Deep Dive heb ik geëxperimenteerd met responsive typografie en cre
 Daarnaast heb ik kennisgemaakt met container query units. Door container-type: inline-size te gebruiken, kan ik elementen laten reageren op de breedte van hun container. Met cqi kan ik bijvoorbeeld de lettergrootte aanpassen aan de beschikbare ruimte binnen een bepaald onderdeel van de pagina.
 
 Ook heb ik geëxperimenteerd met verticale tekst via writing-mode: sideways-lr. Met CSS Grid en media queries heb ik geleerd hoe ik zo'n verticale titel naast de content kan plaatsen op grotere schermen. Als laatste heb ik gewerkt met position: sticky, waarmee een element zichtbaar kan blijven tijdens het scrollen.
+
+</details>
+
+### 5 okt - Websitepagina How I Listened
+
+<details>
+<summary><strong>Ontwerpprocess</strong></summary>
+Voor mijn How I Listened-pagina wilde ik een plek creëren waar ik kon laten zien hoe ik door de jaren heen naar muziek heb geluisterd. Van mijn eerste muziekspeler tot de apparaten die ik tegenwoordig gebruik. Omdat muziek altijd een belangrijk onderdeel van mijn leven is geweest, wilde ik deze herinneringen op een persoonlijke en visuele manier presenteren.
+
+Ik wilde niet zomaar een lijst met apparaten maken, maar een soort tijdlijn waar bezoekers door mijn muziekgeschiedenis kunnen scrollen. Zo kunnen ze stap voor stap ontdekken hoe mijn manier van muziek luisteren is veranderd.
+
+### Schetsen en experimenteren
+
+Voordat ik begon met coderen, heb ik eerst verschillende mobile-first schetsen gemaakt om te onderzoeken hoe ik mijn tijdlijn het beste kon vormgeven. Hierbij heb ik geëxperimenteerd met verschillende manieren van navigeren en het weergeven van de apparaten.
+
+Zo heb ik een ontwerp gemaakt waarbij alle apparaten onder elkaar staan en je naar beneden scrolt, een ontwerp met pop-ups waarin meer informatie verschijnt en een tijdlijn met jaartallen waarop je kunt klikken. Daarnaast heb ik ook geëxperimenteerd met een horizontale tijdlijn waarbij bezoekers opzij moeten swipen, en een ontwerp met een draaiende schijf waarmee je tussen apparaten kunt navigeren.
+
+Uiteindelijk heb ik gekozen voor de verticale tijdlijn met de apparaten afwisselend links en rechts van een lijn. Deze indeling vond ik het beste passen bij mijn concept, omdat bezoekers letterlijk door mijn muziekgeschiedenis naar beneden scrollen. Hierdoor wordt het verloop van de tijd visueel duidelijk gemaakt.
+
+Daarnaast vond ik deze indeling overzichtelijker dan bijvoorbeeld de horizontale tijdlijn, omdat bezoekers op een natuurlijke manier door de pagina kunnen scrollen.
+![Schetsen How I Listened](images/readme/schetsen_HowIListened.png)
+
+### Eerste uitwerking in HTML en CSS
+
+Na het maken van mijn schetsen ben ik begonnen met het opbouwen van de pagina in HTML en CSS. Ik heb eerst een verticale lijn gemaakt met verschillende punten die de momenten in mijn muziekgeschiedenis voorstellen. Vervolgens heb ik de kaarten met jaartallen, afbeeldingen en korte teksten afwisselend links en rechts van de lijn geplaatst.
+
+Ik wilde dat bezoekers niet alleen de apparaten konden bekijken, maar ook meer informatie konden lezen over mijn persoonlijke herinneringen. Daarom besloot ik om bij de apparaten dialog pop-ups toe te voegen.
+
+Hiervoor kon ik een deel van de HTML hergebruiken die ik eerder voor mijn Songs of the Week-pagina had gemaakt. Daar had ik namelijk al gewerkt met dialog-elementen om extra informatie te tonen. Door deze bestaande structuur opnieuw te gebruiken, hoefde ik niet helemaal opnieuw te beginnen en kon ik de code aanpassen aan de inhoud van mijn tijdlijn.
+
+Voor de vormgeving heb ik dezelfde warme kleuren, borders en typografie gebruikt als op mijn andere pagina's, zodat de tijdlijn bij de rest van mijn Digital Garden past.
+
+### Experimenteren met de scrolllijn
+
+Naast de kaarten wilde ik ook dat de verticale lijn interactief werd. Mijn idee was dat de lijn tijdens het scrollen langzaam verder gekleurd zou worden, zodat bezoekers visueel konden zien hoe ver ze door mijn muziekgeschiedenis waren.
+
+Ik heb hiervoor onderzoek gedaan naar CSS scroll-driven animations. Hiermee kun je een animatie koppelen aan de scrollpositie van een pagina, zonder daarvoor JavaScript te hoeven gebruiken.
+
+Om beter te begrijpen hoe dit werkt, heb ik gebruikgemaakt van de documentatie van MDN Web Docs over scroll-driven animations, scroll-timeline-name en scrollbar-width.
+
+[text](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines)
+[text](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/scroll-timeline-name)
+[text](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/scrollbar-width)
+
+### Problemen tijdens het uitwerken
+
+Tijdens het testen merkte ik dat de tijdlijn nog niet helemaal werkte zoals ik wilde. De lijn bewoog niet goed mee met het scrollen en ook de positionering van de kaarten zorgde voor problemen.
+
+Daarnaast wilde ik dat alleen het middelste gedeelte van mijn website scrollde, terwijl de menu's aan de linker- en rechterkant op hun plek bleven staan. In mijn eerste uitwerking werkte dit nog niet goed. De lijn, kaarten en scrollbare content werden niet weergegeven zoals ik had bedoeld.
+![Fouten How I Listened](images/readme/fouten_HIL.png)
+
+Om dit te verbeteren, ben ik verder gaan zoeken naar oplossingen voor de positionering en het scrollgedrag. Hierbij heb ik onder andere gekeken naar het gebruik van overflow, de opbouw van de scrollcontainer en de manier waarop de tijdlijn ten opzichte van de kaarten gepositioneerd moest worden.
+
+Daarnaast heb ik onderzocht hoe ik bepaalde visuele onderdelen beter kon laten aansluiten op de beschikbare ruimte. Hiervoor heb ik gebruikgemaakt van informatie over CSS marquee-effecten en de MDN-documentatie over de Popover API.
+
+[text](https://markodenic.tech/seamless-css-marquees/)
+[text](https://developer.mozilla.org/en-US/docs/Web/API/Popover_API)
+
+### Vormgeving verbeteren en consistentie behouden
+
+Toen de tijdlijn beter werkte, ben ik opnieuw naar de vormgeving gaan kijken. In mijn eerste versie had ik de kaarten een lichte, beige achtergrond gegeven. Hierdoor vielen de kaarten duidelijk op ten opzichte van de bruine achtergrond van de pagina.
+
+Hoewel dit voor voldoende contrast zorgde, vond ik dat deze vormgeving niet helemaal aansloot bij mijn andere pagina's. Daar gebruikte ik namelijk vaker transparantere achtergronden en donkere borders om onderdelen van elkaar te onderscheiden.
+
+Daarom besloot ik om de lichte achtergrond van de kaarten weg te halen en dezelfde borderstijl te gebruiken als op mijn andere pagina's. Hierdoor sluiten de kaarten beter aan bij de rest van mijn Digital Garden en ontstaat er meer visuele consistentie tussen de verschillende pagina's.
+
+Ik heb de tijdlijn en de afwisselende plaatsing van de kaarten wel behouden, omdat ik vond dat deze indeling goed werkte en duidelijk het verloop van de jaren liet zien.
+![Pagina How I Listened](images/readme/old_vs_new_hil.png)
+
+</details>
 
 ### 5 okt - Sprint 3 Workshop 1
 
@@ -902,7 +1324,12 @@ In mijn light mode kwam er wel een probleem naar voren. Het contrast tussen de b
 
 ### 28 sept - Deepdive - meer interactie met HTML en CSS
 
+<details>
+<summary><strong>Deepdive - meer interactie met HTML en CSS</strong></summary>
+
 ![Deepdive meer interactie met HTML en CSS](images/readme/deepdive_meerinteractie.png)
+
+</details>
 
 ### 27 sept - Workshop 4
 
@@ -947,6 +1374,78 @@ Dit is belangrijk voor mijn eigen website, omdat een website niet alleen mooi mo
 Het navigeren met alleen het toetsenbord vond ik nog wel lastig, ik wist niet alle snelkoppelingen waardoor ik steeds terug moest kijken in de lijst wat ik moest doen.
 
 ![Opdracht screenreading](images/readme/opdracht_screenreading.png)
+
+</details>
+
+### 26 sept - Websitepagina Moods
+
+<details>
+<summary><strong>Ontwerpprocess</strong></summary>
+
+Voor mijn Moods-pagina wilde ik een interactieve plek creëren waar bezoekers muziek kunnen ontdekken die past bij hun stemming. Muziek heeft voor mij een sterke connectie met emoties en daarom wilde ik verschillende moods toevoegen, zoals Happy, Calm, Energetic, Nostalgic, Confident en Sad. Bij iedere stemming wilde ik een persoonlijke Spotify-playlist laten zien, maar ook kleine rituelen, quotes en momenten waarop ik graag naar deze muziek luister.
+
+Om de interactie met de pagina te versterken, wilde ik de verschillende stemmingen visueel weergeven met emoji's. Zo kunnen bezoekers niet alleen een stemming lezen, maar deze ook herkennen aan een gezichtsuitdrukking. Ik wilde hierbij wel dat de emoji's aansloten bij de warme en nostalgische uitstraling van mijn Digital Garden. Daarom ben ik op Pinterest gaan zoeken naar afbeeldingen die bij mijn thema passen. Uiteindelijk heb ik emoji's gevonden die goed aansluiten bij de visuele stijl van mijn website.
+
+Bronnen voor mijn afbeeldingen: [text](https://in.pinterest.com/pin/1134133118677719598/)
+[text](https://giphy.com/gifs/stars-review-five-dxPSj5kctYUpXOS4Tp)
+
+### Schetsen en experimenteren
+
+Voordat ik begon met coderen, heb ik verschillende schetsen gemaakt om te onderzoeken hoe ik de moods en bijbehorende informatie het beste kon indelen. Omdat ik mobile-first werk, ben ik begonnen met het ontwerpen van de mobiele schermen.
+
+Voor het overzicht met de verschillende moods heb ik geëxperimenteerd met emoji's als visuele keuzemogelijkheid en met knoppen waarin de namen van de stemmingen staan. Uiteindelijk heb ik ervoor gekozen om de emoji's te gebruiken, omdat deze beter aansluiten bij mijn oorspronkelijke idee om emoties op een visuele en speelse manier over te brengen.
+
+Daarnaast heb ik voor de individuele moodpagina's verschillende layouts geschetst. Hierbij heb ik geëxperimenteerd met één en twee kolommen. In de ene schets stonden het ritueel en de confidence boost naast elkaar, terwijl ik deze in een andere schets onder elkaar plaatste. Ook heb ik gekeken naar de positie van mijn avatar, Spotify-playlist en het onderdeel When to listen?.
+![Schetsen Moods pagina](images/readme/schetsen_moods.png)
+
+Uiteindelijk heb ik ervoor gekozen om eerst de indeling met twee kolommen uit te werken. Deze kwam namelijk overeen met de layout van mijn About Me-pagina. Door een vergelijkbare opbouw te gebruiken, wilde ik zorgen voor meer consistentie tussen de verschillende pagina's van mijn website.
+
+Vervolgens heb ik ook een schets gemaakt voor de desktopversie. Omdat er op desktop meer ruimte beschikbaar is, wilde ik de onderdelen naast elkaar plaatsen. Ik heb hiervoor een gridindeling bedacht met vijf rijen en twee kolommen, zodat de verschillende onderdelen een vaste plek binnen de layout kregen.
+![Schetsen Moods pagina](images/readme/schetsen_moods_2.png)
+
+### Eerste uitwerking in HTML en CSS
+
+Na het maken van mijn schetsen ben ik de pagina gaan uitwerken in HTML en CSS. Ik heb eerst de structuur opgebouwd met de verschillende moods en vervolgens de bijbehorende informatie en Spotify-playlists toegevoegd.
+
+Voor de layout heb ik gebruikgemaakt van de kennis die ik tijdens de Deep Dive CSS Grid heb opgedaan. Hierbij heb ik vooral gewerkt met grid-template-areas. Hiermee kon ik verschillende onderdelen, zoals het ritueel, de sterren, mijn avatar en de Spotify-playlist, een eigen plek geven binnen het grid.
+
+Ik vond dit prettig werken, omdat ik hierdoor niet ieder element afzonderlijk hoefde te positioneren. Door de grid areas aan te passen, kon ik gemakkelijker experimenteren met verschillende indelingen voor mobiel en desktop.
+
+Daarnaast heb ik bij de afbeelding van mijn avatar gebruikgemaakt van clamp(). Hiermee kon ik de grootte van de afbeelding laten meeschalen met de beschikbare schermruimte, terwijl ik tegelijkertijd een minimale en maximale grootte kon instellen. Zo wilde ik voorkomen dat de afbeelding op kleine schermen te groot werd of op grote schermen juist te klein bleef.
+
+Ook heb ik de Spotify-embeds toegevoegd, zodat bezoekers de playlists direct op mijn website kunnen bekijken en beluisteren. Dit vond ik belangrijk, omdat muziek het centrale onderwerp van mijn Digital Garden is en ik bezoekers niet alleen over mijn muzieksmaak wil laten lezen, maar deze ook wil laten ervaren.
+![Schetsen Moods pagina](images/readme/clamp_moodfoto.png)
+
+### Animatie en emotie toevoegen
+
+Naast de indeling wilde ik ook dat de pagina het gevoel van de verschillende moods overbracht. Daarom heb ik bij het onderdeel Confidence boost een animatie met sterren toegevoegd.
+
+Hiervoor heb ik een GIF gebruikt, zodat de sterren bewegen en het gevoel van een boost versterken. Door de beweging wordt dit onderdeel opvallender en krijgt het een speelser karakter. Dit sluit aan bij mijn doel om de pagina niet alleen informatief te maken, maar ook een bepaalde emotie over te brengen.
+
+Ik heb bewust gekozen om de animatie bij dit onderdeel toe te voegen, omdat de sterren visueel laten zien hoeveel energie of zelfvertrouwen de muziek mij geeft. Hierdoor ondersteunt de animatie de betekenis van de content, in plaats van dat deze alleen als decoratie wordt gebruikt.
+
+### Testen en verbeteren van de mobiele layout
+
+Toen ik mijn eerste uitwerking op een mobiel scherm bekeek, merkte ik dat de indeling met twee kolommen toch niet helemaal werkte zoals ik had verwacht. Hoewel het in mijn schets overzichtelijk leek, stonden de onderdelen in de praktijk erg dicht op elkaar.
+
+Vooral het ritueel en de sterren kregen weinig ruimte, waardoor de pagina er krap en onrustig uitzag. Ook de combinatie van mijn avatar en de Spotify-playlist nam veel ruimte in beslag. Hierdoor kwam de informatie niet overal even goed tot zijn recht.
+
+Daarom besloot ik om mijn oorspronkelijke ontwerp aan te passen. In plaats van de onderdelen naast elkaar te houden, heb ik de mobiele layout veranderd naar een indeling waarin de verschillende onderdelen onder elkaar staan.
+
+Met behulp van grid-template-areas kon ik de volgorde van de onderdelen aanpassen zonder de volledige HTML-structuur te hoeven veranderen. Zo kreeg het ritueel meer breedte, konden de sterren beter worden weergegeven en kregen de Spotify-playlist en mijn avatar meer ruimte.
+
+Ook heb ik de afstanden tussen de onderdelen aangepast, zodat er meer rust ontstaat en de informatie gemakkelijker te lezen is.
+![Schetsen Moods pagina](images/readme/moods_pagina_website.png)
+
+### Desktoplayout behouden
+
+Voor de desktopversie heb ik ervoor gekozen om dichter bij mijn oorspronkelijke schets te blijven. Op een groter scherm was er namelijk voldoende ruimte om de verschillende onderdelen naast elkaar te plaatsen, zonder dat dit ten koste ging van de leesbaarheid.
+
+Ik vond dat de desktoplayout een duidelijke visuele hiërarchie had. De naam van de mood staat bovenaan, gevolgd door het ritueel en de sterren. Daaronder staat een persoonlijke quote en vervolgens de Spotify-playlist met mijn avatar en het onderdeel When to listen?.
+
+Door deze onderdelen in verschillende rijen en kolommen te verdelen, blijft de pagina overzichtelijk en wordt de beschikbare ruimte goed benut.
+
+Daarom heb ik vooral de mobiele versie aangepast en de desktopindeling grotendeels behouden. Met behulp van CSS Grid kon ik voor beide schermformaten een passende indeling maken, terwijl de visuele stijl hetzelfde bleef.
 
 </details>
 
@@ -1308,6 +1807,78 @@ Als laatste heb ik het artikel ‘Deceptive Patterns in UX’ van Nielsen Norman
 
 Mijn notities:
 ![Deceptive Patterns in UX notes](images/readme/artikel2_deceptivepatterns.png)
+
+</details>
+
+### 21 sept - Websitepagina Memories
+
+<details>
+<summary><strong>Talk 2 – Deceptive Patterns</strong></summary>
+Voor mijn Memories-pagina wilde ik een plek creëren waar ik persoonlijke herinneringen kon delen die verbonden zijn aan bepaalde liedjes. Sommige nummers brengen mij namelijk meteen terug naar een specifiek moment in mijn leven. Daarom wilde ik deze herinneringen niet alleen met tekst beschrijven, maar ook met foto's laten zien.
+
+Ik wilde vooral dat deze pagina een warme, nostalgische uitstraling kreeg die goed aansloot bij het cozy thema van mijn Digital Garden.
+
+### Schetsen en experimenteren
+
+Voordat ik begon met coderen, heb ik verschillende mobile-first schetsen gemaakt om te onderzoeken hoe ik mijn herinneringen het beste kon presenteren.
+
+Mijn eerste idee was een gewone scrollpagina waarbij steeds twee herinneringen naast elkaar stonden. Bezoekers zouden dan naar beneden kunnen scrollen en op een herinnering klikken om een pop-up met meer informatie te openen. Hoewel deze indeling overzichtelijk was, vond ik het uiteindelijk wat saai en niet bijzonder genoeg voor mijn website.
+
+Daarom ben ik verder gaan experimenteren. Ik heb ook een carrousel geschetst waarbij bezoekers door verschillende herinneringskaarten konden bladeren, en een ontwerp met acht knoppen die ieder een aparte herinnering openen.
+
+Een ander idee was om de herinneringen als Polaroidfoto's aan een bewegende waslijn te hangen, met kleine wasknijpers erboven. Dit ontwerp sprak mij meteen het meeste aan. De combinatie van Polaroids, wasknijpers en een waslijn vond ik heel cozy en nostalgisch, waardoor het perfect bij de uitstraling van mijn website paste.
+
+Uiteindelijk heb ik voor dit ontwerp gekozen. Mijn idee was om twee horizontale rijen met ieder vier verschillende herinneringen te maken. De ene rij zou naar links bewegen en de andere naar rechts. Door de herinneringen steeds opnieuw te laten verschijnen, wilde ik een eindeloze beweging creëren.
+
+Ik wist dat dit technisch een uitdaging zou worden, maar ik wilde graag onderzoeken of ik dit met HTML en CSS kon maken.
+![Schetsen Memories Pagina](images/readme/schetsen_memories.png)
+
+### Eerste uitwerking in HTML en CSS
+
+Na het maken van mijn schetsen ben ik begonnen met het opbouwen van de pagina in HTML en CSS. Ik heb eerst de Polaroidkaarten gemaakt met een afbeelding, de naam van het liedje en de artiest. Vervolgens heb ik wasknijpers toegevoegd en de kaarten in twee horizontale rijen geplaatst.
+
+Voor de bewegende waslijnen ben ik gaan onderzoeken hoe ik een oneindige horizontale animatie kon maken met CSS. Hiervoor heb ik gebruikgemaakt van een artikel over seamless CSS marquees en een YouTube-tutorial.
+
+Gebruikte bronnen:
+[text](https://markodenic.tech/seamless-css-marquees/)
+[text](https://www.youtube.com/watch?v=uw5jV0IeNF8)
+
+Deze bronnen hielpen mij om te begrijpen hoe ik elementen automatisch horizontaal kon laten bewegen en hoe ik ervoor kon zorgen dat de animatie steeds opnieuw doorloopt.
+
+### Eindeloze animatie maken
+
+Een belangrijk onderdeel van mijn ontwerp was dat de Polaroids eindeloos moesten blijven bewegen, zonder dat er steeds een lege ruimte ontstond aan het einde van een rij.
+
+Om dit te bereiken, heb ik de reeks met vier herinneringen in mijn HTML twee keer achter elkaar geplaatst. Hierdoor bestaat iedere bewegende rij uit twee identieke groepen.
+
+Met een CSS-animatie verschuif ik de rij horizontaal. Wanneer de eerste groep uit beeld beweegt, neemt de tweede groep dezelfde plek over. Doordat de groepen identiek zijn, kan de animatie vervolgens opnieuw beginnen zonder een opvallende onderbreking.
+
+Dit principe heb ik toegepast aan de hand van de voorbeelden uit de bronnen over seamless CSS marquees.
+
+Voor de twee rijen heb ik verschillende bewegingsrichtingen gebruikt. De bovenste rij beweegt naar rechts en de onderste naar links. Hierdoor ontstaat er meer dynamiek op de pagina en lijkt het alsof de herinneringen langs elkaar heen bewegen.
+
+Ik vond dit een leuke manier om mijn pagina levendiger te maken, terwijl de Polaroids en wasknijpers juist dat nostalgische gevoel behouden.
+
+### Dialog pop-ups toevoegen
+
+Naast de bewegende Polaroids wilde ik dat bezoekers op een herinnering konden klikken om het verhaal erachter te lezen.
+
+Hiervoor heb ik opnieuw gebruikgemaakt van het HTML-element <dialog>. Dit had ik namelijk al eerder toegepast op mijn Songs of the Week-pagina, waardoor ik al een beetje wist hoe ik hiermee moest werken.
+
+Ik heb de bestaande HTML-structuur als basis gebruikt en aangepast voor mijn Memories-pagina. Wanneer een bezoeker een herinnering opent, verschijnt er een grotere afbeelding met de naam van het liedje, de artiest en een persoonlijke beschrijving van de herinnering.
+
+Zo wilde ik ervoor zorgen dat de bewegende foto's vooral nieuwsgierigheid opwekken, terwijl bezoekers zelf kunnen kiezen welke herinnering ze uitgebreider willen bekijken.
+
+bron: [text](https://developer.mozilla.org/en-US/docs/Web/API/Popover_API/Using)
+
+### Resultaat
+
+Tijdens het uitwerken heb ik veel moeten puzzelen met de positionering van de verschillende elementen. Vooral het goed plaatsen van de wasknijpers boven de Polaroids en de waslijn achter de foto's vond ik lastig. Ik heb verschillende CSS-instellingen uitgeprobeerd en de afstanden en posities meerdere keren aangepast, totdat alles netjes op elkaar aansloot.
+
+Daarnaast heb ik een hover-effect toegevoegd waarbij de animatie stopt zodra een bezoeker met de muis over de bewegende herinneringen gaat. Hierdoor blijven de Polaroids even stilstaan en wordt het makkelijker om een specifieke herinnering aan te klikken. Zo wilde ik ervoor zorgen dat de animatie niet alleen visueel leuk is, maar ook prettig blijft om mee te interacteren.
+
+Uiteindelijk is het gelukt om alle onderdelen goed te positioneren en de bewegende waslijnen te laten werken zoals ik in mijn schets had bedacht.
+![Eindresultaat Memories Page](images/readme/eindresultaat_memories.png)
 
 </details>
 

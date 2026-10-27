@@ -182,6 +182,10 @@
       <p>♡ Digital Garden 2026 — Rianne Geilings</p>
     </footer>
 
+    <!-- =========================
+     COOKIE POPUP
+     ========================= -->
+
     <dialog class="cookie-dialog" id="cookie-dialog" open>
       <h2>A cookie before you press play 🍪</h2>
 
@@ -192,15 +196,87 @@
           are used to host and display the website. In the process, technical
           data may be processed that is necessary to make the website available.
         </p>
+
+        <p>
+          Spotify is used to display and play music content. When Spotify
+          content loads, a connection is made to Spotify, which may receive
+          technical data and use cookies or similar technologies.
+        </p>
       </div>
 
       <div class="cookie-options">
         <img src="images/website/cookie_image.png" alt="" />
 
-        <button commandfor="cookie-dialog" command="close">Accept All</button>
+        <button type="button" commandfor="cookie-dialog" command="close">
+          Accept All
+        </button>
 
-        <a href="https://www.google.com">Reject & Leave</a>
+        <button type="button" commandfor="cookie-dialog" command="close">
+          Necessary only
+        </button>
+
+        <button type="button" commandfor="privacy-dialog" command="show-modal">
+          Manage preferences
+        </button>
       </div>
+    </dialog>
+
+    <!-- =========================
+     PRIVACY PREFERENCES
+     ========================= -->
+
+    <dialog class="privacy-dialog" id="privacy-dialog">
+      <form method="dialog">
+        <h2>Privacy Preferences</h2>
+
+        <!-- Necessary -->
+        <section class="preference-row">
+          <div class="preference-text">
+            <h3>Necessary services</h3>
+
+            <p>
+              GitHub and digitaaltuintje.nl are necessary to keep the website
+              working properly and available.
+            </p>
+          </div>
+
+          <label class="switch">
+            <input
+              type="checkbox"
+              checked
+              disabled
+              aria-label="Necessary services, always enabled"
+            />
+            <span></span>
+          </label>
+        </section>
+
+        <!-- Spotify -->
+        <section class="preference-row">
+          <div class="preference-text">
+            <h3>Spotify content</h3>
+
+            <p>
+              Spotify is used to display music playlists. Loading Spotify
+              content may allow Spotify to receive technical data and use
+              cookies or similar technologies.
+            </p>
+          </div>
+
+          <label class="switch">
+            <input
+              type="checkbox"
+              name="spotify-content"
+              aria-label="Allow Spotify content"
+            />
+            <span></span>
+          </label>
+        </section>
+
+        <button class="save-preferences-button" type="submit">
+          Save preferences
+        </button>
+      </form>
     </dialog>
   </body>
 </html>

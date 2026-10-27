@@ -30,6 +30,10 @@
   --ruimte-m: 1em;
   --ruimte-l: 2em;
   --ruimte-xl: 3em;
+
+  /*scaling teksten*/
+  --tekst-paragraaf: clamp(0.925rem, 0.775rem + 0.7vw, 1rem);
+  --tekst-lijsten: clamp(0.8rem, 0.65rem + 0.7vw, 1rem);
 }
 
 /* =========================
@@ -140,119 +144,287 @@ button:active {
    COOKIE POPUP
    ========================= */
 
-.cookie-dialog {
-  background-color: var(--);
+.cookie-dialog,
+.privacy-dialog {
   position: fixed;
   inset: 0;
-  margin: auto;
-
-  text-align: center;
 
   width: min(90%, 34em);
-  padding: 1.5rem;
-  border: none;
-  border-radius: 1rem;
+  max-height: 90vh;
 
-  background-color: var(--kleur-menu-binnenrand);
-  color: var(--kleur-cookie-text);
+  margin: auto;
+  padding: 1.5em;
+
+  overflow-y: auto;
+
+  color: var(--kleur-tekst);
+  background: var(--kleur-menu);
+
+  border: 0.15em solid var(--kleur-rand);
+  border-radius: 1em;
 
   z-index: 999;
 
   h2 {
-    margin-bottom: 1em;
-    color: var(--kleur-cookie-text);
+    margin: 0 0 1em;
+
+    text-align: center;
+    color: var(--kleur-menu-kop);
   }
 
   p {
-    margin-bottom: 1em;
     line-height: 1.5;
   }
 
-  /* Tablet */
+  /* Tablet en desktop */
   @media (min-width: 55em) {
     width: min(80%, 50rem);
-    padding: 2rem;
+    padding: 2em;
   }
 }
 
+/* =========================
+   COOKIE TEXT
+   ========================= */
+
 .cookie-text {
   max-height: 15em;
+
   overflow-y: auto;
 
   margin-bottom: 1em;
 
-  /* Tablet */
+  p {
+    margin: 0 0 1em;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  /* Tablet en desktop */
   @media (min-width: 55em) {
     max-height: none;
     overflow-y: visible;
-    padding-right: 0;
   }
 }
 
+/* =========================
+   COOKIE OPTIONS
+   ========================= */
+
+/* Voor het maken en vormgeven van de toggles
+   heb ik de volgende bronnen geraadpleegd:
+
+   https://www.w3schools.com/howto/howto_css_switch.asp
+   https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/checkbox
+   https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:checked
+   https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/Next-sibling_combinator
+   https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/::before
+*/
+
 .cookie-options {
   display: grid;
-  grid-template-columns: 8em 1fr;
+
+  grid-template-columns: minmax(0, 6em) minmax(0, 1fr);
+
   grid-template-areas:
     "avatar accept"
-    "avatar necessary";
+    "avatar necessary"
+    "avatar manage";
 
+  gap: 0.7em 1em;
   align-items: center;
 
   img {
     grid-area: avatar;
+
     width: 100%;
     height: auto;
   }
 
-  button,
-  a {
+  button {
     width: 100%;
-    padding: 1.2rem 1em;
+    min-width: 0;
+
+    padding: 0.9em 1em;
 
     font-family: "sniglet", system-ui, sans-serif;
+    font-size: 1em;
 
-    background-color: var(--kleur-menu);
+    color: var(--kleur-cookie-text);
+    background: var(--kleur-menu-binnenrand);
 
     border: 0.1em solid var(--kleur-rand);
     border-radius: 0.5em;
 
     cursor: pointer;
 
-    &:hover {
-      background: var(--kleur-hover-achtergrond);
+    &:hover,
+    &:focus-visible {
       color: var(--kleur-hover-tekst);
-    }
-
-    &:hover {
-      transform: scale(1.05);
-      filter: drop-shadow(0 0 0.4em var(--kleur-schaduw));
-
-      cursor: pointer;
+      background: var(--kleur-hover-achtergrond);
     }
   }
 
-  button {
+  button:nth-of-type(1) {
     grid-area: accept;
   }
 
-  a {
+  button:nth-of-type(2) {
     grid-area: necessary;
-    text-decoration: none;
-
-    display: grid;
-    place-items: center;
-    color: var(--kleur-tekst);
   }
 
-  /* Tablet */
-  @media (min-width: 55em) {
-    grid-template-columns: 12rem 1fr;
+  button:nth-of-type(3) {
+    grid-area: manage;
+  }
 
-    .cookie-options {
-      button {
-        margin-bottom: -3em;
-      }
+  /* Tablet en desktop */
+  @media (min-width: 55em) {
+    grid-template-columns: 12em minmax(0, 1fr);
+
+    gap: 1em;
+  }
+}
+
+/* =========================
+   PRIVACY PREFERENCES
+   ========================= */
+
+.privacy-dialog {
+  form {
+    display: grid;
+    gap: 1em;
+  }
+
+  .preference-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+
+    align-items: center;
+    gap: 1em;
+
+    padding: 1em 0;
+
+    border-top: 0.1em solid var(--kleur-rand);
+  }
+
+  .preference-text {
+    h3 {
+      margin: 0 0 0.5em;
     }
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .save-preferences-button {
+    width: 100%;
+
+    padding: 0.9em 1em;
+
+    font-family: "sniglet", system-ui, sans-serif;
+    font-size: 1em;
+
+    color: var(--kleur-cookie-text);
+    background: var(--kleur-menu-binnenrand);
+
+    border: 0.1em solid var(--kleur-rand);
+    border-radius: 0.5em;
+
+    cursor: pointer;
+
+    &:hover,
+    &:focus-visible {
+      color: var(--kleur-hover-tekst);
+      background: var(--kleur-hover-achtergrond);
+    }
+  }
+}
+
+/* =========================
+   TOGGLES
+   ========================= */
+
+/* Gebaseerd op:
+   https://www.w3schools.com/howto/howto_css_switch.asp */
+
+.switch {
+  position: relative;
+
+  display: inline-block;
+
+  width: 3.5em;
+  height: 2em;
+
+  input {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    margin: 0;
+
+    opacity: 0;
+
+    cursor: pointer;
+
+    &:disabled {
+      cursor: not-allowed;
+    }
+  }
+
+  span {
+    position: absolute;
+    inset: 0;
+
+    background: var(--kleur-achtergrond);
+
+    border: 0.1em solid var(--kleur-rand);
+    border-radius: 2em;
+
+    pointer-events: none;
+
+    transition: background 0.2s ease;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+
+      width: 1.35em;
+      height: 1.35em;
+
+      left: 0.25em;
+      top: 50%;
+
+      transform: translateY(-50%);
+
+      background: var(--kleur-menu-binnenrand);
+
+      border-radius: 50%;
+
+      transition: transform 0.2s ease;
+    }
+  }
+
+  input:checked + span {
+    background: var(--kleur-menu-opties);
+
+    &::before {
+      transform: translate(1.4em, -50%);
+      background: var(--kleur-menu);
+    }
+  }
+
+  input:focus-visible + span {
+    outline: 0.15em solid var(--kleur-focus);
+    outline-offset: 0.2em;
+  }
+
+  input:disabled + span {
+    opacity: 0.7;
   }
 }
 
@@ -284,13 +456,11 @@ header {
       justify-self: start;
     }
 
-    /* Tablet */
     @media (min-width: 55em) {
       max-width: 10em;
       min-width: 0;
     }
 
-    /* Kleinere desktop */
     @media (min-width: 80em) {
       max-width: 15em;
       min-width: initial;
@@ -305,7 +475,6 @@ header {
 
     white-space: nowrap;
 
-    /* Kleinere desktop */
     @media (min-width: 80em) {
       margin: 0 1em;
       white-space: normal;
@@ -318,7 +487,6 @@ header {
     text-decoration: none;
   }
 
-  /* Tablet */
   @media (min-width: 55em) {
     grid-template-columns:
       minmax(0, 1fr)
@@ -328,7 +496,6 @@ header {
     padding: 1em 0.5em;
   }
 
-  /* Kleinere desktop */
   @media (min-width: 80em) {
     grid-template-columns: 1fr auto 1fr;
     padding: 2em;
@@ -340,12 +507,10 @@ header {
   font-size: 2em;
   font-weight: 10;
 
-  /* Tablet */
   @media (min-width: 55em) {
     font-size: 2em;
   }
 
-  /* Kleinere desktop */
   @media (min-width: 80em) {
     font-size: 2.5em;
   }
@@ -356,12 +521,10 @@ header {
   font-size: 1.7em;
   font-weight: 10;
 
-  /* Tablet */
   @media (min-width: 55em) {
     font-size: 1.7em;
   }
 
-  /* Kleinere desktop */
   @media (min-width: 80em) {
     font-size: 2em;
   }
@@ -427,7 +590,6 @@ main {
   width: 100%;
   padding: 0;
 
-  /* Tablet */
   @media (min-width: 55em) {
     grid-template-columns:
       10em
@@ -438,76 +600,8 @@ main {
 
     gap: 1em;
     padding: 0 1em;
-
-    /* Scrollbaar middenvak */
-    > .music-timeline {
-      height: 64em;
-      min-height: 0;
-
-      box-sizing: border-box;
-
-      overflow-y: auto;
-      overflow-x: hidden;
-      overscroll-behavior-y: contain;
-    }
   }
 
-  /* Grote desktop */
-  @media (min-width: 100em) {
-    grid-template-columns:
-      1fr
-      minmax(8em, 13em)
-      minmax(25em, 50em)
-      minmax(8em, 13em)
-      1fr;
-
-    grid-template-areas: ". menu-links midden menu-rechts .";
-
-    gap: 2em;
-    padding: 0;
-  }
-}
-main {
-  display: grid;
-
-  grid-template-columns: minmax(0, 1fr);
-
-  grid-template-areas:
-    "menu-rechts"
-    "midden"
-    "menu-links";
-
-  gap: 2em;
-
-  width: 100%;
-  padding: 0;
-
-  /* Tablet */
-  @media (min-width: 55em) {
-    grid-template-columns:
-      10em
-      minmax(0, 1fr)
-      10em;
-
-    grid-template-areas: "menu-links midden menu-rechts";
-
-    gap: 1em;
-    padding: 0 1em;
-
-    /* Scrollbaar middenvak */
-    > .music-timeline {
-      height: 64em;
-      min-height: 0;
-
-      box-sizing: border-box;
-
-      overflow-y: auto;
-      overflow-x: hidden;
-      overscroll-behavior-y: contain;
-    }
-  }
-
-  /* Grote desktop */
   @media (min-width: 100em) {
     grid-template-columns:
       1fr
@@ -536,6 +630,16 @@ main {
 .piano,
 .sources {
   grid-area: midden;
+  padding: var(--ruimte-m);
+
+  p {
+    font-size: var(--tekst-paragraaf);
+  }
+
+  ul,
+  li {
+    font-size: var(--tekst-lijsten);
+  }
 }
 
 /* =========================
@@ -829,10 +933,6 @@ main {
     z-index: 5;
   }
 }
-
-/* =========================
-   HOMEPAGE
-   ========================= */
 
 /* =========================
    HOMEPAGE
@@ -1260,8 +1360,6 @@ main {
 
   gap: var(--ruimte-m);
 
-  margin: var(--ruimte-m);
-
   h2 {
     grid-area: naam;
     text-align: start;
@@ -1440,8 +1538,6 @@ main {
    ========================= */
 
 .moods {
-  padding: 0 2em;
-
   .moods-intro {
     text-align: center;
     margin-top: var(--ruimte-m);
@@ -1503,12 +1599,13 @@ main {
    DETAIL
    ========================= */
 
-/* in dit gedeelte maak ik gebruik van de kennis
+/* In dit gedeelte maak ik gebruik van de kennis
    opgedaan uit de deepdive grid-template-areas */
 
 .mood-detail {
   display: grid;
 
+  /* Mobiel */
   grid-template-columns:
     minmax(0, 0.7fr)
     minmax(0, 1.3fr);
@@ -1516,14 +1613,16 @@ main {
   grid-template-areas:
     "title title"
     "text text"
-    "ritual boost"
+    "ritual ritual"
+    "boost boost"
     "quote quote"
     "photo playlist"
     "photo listen";
 
   row-gap: 1em;
+  column-gap: 1em;
 
-  margin-top: 2em;
+  align-content: start;
 
   h2,
   p {
@@ -1540,8 +1639,10 @@ main {
     margin-top: 0;
   }
 
+  /* Terugknop */
   button {
     grid-area: title;
+
     width: 2em;
     height: 2em;
 
@@ -1556,6 +1657,7 @@ main {
     cursor: pointer;
   }
 
+  /* Favorite ritual */
   .favorite-ritual {
     grid-area: ritual;
 
@@ -1573,8 +1675,10 @@ main {
     }
   }
 
+  /* Mood boost */
   .mood-boost {
     grid-area: boost;
+
     justify-self: center;
 
     display: flex;
@@ -1585,16 +1689,21 @@ main {
 
     h3 {
       margin-top: 0;
+      text-align: center;
     }
 
     img {
+      display: block;
+
       width: 15em;
+      max-width: 100%;
       height: auto;
 
       margin-top: -3em;
     }
   }
 
+  /* Quote */
   blockquote {
     grid-area: quote;
 
@@ -1607,25 +1716,65 @@ main {
     border-top: 0.1em solid var(--kleur-rand);
     border-bottom: 0.1em solid var(--kleur-rand);
   }
+
+  /* Tablet en desktop */
+  @media (min-width: 55em) {
+    grid-template-columns:
+      minmax(0, 0.7fr)
+      minmax(0, 1.3fr);
+
+    grid-template-areas:
+      "title title"
+      "text text"
+      "ritual boost"
+      "quote quote"
+      "photo playlist"
+      "photo listen";
+  }
 }
+
+/* =========================
+   MOOD PHOTO
+   ========================= */
 
 .mood-photo {
   grid-area: photo;
 
-  width: 24em;
+  position: relative;
+
+  width: clamp(17em, 55vw, 23em);
+  max-width: none;
   height: auto;
 
   justify-self: center;
   align-self: start;
 
-  margin-top: -6em;
-  margin-left: -4em;
+  margin: 0;
+
+  top: 4em;
+  left: 0;
 
   z-index: 2;
+
+  @media (min-width: 55em) {
+    width: 24em;
+
+    top: 0;
+    left: 0;
+
+    margin-top: -6em;
+    margin-left: -4em;
+  }
 }
+
+/* =========================
+   PLAYLIST
+   ========================= */
 
 .playlist {
   grid-area: playlist;
+
+  min-width: 0;
 
   align-self: start;
 
@@ -1634,13 +1783,15 @@ main {
   }
 
   iframe {
+    display: block;
+
     width: 100%;
     height: 12em;
 
     border: 0;
     border-radius: 0.8em;
 
-    /* Tablet */
+    /* Tablet en desktop */
     @media (min-width: 55em) {
       width: 30em;
       height: 10em;
@@ -1648,8 +1799,14 @@ main {
   }
 }
 
+/* =========================
+   WHEN TO LISTEN
+   ========================= */
+
 .listen {
   grid-area: listen;
+
+  min-width: 0;
 
   padding: 1em;
   align-self: start;
@@ -1686,10 +1843,6 @@ main {
     align-items: center;
 
     text-align: center;
-  }
-
-  p {
-    margin: 0 1.5em;
   }
 
   figure {
@@ -1836,7 +1989,6 @@ main {
 
 .artists {
   text-align: center;
-  padding: 0 1em;
 
   ul {
     display: grid;
@@ -1885,19 +2037,22 @@ main {
 /* =========================
    OLIVIA RODRIGO
    ========================= */
+
 .artist {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+
+  grid-template-columns: minmax(0, 1fr);
 
   grid-template-areas:
-    "title title"
-    "image olivia"
-    "lyrics lyrics"
-    "experience experience"
-    "concert concert";
+    "title"
+    "image"
+    "olivia"
+    "lyrics"
+    "experience"
+    "concert";
 
   align-content: start;
-  row-gap: 0.1em;
+  row-gap: 1em;
 
   h2 {
     grid-area: title;
@@ -1906,6 +2061,7 @@ main {
 
   button {
     grid-area: title;
+
     width: 2em;
     height: 2em;
 
@@ -1922,8 +2078,12 @@ main {
 
   > img {
     grid-area: image;
-    width: 15em;
+
+    width: 100%;
+    max-width: 15em;
     height: auto;
+
+    justify-self: center;
 
     border: 0.15em solid var(--kleur-rand);
     box-shadow: inset 0 0 0 0.2em var(--kleur-menu-binnenrand);
@@ -1931,13 +2091,21 @@ main {
 
   .details-artist {
     grid-area: olivia;
-    margin-top: -1em;
+
+    margin-top: 0;
+
+    h3 {
+      text-align: center;
+    }
 
     dl {
       display: grid;
-      grid-template-columns: auto 1fr;
+      grid-template-columns: minmax(0, auto) minmax(0, 1fr);
 
       gap: 0.5em 1em;
+
+      max-width: 22em;
+      margin: 0 auto;
     }
 
     dt {
@@ -1947,12 +2115,13 @@ main {
     dd {
       margin: 0;
       text-align: left;
+
+      overflow-wrap: break-word;
     }
   }
 
   .lyrics {
     grid-area: lyrics;
-    text-align: center;
 
     margin: 0;
     padding: var(--ruimte-s) 0;
@@ -1974,7 +2143,7 @@ main {
 
     dl {
       display: grid;
-      grid-template-columns: auto 1fr;
+      grid-template-columns: minmax(0, auto) minmax(0, 1fr);
 
       gap: 0.5em 1em;
 
@@ -1988,6 +2157,8 @@ main {
     dd {
       margin: 0;
       text-align: left;
+
+      overflow-wrap: break-word;
     }
   }
 
@@ -1996,12 +2167,17 @@ main {
 
     display: grid;
 
-    grid-template-areas:
-      "title title title"
-      "tour tour tour"
-      "video1 video2 video3";
+    grid-template-columns: minmax(0, 1fr);
 
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "title"
+      "tour"
+      "video1"
+      "video2"
+      "video3";
+
+    gap: 1em;
+
     padding: 0 var(--ruimte-m) var(--ruimte-m);
 
     h3 {
@@ -2014,11 +2190,15 @@ main {
     }
 
     img {
-      width: 15em;
+      width: 100%;
+      max-width: 15em;
+      height: auto;
     }
 
     video {
-      width: 10em;
+      width: 100%;
+      max-width: 10em;
+      height: auto;
 
       &:nth-child(1) {
         grid-area: video1;
@@ -2030,6 +2210,78 @@ main {
 
       &:nth-child(3) {
         grid-area: video2;
+      }
+    }
+  }
+
+  /* =========================
+     TABLET EN DESKTOP
+     ========================= */
+
+  @media (min-width: 55em) {
+    grid-template-columns: repeat(2, 1fr);
+
+    grid-template-areas:
+      "title title"
+      "image olivia"
+      "lyrics lyrics"
+      "experience experience"
+      "concert concert";
+
+    row-gap: 0.1em;
+
+    > img {
+      justify-self: start;
+      width: 15em;
+      max-width: 100%;
+    }
+
+    .details-artist {
+      margin-top: -1em;
+
+      h3 {
+        text-align: left;
+      }
+
+      dl {
+        grid-template-columns: auto 1fr;
+        max-width: none;
+        margin: 1em 0;
+      }
+
+      dd {
+        overflow-wrap: normal;
+      }
+    }
+
+    .my-era {
+      dl {
+        grid-template-columns: auto 1fr;
+      }
+
+      dd {
+        overflow-wrap: normal;
+      }
+    }
+
+    .my-experience {
+      grid-template-columns: repeat(3, 1fr);
+
+      grid-template-areas:
+        "title title title"
+        "tour tour tour"
+        "video1 video2 video3";
+
+      gap: 0;
+
+      img {
+        width: 15em;
+        max-width: none;
+      }
+
+      video {
+        width: 10em;
+        max-width: none;
       }
     }
   }
@@ -2242,12 +2494,6 @@ main {
       filter: drop-shadow(0 0 0.4em var(--kleur-schaduw));
     }
   }
-
-  /* Reduced motion */
-
-  @media (prefers-reduced-motion: reduce) {
-    display: none;
-  }
 }
 
 /* =========================
@@ -2389,8 +2635,6 @@ main {
    https://markodenic.tech/seamless-css-marquees/
    https://www.youtube.com/watch?v=uw5jVO1eNF8 */
 
-/* Naar links */
-
 @keyframes marquee-links {
   from {
     transform: translateX(0);
@@ -2400,8 +2644,6 @@ main {
     transform: translateX(-50%);
   }
 }
-
-/* Naar rechts */
 
 @keyframes marquee-rechts {
   from {
@@ -2427,9 +2669,6 @@ main {
   min-width: 0;
   box-sizing: border-box;
 
-  padding: var(--ruimte-l);
-
-  /* Scrolltijdlijn */
   scroll-timeline-name: --music-scroll;
   scroll-timeline-axis: block;
 
@@ -2446,14 +2685,16 @@ main {
     margin-bottom: var(--ruimte-xl);
   }
 
-  /* Tablet en desktop */
   @media (min-width: 55em) {
     height: 64em;
+    min-height: 0;
 
     overflow-y: auto;
     overflow-x: hidden;
 
     overscroll-behavior-y: contain;
+
+    box-sizing: border-box;
   }
 }
 
@@ -2731,11 +2972,6 @@ main {
    ========================= */
 
 .concerts {
-  min-width: 0;
-  padding: var(--ruimte-l);
-
-  /*titel en introductie*/
-
   h2,
   h3,
   p {
@@ -2779,8 +3015,6 @@ main {
           transform 0.6s ease,
           opacity 0.6s ease;
 
-        /* Actieve kaart */
-
         &.active {
           opacity: 1;
 
@@ -2788,8 +3022,6 @@ main {
 
           z-index: 3;
         }
-
-        /* Vorige kaart */
 
         &.previous {
           opacity: 0.7;
@@ -2799,8 +3031,6 @@ main {
           z-index: 2;
         }
 
-        /* Volgende kaart */
-
         &.next {
           opacity: 0.7;
 
@@ -2808,8 +3038,6 @@ main {
 
           z-index: 2;
         }
-
-        /* Concertafbeelding */
 
         > video {
           display: block;
@@ -2819,8 +3047,6 @@ main {
 
           object-fit: cover;
         }
-
-        /* Concertinformatie */
 
         .concert-info {
           position: absolute;
@@ -2849,8 +3075,6 @@ main {
         }
       }
     }
-
-    /* Navigatie */
 
     .concert-navigation {
       display: flex;
@@ -2976,6 +3200,14 @@ main {
    IMAGE CREDITS / SOURCES
    ========================= */
 
+/* Voor het uitklapbare bronnenmenu heb ik
+   gebruikgemaakt van de volgende bronnen:
+
+   https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/details
+   https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/summary
+   https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/::after
+*/
+
 .sources {
   min-width: 0;
   min-height: 0;
@@ -2985,9 +3217,6 @@ main {
   overflow-y: auto;
   overflow-x: hidden;
 
-  padding: 1.5em;
-
-  /* Titel */
   h2 {
     text-align: center;
 
@@ -2995,7 +3224,6 @@ main {
     margin-bottom: 0.5em;
   }
 
-  /* Introductietekst */
   .sources-intro {
     max-width: 40em;
 
@@ -3004,44 +3232,88 @@ main {
     text-align: center;
   }
 
-  /* Grid met bronnen */
   .sources-grid {
     display: grid;
 
-    /* Mobiel: 2 kolommen */
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: minmax(0, 1fr);
 
     gap: 1em;
 
     align-items: start;
 
-    /* Laptop en desktop: 3 kolommen */
-    @media (min-width: 55em) {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+    max-width: 55em;
+    margin: 0 auto;
 
+    @media (min-width: 55em) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 1.5em;
     }
   }
 
-  /* Individuele bronbox */
   .sources-box {
     min-width: 0;
 
-    padding: 1em;
-
-    /* Dezelfde border als de rest van de website */
     border: 0.15em solid var(--kleur-rand);
+
     box-shadow: inset 0 0 0 0.2em var(--kleur-menu-binnenrand);
 
-    h3 {
-      margin-top: 0;
-      margin-bottom: 1em;
+    summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 1em;
+
+      padding: 1em;
+
+      list-style: none;
+
+      cursor: pointer;
+
+      /* Standaard pijltje verwijderen */
+      &::-webkit-details-marker {
+        display: none;
+      }
+
+      h3 {
+        margin: 0;
+        font-size: 1.1em;
+      }
+
+      &::after {
+        content: "+";
+
+        font-size: 1.5em;
+        line-height: 1;
+
+        flex-shrink: 0;
+      }
+
+      &:hover {
+        background: var(--kleur-hover-achtergrond);
+
+        color: var(--kleur-hover-tekst);
+      }
+
+      &:focus-visible {
+        outline: 0.15em solid var(--kleur-focus);
+        outline-offset: -0.3em;
+      }
+    }
+
+    &[open] {
+      summary {
+        border-bottom: 0.1em solid var(--kleur-rand);
+
+        &::after {
+          content: "−";
+        }
+      }
     }
 
     ul {
       margin: 0;
-
-      padding-left: 1.2em;
+      padding: 1em 1em 1em 2.5em;
 
       list-style: disc;
     }
@@ -3050,12 +3322,13 @@ main {
       margin-bottom: 0.8em;
 
       overflow-wrap: anywhere;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
 
-    li:last-child {
-      margin-bottom: 0;
-    }
-
+    /* Links */
     a {
       color: var(--kleur-tekst);
 
@@ -3067,7 +3340,7 @@ main {
       }
 
       &:focus-visible {
-        outline: 0.15em solid var(--kleur-rand);
+        outline: 0.15em solid var(--kleur-focus);
         outline-offset: 0.2em;
       }
     }
