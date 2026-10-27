@@ -241,23 +241,23 @@ Vandaag hebben we de allerlaatste Retrospect gedaan van dit blok. Deze retrospec
 
 Voor deze retrospect heb ik een piek- en daltekening gemaakt waarin ik terugblik op de afgelopen zes weken. Mijn lijn laat zien dat mijn motivatie, energie en voortgang erg wisselden. Ik had meerdere hoogtepunten waarin ik goed op schema liep, maar ook dieptepunten waarin ik door ziekte, stress en werkdruk achterliep met mijn schoolopdrachten.
 
-<strong>Begin sprint 0 & 1 – Eerste hoogtepunt</strong><br>
+<strong>Begin sprint 0 & 1 - Eerste hoogtepunt</strong><br>
 
 Ik begon met veel motivatie, een goede planning en liep goed bij met mijn opdrachten. Ik zocht inspiratie voor typografie, kleuren en de sfeer van mijn website en maakte mijn eerste schetsen. Dit hoort vooral bij persoonlijk en geëngageerd ontwerpen, omdat ik mijn eigen ideeën en interesses verwerkte in mijn ontwerp.
 
-<strong>Begin sprint 2 – Eerste dieptepunt</strong><br>
+<strong>Begin sprint 2 - Eerste dieptepunt</strong><br>
 
 Ik voelde me erg ziek en had veel stress door school en werk, waardoor ik achter begon te lopen. Ik probeerde thuis nog schetsen te maken, maar deze waren niet helemaal uitgewerkt. Dit was een aandachtspunt bij georganiseerd en professioneel ontwerpen, vooral op het gebied van planning en voortgang.
 
-<strong>Eind sprint 2 – Tweede hoogtepunt</strong><br>
+<strong>Eind sprint 2 - Tweede hoogtepunt</strong><br>
 
 Ik heb mijn achterstand ingehaald, mijn cookiepop-up afgerond en de toegankelijkheid van mijn website verbeterd. Ik testte onder andere de screenreader, toetsenbordnavigatie, ARIA-labels, alt-teksten en kleurcontrast. Hier kwamen beide competenties terug: professioneel door mijn website systematisch te testen en verbeteren, en persoonlijk en geëngageerd door rekening te houden met verschillende gebruikers.
 
-<strong>Begin sprint 3 – Tweede dieptepunt</strong><br>
+<strong>Begin sprint 3 - Tweede dieptepunt</strong><br>
 
 Doordat ik te weinig rust had genomen, voelde ik me opnieuw niet goed en liep ik achter met mijn schoolopdrachten. Ik werkte wel verder aan mijn website en deed onderzoek voor mijn songtekst-opdracht, maar door tijdsdruk is deze nog niet responsive. Dit was opnieuw een aandachtspunt bij georganiseerd en professioneel ontwerpen.
 
-<strong>Eind sprint 3 – Laatste stijging</strong><br>
+<strong>Eind sprint 3 - Laatste stijging</strong><br>
 
 Ik pakte mijn opdrachten weer op, controleerde mijn website met het Webby-formulier en vroeg feedback aan studenten en docenten. Dit hoort bij georganiseerd en professioneel ontwerpen, omdat ik mijn werk kritisch beoordeelde en keek wat ik nog kon verbeteren.
 
