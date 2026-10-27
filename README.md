@@ -67,7 +67,7 @@ Ik vind het jammer dat ik dit onderdeel niet meer heb kunnen aanpassen, omdat ik
 </details>
 
 <details>
-<summary><strong>Reflectie – Expo Digital Garden</strong></summary>
+<summary><strong>Reflectie - Expo Digital Garden</strong></summary>
 
 Afgelopen maandag hebben we een expo gehad waarbij we elkaars Digital Gardens konden bekijken en beoordelen. Tijdens deze expo kregen we de mogelijkheid om te zien wat andere studenten hadden gemaakt en feedback geven op elkaars werk. Dit deden we met verschillende kleuren stickers. De blauwe stickers stonden voor toegankelijkheid en privacy, de rode stickers voor ontwerpvaardigheden en de groene stickers voor technische vaardigheden.
 
@@ -102,6 +102,7 @@ Voor de komende periode wil ik deze feedback meenemen door mijn website verder t
 <details>
 <summary><strong>Webby Formulier Check</strong></summary>
 Tijdens het invullen van dit formulier merkte ik dat mijn website eigenlijk al goed aan de verschillende criteria voldeed. Dit komt doordat ik tijdens mijn ontwerpproces steeds rekening heb gehouden met deze richtlijnen. Ik heb bijvoorbeeld bewust gewerkt aan responsiveness, toegankelijkheid, interactie en visuele consistentie. Hierdoor kwamen er tijdens het invullen geen grote verbeterpunten meer naar voren en was ik tevreden met mijn eindresultaat.
+
 ![Webby formulier](images/readme/webby_formulier_2.jpeg)
 
 </details>
@@ -109,6 +110,7 @@ Tijdens het invullen van dit formulier merkte ik dat mijn website eigenlijk al g
 <details>
 <summary><strong>Learning Log Formulier Check</strong></summary>
 Ook mijn Learning Log voldeed aan de meeste criteria. Ik heb mijn proces gedurende de sprints steeds bijgehouden en ervoor gezorgd dat mijn schetsen, onderzoeken, experimenten, feedback en reflecties duidelijk terug te vinden zijn. Daarnaast heb ik veel aandacht besteed aan de structuur en leesbaarheid van mijn Learning Log. Hierdoor hoefde ik op het laatste moment niet alles nog bij elkaar te zoeken.
+
 ![Learning log formulier](images/readme/learninglog_formulier.jpeg)
 
 </details>
