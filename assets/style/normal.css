@@ -176,7 +176,6 @@ button:active {
     line-height: 1.5;
   }
 
-  /* Tablet en desktop */
   @media (min-width: 55em) {
     width: min(80%, 50rem);
     padding: 2em;
@@ -202,7 +201,6 @@ button:active {
     }
   }
 
-  /* Tablet en desktop */
   @media (min-width: 55em) {
     max-height: none;
     overflow-y: visible;
@@ -213,8 +211,7 @@ button:active {
    COOKIE OPTIONS
    ========================= */
 
-/* Voor het maken en vormgeven van de toggles
-   heb ik de volgende bronnen geraadpleegd:
+/* Voor dit gedeelte heb ik gebruik gemaakt van de volgende bronnen:
 
    https://www.w3schools.com/howto/howto_css_switch.asp
    https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/checkbox
@@ -279,7 +276,6 @@ button:active {
     grid-area: manage;
   }
 
-  /* Tablet en desktop */
   @media (min-width: 55em) {
     grid-template-columns: 12em minmax(0, 1fr);
 
@@ -347,7 +343,7 @@ button:active {
    TOGGLES
    ========================= */
 
-/* Gebaseerd op:
+/* Ik heb hier gebruik gemaakt van de bron:
    https://www.w3schools.com/howto/howto_css_switch.asp */
 
 .switch {
@@ -689,7 +685,6 @@ main {
 
     list-style: none;
 
-    /* Tablet */
     @media (min-width: 55em) {
       flex-direction: column;
       flex-wrap: nowrap;
@@ -717,7 +712,6 @@ main {
     }
   }
 
-  /* Tablet */
   @media (min-width: 55em) {
     margin: 0;
     min-height: 64em;
@@ -746,7 +740,6 @@ main {
     align-items: center;
     justify-content: center;
 
-    /* Tablet */
     @media (min-width: 55em) {
       min-height: auto;
     }
@@ -813,7 +806,6 @@ main {
     &:nth-child(4) {
       grid-area: cookies;
 
-      /* Tablet */
       @media (min-width: 55em) {
         margin-top: auto;
       }
@@ -825,7 +817,6 @@ main {
       transform: scale(1.1);
     }
 
-    /* Tablet */
     @media (min-width: 55em) {
       &:nth-child(1),
       &:nth-child(2),
@@ -838,7 +829,6 @@ main {
   p {
     text-align: center;
 
-    /* Tablet */
     @media (min-width: 55em) {
       text-align: start;
     }
@@ -847,13 +837,11 @@ main {
   img {
     scale: 0.8;
 
-    /* Tablet */
     @media (min-width: 55em) {
       scale: 1;
     }
   }
 
-  /* Tablet */
   @media (min-width: 55em) {
     display: flex;
     flex-direction: column;
@@ -955,7 +943,6 @@ main {
 
     list-style: none;
 
-    /* Kleinere desktop */
     @media (min-width: 80em) {
       grid-template-columns: repeat(4, 1fr);
     }
@@ -967,7 +954,6 @@ main {
 
     aspect-ratio: 1;
 
-    /* Planken */
     /* Voor dit gedeelte heb ik gebruik gemaakt van de bron:
        https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements */
 
@@ -986,7 +972,6 @@ main {
       background: var(--kleur-plank);
     }
 
-    /* Naamlabel */
     span {
       position: absolute;
 
@@ -1020,7 +1005,6 @@ main {
         visibility 0.2s ease;
     }
 
-    /* Hover op afbeelding */
     &:hover img,
     &:focus-visible img {
       transform: scale(1.05);
@@ -1028,7 +1012,6 @@ main {
       filter: drop-shadow(0 0 0.4em var(--kleur-schaduw));
     }
 
-    /* Label zichtbaar bij hover en focus */
     &:hover span,
     &:focus-visible span {
       opacity: 1;
@@ -1050,7 +1033,6 @@ main {
     transition: transform 0.2s ease;
   }
 
-  /* Plant */
   li:nth-child(1) {
     img {
       position: relative;
@@ -1085,7 +1067,6 @@ main {
     }
   }
 
-  /* Lamp */
   li:nth-child(5) {
     img {
       position: relative;
@@ -1093,15 +1074,6 @@ main {
       top: 10%;
 
       z-index: 2;
-    }
-  }
-
-  /* Minder beweging voor gebruikers
-     die dit hebben ingesteld */
-  @media (prefers-reduced-motion: reduce) {
-    img,
-    a span {
-      transition: none;
     }
   }
 }
@@ -1112,8 +1084,6 @@ main {
 
 .songs {
   padding: 0 var(--ruimte-l);
-
-  /* Maanden */
 
   nav {
     display: grid;
@@ -1148,8 +1118,6 @@ main {
     }
   }
 
-  /* Songs */
-
   ul {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -1165,8 +1133,6 @@ main {
   li {
     text-align: center;
 
-    /* Afbeeldingen */
-
     img {
       display: block;
 
@@ -1177,15 +1143,11 @@ main {
       border: 0.15em solid var(--kleur-rand);
     }
 
-    /* Songtitel */
-
     p {
       margin: var(--ruimte-s) 0 0;
 
       text-align: center;
     }
-
-    /* Album knop */
 
     button {
       padding: 0;
@@ -1198,8 +1160,6 @@ main {
       img {
         transition: transform 0.2s ease;
       }
-
-      /* Album wordt groter bij hover */
 
       &:hover img,
       &:focus-visible img {
@@ -1233,13 +1193,9 @@ main {
 
     border: 0.15em solid var(--kleur-rand);
 
-    /* Achtergrond achter dialog */
-
     &::backdrop {
       background: rgb(0 0 0 / 60%);
     }
-
-    /* Grote albumcover */
 
     img {
       display: block;
@@ -1249,8 +1205,6 @@ main {
 
       object-fit: contain;
     }
-
-    /* Kruisje */
 
     > button {
       position: absolute;
@@ -1372,7 +1326,6 @@ main {
     margin: -0.7em 0 0;
   }
 
-  /* Tablet */
   @media (min-width: 55em) {
     grid-template-columns: repeat(2, auto);
   }
@@ -1639,7 +1592,6 @@ main {
     margin-top: 0;
   }
 
-  /* Terugknop */
   button {
     grid-area: title;
 
@@ -1657,7 +1609,6 @@ main {
     cursor: pointer;
   }
 
-  /* Favorite ritual */
   .favorite-ritual {
     grid-area: ritual;
 
@@ -1675,7 +1626,6 @@ main {
     }
   }
 
-  /* Mood boost */
   .mood-boost {
     grid-area: boost;
 
@@ -1703,7 +1653,6 @@ main {
     }
   }
 
-  /* Quote */
   blockquote {
     grid-area: quote;
 
@@ -1717,7 +1666,6 @@ main {
     border-bottom: 0.1em solid var(--kleur-rand);
   }
 
-  /* Tablet en desktop */
   @media (min-width: 55em) {
     grid-template-columns:
       minmax(0, 0.7fr)
@@ -1791,7 +1739,6 @@ main {
     border: 0;
     border-radius: 0.8em;
 
-    /* Tablet en desktop */
     @media (min-width: 55em) {
       width: 30em;
       height: 10em;
@@ -1889,7 +1836,6 @@ main {
 
       list-style: none;
 
-      /* Tablet */
       @media (min-width: 55em) {
         margin: 1em 0;
         padding: 0;
@@ -1901,8 +1847,6 @@ main {
 
       border: 0.15em solid var(--kleur-rand);
       box-shadow: inset 0 0 0 0.2em var(--kleur-menu-binnenrand);
-
-      /* Eerste aura */
 
       &:nth-child(1) {
         figure::before {
@@ -1917,8 +1861,6 @@ main {
         }
       }
 
-      /* Tweede aura */
-
       &:nth-child(2) {
         figure::before {
           background: radial-gradient(
@@ -1931,8 +1873,6 @@ main {
           );
         }
       }
-
-      /* Derde aura */
 
       &:nth-child(3) {
         figure::before {
@@ -2024,7 +1964,6 @@ main {
     }
   }
 
-  /* Tablet */
   @media (min-width: 55em) {
     li {
       img {
@@ -2214,10 +2153,6 @@ main {
     }
   }
 
-  /* =========================
-     TABLET EN DESKTOP
-     ========================= */
-
   @media (min-width: 55em) {
     grid-template-columns: repeat(2, 1fr);
 
@@ -2320,7 +2255,6 @@ main {
     border-top: 0.1em solid var(--kleur-rand);
     border-bottom: 0.1em solid var(--kleur-rand);
 
-    /* Tablet */
     @media (min-width: 55em) {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -2455,7 +2389,6 @@ main {
 
     list-style: none;
 
-    /* Onderste rij beweegt naar links */
     animation: marquee-links 65s linear infinite;
 
     &::before {
@@ -2477,8 +2410,6 @@ main {
       animation-play-state: paused;
     }
   }
-
-  /* Bovenste rij beweegt naar rechts */
 
   &.reverse {
     ul {
@@ -2524,8 +2455,6 @@ main {
     position: relative;
     z-index: 1;
   }
-
-  /* Reduced motion */
 
   @media (prefers-reduced-motion: reduce) {
     display: block;
@@ -2713,8 +2642,6 @@ main {
 
   list-style: none;
 
-  /* Achtergrondlijn */
-
   &::before {
     content: "";
 
@@ -2730,8 +2657,6 @@ main {
 
     border-radius: 1em;
   }
-
-  /* Scrollende lijn */
 
   &::after {
     content: "";
@@ -2755,8 +2680,6 @@ main {
     animation-timeline: --music-scroll;
   }
 
-  /* Apparaten */
-
   li {
     position: relative;
     z-index: 1;
@@ -2765,8 +2688,6 @@ main {
     grid-template-columns: minmax(0, 1fr);
 
     padding-left: 3em;
-
-    /* Rondje op de lijn */
 
     &::before {
       content: "";
@@ -2789,8 +2710,6 @@ main {
       z-index: 2;
     }
 
-    /* Informatieblok */
-
     article {
       min-width: 0;
 
@@ -2808,8 +2727,6 @@ main {
 
         color: var(--kleur-menu-kop);
       }
-
-      /* Klikbare afbeelding */
 
       button {
         display: block;
@@ -2847,8 +2764,6 @@ main {
       }
     }
   }
-
-  /* Tablet en desktop */
 
   @media (min-width: 55em) {
     &::before,
@@ -2923,8 +2838,6 @@ main {
 
     margin-bottom: var(--ruimte-m);
   }
-
-  /* Sluitknop */
 
   > button {
     position: absolute;
@@ -3112,10 +3025,6 @@ main {
   margin-top: var(--ruimte-l);
 }
 
-/* =========================
-     TABLET
-     ========================= */
-
 @media (min-width: 55em) {
   .concert-slider {
     .concert-cards {
@@ -3127,10 +3036,6 @@ main {
     }
   }
 }
-
-/* =========================
-   KLEINERE DESKTOP
-   ========================= */
 
 @media (min-width: 80em) {
   .concert-slider {
@@ -3270,7 +3175,6 @@ main {
 
       cursor: pointer;
 
-      /* Standaard pijltje verwijderen */
       &::-webkit-details-marker {
         display: none;
       }
@@ -3328,7 +3232,6 @@ main {
       }
     }
 
-    /* Links */
     a {
       color: var(--kleur-tekst);
 
