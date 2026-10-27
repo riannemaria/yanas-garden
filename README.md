@@ -116,7 +116,7 @@ Ook mijn Learning Log voldeed aan de meeste criteria. Ik heb mijn proces geduren
 ### 25 okt - Websitepagina Credits
 
 <details>
-<summary><strong>Font variable toevoegen</strong></summary>
+<summary><strong>Ontwerpprocess</strong></summary>
 Voor mijn Sources-pagina wilde ik een plek creëren waar bezoekers alle bronnen kunnen terugvinden van de afbeeldingen die ik op mijn Digital Garden heb gebruikt. Omdat ik op verschillende pagina's afbeeldingen van het internet gebruik, vond ik het belangrijk om de oorspronkelijke makers te vermelden en duidelijk te laten zien waar mijn afbeeldingen vandaan komen.
 
 Daarnaast wilde ik ervoor zorgen dat bezoekers gemakkelijk konden terugvinden welke afbeeldingen bij welke pagina horen. Daarom besloot ik om de bronnen per pagina te organiseren, bijvoorbeeld Homepage, Artists I Love, Moods en Song of the Week.
@@ -126,6 +126,7 @@ Daarnaast wilde ik ervoor zorgen dat bezoekers gemakkelijk konden terugvinden we
 Voordat ik begon met coderen, had ik het idee om alle bronnen in aparte kaders te plaatsen. Ieder kader zou een eigen titel krijgen met de naam van de bijbehorende pagina en daaronder een lijst met links naar de gebruikte afbeeldingen.
 
 Op deze manier wilde ik de informatie overzichtelijk organiseren en ervoor zorgen dat bezoekers niet door één lange lijst met bronnen hoefden te zoeken.
+
 ![schetsen credit pagina](images/readme/schetsen_credits.png)
 
 ### Eerste uitwerking in HTML en CSS
@@ -154,9 +155,9 @@ Ik heb dit idee verder uitgewerkt in twee schetsen: één waarin alle categorie�
 
 ### Tweede uitwerking met HTML en CSS
 
-Na het maken van mijn nieuwe schetsen ben ik mijn HTML en CSS gaan aanpassen. Voor de uitklapbare menu's heb ik gebruikgemaakt van de HTML-elementen <details> en <summary>. Hiermee kunnen bezoekers de bronnen per categorie open- en dichtklappen, zonder dat ik JavaScript hoef te gebruiken.
+Na het maken van mijn nieuwe schetsen ben ik mijn HTML en CSS gaan aanpassen. Voor de uitklapbare menu's heb ik gebruikgemaakt van de HTML-elementen details en summary. Hiermee kunnen bezoekers de bronnen per categorie open- en dichtklappen, zonder dat ik JavaScript hoef te gebruiken.
 
-Om te begrijpen hoe deze elementen werken en hoe ik ze kon vormgeven, heb ik gebruikgemaakt van de documentatie van MDN Web Docs over <details>, <summary> en de CSS-selector ::after.
+Om te begrijpen hoe deze elementen werken en hoe ik ze kon vormgeven, heb ik gebruikgemaakt van de documentatie van MDN Web Docs over details, summary en de CSS-selector ::after.
 
 bronnen die ik heb gebruikt:
 [text](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/details)
